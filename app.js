@@ -47,7 +47,7 @@
     loc: saved.loc || null,
     radius: saved.radius || 3,
     born: saved.born || '',
-    group: saved.group || 'all',
+    group: 'all', // always open on Everything; a remembered filter makes the list look empty days later
     free: false, drop: false, indoor: false, ageFit: true,
     saved: new Set(saved.saved || []),
     showSaved: false,
