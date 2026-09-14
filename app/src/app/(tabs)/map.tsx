@@ -37,7 +37,7 @@ export default function MapScreen() {
         style={StyleSheet.absoluteFill}
         initialRegion={{ latitude: lat, longitude: lng, latitudeDelta: span, longitudeDelta: span / Math.cos((lat * Math.PI) / 180) }}
         showsUserLocation
-        showsPointsOfInterest={false}>
+        showsPointsOfInterests={false}>
         <Circle center={{ latitude: lat, longitude: lng }} radius={settings.radius * MI} strokeColor={C.marigold} strokeWidth={2} fillColor="rgba(242,160,7,0.06)" />
         {rows.map((r) => (
           <Marker

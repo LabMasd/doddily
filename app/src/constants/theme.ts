@@ -1,5 +1,3 @@
-import '@/global.css';
-
 // Little Days palette: cool milk and navy ink, one marigold accent, leaf green for "free".
 export const C = {
   milk: '#F4F6F8',

@@ -33,6 +33,7 @@ const LIMIT = args.limit ? Number(args.limit) : Infinity;
 
 // ---------- polite cached fetch ----------
 const lastHit = new Map();
+const BLOCKED = [];
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function politeWait(host, gapMs = 1100) {
@@ -60,6 +61,7 @@ async function get(url, { method = 'GET', body, headers = {}, json = false, noCa
         signal: AbortSignal.timeout(45000),
       });
       if (res.status === 403 || res.status === 401 || res.status === 429) {
+        BLOCKED.push(`${res.status} ${url}`); // recorded and skipped, never worked around
         throw Object.assign(new Error(`HTTP ${res.status} ${url}`), { fatal: true });
       }
       if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
@@ -315,7 +317,8 @@ async function crawlBaskingBabies() {
     let html;
     try { html = await get(url); } catch (e) { console.warn('[baskingbabies]', e.message); continue; }
     const t = textLines(html);
-    const branch = (t.find(x => /^Basking Babies\s+\S/.test(x) && x.length < 60) || `Basking Babies ${slug}`);
+    const branch = (t.find(x => /^Basking Babies\s+[A-Z]/.test(x) && !x.includes('|') && x.length < 60)
+      || `Basking Babies ${clean((t.find(x => /^Basking Babies\s*\|/.test(x)) || '').split('|').pop()) || slug}`);
     const phoneIdx = t.indexOf('Phone:');
     const phone = phoneIdx >= 0 ? t[phoneIdx + 1] : '';
     const a = t.indexOf('Timetable by venue');
@@ -459,7 +462,7 @@ for (const [name, fn] of Object.entries(CRAWLERS)) {
 }
 const { kept, dropped } = await geocode(all);
 
-const stats = { bySource: {}, tier: {}, country: {}, confidence: {}, dropped, errors };
+const stats = { bySource: {}, tier: {}, country: {}, confidence: {}, dropped, errors, blocked: BLOCKED };
 for (const r of kept) {
   stats.bySource[r.source] = (stats.bySource[r.source] || 0) + 1;
   stats.tier[r.tier] = (stats.tier[r.tier] || 0) + 1;

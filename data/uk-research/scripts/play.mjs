@@ -88,11 +88,11 @@ async function gymboree() {
     const place = title.replace(/^Gymboree Play & Music\s*/i, '').trim();
     // Contact block: "Contact Us | line | line | ... | POSTCODE | phone"
     const cm = t.match(/Contact Us \|((?:[^|]{2,80}\|){1,6}?)\s*([A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2})\s*\|\s*([0-9 +]{9,16})?/);
-    const address = cm ? cm[1].split('|').map((s) => s.trim()).filter(Boolean).join(', ') : ld?.address?.streetAddress || '';
+    const address = cm ? cm[1].split('|').map((s) => s.replace(/\*[^*]*\*/g, '').trim()).filter(Boolean).join(', ') : ld?.address?.streetAddress || '';
     const postcode = cm ? cm[2] : ld?.address?.postalCode;
     if (!normPC(postcode)) { drop('Gymboree Play & Music', 'no postcode ' + url); continue; }
     const trial = (t.match(/Trial Class \| £\s*(\d+)/i) || [])[1];
-    const memb = [...t.matchAll(/£\s*(\d+)\s*per month/gi)].map((m) => +m[1]);
+    const memb = [...t.matchAll(/Membership \| £\s*(\d+)\s*per month/gi)].map((m) => +m[1]);
     const price = [trial && `Trial class £${trial}`, memb.length && `membership from £${Math.min(...memb)}/month`].filter(Boolean).join('; ');
     rows.push(base({
       name: 'Gymboree Play & Music', provider: 'Gymboree Play & Music', category: 'movement', venue: `Gymboree Play & Music ${place}`,
@@ -112,7 +112,7 @@ async function littleGym() {
   if (!m) { report.notes.push('Little Gym: location data not found'); return []; }
   let locs; try { locs = JSON.parse(m[1].replace(/\\r|\\n/g, ' ')); } catch (e) { report.notes.push('Little Gym parse error ' + e); return []; }
   return locs.filter((l) => l.countryShort === 'GB').map((l) => {
-    const addr = l.address.replace(/^The Little Gym [^,]*,?\s*/i, '');
+    const addr = l.address.replace(/^The Little Gym [^,]*,?\s*/i, '').replace(/,?\s*United Kingdom\s*$/i, '');
     return base({
       name: 'The Little Gym', provider: 'The Little Gym', category: 'movement', venue: `The Little Gym ${l.name}`, address: addr.replace(PC_G, '').replace(/,\s*$/, ''), postcode: addr,
       tier: 'venue', sessions: [], schedule_note: 'Weekly term classes; parent & child classes for 4 months–3 years', age_min_months: 4, age_max_months: 144,
@@ -152,11 +152,20 @@ async function littleStreet() {
     const t = txt(await page(url));
     const am = t.match(/(?:Address: \| )?([^|]{5,160}?)\.?\s*\|?\s*([A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2})\s*\|/);
     const addrIdx = t.search(/Address:/); let address = '', pc = '';
-    const seg = addrIdx > 0 ? t.slice(addrIdx + 8, addrIdx + 260) : (am ? am[0] : '');
+    const seg = addrIdx > 0 ? t.slice(addrIdx + 8, addrIdx + 260) : '';
     const pm = seg.match(PC_RE); if (pm) { pc = pm[0]; address = seg.slice(0, seg.indexOf(pm[0])).split('|').map((s) => s.trim()).filter(Boolean).join(', ').replace(/\.\s*$/, ''); }
-    if (!normPC(pc)) { const all = t.match(PC_G); pc = all ? all[0] : ''; }
+    if (!normPC(pc)) { // no "Address:" label: take the cells just before the first postcode, after the offers link
+      const all = t.match(PC_G); pc = all ? all[0] : '';
+      if (pc) {
+        const cells = t.slice(0, t.indexOf(pc)).split('|').map((s) => s.trim()).filter(Boolean);
+        const k = cells.map((c) => /click here|offers|free of charge/i.test(c)).lastIndexOf(true);
+        address = cells.slice(k + 1).slice(-5).join(', ').replace(/\.\s*$/, '');
+      }
+    }
     if (!normPC(pc)) { drop('Little Street', 'no postcode ' + url); continue; }
-    const place = ent((t.match(/Children’s Role Play Town ([^|-]+)/) || t.match(/Children's Role Play Town ([^|-]+)/) || [])[1] || url.split('/').slice(-2)[0]).trim();
+    { const parts = address.split(/,\s*/); const k = parts.map((p) => /click here|offers|please|free of charge|booked space/i.test(p)).lastIndexOf(true); address = parts.slice(k + 1).join(', '); }
+    const slug = url.split('/').slice(-2)[0];
+    const place = slug === 'horsham-rudgwick' ? 'Horsham (Rudgwick)' : slug.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
     const child = (t.match(/Child(?:ren)?(?:’s|'s)? ticket:?\s*£\s*([\d.]+)/i) || [])[1];
     const adult = (t.match(/Adult ticket:?\s*£\s*([\d.]+)/i) || [])[1];
     const times = [...t.matchAll(/(\d\d:\d\d) ?(?:am|pm) – \d\d:\d\d ?(?:am|pm)/g)].map((m) => m[1]);
@@ -178,14 +187,14 @@ async function rugrats() {
     const url = `https://www.rugratsandhalfpints.com/${slug}`;
     const t = txt(await page(url));
     const Town = slug[0].toUpperCase() + slug.slice(1);
-    const blk = t.match(new RegExp(`${Town} \\| [^A-Za-z]*Mon-Thur: ([^|]+) \\| Fri: ([^|]+) \\| Sat-Sun: ([^|]+) \\| [^|]*\\| ([^|]+?)\\s*\\| [^|]*\\| [^|]*@rugratsandhalfpints\\.com \\| ([^|]+)`));
+    const blk = t.match(new RegExp(`${Town} \\| [^A-Za-z]*Mon-Thur: ([^|]+) \\| Fri: ([^|]+) \\| Sat-Sun: ([^|]+) \\| Holiday[^|]*\\| ([^|]+?)\\s*\\|(?:\\s*\\|)* [^|]*@rugratsandhalfpints\\.com \\| ([^|]+)`));
     if (!blk || !normPC(blk[4])) { drop('Rugrats & Halfpints', 'no address ' + url); continue; }
     const infant = (t.match(/6-11 months £\s*([\d.]+)/i) || [])[1];
     const tod = (t.match(/2-4 Years £\s*([\d.]+)/i) || [])[1];
     const addr = blk[4].trim().replace(/\.\s*[A-Z]{1,2}\d[A-Z\d]? ?\d[A-Z]{2}$/i, '');
     rows.push(base({
       name: 'Rugrats & Halfpints', provider: 'Rugrats & Halfpints', category: 'softplay', venue: `Rugrats & Halfpints ${Town}`, address: addr, postcode: blk[4],
-      schedule_note: `Mon–Thu ${blk[1].trim()}, Fri ${blk[2].trim()}, Sat–Sun ${blk[3].trim()}; baby sensory area`,
+      schedule_note: [['Mon–Thu', blk[1]], ['Fri', blk[2]], ['Sat–Sun', blk[3]]].map(([d, s]) => { const [a, b] = s.split(/\s+[-–]\s+/); return `${d} ${hhmm(a.replace(/\./, ':')) || a.trim()}–${hhmm((b || '').replace(/\./, ':')) || (b || '').trim()}`; }).join(', ') + '; baby sensory area',
       age_min_months: 0, age_max_months: 168, price: [infant && `6–11 months from £${infant}`, tod && `2–4 years from £${tod}`, 'under-6 months free with paying sibling'].filter(Boolean).join('; '),
       booking: 'drop-in', description: 'Indoor soft play with a toddler zone and a dedicated sensory area for babies.', url, phone: blk[5], source: 'rugratsandhalfpints.com', confidence: 'high',
     }));
@@ -225,12 +234,15 @@ async function gambado() {
   const hours = [...t.matchAll(/(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday) \| (\d{1,2}(?:[:.]\d\d)?\s*[ap]m)\s*[–-]\s*(\d{1,2}(?:[:.]\d\d)?\s*[ap]m)/gi)]
     .map((m) => [DAY[m[1].toLowerCase()], `${hhmm(m[2])}–${hhmm(m[3])}`]).filter((p, i, a) => a.findIndex((q) => q[0] === p[0]) === i);
   const pl = txt(await page('https://www.gambado.com/play'));
-  const u1 = pl.match(/U1 \| 1 - 2 Years \| 3 - 12 Years \| 13 - 17 Years \| From £\s*([\d.]+) \| From £\s*([\d.]+) \| From £\s*([\d.]+)/);
+  // price grid lists 5 labels then 5 prices; only the lowest "From" price is unambiguous
+  const grid = pl.match(/Adult Supervisors \| U1 \|[^£]*((?:From £\s*[\d.]+ \| ){3,})/);
+  const low = grid ? Math.min(...[...grid[1].matchAll(/£\s*([\d.]+)/g)].map((m) => +m[1])) : null;
+  const u1 = null;
   const phone = (t.match(/📞 \| ([0-9 ]{10,14})/) || [])[1];
   return [base({
     name: 'Gambado', provider: 'Gambado', category: 'softplay', venue: 'Gambado Chelsea', address: pm[1].replace(PC_G, '').replace(/,\s*$/, ''), postcode: pm[1],
     schedule_note: groupHours(hours), age_min_months: 0, age_max_months: 204,
-    price: u1 ? `Under-1s from £${u1[1]}; 1–2 years from £${u1[2]}` : '', booking: 'book',
+    price: low ? `Play session tickets from £${low}` : '', booking: 'book',
     description: 'Indoor soft play and activity centre with ticket prices for under-ones and toddlers.', url: 'https://www.gambado.com/', phone, source: 'gambado.com', confidence: 'medium',
   })];
 }
@@ -240,11 +252,11 @@ async function clambers() {
   const url = 'https://www.edinburghleisure.co.uk/clambers-soft-play/';
   const t = txt(await page(url));
   const am = t.match(/Getting Here \| ([^|]*?EH\d+ ?\d[A-Z]{2})/); if (!am) { drop('Clambers', 'no address'); return []; }
-  const hours = [...t.matchAll(/(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday) \| (\d\d)\.(\d\d) - (\d\d)\.(\d\d)/g)].map((m) => [DAY[m[1].toLowerCase()], `${m[2]}:${m[3]}–${m[4]}:${m[5]}`])
+  const hours = [...t.matchAll(/(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday) \| (\d\d)\.(\d\d) [-–] (\d\d)\.(\d\d)/g)].map((m) => [DAY[m[1].toLowerCase()], `${m[2]}:${m[3]}–${m[4]}:${m[5]}`])
     .filter((p, i, a) => a.findIndex((q) => q[0] === p[0]) === i);
   return [base({
     name: 'Clambers', provider: 'Edinburgh Leisure', category: 'softplay', venue: 'Clambers at Royal Commonwealth Pool', address: am[1].replace(PC_G, '').replace(/,\s*$/, '').replace(/,(?=\S)/g, ', '), postcode: am[1],
-    schedule_note: `${groupHours(hours)} (Wed from 10:00); baby area for up to 18 months`, age_min_months: 0, age_max_months: 120, price: '', booking: 'drop-in',
+    schedule_note: `${groupHours(hours)}; baby area for up to 18 months`, age_min_months: 0, age_max_months: 120, price: '', booking: 'drop-in',
     description: 'Soft play for children up to ten with a separate cosy area for non-walking babies.', url, source: 'edinburghleisure.co.uk', confidence: 'high',
   })];
 }
@@ -262,7 +274,7 @@ async function farms() {
     if (!/farm/i.test(name)) continue;
     const url = 'https://www.farmgarden.org.uk' + p;
     const t = txt(await page(url)); if (!t) continue;
-    const field = (label) => { const re = new RegExp(`${label}:? \\| ([^|]*)`, 'g'); return [...t.matchAll(re)].map((m) => m[1].trim()); };
+    const field = (label) => { const re = new RegExp(`${label}:? \\| ([^|]*)`, 'g'); return [...t.matchAll(re)].map((m) => m[1].trim()).filter((v) => v && !/[?:]$/.test(v) && !/^(Footer menu|Directions|Email|Website)$/i.test(v)); };
     const open = field('Open to the public\\?'); const livestock = field('Has livestock\\?')[0] || '';
     if (!open.some((v) => /^yes/i.test(v))) { drop('Social Farms & Gardens', `not open to public: ${name}`); continue; }
     if (!/^yes/i.test(livestock)) { drop('Social Farms & Gardens', `no livestock listed: ${name}`); continue; }
@@ -282,7 +294,7 @@ async function farms() {
     const isCity = /city farm|community farm|urban farm/i.test(name);
     rows.push(base({
       name, provider: 'Social Farms & Gardens member', category: 'farm', venue: name, address, postcode: pc, tier: 'place',
-      schedule_note: [hours ? hours.slice(0, 140) : 'Opening hours not listed', /play area/i.test(facilities) ? 'play area' : ''].filter(Boolean).join('; '),
+      schedule_note: [hours ? (hours.length > 140 ? (hours.slice(0, 140).match(/^.*[.;]/) || [hours.slice(0, 137) + '…'])[0].replace(/[.;]$/, '') : hours) : 'Opening hours not listed', /play area/i.test(facilities) ? 'play area' : ''].filter(Boolean).join('; '),
       age_min_months: 0, age_max_months: 216, price: '', free: false, booking: 'drop-in', indoor: false,
       description: `${isCity ? 'Community-run city farm' : 'Community farm'} open to visitors${stock ? ', with animals such as ' + stock.split(/,|;| and /).map((s) => s.trim().toLowerCase()).filter(Boolean).slice(0, 3).join(', ') : ''}.`,
       url, phone, source: 'farmgarden.org.uk', confidence: 'medium',

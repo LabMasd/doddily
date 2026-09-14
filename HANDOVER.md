@@ -28,3 +28,26 @@ No local model or API key. In Claude Code:
 - `/little-days <what> [near <postcode>] [<n> miles]`: searches the web, checks the providers' pages, prints cards in the terminal, then asks whether to add them to the app.
 - `/little-days refresh`: re-checks the saved timetables, then updates and publishes.
 - The command is a user skill at `~/.claude/skills/little-days/SKILL.md`.
+
+## Phone app (iOS + Android), started 2026-09-15
+- **Code:** `app/`, Expo SDK 57 (React Native 0.86, expo-router, TypeScript). The plan is in `docs/mobile-app-plan.md`.
+- **Screens:**
+  - `welcome`: postcode or location, distance, birth month
+  - `(tabs)/index`: Today, with the week strip, filters and sections
+  - `(tabs)/map`: native map (Apple on iOS, Google on Android); the web preview shows a note instead
+  - `(tabs)/saved`
+  - `activity/[id]`: directions, website, call, save, add to calendar (native form), send
+  - `settings`: form sheet
+- **Data:**
+  - Listings: `src/lib/data.ts` loads the tiles from `https://labmasd.github.io/little-days/data/tiles/`. They're cached on the phone and still work offline.
+  - Places: parks, playgrounds, libraries, pools, soft play, farms, museums and baby change come live from Overpass. The plan moves them to a pre-built import before launch.
+- **No login.** Model: a paid-upfront app with Family Sharing (see the plan).
+- **Run:**
+  - `cd app && npx expo start --web` for the browser preview
+  - `npx expo run:ios` for the iPhone simulator (needs Xcode + CocoaPods, both installed)
+- **Store builds:** `eas.json` has development, preview and production profiles. It needs an Expo account (`npx eas-cli login`), an Apple Developer account and a Google Play account.
+- **Database design:** `supabase/migrations/0001_init.sql`, for when listings move off static tiles.
+- **UK data:**
+  - `data/uk-research/*.json` come from national sources (family hubs, class chains, cinemas, libraries and so on), with crawl scripts in `data/uk-research/scripts/`.
+  - `node scripts/merge.mjs` builds `data/tiles/`.
+  - `tier`: timetable = day and time known; venue = runs there, times on the provider's site; place = open hours.
