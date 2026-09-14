@@ -104,10 +104,23 @@
   }
 
   // ---------- data ----------
+  // UK data is split into 0.5° map tiles; load only the ones around the chosen location.
+  const tileCache = new Map();
+  let tileIndex = null;
   async function loadData() {
     try {
-      const r = await fetch('data/activities.json', { cache: 'no-cache' });
-      state.data = await r.json();
+      if (!tileIndex) tileIndex = await (await fetch('data/tiles/index.json', { cache: 'no-cache' })).json();
+      if (!state.loc) { state.data = { checked: tileIndex.checked, items: [] }; return; }
+      const T = tileIndex.tile, { lat, lng } = state.loc, r = state.radius;
+      const dLat = r / 69, dLng = r / (69 * Math.cos(lat * Math.PI / 180));
+      const keys = [];
+      for (let y = Math.floor((lat - dLat) / T); y <= Math.floor((lat + dLat) / T); y++)
+        for (let x = Math.floor((lng - dLng) / T); x <= Math.floor((lng + dLng) / T); x++)
+          if (tileIndex.tiles[`${y}_${x}`]) keys.push(`${y}_${x}`);
+      await Promise.all(keys.filter((k) => !tileCache.has(k)).map(async (k) => {
+        tileCache.set(k, await (await fetch(`data/tiles/${k}.json`)).json());
+      }));
+      state.data = { checked: tileIndex.checked, items: keys.flatMap((k) => tileCache.get(k) || []) };
     } catch { state.data = { checked: '', items: [] }; }
   }
 
@@ -250,7 +263,8 @@
     else if (it.booking === 'book') tags.push('<span class="tag">Book ahead</span>');
     else if (it.booking === 'term') tags.push('<span class="tag">Term booking</span>');
     if (!it.osm) tags.push(`<span class="tag">${esc(ageText(it))}</span>`);
-    if (it.confidence === 'low') tags.push('<span class="tag warn">Check times</span>');
+    if (it.tier === 'venue') tags.push('<span class="tag">Times on their site</span>');
+    else if (it.confidence === 'low') tags.push('<span class="tag warn">Check times</span>');
 
     const sessions = (it.sessions || []).map((s) => `${s.day}${s.start ? ' ' + s.start : ''}${s.end ? '–' + s.end : ''}`).join(', ');
     const addr = [it.address, it.postcode].filter(Boolean).join(', ');
@@ -338,7 +352,7 @@
       const date = dateFor(state.day);
       const wd = DAYS[date.getDay()];
       const nowMin = state.day === 0 ? new Date().getHours() * 60 + new Date().getMinutes() : -1;
-      const timed = [], anytime = [], past = [];
+      const timed = [], anytime = [], past = [], venues = [];
       for (const r of rows) {
         const ss = (r.it.sessions || []).filter((s) => s.day === wd);
         if (ss.length) {
@@ -348,7 +362,7 @@
             (s.start && end < nowMin ? past : timed).push(entry);
           }
         } else if (!(r.it.sessions || []).length) {
-          anytime.push(r);
+          (r.it.tier === 'venue' ? venues : anytime).push(r);
         }
       }
       const byTime = (a, b) => (toMin(a.s.start) ?? 9999) - (toMin(b.s.start) ?? 9999) || a.d - b.d;
@@ -369,6 +383,13 @@
         html += `<div class="empty"><h3>That's everything for today</h3><p><button class="btn" data-day="1">See tomorrow</button></p></div>`;
       } else if (state.group !== 'parks' && state.group !== 'change') {
         html += `<div class="empty"><h3>Nothing timetabled ${dayName}</h3><p>Try a wider distance, another day, or the places below.</p></div>`;
+      }
+      if (venues.length) {
+        venues.sort((a, b) => a.d - b.d);
+        const shown = venues.slice(0, state.group === 'all' ? 12 : 60);
+        html += `<h2 class="group-title">Classes nearby, check times<small>${venues.length}</small></h2>`;
+        for (const r of shown) { html += cardHTML(r, null); mapRows.push(r); }
+        if (venues.length > shown.length) html += `<p class="summary">Showing the closest ${shown.length}. Pick a category to see more.</p>`;
       }
       if (anytime.length) {
         const shown = anytime.slice(0, state.group === 'all' ? 25 : 80);
@@ -485,7 +506,7 @@
       state.radius = +rad.value;
       state.born = $('#born').value;
       persist(); closeSheet(); render();
-      if (moved || radChanged) loadPlaces();
+      if (moved || radChanged) { await loadData(); render(); loadPlaces(); }
     };
     setTimeout(() => (state.loc ? $('#rad') : $('#pc')).focus(), 50);
   }
@@ -574,7 +595,8 @@
 
   (async () => {
     render();
-    await Promise.all([loadData(), applyHash()]);
+    await applyHash();
+    await loadData();
     render();
     if (!state.loc) openSheet(); else loadPlaces();
     if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});

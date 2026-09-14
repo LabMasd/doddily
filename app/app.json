@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "Little Days",
+    "slug": "little-days",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "littledays",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F4F6F8",
+    "ios": {
+      "bundleIdentifier": "cc.masd.littledays",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "cc.masd.littledays",
+      "adaptiveIcon": {
+        "backgroundColor": "#1E2536",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F4F6F8",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 96
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Little Days uses your location to show baby activities near you. It isn't stored or shared."
+        }
+      ],
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "Little Days adds the classes you choose to your calendar."
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
