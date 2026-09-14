@@ -54,10 +54,37 @@ export async function loadActivities(loc: Loc, radius: number) {
 // ---------- live places from OpenStreetMap ----------
 type OsmEl = { type: string; id: number; lat?: number; lon?: number; center?: { lat: number; lon: number }; tags?: Record<string, string> };
 
+const PLACES_BASE = 'https://labmasd.github.io/little-days/data/places';
+
 export async function loadPlaces(loc: Loc, radius: number, curated: Activity[]) {
   const r = Math.min(radius, PLACE_MAX_MI);
+  let places: Activity[];
+  try {
+    places = await loadPlaceTiles(loc, r);
+  } catch {
+    places = await loadOverpass(loc, r);
+  }
+  const out = dedupeAgainst(places, curated);
+  for (const p of out) activityCache.set(p.id, p);
+  return out;
+}
+
+/** Prebuilt monthly from an OpenStreetMap extract (see .github/workflows/places.yml). */
+async function loadPlaceTiles(loc: Loc, r: number) {
+  const index = await cached<{ built: string; tile: number; tiles: Record<string, number> }>('ld:places-index', 24 * HOUR, () =>
+    fetchJSON(`${PLACES_BASE}/index.json`)
+  );
+  const keys = tileKeys(loc, r, index.tile, index.tiles);
+  const tiles = await Promise.all(
+    keys.map((k) => cached<Activity[]>(`ld:places:${index.built}:${k}`, 60 * 24 * HOUR, () => fetchJSON(`${PLACES_BASE}/${k}.json`)))
+  );
+  return oneCardPerName(tiles.flat().filter((p) => miles(loc, p) <= r), loc);
+}
+
+/** Fallback while the prebuilt places aren't available. */
+async function loadOverpass(loc: Loc, r: number) {
   const key = `ld:places:${loc.lat.toFixed(3)},${loc.lng.toFixed(3)},${r}`;
-  const places = await cached<Activity[]>(key, 7 * 24 * HOUR, async () => {
+  return cached<Activity[]>(key, 7 * 24 * HOUR, async () => {
     const around = `(around:${Math.round(r * 1609.344)},${loc.lat},${loc.lng})`;
     const q = `[out:json][timeout:30];(
       nwr${around}[leisure=playground];
@@ -80,9 +107,6 @@ export async function loadPlaces(loc: Loc, radius: number, curated: Activity[]) 
     }
     throw lastErr;
   });
-  const out = dedupeAgainst(places, curated);
-  for (const p of out) activityCache.set(p.id, p);
-  return out;
 }
 
 function shapePlaces(els: OsmEl[], home: Loc): Activity[] {
@@ -129,9 +153,13 @@ function shapePlaces(els: OsmEl[], home: Loc): Activity[] {
     if (!big && !withPlay.has(k.id)) continue;
     out.push(base(k, 'park', k.t.name, { venue: withPlay.has(k.id) ? 'Has a playground' : '', indoor: false }));
   }
-  // One card per name: big parks often have several mapped playgrounds.
+  return oneCardPerName(out, home);
+}
+
+/** One card per name: big parks often have several mapped playgrounds. Keeps the nearest. */
+function oneCardPerName(list: Activity[], home: Loc) {
   const byName = new Map<string, Activity>();
-  for (const p of out) {
+  for (const p of list) {
     const key = `${p.category}|${p.name}`;
     const prev = byName.get(key);
     if (!prev || miles(home, p) < miles(home, prev)) byName.set(key, p);

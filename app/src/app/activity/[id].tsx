@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from 'expo-router';
-import { useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -9,6 +9,7 @@ import { addToCalendar, callPhone, nextOccurrence, openDirections, openLink, sha
 import { CATS } from '@/lib/categories';
 import { activityCache } from '@/lib/data';
 import { distLabel, miles } from '@/lib/geo';
+import { clearReminder, getReminder, setReminder } from '@/lib/reminders';
 import { ageText } from '@/lib/schedule';
 import { useStore } from '@/lib/store';
 
@@ -20,6 +21,12 @@ export default function ActivityScreen() {
   const { saved, toggleSaved, settings } = useStore();
   const insets = useSafeAreaInsets();
   const [calState, setCalState] = useState<'idle' | 'added' | 'error'>('idle');
+  const [reminder, setReminderState] = useState<'none' | 'set' | 'denied' | 'too-late' | 'error'>('none');
+
+  useEffect(() => {
+    if (Platform.OS === 'web') return;
+    getReminder(id).then((r) => setReminderState(r ? 'set' : 'none'));
+  }, [id]);
 
   const it = activityCache.get(id) ?? saved[id];
   if (!it) {
@@ -42,6 +49,16 @@ export default function ActivityScreen() {
     setCalState(res === 'added' ? 'added' : res === 'error' ? 'error' : 'idle');
   };
 
+  const onReminder = async () => {
+    if (reminder === 'set') {
+      await clearReminder(it.id);
+      setReminderState('none');
+    } else if (next) {
+      setReminderState(await setReminder(it, next));
+    }
+  };
+  const reminderLabel = { none: 'Remind me', set: '🔔 Reminder on', denied: 'Notifications are off', 'too-late': 'Starts too soon', error: 'Couldn’t set reminder' }[reminder];
+
   return (
     <ScrollView style={s.screen} contentContainerStyle={[s.content, { paddingBottom: insets.bottom + 32 }]}>
       <Text style={s.cat}>{cat.e}  {cat.label}</Text>
@@ -57,6 +74,7 @@ export default function ActivityScreen() {
         {next && Platform.OS !== 'web' && (
           <Action label={calState === 'added' ? 'Added to calendar' : calState === 'error' ? 'Calendar unavailable' : 'Add to calendar'} onPress={onCalendar} />
         )}
+        {next?.session.start && Platform.OS !== 'web' && <Action label={reminderLabel} active={reminder === 'set'} onPress={onReminder} />}
         <Action label="Send" onPress={() => shareActivity(it)} />
       </View>
 

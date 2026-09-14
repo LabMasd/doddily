@@ -56,7 +56,8 @@
           "calendarPermission": "Little Days adds the classes you choose to your calendar."
         }
       ],
-      "expo-font"
+      "expo-font",
+      "expo-notifications"
     ],
     "experiments": {
       "typedRoutes": true,

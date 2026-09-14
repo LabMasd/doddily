@@ -28,15 +28,19 @@
     park:     { e: '🌳', label: 'Park' },
     libplace: { e: '📚', label: 'Library' },
     change:   { e: '🚼', label: 'Baby change' },
+    pool:     { e: '🏊', label: 'Swimming pool' },
+    softplace: { e: '🧩', label: 'Soft play' },
+    farmplace: { e: '🐐', label: 'Farm' },
+    museumplace: { e: '🏛️', label: 'Museum' },
   };
 
   const GROUPS = [
     { id: 'all', label: 'Everything' },
     { id: 'rhymes', label: 'Rhymes & stay-and-play', cats: ['library', 'stayplay', 'support'] },
     { id: 'classes', label: 'Classes', cats: ['music', 'sensory', 'movement', 'massage', 'fitness'] },
-    { id: 'swim', label: 'Swim', cats: ['swim'] },
+    { id: 'swim', label: 'Swim', cats: ['swim', 'pool'] },
     { id: 'cinema', label: 'Cinema', cats: ['cinema'] },
-    { id: 'out', label: 'Days out', cats: ['museum', 'farm', 'softplay', 'cafe', 'outdoor'] },
+    { id: 'out', label: 'Days out', cats: ['museum', 'farm', 'softplay', 'cafe', 'outdoor', 'softplace', 'farmplace', 'museumplace'] },
     { id: 'parks', label: 'Parks & playgrounds', cats: ['playground', 'park'] },
     { id: 'change', label: 'Baby change', cats: ['change', 'libplace'] },
   ];
@@ -127,6 +131,27 @@
   async function loadPlaces() {
     if (!state.loc) return;
     const r = Math.min(state.radius, PLACE_MAX_MI);
+    // Prefer the monthly prebuilt places (OpenStreetMap extract); fall back to Overpass below.
+    try {
+      const idx = await (await fetch('data/places/index.json', { cache: 'no-cache' })).json();
+      const T = idx.tile, { lat, lng } = state.loc;
+      const dLat = r / 69, dLng = r / (69 * Math.cos(lat * Math.PI / 180));
+      const keys = [];
+      for (let y = Math.floor((lat - dLat) / T); y <= Math.floor((lat + dLat) / T); y++)
+        for (let x = Math.floor((lng - dLng) / T); x <= Math.floor((lng + dLng) / T); x++)
+          if (idx.tiles[`${y}_${x}`]) keys.push(`${y}_${x}`);
+      const tiles = await Promise.all(keys.map(async (k) => (await fetch(`data/places/${k}.json`)).json()));
+      const byName = new Map();
+      for (const p of tiles.flat()) {
+        if (miles(state.loc, p) > r) continue;
+        const k = `${p.category}|${p.name}`, prev = byName.get(k);
+        if (!prev || miles(state.loc, p) < miles(state.loc, prev)) byName.set(k, p);
+      }
+      state.places = [...byName.values()];
+      dedupePlaces();
+      state.placesStatus = 'ok'; render();
+      return;
+    } catch { /* not built yet */ }
     const key = `ld-places:${state.loc.lat.toFixed(3)},${state.loc.lng.toFixed(3)},${r}`;
     try {
       const c = JSON.parse(localStorage.getItem(key));
@@ -211,7 +236,7 @@
       if (state.showSaved) { if (!state.saved.has(it.id)) continue; }
       else {
         if (g.cats && !g.cats.includes(it.category)) continue;
-        if (g.id === 'all' && (['change', 'libplace', 'playground'].includes(it.category) || (it.category === 'park' && !it.venue))) continue;
+        if (g.id === 'all' && (['change', 'libplace', 'playground', 'pool'].includes(it.category) || (it.category === 'park' && !it.venue))) continue;
         if (g.id === 'parks' && it.unnamed && d > 0.6) continue;
       }
       if (state.free && !it.free) continue;

@@ -1,21 +1,43 @@
 import { BricolageGrotesque_500Medium, BricolageGrotesque_700Bold, useFonts } from '@expo-google-fonts/bricolage-grotesque';
 import { Figtree_400Regular, Figtree_500Medium, Figtree_600SemiBold } from '@expo-google-fonts/figtree';
-import { Stack } from 'expo-router';
+import * as Notifications from 'expo-notifications';
+import { Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
+import { Platform } from 'react-native';
 
 import { C } from '@/constants/theme';
+import { hydrateReminderActivities } from '@/lib/reminders';
 import { StoreProvider } from '@/lib/store';
 
 SplashScreen.preventAutoHideAsync();
 
+if (Platform.OS !== 'web') {
+  Notifications.setNotificationHandler({
+    handleNotification: async () => ({ shouldShowBanner: true, shouldShowList: true, shouldPlaySound: false, shouldSetBadge: false }),
+  });
+}
+
 export default function RootLayout() {
+  const router = useRouter();
   const [loaded] = useFonts({ BricolageGrotesque_500Medium, BricolageGrotesque_700Bold, Figtree_400Regular, Figtree_500Medium, Figtree_600SemiBold });
 
   useEffect(() => {
     if (loaded) SplashScreen.hideAsync();
   }, [loaded]);
+
+  // Tapping a class reminder opens that class.
+  useEffect(() => {
+    if (Platform.OS === 'web') return;
+    const open = (id?: unknown) => {
+      if (typeof id === 'string') hydrateReminderActivities().then(() => router.push({ pathname: '/activity/[id]', params: { id } }));
+    };
+    const last = Notifications.getLastNotificationResponse();
+    if (last) open(last.notification.request.content.data?.id);
+    const sub = Notifications.addNotificationResponseReceivedListener((r) => open(r.notification.request.content.data?.id));
+    return () => sub.remove();
+  }, [router]);
 
   if (!loaded) return null;
 
