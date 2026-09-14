@@ -1,0 +1,1482 @@
+[
+  {
+    "name": "Stories & Rhymes",
+    "provider": "Hackney Libraries",
+    "category": "library",
+    "venue": "Clissold House",
+    "address": "Clissold Park, Stoke Newington Church St, London",
+    "postcode": "N16 9HJ",
+    "lat": 51.561199,
+    "lng": -0.086247,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "10:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Moved here while Stoke Newington Library is closed for repairs. Free but booking essential on Eventbrite; places limited. All Hackney libraries closed Wed 23 Sep 2026.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "book",
+    "indoor": true,
+    "description": "Library staff run stories, songs and movement for babies and toddlers in the park's historic house.",
+    "url": "https://www.eventbrite.co.uk/e/stories-rhymes-at-clissold-house-tickets-852279509957",
+    "phone": "020 8356 5235",
+    "confidence": "medium"
+  },
+  {
+    "name": "Stories & Rhymes",
+    "provider": "Hackney Libraries",
+    "category": "library",
+    "venue": "Clapton Library",
+    "address": "Northwold Road, London",
+    "postcode": "E5 8RA",
+    "lat": 51.56263,
+    "lng": -0.060102,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Librarian-led interactive session with books and songs for babies, toddlers and their adults; just turn up.",
+    "url": "http://www.lovehackney.uk/clapton-library",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Stories & Rhymes",
+    "provider": "Hackney Libraries",
+    "category": "library",
+    "venue": "Dalston CLR James Library",
+    "address": "Dalston Square, London",
+    "postcode": "E8 3BQ",
+    "lat": 51.545726,
+    "lng": -0.073829,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": "12:00"
+      },
+      {
+        "day": "Sat",
+        "start": "11:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Interactive books-and-songs session for babies and toddlers; one of the few with a Saturday slot.",
+    "url": "http://www.lovehackney.uk/dalston-clr-james-library",
+    "phone": "020 8356 8935",
+    "confidence": "high"
+  },
+  {
+    "name": "Stories & Rhymes",
+    "provider": "Hackney Libraries",
+    "category": "library",
+    "venue": "Hackney Central Library",
+    "address": "1 Reading Lane, London",
+    "postcode": "E8 1GQ",
+    "lat": 51.544479,
+    "lng": -0.05607,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "11:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "Library reopened Feb 2026 after refurbishment.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Books and songs with librarians in the newly refurbished library with its Story Tree children's area.",
+    "url": "https://www.lovehackney.uk/hackney-central-library",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Stories & Rhymes",
+    "provider": "Hackney Libraries",
+    "category": "library",
+    "venue": "Homerton Library",
+    "address": "Homerton High Street, London",
+    "postcode": "E9 6AS",
+    "lat": 51.548897,
+    "lng": -0.04055,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "11:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Fun, interactive session with books and songs for babies, toddlers and their adults.",
+    "url": "https://www.lovehackney.uk/homerton-library",
+    "phone": "020 8356 1066",
+    "confidence": "high"
+  },
+  {
+    "name": "Stories & Rhymes",
+    "provider": "Hackney Libraries",
+    "category": "library",
+    "venue": "Shoreditch Library",
+    "address": "80 Hoxton Street, London",
+    "postcode": "N1 6LP",
+    "lat": 51.530297,
+    "lng": -0.079974,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "11:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Weekly librarian-led rhymes and stories for babies and toddlers; no booking.",
+    "url": "https://www.lovehackney.uk/shoreditch-library",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Stories & Rhymes",
+    "provider": "Hackney Libraries",
+    "category": "library",
+    "venue": "Stamford Hill Library",
+    "address": "Portland Avenue, London",
+    "postcode": "N16 6SB",
+    "lat": 51.570369,
+    "lng": -0.072414,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "14:00",
+        "end": "15:00"
+      }
+    ],
+    "schedule_note": "First floor, lift access. Closed Wed 23 Sep 2026 (staff training).",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Afternoon songs-and-stories session for babies and toddlers; handy for nap-time schedules.",
+    "url": "https://www.lovehackney.uk/stamford-hill-library",
+    "phone": "020 8356 1708",
+    "confidence": "high"
+  },
+  {
+    "name": "Stories & Rhymes",
+    "provider": "Hackney Libraries",
+    "category": "library",
+    "venue": "Woodberry Down Library",
+    "address": "Redmond Community Centre, Kayani Avenue, London",
+    "postcode": "N4 2HF",
+    "lat": 51.570538,
+    "lng": -0.091498,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "14:15",
+        "end": "15:00"
+      },
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": "11:45"
+      }
+    ],
+    "schedule_note": "",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Volunteer-led books and songs for babies and toddlers; ground-floor access.",
+    "url": "https://www.lovehackney.uk/woodberry-down-library",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "One O'Clock Club Stay & Play",
+    "provider": "Woodberry Down Children & Family Hub",
+    "category": "outdoor",
+    "venue": "Clissold One O'Clock Club",
+    "address": "Clissold Park, Stoke Newington Church St, London",
+    "postcode": "N16 9HJ",
+    "lat": 51.561199,
+    "lng": -0.086247,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "13:30",
+        "end": "16:00"
+      },
+      {
+        "day": "Tue",
+        "start": "10:00",
+        "end": "16:00"
+      },
+      {
+        "day": "Wed",
+        "start": "13:30",
+        "end": "16:00"
+      },
+      {
+        "day": "Thu",
+        "start": "13:30",
+        "end": "16:00"
+      },
+      {
+        "day": "Fri",
+        "start": "10:00",
+        "end": "16:00"
+      }
+    ],
+    "schedule_note": "Hours from hub website; older timetables show 1-3/4pm afternoons. Tue/Fri mornings host the groups below.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": false,
+    "description": "Free under-5s play hut in Clissold Park with messy play, outdoor play, arts & crafts and music.",
+    "url": "https://www.woodberrydowncfhub.hackney.gov.uk/clissold-park-one-oclock-club",
+    "phone": "020 8815 3270",
+    "confidence": "high"
+  },
+  {
+    "name": "Under 1's Group with Infant Feeding Support",
+    "provider": "Woodberry Down Children & Family Hub",
+    "category": "support",
+    "venue": "Clissold One O'Clock Club",
+    "address": "Clissold Park, Stoke Newington Church St, London",
+    "postcode": "N16 9HJ",
+    "lat": 51.561199,
+    "lng": -0.086247,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "10:00",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "From April–June 2026 timetable; autumn timetable not found online, call to confirm.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Baby group at the park's One O'Clock Club with infant feeding support on hand.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Hillside,%20Oldhill%20and%20Woodberry%20Down%20Timetable.pdf",
+    "phone": "020 8815 3270",
+    "confidence": "medium"
+  },
+  {
+    "name": "Rhyme Time",
+    "provider": "Woodberry Down Children & Family Hub",
+    "category": "music",
+    "venue": "Clissold One O'Clock Club",
+    "address": "Clissold Park, Stoke Newington Church St, London",
+    "postcode": "N16 9HJ",
+    "lat": 51.561199,
+    "lng": -0.086247,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "10:00",
+        "end": "11:15"
+      }
+    ],
+    "schedule_note": "From April–June 2026 timetable; confirm for autumn.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Friday morning rhymes and songs for under-5s at the One O'Clock Club.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Hillside,%20Oldhill%20and%20Woodberry%20Down%20Timetable.pdf",
+    "phone": "020 8815 3270",
+    "confidence": "medium"
+  },
+  {
+    "name": "Under 1's Group",
+    "provider": "Woodberry Down Children & Family Hub",
+    "category": "stayplay",
+    "venue": "Woodberry Down Children & Family Hub",
+    "address": "Spring Park Drive, London",
+    "postcode": "N4 2NP",
+    "lat": 51.568533,
+    "lng": -0.093732,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Term time only. From April–June 2026 timetable (includes 'Mini Movers'); confirm for autumn.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Weekly baby group at the hub by Woodberry Wetlands, sometimes with Mini Movers movement play.",
+    "url": "https://www.woodberrydowncfhub.hackney.gov.uk/",
+    "phone": "020 8815 3270",
+    "confidence": "medium"
+  },
+  {
+    "name": "Infant Stay & Play",
+    "provider": "Woodberry Down Children & Family Hub",
+    "category": "stayplay",
+    "venue": "Woodberry Down Children & Family Hub",
+    "address": "Spring Park Drive, London",
+    "postcode": "N4 2NP",
+    "lat": 51.568533,
+    "lng": -0.093732,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "From April–June 2026 timetable; confirm for autumn.",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Stay and play aimed at the youngest children, with toys and space to meet other parents.",
+    "url": "https://www.woodberrydowncfhub.hackney.gov.uk/",
+    "phone": "020 8815 3270",
+    "confidence": "medium"
+  },
+  {
+    "name": "Steps into Music (Under 2s)",
+    "provider": "Woodberry Down Children & Family Hub",
+    "category": "music",
+    "venue": "Woodberry Down Children & Family Hub",
+    "address": "Spring Park Drive, London",
+    "postcode": "N4 2NP",
+    "lat": 51.568533,
+    "lng": -0.093732,
+    "sessions": [
+      {
+        "day": "Sat",
+        "start": "10:00",
+        "end": "10:45"
+      }
+    ],
+    "schedule_note": "Term time only. From April–June 2026 timetable; confirm for autumn.",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Saturday music session for under-2s, a rare free weekend option.",
+    "url": "https://www.woodberrydowncfhub.hackney.gov.uk/",
+    "phone": "020 8815 3270",
+    "confidence": "medium"
+  },
+  {
+    "name": "Baby Yoga Drop-in",
+    "provider": "Woodberry Down Children & Family Hub",
+    "category": "movement",
+    "venue": "Hillside Children's Centre",
+    "address": "1 Leatherhead Close, Holmleigh Road, London",
+    "postcode": "N16 5QR",
+    "lat": 51.568734,
+    "lng": -0.07521,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "10:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "From April–June 2026 timetable; confirm for autumn.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Gentle baby yoga with Karen at the Hillside children's centre off Stamford Hill.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Hillside,%20Oldhill%20and%20Woodberry%20Down%20Timetable.pdf",
+    "phone": "020 8800 7325",
+    "confidence": "medium"
+  },
+  {
+    "name": "Tiny Tots Adventure",
+    "provider": "Ihsan Children's Centre",
+    "category": "stayplay",
+    "venue": "Ihsan Children's Centre",
+    "address": "66-68 Cazenove Road, Stoke Newington, London",
+    "postcode": "N16 6AA",
+    "lat": 51.565079,
+    "lng": -0.06841,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "11:15"
+      }
+    ],
+    "schedule_note": "From an undated Hackney 'Area A&B' timetable (likely 2023-24); may have changed. Call first.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Play session for 0-18 month 'mini adventurers'; the centre also runs stay & play with story and rhyme times in other languages.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Fernbank,%20Ihsan,%20Lubavitch%20and%20Tyssen%20Timetable.pdf",
+    "phone": "020 8806 1147",
+    "confidence": "low"
+  },
+  {
+    "name": "Baby Club",
+    "provider": "Lubavitch Children's Centre",
+    "category": "stayplay",
+    "venue": "Lubavitch Children's Centre",
+    "address": "1 Northfield Road, London",
+    "postcode": "N16 5RL",
+    "lat": 51.572435,
+    "lng": -0.075516,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "11:00"
+      }
+    ],
+    "schedule_note": "From an undated Hackney timetable (likely 2023-24); centre asks you to call to book all sessions.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "book",
+    "indoor": true,
+    "description": "Baby club for 0-18 months; the centre also lists baby massage (0-9 months) on Mondays.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Fernbank,%20Ihsan,%20Lubavitch%20and%20Tyssen%20Timetable.pdf",
+    "phone": "020 8809 9050",
+    "confidence": "low"
+  },
+  {
+    "name": "Minik Kardes Stay & Play",
+    "provider": "Minik Kardes",
+    "category": "stayplay",
+    "venue": "Linden Children & Family Hub",
+    "address": "86-92 Rectory Road, London",
+    "postcode": "N16 7SH",
+    "lat": 51.558626,
+    "lng": -0.069231,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "10:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "Term time only, from 11 Sep 2026. Turkish-speaking practitioners; all welcome.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Friday stay and play run by Turkish-speaking early years staff at the Linden hub near Rectory Road.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/London%20Fields%20and%20Shoreditch%20Park%20Timetable.pdf",
+    "phone": "020 7923 7226",
+    "confidence": "medium"
+  },
+  {
+    "name": "Baby Club",
+    "provider": "Linden Children & Family Hub",
+    "category": "stayplay",
+    "venue": "Linden Children & Family Hub",
+    "address": "86-92 Rectory Road, London",
+    "postcode": "N16 7SH",
+    "lat": 51.558626,
+    "lng": -0.069231,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "11:00"
+      }
+    ],
+    "schedule_note": "Only published timetable is Jan–Mar 2025; the hub also listed Rhyme Time stay & play (12-24m) Mon 1-2.30pm and NCT feeding drop-in Fri 1-2.30pm. Call to confirm.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Baby club for 0-12 months at the Hackney Downs & Clissold Park area hub.",
+    "url": "https://www.lindencfhub.hackney.gov.uk/",
+    "phone": "020 7254 9939",
+    "confidence": "low"
+  },
+  {
+    "name": "Steps into Music (0-18 months)",
+    "provider": "Ann Tayler Children & Family Hub",
+    "category": "music",
+    "venue": "Ann Tayler Children & Family Hub",
+    "address": "1-13 Triangle Road, London",
+    "postcode": "E8 3RP",
+    "lat": 51.538161,
+    "lng": -0.05843,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "10:30"
+      }
+    ],
+    "schedule_note": "7 Sep–7 Dec 2026. Hackney residents only; register at the hub first. Sep–Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Short, lively music session for babies before the older-child slots.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Ann%20Tayler%20Timetable.pdf",
+    "phone": "020 7275 6020",
+    "confidence": "high"
+  },
+  {
+    "name": "Rollers and Crawlers",
+    "provider": "Ann Tayler Children & Family Hub",
+    "category": "stayplay",
+    "venue": "Ann Tayler Children & Family Hub",
+    "address": "1-13 Triangle Road, London",
+    "postcode": "E8 3RP",
+    "lat": 51.538161,
+    "lng": -0.05843,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "10:30",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "Hackney residents only; register at the hub first. Sep–Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Drop-in play for parents with babies under one, off Mare Street.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Ann%20Tayler%20Timetable.pdf",
+    "phone": "020 7275 6020",
+    "confidence": "high"
+  },
+  {
+    "name": "Baby Sensory",
+    "provider": "Ann Tayler Children & Family Hub",
+    "category": "sensory",
+    "venue": "Ann Tayler Children & Family Hub",
+    "address": "1-13 Triangle Road, London",
+    "postcode": "E8 3RP",
+    "lat": 51.538161,
+    "lng": -0.05843,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "13:45",
+        "end": "14:30"
+      }
+    ],
+    "schedule_note": "9 Sep–23 Dec 2026. Hackney residents only; register at the hub first. Sep–Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Sensory play session for babies with lights, textures and sounds.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Ann%20Tayler%20Timetable.pdf",
+    "phone": "020 7275 6020",
+    "confidence": "medium"
+  },
+  {
+    "name": "NCT Infant Feeding Peer Support",
+    "provider": "NCT / Ann Tayler Children & Family Hub",
+    "category": "support",
+    "venue": "Ann Tayler Children & Family Hub",
+    "address": "1-13 Triangle Road, London",
+    "postcode": "E8 3RP",
+    "lat": 51.538161,
+    "lng": -0.05843,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "13:00",
+        "end": "14:30"
+      }
+    ],
+    "schedule_note": "Hackney residents only; register at the hub first. Sep–Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Relaxed feeding support group with NCT peer supporters; bring your baby.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Ann%20Tayler%20Timetable.pdf",
+    "phone": "020 7275 6020",
+    "confidence": "high"
+  },
+  {
+    "name": "Steps into Music (0-18 months)",
+    "provider": "Sebright Children's Centre",
+    "category": "music",
+    "venue": "Sebright Children's Centre",
+    "address": "Haggerston Park, Queensbridge Road, London",
+    "postcode": "E2 8NP",
+    "lat": 51.531615,
+    "lng": -0.069912,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "10:00",
+        "end": "10:45"
+      }
+    ],
+    "schedule_note": "11 Sep–11 Dec 2026. Hackney residents only; register at the hub first. Sep–Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Baby music session at the children's centre inside Haggerston Park.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Ann%20Tayler%20Timetable.pdf",
+    "phone": "0208 106 5613",
+    "confidence": "high"
+  },
+  {
+    "name": "Baby Club (pre-walkers)",
+    "provider": "Comet Children's Centre",
+    "category": "sensory",
+    "venue": "Comet Children's Centre",
+    "address": "20 Halcomb Street, London",
+    "postcode": "N1 5RF",
+    "lat": 51.535902,
+    "lng": -0.08069,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "09:15",
+        "end": "11:15"
+      }
+    ],
+    "schedule_note": "Sep–Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Calm sensory experience for babies who aren't walking yet.",
+    "url": "https://www.cometnurseryandcc.co.uk/web/",
+    "phone": "020 7749 9850",
+    "confidence": "high"
+  },
+  {
+    "name": "Baby Club (pre-walkers)",
+    "provider": "Comet@TF Children's Centre",
+    "category": "sensory",
+    "venue": "Comet@TF Children's Centre",
+    "address": "Cropley Street, London",
+    "postcode": "N1 7HT",
+    "lat": 51.532804,
+    "lng": -0.090365,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Sep–Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Calm sensory session for pre-walkers near the Regent's Canal in Hoxton.",
+    "url": "https://www.cometnurseryandcc.co.uk/web/",
+    "phone": "07766 547679",
+    "confidence": "high"
+  },
+  {
+    "name": "Tiny Tots Soft Play",
+    "provider": "Comet@TF Children's Centre",
+    "category": "softplay",
+    "venue": "Comet@TF Children's Centre",
+    "address": "Cropley Street, London",
+    "postcode": "N1 7HT",
+    "lat": 51.532804,
+    "lng": -0.090365,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "09:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Sep–Dec 2026 timetable; separate 1-3pm slot is for older children.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Safe soft play session just for babies and young toddlers.",
+    "url": "https://www.cometnurseryandcc.co.uk/web/",
+    "phone": "07766 547679",
+    "confidence": "high"
+  },
+  {
+    "name": "Sing & Sign Drop-in",
+    "provider": "Mapledene & Queensbridge Children's Centre",
+    "category": "music",
+    "venue": "Mapledene & Queensbridge Children's Centre",
+    "address": "54 Mapledene Road, London",
+    "postcode": "E8 3LE",
+    "lat": 51.541326,
+    "lng": -0.070439,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "10:00",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Sep–Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Songs with simple baby signing for under-18-month-olds, near London Fields.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Ann%20Tayler%20Timetable.pdf",
+    "phone": "020 7249 8139",
+    "confidence": "high"
+  },
+  {
+    "name": "Wigglers & Jigglers",
+    "provider": "Daubeney Children & Family Hub",
+    "category": "stayplay",
+    "venue": "Daubeney Children & Family Hub",
+    "address": "103 Daubeney Road, London",
+    "postcode": "E5 0EG",
+    "lat": 51.552359,
+    "lng": -0.037848,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "10:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "From 8 Sep. Term time only, 2 Sep–16 Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Gentle play and socialising for babies under one.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Well%20Street%20Common%20and%20Hackney%20Marshes%20Timetable.pdf",
+    "phone": "020 8525 7040",
+    "confidence": "high"
+  },
+  {
+    "name": "Baby Bells with Hartbeeps",
+    "provider": "Daubeney Children & Family Hub",
+    "category": "sensory",
+    "venue": "Daubeney Children & Family Hub",
+    "address": "103 Daubeney Road, London",
+    "postcode": "E5 0EG",
+    "lat": 51.552359,
+    "lng": -0.037848,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "13:00",
+        "end": "13:45"
+      }
+    ],
+    "schedule_note": "From 10 Sep. Term time only, 2 Sep–16 Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 9,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Calm, musical sensory session for babies who aren't crawling yet.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Well%20Street%20Common%20and%20Hackney%20Marshes%20Timetable.pdf",
+    "phone": "020 8525 7040",
+    "confidence": "high"
+  },
+  {
+    "name": "Music with Creative Futures",
+    "provider": "Daubeney Children & Family Hub",
+    "category": "music",
+    "venue": "Daubeney Children & Family Hub",
+    "address": "103 Daubeney Road, London",
+    "postcode": "E5 0EG",
+    "lat": 51.552359,
+    "lng": -0.037848,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "13:00",
+        "end": "13:45"
+      }
+    ],
+    "schedule_note": "From 7 Sep; 0-12 months slot (1-4 years at 2pm). Term time only, 2 Sep–16 Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Live music session for babies under one.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Well%20Street%20Common%20and%20Hackney%20Marshes%20Timetable.pdf",
+    "phone": "020 8525 7040",
+    "confidence": "high"
+  },
+  {
+    "name": "Chill & Chat Infant Feeding Peer Support",
+    "provider": "Daubeney Children & Family Hub",
+    "category": "support",
+    "venue": "Daubeney Children & Family Hub",
+    "address": "103 Daubeney Road, London",
+    "postcode": "E5 0EG",
+    "lat": 51.552359,
+    "lng": -0.037848,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Term time only, 2 Sep–16 Dec 2026 timetable.",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Informal chat with feeding peer supporters and other new parents.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Well%20Street%20Common%20and%20Hackney%20Marshes%20Timetable.pdf",
+    "phone": "020 8525 7040",
+    "confidence": "high"
+  },
+  {
+    "name": "Tiny Tots & Tots Together",
+    "provider": "Wentworth Children's Centre",
+    "category": "stayplay",
+    "venue": "Wentworth Nursery School & Children's Centre",
+    "address": "Granard House, Bradstock Road, London",
+    "postcode": "E9 5BN",
+    "lat": 51.544419,
+    "lng": -0.041103,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "11:30"
+      },
+      {
+        "day": "Thu",
+        "start": "09:30",
+        "end": "10:30"
+      }
+    ],
+    "schedule_note": "Term time only, 7 Sep–21 Dec 2026. Tue = Tots Together (0-24m); Thu = Tiny Tots (newborn to crawling). No Tue session 4 Nov.",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Two baby drop-ins near Victoria Park: a newborn-to-crawler session and an under-2s group.",
+    "url": "https://education.hackney.gov.uk/sites/default/files/document/Well%20Street%20Common%20and%20Hackney%20Marshes%20Timetable.pdf",
+    "phone": "020 8985 3491",
+    "confidence": "high"
+  },
+  {
+    "name": "Under 1s Stay & Play",
+    "provider": "Haringey Best Start Family Hubs",
+    "category": "stayplay",
+    "venue": "Triangle Family Hub",
+    "address": "91-93 St Ann's Road, London",
+    "postcode": "N15 6NU",
+    "lat": 51.577882,
+    "lng": -0.081997,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "14:00",
+        "end": "15:30"
+      }
+    ],
+    "schedule_note": "Dates listed to Nov 2026.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Parent-led stay and play: use the hub's space and toys with your baby and meet other families.",
+    "url": "https://haringey.gov.uk/events/under-1s-drop-parent-led-stay-play-triangle-family-hub",
+    "phone": "020 8802 8782",
+    "confidence": "high"
+  },
+  {
+    "name": "Under 2s Stay & Play",
+    "provider": "Haringey Best Start Family Hubs",
+    "category": "stayplay",
+    "venue": "Triangle Family Hub",
+    "address": "91-93 St Ann's Road, London",
+    "postcode": "N15 6NU",
+    "lat": 51.577882,
+    "lng": -0.081997,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "10:00",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Call to book. Runs to at least Nov 2026.",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "book",
+    "indoor": true,
+    "description": "Interactive parent-and-child play session with activities and resources.",
+    "url": "https://haringey.gov.uk/events/under-2s-stay-play-triangle-family-hub",
+    "phone": "020 8802 8782",
+    "confidence": "high"
+  },
+  {
+    "name": "Stay & Play (0-2 years)",
+    "provider": "Haringey Best Start Family Hubs",
+    "category": "sensory",
+    "venue": "Rising Green Family Hub",
+    "address": "Unit 2A, Lymington Avenue, Wood Green, London",
+    "postcode": "N22 6JA",
+    "lat": 51.593835,
+    "lng": -0.105797,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "13:30",
+        "end": "15:00"
+      }
+    ],
+    "schedule_note": "",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Sensory play session focused on early language and communication.",
+    "url": "https://www.haringey.gov.uk/events/stay-play-0-to-4-years-rising-green-family-hub",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Stay & Play Rhyme Time",
+    "provider": "Haringey Libraries",
+    "category": "library",
+    "venue": "Stroud Green & Harringay Library",
+    "address": "Quernmore Road, London",
+    "postcode": "N4 4QP",
+    "lat": 51.577357,
+    "lng": -0.106092,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "10:15",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Term time only. From a 2025 Haringey listing; unverified for autumn 2026.",
+    "age_min_months": 0,
+    "age_max_months": 48,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Rhyme time followed by play with toys in the children's library.",
+    "url": "https://haringey.events.mylibrary.digital/",
+    "phone": "",
+    "confidence": "low"
+  },
+  {
+    "name": "Baby Bounce",
+    "provider": "Islington Libraries",
+    "category": "library",
+    "venue": "Central Library",
+    "address": "2 Fieldway Crescent, Highbury, London",
+    "postcode": "N5 1PF",
+    "lat": 51.549236,
+    "lng": -0.10713,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "11:00",
+        "end": null
+      },
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": null
+      }
+    ],
+    "schedule_note": "Times from Islington directory search snippets (page blocks automated access); end time not listed.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Action rhymes and songs for babies up to about 18 months.",
+    "url": "https://findyour.islington.gov.uk/kb5/islington/directory/service.page?id=TypTJ80Yx4A",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Baby Bounce",
+    "provider": "Islington Libraries",
+    "category": "library",
+    "venue": "Mildmay Library",
+    "address": "21-23 Mildmay Park, London",
+    "postcode": "N1 4NA",
+    "lat": 51.548112,
+    "lng": -0.084431,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": null
+      }
+    ],
+    "schedule_note": "Times from Islington directory search snippets; end time not listed.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Song and rhyme session for babies near Newington Green.",
+    "url": "https://findyour.islington.gov.uk/kb5/islington/directory/service.page?id=qA5RASp-ffk",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Baby Bounce",
+    "provider": "Islington Libraries",
+    "category": "library",
+    "venue": "North Library",
+    "address": "Manor Gardens, London",
+    "postcode": "N7 6JX",
+    "lat": 51.560346,
+    "lng": -0.121932,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "11:00",
+        "end": null
+      }
+    ],
+    "schedule_note": "Times from Islington directory search snippets; end time not listed.",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Friday action rhymes for babies up to about 18 months.",
+    "url": "https://findyour.islington.gov.uk/kb5/islington/directory/service.page?id=LOvscdwbCHI",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Under 1s Stay & Play",
+    "provider": "Bright Start Islington / Minik Kardes",
+    "category": "stayplay",
+    "venue": "The Factory Children's Centre",
+    "address": "Minik Kardes @ The Factory Children's Centre, Islington, London",
+    "postcode": "N16 8NP",
+    "lat": 51.551921,
+    "lng": -0.083636,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "13:30",
+        "end": "15:00"
+      }
+    ],
+    "schedule_note": "From Bright Start summer term 2026 timetable (ended 17 Jul); autumn timetable not published online, so confirm.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Baby-only stay and play run with Minik Kardes, a short walk from Newington Green.",
+    "url": "https://www.islington.gov.uk/children-and-families/bright-start-islington-start-for-life-and-family-hubs",
+    "phone": "020 7527 8465",
+    "confidence": "low"
+  },
+  {
+    "name": "Under 1s Stay & Play",
+    "provider": "Bright Start Islington",
+    "category": "stayplay",
+    "venue": "Conewood Children's Centre",
+    "address": "Conewood Street, Highbury, London",
+    "postcode": "N5 1DL",
+    "lat": 51.558278,
+    "lng": -0.100161,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "10:00",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "From Bright Start summer term 2026 timetable (ended 17 Jul); autumn timetable not published online, so confirm.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Free drop-in play for babies with early years staff.",
+    "url": "https://www.islington.gov.uk/children-and-families/bright-start-islington-start-for-life-and-family-hubs",
+    "phone": "020 7527 8465",
+    "confidence": "low"
+  },
+  {
+    "name": "Under 1s Stay & Play",
+    "provider": "Bright Start Islington",
+    "category": "stayplay",
+    "venue": "New River Green Children's Centre (Family Hub Central)",
+    "address": "New River Green Children's Centre, Islington, London",
+    "postcode": "N1 2SX",
+    "lat": 51.545135,
+    "lng": -0.08995,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "13:30",
+        "end": "15:00"
+      }
+    ],
+    "schedule_note": "From Bright Start summer term 2026 timetable (ended 17 Jul); autumn timetable not published online, so confirm. Includes information and advice.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Baby stay and play at Islington's central family hub, with advice staff on hand.",
+    "url": "https://www.islington.gov.uk/children-and-families/bright-start-islington-start-for-life-and-family-hubs",
+    "phone": "020 7527 8465",
+    "confidence": "low"
+  },
+  {
+    "name": "Breastfeeding Support Group",
+    "provider": "Bright Start Islington",
+    "category": "support",
+    "venue": "New River Green Children's Centre (Family Hub Central)",
+    "address": "New River Green Children's Centre, Islington, London",
+    "postcode": "N1 2SX",
+    "lat": 51.545135,
+    "lng": -0.08995,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "13:30",
+        "end": "15:00"
+      }
+    ],
+    "schedule_note": "From Bright Start summer term 2026 timetable (ended 17 Jul); autumn timetable not published online, so confirm.",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "General feeding information, support and a chance to meet other breastfeeding mums.",
+    "url": "https://www.islington.gov.uk/children-and-families/bright-start-islington-start-for-life-and-family-hubs",
+    "phone": "020 3316 8439",
+    "confidence": "low"
+  },
+  {
+    "name": "Breastfeeding Support Group",
+    "provider": "Bright Start Islington",
+    "category": "support",
+    "venue": "Ambler Children's Centre",
+    "address": "Ambler Road, Finsbury Park, London",
+    "postcode": "N4 2QX",
+    "lat": 51.561714,
+    "lng": -0.101923,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "13:00",
+        "end": "14:30"
+      }
+    ],
+    "schedule_note": "From Bright Start summer term 2026 timetable (ended 17 Jul); autumn timetable not published online, so confirm.",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Friday feeding support group near Finsbury Park.",
+    "url": "https://www.islington.gov.uk/children-and-families/bright-start-islington-start-for-life-and-family-hubs",
+    "phone": "020 3316 8439",
+    "confidence": "low"
+  },
+  {
+    "name": "Under 1s Stay & Play",
+    "provider": "Bright Start Islington",
+    "category": "stayplay",
+    "venue": "Paradise Park Children's Centre",
+    "address": "164 Mackenzie Road, London",
+    "postcode": "N7 8SE",
+    "lat": 51.549322,
+    "lng": -0.111352,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "09:30",
+        "end": "11:00"
+      }
+    ],
+    "schedule_note": "Listed on Islington directory and summer 2026 timetable; places may be limited.",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Morning baby stay and play at a children's centre beside Paradise Park.",
+    "url": "https://www.islington.gov.uk/children-and-families/bright-start-islington-start-for-life-and-family-hubs",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "One O'Clock Club",
+    "provider": "Islington Council",
+    "category": "outdoor",
+    "venue": "Highbury Fields One O'Clock Club",
+    "address": "Highbury Fields (by the bandstand), London",
+    "postcode": "N5 1QL",
+    "lat": 51.550486,
+    "lng": -0.100471,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "13:00",
+        "end": "15:00"
+      },
+      {
+        "day": "Tue",
+        "start": "13:00",
+        "end": "15:00"
+      },
+      {
+        "day": "Wed",
+        "start": "13:00",
+        "end": "15:00"
+      },
+      {
+        "day": "Thu",
+        "start": "13:00",
+        "end": "15:00"
+      },
+      {
+        "day": "Fri",
+        "start": "13:00",
+        "end": "15:00"
+      }
+    ],
+    "schedule_note": "Hours from an older secondary source; postcode approximate (bandstand garden). Call before going.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": false,
+    "description": "Drop-in under-5s hub at the bandstand on Highbury Fields, beside the playground.",
+    "url": "https://www.islington.gov.uk/physical-activity-parks-and-trees/parks-and-green-space/your-local-parks/highbury-fields",
+    "phone": "020 7704 9337",
+    "confidence": "low"
+  },
+  {
+    "name": "Stories and Rhymes",
+    "provider": "Waltham Forest Libraries",
+    "category": "library",
+    "venue": "Walthamstow Library",
+    "address": "High Street, Walthamstow, London",
+    "postcode": "E17 7JN",
+    "lat": 51.584478,
+    "lng": -0.021034,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:30",
+        "end": "12:00"
+      },
+      {
+        "day": "Wed",
+        "start": "11:30",
+        "end": "12:00"
+      },
+      {
+        "day": "Fri",
+        "start": "11:30",
+        "end": "12:00"
+      },
+      {
+        "day": "Sat",
+        "start": "11:30",
+        "end": "12:00"
+      },
+      {
+        "day": "Sun",
+        "start": "11:30",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "Best Start in Life session; listing says ongoing from 16 Sep 2026.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Singalong rhymes with speech-and-language tips; runs at weekends too.",
+    "url": "https://www.walthamforest.gov.uk/events/stories-and-rhymes-walthamstow-library",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Stories and Rhymes",
+    "provider": "Waltham Forest Libraries",
+    "category": "library",
+    "venue": "Lea Bridge Library",
+    "address": "Lea Bridge Road, London",
+    "postcode": "E10 7HU",
+    "lat": 51.570502,
+    "lng": -0.024151,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "11:00",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Book on Eventbrite or just drop in.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Nursery rhymes and movement with speech and language tips.",
+    "url": "https://www.walthamforest.gov.uk/events/stories-and-rhymes-lea-bridge-library",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Stories and Rhymes",
+    "provider": "Waltham Forest Libraries",
+    "category": "library",
+    "venue": "Leyton Library",
+    "address": "High Road, Leyton, London",
+    "postcode": "E10 5QH",
+    "lat": 51.558517,
+    "lng": -0.007243,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Every Monday from 21 Sep 2026; booking required on Eventbrite.",
+    "age_min_months": 0,
+    "age_max_months": 60,
+    "price": "Free",
+    "free": true,
+    "booking": "book",
+    "indoor": true,
+    "description": "Favourite nursery songs plus speech and language tips.",
+    "url": "https://www.walthamforest.gov.uk/events/stories-and-rhymes-leyton-library",
+    "phone": "",
+    "confidence": "high"
+  }
+]
