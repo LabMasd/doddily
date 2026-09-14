@@ -24,8 +24,10 @@ const UK_COUNTRIES = new Set(['England', 'Scotland', 'Wales', 'Northern Ireland'
 
 // Brands whose official finder refuses this UA (checked once per run, never bypassed),
 // or which are otherwise out of reach. Kept here so re-runs notice if that changes.
+// Monkey Music: www.monkeymusic.co.uk area pages are crawlable (robots allow), but the class
+// finder / booking host wwwapi.monkeymusic.co.uk is "Disallow: /" - never fetched, never linked as data source.
+// Rhythm Time: its finder API (api.uk.prod.franscape.services) is "Disallow: /" - not used.
 const BLOCKED_PROBES = [
-  { brand: 'Monkey Music', url: 'https://www.monkeymusic.co.uk/find-a-class' },
   { brand: 'Music Bugs', url: 'https://www.musicbugs.co.uk/' },
   { brand: 'Boogie Mites', url: 'https://www.boogiemites.co.uk/' },
   { brand: 'Hartbeeps', url: 'https://www.hartbeeps.com/' },
@@ -169,7 +171,10 @@ function toText(html) {
 const PC_RE = /\b([A-Z]{1,2}\d[A-Z\d]?)\s*(\d[A-Z]{2})\b/i;
 function normPc(s) {
   const m = String(s || '').match(PC_RE);
-  return m ? `${m[1]} ${m[2]}`.toUpperCase() : null;
+  if (!m) return null;
+  // common typo: zero for letter O in the area part ("Y08" -> "YO8")
+  const out = m[1].toUpperCase().replace(/^([A-Z])0(\d)/, '$1O$2');
+  return `${out} ${m[2].toUpperCase()}`;
 }
 const titleCase = (s) => s.replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()).trim();
 
@@ -264,6 +269,7 @@ function dedupeSessions(list) {
 // ---------------------------------------------------------------- item builder
 const DESCRIPTIONS = {
   'Jo Jingles': 'Music, singing and movement classes for young children, run in age-based groups.',
+  'Monkey Music': 'Age-staged weekly music classes with songs, movement and percussion for babies and toddlers with their carers.',
   'Moo Music': 'Weekly sing-along music sessions with original songs, percussion and movement for young children.',
   'Mini Mozart': 'Nursery rhymes and classical music classes led by live musicians, with separate age groups.',
   'Musical Bumps': 'Songs, rhymes and percussion play in small music groups for babies and young children with their carers.',
@@ -332,6 +338,9 @@ async function joJingles() {
   for (const r of byClass.values()) {
     const ages = jjAges(r.title, r.ages);
     if (ages.min > 18) continue;
+    if (/@home|online/i.test(r.title) || /summer sessions/i.test(r.location)) continue; // online / holiday placeholders
+    if ((r.address.match(new RegExp(PC_RE.source, 'gi')) || []).length > 1) continue; // multi-venue placeholder rows
+    if (/£0(\.00)?\b/.test(r.price)) r.price = '';
     const [start, end] = (r.time.match(/(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/) || []).slice(1).map((x) => x && x.padStart(5, '0'));
     const day = dayOf(r.day);
     const address = r.address.replace(/,\s*uk\s*,/i, ',').replace(/\s+,/g, ',');
@@ -369,6 +378,63 @@ function jjAges(title, queried) {
   if (queried.has(0)) return { min: 3, max: 12 };
   if (queried.has(1)) return { min: 12, max: 24 };
   return { min: 24, max: 84 };
+}
+
+// ---------------------------------------------------------------- Monkey Music
+async function monkeyMusic() {
+  const list = await get('https://www.monkeymusic.co.uk/franchise-list');
+  if (!list) return [];
+  const areas = [...new Set([...list.matchAll(/href="(\/area\/[a-z0-9-]+)"/g)].map((m) => 'https://www.monkeymusic.co.uk' + m[1]))];
+  const byKey = new Map();
+  for (const url of take(areas)) {
+    const html = await get(url); // robots on www allow /area/
+    if (!html) continue;
+    const tt = html.split('<div id="timetable">')[1];
+    if (!tt) continue;
+    const title = clean(html.match(/<title>([\s\S]*?)<\/title>/)?.[1]).split('|')[0].trim();
+    const area = title.replace(/monkey music/gi, '').replace(/^[\s\-–|]+|[\s\-–|]+$/g, '').trim() || titleCase(url.split('/').pop());
+    for (const dayBox of tt.split('class="daybox"').slice(1)) {
+      const day = dayOf(clean(dayBox.match(/<h3>([\s\S]*?)<\/h3>/)?.[1]));
+      for (const venueBox of dayBox.split('class="venuebox"').slice(1)) {
+        const address = clean(venueBox.match(/<h4>([\s\S]*?)<\/h4>/)?.[1]);
+        const postcode = normPc(address);
+        for (const row of venueBox.split('class="classrow"').slice(1)) {
+          const time = clean(row.match(/class="classtime">([\s\S]*?)<\/div>/)?.[1]);
+          const details = row.match(/class="classdetails">([\s\S]*?)<\/div>/)?.[1] || '';
+          const cls = clean(details.match(/<strong>([\s\S]*?)<\/strong>/)?.[1]);
+          const label = clean(details.replace(/<strong>[\s\S]*?<\/strong>/, ''));
+          let ages;
+          if (/rock.?n.?roll/i.test(cls)) ages = [3, 12];
+          else if (/heigh.?ho/i.test(cls)) ages = [12, 24];
+          else {
+            const fm = label.match(/from\s+(\d+)\s*months/i);
+            if (fm && Number(fm[1]) <= 18) ages = [Number(fm[1]), 48];
+            else continue; // Jiggety-Jig (2-3y), Ding-Dong (3-4y) etc.
+          }
+          const tm = time.match(/(\d{1,2})[:.](\d{2})\s*(am|pm)/i);
+          const key = `${cls}|${address}`;
+          const rec = byKey.get(key) || {
+            brand: 'Monkey Music',
+            name: `Monkey Music ${cls}`,
+            provider: `Monkey Music ${area}`,
+            venue: address.split(',')[0].trim(),
+            address,
+            postcode,
+            sessions: [],
+            schedule_note: `${label ? `${label}; ` : ''}term-time weekly class, first class free`,
+            age_min_months: ages[0],
+            age_max_months: ages[1],
+            booking: 'term',
+            url,
+            source: 'monkeymusic.co.uk',
+          };
+          if (day && tm) rec.sessions.push({ day, start: to24(tm[1], tm[2], tm[3]), end: null });
+          byKey.set(key, rec);
+        }
+      }
+    }
+  }
+  return [...byKey.values()].map(item);
 }
 
 // ---------------------------------------------------------------- Moo Music
@@ -473,7 +539,8 @@ async function musicalBumps() {
     const html = await get(url);
     if (!html) continue;
     const title = clean(html.match(/<title>([\s\S]*?)<\/title>/)?.[1]);
-    const area = title.replace(/\s*-\s*Musical Bumps\s*$/i, '').replace(/^Musical Bumps\s*/i, '').replace(/\s*-.*$/, '').trim();
+    let area = title.replace(/\s*-\s*Musical Bumps\s*$/i, '').replace(/^Musical Bumps\s*/i, '').replace(/\s*-.*$/, '').trim();
+    if (!area || /^classes?$/i.test(area)) area = titleCase(new URL(url).pathname.split('/').filter(Boolean).pop());
     const text = toText(html);
     const years = [...text.matchAll(/\b(20[12]\d)\b/g)].map((m) => Number(m[1])).filter((y) => y <= 2030);
     const stale = years.length && Math.max(...years) < 2025;
@@ -676,7 +743,8 @@ async function jiggyWrigglers() {
     if (!html) continue;
     const lines = toText(html).split('\n').map((s) => s.trim()).filter(Boolean);
     const pageTitle = clean(html.match(/<title>([\s\S]*?)<\/title>/)?.[1]).split('|')[0].trim();
-    const area = pageTitle && !/locations/i.test(pageTitle) ? pageTitle : titleCase(new URL(url).pathname.split('/').filter(Boolean).pop());
+    const titleArea = pageTitle.replace(/jiggy wrigglers/gi, '').replace(/^[\s\-–|]+|[\s\-–|]+$/g, '').trim();
+    const area = titleArea && !/locations/i.test(titleArea) ? titleArea : titleCase(new URL(url).pathname.split('/').filter(Boolean).pop());
     const programmes = [...new Set(lines.filter((l) => /^Jiggy (Babies|Tots|Mixed)\b/i.test(l) && l.length > 12 && l.length < 80))];
     const has = (re) => programmes.some((p) => re.test(p));
     if (!programmes.length) continue;
@@ -689,6 +757,7 @@ async function jiggyWrigglers() {
       if (!m) continue;
       const pc = normPc(m[2]);
       if (!pc || seen.has(pc) || /email|contact|phone/i.test(m[1])) continue;
+      if (/care home|nursing|retirement|residential/i.test(l)) continue; // Jiggy Vintage (care-home) sessions, not baby classes
       seen.add(pc);
       out.push(item({
         brand: 'Jiggy Wrigglers',
@@ -752,6 +821,7 @@ async function geocode(items) {
 // ---------------------------------------------------------------- main
 const BRANDS = {
   jojingles: joJingles,
+  monkey: monkeyMusic,
   moo: mooMusic,
   minimozart: miniMozart,
   musicalbumps: musicalBumps,
