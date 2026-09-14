@@ -367,7 +367,9 @@ async function light() {
     const dayOnly = [...new Set(starts.filter((s) => s.length === 11).map((s) => s.slice(0, 10)))];
     const p = pattern(clean.length ? clean : []);
     for (const d of dayOnly) if (!p.sessions.some((x) => x.day === dow(d))) p.sessions.push({ day: dow(d), start: null, end: null });
-    const addr = L.find((l) => PC.test(l) && l.length < 120) || "";
+    let addr = L.find((l) => PC.test(l) && l.length < 120) || "";
+    // Redhill publishes RH1 1RA, which is in neither postcodes.io register; OpenStreetMap places The Light at RH1 1RU.
+    if (sub === "redhill") addr = addr.replace("RH1 1RA", "RH1 1RU");
     items.push(item({
       name: "Baby Friendly Screenings", provider: "The Light", venue: `The Light ${town}`, address: addr, postcode: (addr.match(PC) || [])[1] || "", pattern: p,
       sessions: p.sessions, schedule_note: scheduleNote(p, "Weekly baby friendly screening"),
