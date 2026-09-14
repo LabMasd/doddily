@@ -52,3 +52,9 @@ No local model or API key. In Claude Code:
   - `node scripts/merge.mjs` builds `data/tiles/`.
   - `tier`: timetable = day and time known; venue = runs there, times on the provider's site; place = open hours.
 - **Xcode 26.3 patch:** `app/patches/expo-modules-jsi+57.1.0.patch` removes `SWIFT_RETURNS_RETAINED` from two `RuntimeScheduler` constructors, which the Xcode 26.3 compiler rejects. It re-applies on `npm install` via `postinstall: patch-package`. Delete the patch once Expo ships a fix.
+- **Reminders:** `app/src/lib/reminders.ts`. The activity page's "Remind me" schedules a local notification an hour before, or 15 minutes if the class is sooner. Tapping it opens the class.
+- **Prebuilt places:** `.github/workflows/places.yml` runs monthly on GitHub (it can also be started by hand). It downloads the Geofabrik UK extract and filters it with osmium, then `scripts/build-places.mjs` writes `data/places/` tiles. The app and web load those and fall back to live Overpass if the tiles are missing.
+- **Cloud builds (EAS):** the project is `@labmasd/little-days`.
+  - Development simulator build: `cd app && npx eas-cli build --profile development --platform ios`
+  - Run it: install the build on the simulator, then `npx expo start --dev-client`.
+- **Store drafts:** `docs/store-listing.md` (App Store and Play text, privacy labels, screenshots list, privacy policy draft) and `docs/partner-emails.md` (Babyballet, Happity).
