@@ -356,7 +356,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Parent and baby screenings, not every week at every cinema; listings Wed 16 Sep–Wed 16 Sep show Wed; some days seen only once so far; film changes each week.",
+  "schedule_note": "Parent and baby screenings, not every week at every cinema; only listing so far is Wed 16 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 18,
   "price": "Adult ticket; see booking page",
@@ -416,7 +416,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Parent and baby screenings, not every week at every cinema; listings Mon 21 Sep–Mon 21 Sep show Mon; some days seen only once so far; film changes each week.",
+  "schedule_note": "Parent and baby screenings, not every week at every cinema; only listing so far is Mon 21 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 18,
   "price": "Adult ticket; see booking page",
@@ -536,7 +536,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly baby-friendly screening; listings Thu 17 Sep–Thu 17 Sep show Thu; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly baby-friendly screening; only listing so far is Thu 17 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Adult ticket; babies under 12 months free",
@@ -626,7 +626,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly baby-friendly screening; listings Fri 18 Sep–Fri 18 Sep show Fri; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly baby-friendly screening; only listing so far is Fri 18 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Adult ticket; babies under 12 months free",
@@ -751,7 +751,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly baby-friendly screening; listings Mon 21 Sep–Mon 21 Sep show Mon; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly baby-friendly screening; only listing so far is Mon 21 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Adult ticket; babies under 12 months free",
@@ -2871,7 +2871,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 23 Sep–Wed 23 Sep show Wed; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); only listing so far is Wed 23 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Adult ticket price varies by cinema; see booking page",
@@ -3021,7 +3021,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Thu 17 Sep–Thu 17 Sep show Thu; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); only listing so far is Thu 17 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Adult ticket price varies by cinema; see booking page",
@@ -3271,7 +3271,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Mon 21 Sep–Mon 21 Sep show Mon; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); only listing so far is Mon 21 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Adult ticket price varies by cinema; see booking page",
@@ -3301,7 +3301,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Tue 15 Sep–Tue 15 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); only listing so far is Tue 15 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Adult ticket price varies by cinema; see booking page",
@@ -3361,7 +3361,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; only listing so far is Tue 22 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "£4.99 including hot drinks and refills",
@@ -3451,7 +3451,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; only listing so far is Tue 22 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "£4.99 including hot drinks and refills",
@@ -3481,7 +3481,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; only listing so far is Tue 22 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "£4.99 including hot drinks and refills",
@@ -3601,7 +3601,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; only listing so far is Tue 22 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "£4.99 including hot drinks and refills",
@@ -3691,7 +3691,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; only listing so far is Tue 22 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "£4.99 including hot drinks and refills",
@@ -3721,7 +3721,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; only listing so far is Tue 22 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "£4.99 including hot drinks and refills",
@@ -3751,7 +3751,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; only listing so far is Tue 22 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "£4.99 including hot drinks and refills",
@@ -3925,7 +3925,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Parent & Baby screenings of U, PG and 12A films; tickets from the cinema on the day; listings Wed 16 Sep–Wed 16 Sep show Wed; some days seen only once so far; film changes each week.",
+  "schedule_note": "Parent & Baby screenings of U, PG and 12A films; tickets from the cinema on the day; only listing so far is Wed 16 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Standard ticket; under-18-months free",
@@ -4015,7 +4015,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Scott says Little Screeners runs Wednesdays at noon (doors 11:45, film 12:25); listings Wed 23 Sep–Wed 23 Sep show Wed; some days seen only once so far; film changes each week.",
+  "schedule_note": "Scott says Little Screeners runs Wednesdays at noon (doors 11:45, film 12:25); only listing so far is Wed 23 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 24,
   "price": "Ticket includes tea/coffee or a small fountain drink and a Twix",
@@ -4340,7 +4340,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 24 Sep–Thu 24 Sep show Thu; some days seen only once so far; film changes each week.",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; only listing so far is Thu 24 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
@@ -4929,7 +4929,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly baby friendly screening; listings Tue 29 Sep–Tue 29 Sep show Tue; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly baby friendly screening; only listing so far is Tue 29 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Standard ticket; free refill on fountain or hot drinks",
@@ -5037,10 +5037,10 @@
   "provider": "The Light",
   "category": "cinema",
   "venue": "The Light Redhill",
-  "address": "3-11 Gallery Walk, High Street, Redhill, RH1 1RA",
-  "postcode": "RH1 1RA",
-  "lat": null,
-  "lng": null,
+  "address": "3-11 Gallery Walk, High Street, Redhill, RH1 1RU",
+  "postcode": "RH1 1RU",
+  "lat": 51.239543,
+  "lng": -0.167691,
   "sessions": [
    {
     "day": "Wed",
@@ -5179,7 +5179,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly baby friendly screening; listings Wed 23 Sep–Wed 23 Sep show Wed; some days seen only once so far; film changes each week.",
+  "schedule_note": "Weekly baby friendly screening; only listing so far is Wed 23 Sep; some days seen only once so far; film changes each week.",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "Standard ticket; free refill on fountain or hot drinks",

@@ -1230,36 +1230,6 @@
   "confidence": "high"
  },
  {
-  "name": "Play, Connect and Free-cycle",
-  "provider": "NCT Exeter and East Devon",
-  "category": "stayplay",
-  "venue": "EX2 8PF",
-  "address": "EX2 8PF, Marsh Barton, EX2 8PF",
-  "postcode": "EX2 8PF",
-  "lat": 50.697482,
-  "lng": -3.524642,
-  "sessions": [
-   {
-    "day": "Fri",
-    "start": "19:00",
-    "end": "22:00"
-   }
-  ],
-  "tier": "timetable",
-  "schedule_note": "",
-  "age_min_months": 0,
-  "age_max_months": 48,
-  "price": "",
-  "free": false,
-  "booking": "book",
-  "indoor": true,
-  "description": "Volunteer-run NCT play and chat session for parents and young children.",
-  "url": "https://www.nct.org.uk/local-activities-meet-ups/exeter-and-east-devon",
-  "phone": "",
-  "source": "nct.org.uk",
-  "confidence": "high"
- },
- {
   "name": "NCT Guildford Bumps & Babies",
   "provider": "NCT Guildford",
   "category": "support",
@@ -1642,36 +1612,6 @@
   ],
   "tier": "timetable",
   "schedule_note": "",
-  "age_min_months": 0,
-  "age_max_months": 12,
-  "price": "",
-  "free": false,
-  "booking": "book",
-  "indoor": true,
-  "description": "Relaxed volunteer-run NCT meet-up for expectant parents and families with babies.",
-  "url": "https://www.nct.org.uk/local-activities-meet-ups/plymouth-and-west-devon",
-  "phone": "",
-  "source": "nct.org.uk",
-  "confidence": "high"
- },
- {
-  "name": "NCT Plymouth Home Birth Support Group",
-  "provider": "NCT Plymouth and West Devon",
-  "category": "support",
-  "venue": "WOW Centre",
-  "address": "WOW Centre, Plymouth, PL7 4BA",
-  "postcode": "PL7 4BA",
-  "lat": 50.393595,
-  "lng": -4.045063,
-  "sessions": [
-   {
-    "day": "Thu",
-    "start": "18:30",
-    "end": "20:30"
-   }
-  ],
-  "tier": "timetable",
-  "schedule_note": "Monthly",
   "age_min_months": 0,
   "age_max_months": 12,
   "price": "",
@@ -2344,36 +2284,6 @@
   "booking": "book",
   "indoor": true,
   "description": "Relaxed volunteer-run NCT meet-up for expectant parents and families with babies.",
-  "url": "https://www.nct.org.uk/local-activities-meet-ups/beckenham-and-borders",
-  "phone": "",
-  "source": "nct.org.uk",
-  "confidence": "high"
- },
- {
-  "name": "NCT Beckenham & Borders Baby Cafe",
-  "provider": "NCT Beckenham and Borders",
-  "category": "support",
-  "venue": "Neighbourhood Church",
-  "address": "Neighbourhood Church, Beckenham, Beckenham, BR3 4LW",
-  "postcode": "BR3 4LW",
-  "lat": 51.403119,
-  "lng": -0.039182,
-  "sessions": [
-   {
-    "day": "Mon",
-    "start": "19:00",
-    "end": "22:00"
-   }
-  ],
-  "tier": "timetable",
-  "schedule_note": "",
-  "age_min_months": 0,
-  "age_max_months": 12,
-  "price": "",
-  "free": false,
-  "booking": "book",
-  "indoor": true,
-  "description": "Volunteer-run NCT drop-in offering infant feeding support and a chance to meet other parents.",
   "url": "https://www.nct.org.uk/local-activities-meet-ups/beckenham-and-borders",
   "phone": "",
   "source": "nct.org.uk",
