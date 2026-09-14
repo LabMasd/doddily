@@ -1,6 +1,6 @@
 // Little Days service worker: app shell offline, data always fresh when online.
-const CACHE = 'littledays-v3';
-const SHELL = ['./', 'index.html', 'app.js', 'manifest.webmanifest', 'icon.svg', 'data/activities.json'];
+const CACHE = 'littledays-v4';
+const SHELL = ['./', 'index.html', 'app.js', 'manifest.webmanifest', 'icon.svg', 'data/tiles/index.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
