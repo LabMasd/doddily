@@ -385,14 +385,20 @@ async function monkeyMusic() {
   const list = await get('https://www.monkeymusic.co.uk/franchise-list');
   if (!list) return [];
   const areas = [...new Set([...list.matchAll(/href="(\/area\/[a-z0-9-]+)"/g)].map((m) => 'https://www.monkeymusic.co.uk' + m[1]))];
+  // franchise-list rows pair a town label with the /area/ link
+  const townBySlug = new Map();
+  for (const row of list.split('class="views-row').slice(1)) {
+    const town = clean(row.match(/field-franchisee-town"><div class="field-content">([\s\S]*?)<\/div>/)?.[1]);
+    const slug = row.match(/href="(\/area\/[a-z0-9-]+)"/)?.[1];
+    if (town && slug && !townBySlug.has(slug)) townBySlug.set(slug, town);
+  }
   const byKey = new Map();
   for (const url of take(areas)) {
     const html = await get(url); // robots on www allow /area/
     if (!html) continue;
     const tt = html.split('<div id="timetable">')[1];
     if (!tt) continue;
-    const title = clean(html.match(/<title>([\s\S]*?)<\/title>/)?.[1]).split('|')[0].trim();
-    const area = title.replace(/monkey music/gi, '').replace(/^[\s\-–|]+|[\s\-–|]+$/g, '').trim() || titleCase(url.split('/').pop());
+    const area = townBySlug.get(new URL(url).pathname) || titleCase(url.split('/').pop());
     for (const dayBox of tt.split('class="daybox"').slice(1)) {
       const day = dayOf(clean(dayBox.match(/<h3>([\s\S]*?)<\/h3>/)?.[1]));
       for (const venueBox of dayBox.split('class="venuebox"').slice(1)) {
