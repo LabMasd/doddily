@@ -1,0 +1,5405 @@
+[
+ {
+  "name": "Parent & Baby",
+  "provider": "Arc",
+  "category": "cinema",
+  "venue": "The Arc Cinema Beeston",
+  "address": "2 Station Road, Beeston, Nottinghamshire NG9 2WJ",
+  "postcode": "NG9 2WJ",
+  "lat": 52.925861,
+  "lng": -1.214404,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually monthly on a weekday morning, not in school holidays. No date listed right now.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Standard ticket; babies under 18 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly screening of a new release for parents with babies under 18 months, with lights dimmed but not off and the sound lowered.",
+  "url": "https://beeston.arccinema.co.uk/whatson/parent-baby",
+  "phone": "",
+  "source": "arccinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Arc",
+  "category": "cinema",
+  "venue": "The Arc Cinema Blackpool",
+  "address": "Houndshill Shopping Centre, Coronation Street, Blackpool, Lancashire FY1 4EN",
+  "postcode": "FY1 4EN",
+  "lat": 53.816327,
+  "lng": -3.052458,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually monthly on a weekday morning, not in school holidays. Next: Fri 02 Oct, 10:30.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Standard ticket; babies under 18 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly screening of a new release for parents with babies under 18 months, with lights dimmed but not off and the sound lowered.",
+  "url": "https://blackpool.arccinema.co.uk/whatson/parent-baby",
+  "phone": "",
+  "source": "arccinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Arc",
+  "category": "cinema",
+  "venue": "The Arc Cinema Daventry",
+  "address": "Mulberry Place, Daventry, Northants NN11 4GH",
+  "postcode": "NN11 4GH",
+  "lat": 52.258331,
+  "lng": -1.162007,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually monthly on a weekday morning, not in school holidays. Next: Fri 02 Oct, 11:00.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Standard ticket; babies under 18 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly screening of a new release for parents with babies under 18 months, with lights dimmed but not off and the sound lowered.",
+  "url": "https://daventry.arccinema.co.uk/whatson/parent-baby",
+  "phone": "",
+  "source": "arccinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Arc",
+  "category": "cinema",
+  "venue": "The Arc Cinema Great Yarmouth",
+  "address": "The Royalty, Marine Parade, Great Yarmouth, Norfolk NR30 2DL",
+  "postcode": "NR30 2DL",
+  "lat": 52.607896,
+  "lng": 1.737685,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually monthly on a weekday morning, not in school holidays. Next: Fri 02 Oct, 11:00.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Standard ticket; babies under 18 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly screening of a new release for parents with babies under 18 months, with lights dimmed but not off and the sound lowered.",
+  "url": "https://greatyarmouth.arccinema.co.uk/whatson/parent-baby",
+  "phone": "",
+  "source": "arccinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Arc",
+  "category": "cinema",
+  "venue": "The Arc Cinema Hucknall",
+  "address": "THE BYRON, High Street, Hucknall, Nottinghamshire NG15 7HJ",
+  "postcode": "NG15 7HJ",
+  "lat": 53.037561,
+  "lng": -1.201937,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually monthly on a weekday morning, not in school holidays. No date listed right now.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Standard ticket; babies under 18 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly screening of a new release for parents with babies under 18 months, with lights dimmed but not off and the sound lowered.",
+  "url": "https://hucknall.arccinema.co.uk/whatson/parent-baby",
+  "phone": "",
+  "source": "arccinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Arc",
+  "category": "cinema",
+  "venue": "The Arc Cinema Peterhead",
+  "address": "63 Marischal Street, Peterhead, Aberdeenshire AB42 1PR",
+  "postcode": "AB42 1PR",
+  "lat": 57.505004,
+  "lng": -1.78088,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually monthly on a weekday morning, not in school holidays. Next: Fri 02 Oct, 11:00.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Standard ticket; babies under 18 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly screening of a new release for parents with babies under 18 months, with lights dimmed but not off and the sound lowered.",
+  "url": "https://peterhead.arccinema.co.uk/whatson/parent-baby",
+  "phone": "",
+  "source": "arccinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Arc",
+  "category": "cinema",
+  "venue": "The Arc Cinema Preston",
+  "address": "Animate, Tenterfield Street, Preston, PR1 2BL",
+  "postcode": "PR1 2BL",
+  "lat": 53.761198,
+  "lng": -2.70034,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually monthly on a weekday morning, not in school holidays. No date listed right now.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Standard ticket; babies under 18 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly screening of a new release for parents with babies under 18 months, with lights dimmed but not off and the sound lowered.",
+  "url": "https://preston.arccinema.co.uk/whatson/parent-baby",
+  "phone": "",
+  "source": "arccinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Arc",
+  "category": "cinema",
+  "venue": "The Arc Cinema Rotherham",
+  "address": "Forge Island, Bridge Street, Rotherham, S60 1QJ",
+  "postcode": "S60 1QJ",
+  "lat": 53.431206,
+  "lng": -1.359835,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually monthly on a weekday morning, not in school holidays. No date listed right now.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Standard ticket; babies under 18 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly screening of a new release for parents with babies under 18 months, with lights dimmed but not off and the sound lowered.",
+  "url": "https://rotherham.arccinema.co.uk/whatson/parent-baby",
+  "phone": "",
+  "source": "arccinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Babes in Arms",
+  "provider": "ArtHouse Crouch End",
+  "category": "cinema",
+  "venue": "ArtHouse Crouch End",
+  "address": "159A Tottenham Lane, London N8 9BT",
+  "postcode": "N8 9BT",
+  "lat": 51.581834,
+  "lng": -0.119964,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "12:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Every Tuesday; film from the regular programme",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screenings just for parents and carers with babies under one, with low lighting and changing facilities.",
+  "url": "https://www.arthousecrouchend.co.uk/babes-in-arms/",
+  "phone": "",
+  "source": "arthousecrouchend.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent and Baby Screenings",
+  "provider": "Barbican",
+  "category": "cinema",
+  "venue": "Barbican Cinema",
+  "address": "Barbican Centre, Silk Street, London EC2Y 8DS",
+  "postcode": "EC2Y 8DS",
+  "lat": 51.519961,
+  "lng": -0.094103,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:15",
+    "end": null
+   },
+   {
+    "day": "Sat",
+    "start": "11:15",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Every Monday and Saturday morning; 11:15 start includes ads and trailers, some films 10:45",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£6 per adult plus booking fee (free in person)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening with the lights up a little and the sound turned down.",
+  "url": "https://www.barbican.org.uk/whats-on/series/parent-and-baby-screenings",
+  "phone": "020 7638 8891",
+  "source": "barbican.org.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent & Baby Screenings",
+  "provider": "Broadway",
+  "category": "cinema",
+  "venue": "Broadway Cinema",
+  "address": "14-18 Broad Street, Hockley, Nottingham NG1 3AL",
+  "postcode": "NG1 3AL",
+  "lat": 52.954104,
+  "lng": -1.143785,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Roughly monthly; dates announced on the listings page, no adverts or trailers",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£7 incl. hot drink, babies free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monthly parent and baby screening in Screen 3 with low lights, reduced volume and a free hot drink.",
+  "url": "https://www.broadway.org.uk/whats-on/parent-baby-screenings",
+  "phone": "0115 952 6611",
+  "source": "broadway.org.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent & Baby Screenings",
+  "provider": "Campus West",
+  "category": "cinema",
+  "venue": "Campus West Cinema",
+  "address": "The Campus, Welwyn Garden City AL8 6BX",
+  "postcode": "AL8 6BX",
+  "lat": 51.805566,
+  "lng": -0.208117,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Regular screenings listed individually (e.g. Thu 17 Sep 2026); check listings",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard adult ticket, babies free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening with the lights up a little and the sound turned down.",
+  "url": "https://www.campuswest.co.uk/cinema/accessible-screenings/parent-baby/",
+  "phone": "01707 357117",
+  "source": "campuswest.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Cinebabies",
+  "provider": "Cineworld",
+  "category": "cinema",
+  "venue": "Cineworld Aberdeen - Union Square",
+  "address": "Union Square, Guild Square, AB11 5RG, Aberdeen",
+  "postcode": "AB11 5RG",
+  "lat": 57.144354,
+  "lng": -2.096083,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:50",
+    "end": null
+   },
+   {
+    "day": "Sat",
+    "start": "09:50",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent and baby screenings, not every week at every cinema; listings Wed 16 Sep–Wed 23 Sep show Wed and Sat; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Adult ticket; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening just for parents and babies, with pushchair storage, dimmed lights and the sound turned down a little.",
+  "url": "https://www.cineworld.co.uk/cinebabies",
+  "phone": "",
+  "source": "cineworld.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Cinebabies",
+  "provider": "Cineworld",
+  "category": "cinema",
+  "venue": "Cineworld Bracknell",
+  "address": "Eagle Lane, RG12 1BG, Bracknell",
+  "postcode": "RG12 1BG",
+  "lat": 51.417311,
+  "lng": -0.751083,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent and baby screenings, not every week at every cinema; listings Wed 16 Sep–Wed 16 Sep show Wed; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Adult ticket; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening just for parents and babies, with pushchair storage, dimmed lights and the sound turned down a little.",
+  "url": "https://www.cineworld.co.uk/cinebabies",
+  "phone": "",
+  "source": "cineworld.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Cinebabies",
+  "provider": "Cineworld",
+  "category": "cinema",
+  "venue": "Cineworld Haverhill",
+  "address": "Ehringshausen Way, CB9 0ER, Haverhill",
+  "postcode": "CB9 0ER",
+  "lat": 52.083736,
+  "lng": 0.439853,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent and baby screenings, not every week at every cinema; listings Tue 15 Sep–Tue 22 Sep show Tue; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Adult ticket; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening just for parents and babies, with pushchair storage, dimmed lights and the sound turned down a little.",
+  "url": "https://www.cineworld.co.uk/cinebabies",
+  "phone": "",
+  "source": "cineworld.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Cinebabies",
+  "provider": "Cineworld",
+  "category": "cinema",
+  "venue": "Cineworld St Neots",
+  "address": "The Rowley Arts Centre, Huntingdon Street, PE19 1BH, St Neots",
+  "postcode": "PE19 1BH",
+  "lat": 52.228702,
+  "lng": -0.265663,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent and baby screenings, not every week at every cinema; listings Mon 21 Sep–Mon 21 Sep show Mon; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Adult ticket; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening just for parents and babies, with pushchair storage, dimmed lights and the sound turned down a little.",
+  "url": "https://www.cineworld.co.uk/cinebabies",
+  "phone": "",
+  "source": "cineworld.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Cinebabies",
+  "provider": "Cineworld",
+  "category": "cinema",
+  "venue": "Cineworld Swindon - Shaw Ridge",
+  "address": "Shaw Ridge Leisure Park, Whitehill Way, SN5 7DN, Swindon",
+  "postcode": "SN5 7DN",
+  "lat": 51.560799,
+  "lng": -1.831324,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent and baby screenings, not every week at every cinema; listings Wed 16 Sep–Wed 23 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "Adult ticket; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening just for parents and babies, with pushchair storage, dimmed lights and the sound turned down a little.",
+  "url": "https://www.cineworld.co.uk/cinebabies",
+  "phone": "",
+  "source": "cineworld.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Babycinema",
+  "provider": "Cube Cinema",
+  "category": "cinema",
+  "venue": "Cube Microplex",
+  "address": "Dove Street South, Bristol BS2 8JP",
+  "postcode": "BS2 8JP",
+  "lat": 51.462618,
+  "lng": -2.590657,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Most Wednesdays at 11:00; volunteer-run",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Volunteer-run Wednesday screening for parents and carers with babies up to one year.",
+  "url": "https://www.cubecinema.com/pages/regular-events/babycinema/",
+  "phone": "",
+  "source": "cubecinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Aldgate",
+  "address": "2 Canter Way, London, E1 8PS",
+  "postcode": "E1 8PS",
+  "lat": 51.513923,
+  "lng": -0.069133,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Wed 16 Sep–Wed 23 Sep show Wed; start times vary a little (11:00–12:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Canterbury",
+  "address": "Unit 9, The Riverside, Canterbury, CT1 1BN",
+  "postcode": "CT1 1BN",
+  "lat": 51.285557,
+  "lng": 1.086635,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Thu 17 Sep–Thu 17 Sep show Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Colchester",
+  "address": "19 Queen Street, Colchester, CO1 2PH",
+  "postcode": "CO1 2PH",
+  "lat": 51.88926,
+  "lng": 0.904508,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "11:40",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Thu 17 Sep–Thu 24 Sep show Thu; start times vary a little (11:40–12:20); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Hoxton",
+  "address": "55 Pitfield Street, London, N1 6BU",
+  "postcode": "N1 6BU",
+  "lat": 51.528877,
+  "lng": -0.083883,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:50",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Tue 15 Sep–Tue 22 Sep show Tue; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Kingston",
+  "address": "The Bentall Centre, London, KT1 1TP",
+  "postcode": "KT1 1TP",
+  "lat": 51.411562,
+  "lng": -0.304869,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "12:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Fri 18 Sep–Fri 18 Sep show Fri; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Knutsford",
+  "address": "Toft Road, Knutsford, WA16 0PE",
+  "postcode": "WA16 0PE",
+  "lat": 53.302268,
+  "lng": -2.373189,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Tue 15 Sep–Tue 22 Sep show Tue; start times vary a little (11:00–11:40); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Oxford",
+  "address": "Westgate Centre, Oxford, OX1 1NZ",
+  "postcode": "OX1 1NZ",
+  "lat": 51.749825,
+  "lng": -1.261909,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:40",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Wed 16 Sep–Wed 23 Sep show Wed; start times vary a little (11:40–12:20); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Victoria",
+  "address": "58 Victoria Street, London, SW1E 6QW",
+  "postcode": "SW1E 6QW",
+  "lat": 51.497715,
+  "lng": -0.136813,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "12:30",
+    "end": null
+   },
+   {
+    "day": "Sat",
+    "start": "12:15",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Sat 19 Sep–Tue 22 Sep show Tue and Sat; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Curzon",
+  "category": "cinema",
+  "venue": "Curzon Wimbledon",
+  "address": "23 The Broadway, London, SW19 1RE",
+  "postcode": "SW19 1RE",
+  "lat": 51.420088,
+  "lng": -0.204104,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "12:20",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby-friendly screening; listings Mon 21 Sep–Mon 21 Sep show Mon; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket; babies under 12 months free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly screening with the lights at half and the sound turned lower, plus changing mats and a bottle warmer.",
+  "url": "https://www.curzon.com/community-screenings/baby-club/",
+  "phone": "",
+  "source": "curzon.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Bring a Baby",
+  "provider": "DCA",
+  "category": "cinema",
+  "venue": "DCA Cinema",
+  "address": "152 Nethergate, Dundee DD1 4DY",
+  "postcode": "DD1 4DY",
+  "lat": 56.457094,
+  "lng": -2.974713,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Regular series; latest listing Thu 17 Sep 2026 10:30, check cinema listings",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£9 incl. tea/coffee and biscuit",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screenings for people caring for babies under 12 months, with buggies allowed and bottle warming available.",
+  "url": "https://www.dca.org.uk/cinema/Bmi-bring-a-baby-pressure/",
+  "phone": "01382 909900",
+  "source": "dca.org.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby Screenings",
+  "provider": "Depot",
+  "category": "cinema",
+  "venue": "Depot Lewes",
+  "address": "Pinwell Road, Lewes BN7 2FS",
+  "postcode": "BN7 2FS",
+  "lat": 50.873559,
+  "lng": 0.014853,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly, Monday late morning; check listings for time",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket incl. hot drink, babies free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly screening just for parents and carers with babies under 12 months, with a free hot drink.",
+  "url": "https://lewesdepot.org/visit/families",
+  "phone": "01273 525354",
+  "source": "lewesdepot.org",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Altrincham",
+  "address": "74-78 George Street, Altrincham, WA14 1RF",
+  "postcode": "WA14 1RF",
+  "lat": 53.386478,
+  "lng": -2.351434,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:15",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–13:20); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Barnet",
+  "address": "Great North Road, Barnet, EN5 1AB",
+  "postcode": "EN5 1AB",
+  "lat": 51.646644,
+  "lng": -0.188154,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:15",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "09:15",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:15–14:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Bath",
+  "address": "6-8 Dorchester St, Bath, BA1 1SS",
+  "postcode": "BA1 1SS",
+  "lat": 51.378055,
+  "lng": -2.35837,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:30–12:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Belsize Park",
+  "address": "203 Haverstock Hill, London, NW3 4QG",
+  "postcode": "NW3 4QG",
+  "lat": 51.550623,
+  "lng": -0.16559,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Tue 22 Sep show Tue; start times vary a little (10:00–10:45); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Birmingham Mailbox",
+  "address": "116 Wharfside Street, Birmingham, B1 1RF",
+  "postcode": "B1 1RF",
+  "lat": 52.475939,
+  "lng": -1.905387,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:15",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:50–13:15); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "01233 555642",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Borough Yards",
+  "address": "3 Dirty Lane, London, SE1 9PA",
+  "postcode": "SE1 9PA",
+  "lat": 51.506046,
+  "lng": -0.092277,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–13:30); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Brentford",
+  "address": "5 West Bradbury Yard, Brentford, TW8 8GJ",
+  "postcode": "TW8 8GJ",
+  "lat": 51.482953,
+  "lng": -0.307912,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "09:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–13:15); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Bristol",
+  "address": "Whiteladies Road, Bristol, BS8 2NH",
+  "postcode": "BS8 2NH",
+  "lat": 51.463366,
+  "lng": -2.609568,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": "09:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "09:45",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue, Wed and Thu; often more than one screening a day (09:30–13:30); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Broadgate",
+  "address": "1 Finsbury Avenue, London, EC2M 2PF",
+  "postcode": "EC2M 2PF",
+  "lat": 51.519362,
+  "lng": -0.08496,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "12:30",
+    "end": null
+   },
+   {
+    "day": "Tue",
+    "start": "11:15",
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Mon, Tue, Wed and Thu; start times vary a little (10:30–12:45); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Bury St Edmunds",
+  "address": "The Arc Shopping Centre, Bury St Edmunds, IP33 3DG",
+  "postcode": "IP33 3DG",
+  "lat": 52.244875,
+  "lng": 0.709423,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–13:45); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Cambridge",
+  "address": "Unit 42, Grand Arcade, Cambridge, CB2 3BJ",
+  "postcode": "CB2 3BJ",
+  "lat": 52.204141,
+  "lng": 0.121518,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:00–12:15); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Canary Wharf",
+  "address": "Crossrail Place - Level Minus Two, London, E14 5AR",
+  "postcode": "E14 5AR",
+  "lat": 51.506133,
+  "lng": -0.017816,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:15",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:45",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 17 Sep show Tue and Thu; often more than one screening a day (10:45–14:15); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Cardiff",
+  "address": "Mermaid Quay, Cardiff, CF10 5BZ",
+  "postcode": "CF10 5BZ",
+  "lat": 51.463431,
+  "lng": -3.165354,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:15",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:15–14:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Chelmsford",
+  "address": "131 Bond Street, Chelmsford, CM1 1GD",
+  "postcode": "CM1 1GD",
+  "lat": 51.734506,
+  "lng": 0.475897,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "09:45",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:20–14:45); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Chelsea",
+  "address": "279 Kings Road, London, SW3 5EW",
+  "postcode": "SW3 5EW",
+  "lat": 51.485345,
+  "lng": -0.173628,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:15–13:15); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Cheltenham",
+  "address": "Regent Arcade Regent Street, Cheltenham, GL50 1EU",
+  "postcode": "GL50 1EU",
+  "lat": 51.898635,
+  "lng": -2.075825,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:45",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:45–12:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Clitheroe",
+  "address": "Greenacre Street, Clitheroe, BB7 1EB",
+  "postcode": "BB7 1EB",
+  "lat": 53.867995,
+  "lng": -2.394696,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–14:20); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Crystal Palace",
+  "address": "25 Church Road, London, SE19 2TE",
+  "postcode": "SE19 2TE",
+  "lat": 51.418412,
+  "lng": -0.079662,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:45",
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue, Wed and Thu; often more than one screening a day (09:10–14:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Edinburgh",
+  "address": "St James Quarter, Edinburgh, EH1 3AD",
+  "postcode": "EH1 3AD",
+  "lat": 55.954829,
+  "lng": -3.188432,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:30",
+    "end": null
+   },
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Mon, Tue, Wed and Thu; often more than one screening a day (09:30–12:15); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Egham",
+  "address": "Gem House, Egham, TW20 9FG",
+  "postcode": "TW20 9FG",
+  "lat": 51.430968,
+  "lng": -0.548034,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:00–13:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Esher",
+  "address": "22 High Street, Esher, KT10 9RT",
+  "postcode": "KT10 9RT",
+  "lat": 51.370845,
+  "lng": -0.363826,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "09:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue, Wed and Thu; often more than one screening a day (09:30–14:45); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Gerrards Cross",
+  "address": "Ethorpe Crescent, Gerrards Cross, SL9 8PN",
+  "postcode": "SL9 8PN",
+  "lat": 51.588843,
+  "lng": -0.553024,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:45",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "09:15",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 17 Sep show Tue and Thu; often more than one screening a day (09:15–13:45); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Glasgow",
+  "address": "Princes Square - Unit 3-5, Glasgow, G1 3JN",
+  "postcode": "G1 3JN",
+  "lat": 55.859197,
+  "lng": -4.253442,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; start times vary a little (10:00–11:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Hampstead",
+  "address": "5 Holly Bush Vale, London, NW3 6TX",
+  "postcode": "NW3 6TX",
+  "lat": 51.556444,
+  "lng": -0.179003,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–14:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Harrogate",
+  "address": "Westgate House, Harrogate, HG1 1HQ",
+  "postcode": "HG1 1HQ",
+  "lat": 53.990016,
+  "lng": -1.537038,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": "09:45",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue, Wed and Thu; often more than one screening a day (09:30–13:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Horsham",
+  "address": "16 Piries Place, Horsham, RH12 1EH",
+  "postcode": "RH12 1EH",
+  "lat": 51.062394,
+  "lng": -0.327068,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue, Wed and Thu; start times vary a little (10:00–11:15); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman King's Cross",
+  "address": "14-18 Handyside Street, London, N1C 4DN",
+  "postcode": "N1C 4DN",
+  "lat": 51.537412,
+  "lng": -0.123973,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; start times vary a little (10:00–11:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Leeds",
+  "address": "Level 4 - Trinity Leeds - Albion Street, Leeds, LS1 5AY",
+  "postcode": "LS1 5AY",
+  "lat": 53.796596,
+  "lng": -1.543936,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:40–12:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Lincoln",
+  "address": "Exchange Square, Lincoln, LN5 7ET",
+  "postcode": "LN5 7ET",
+  "lat": 53.227207,
+  "lng": -0.538686,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:00–13:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Liverpool",
+  "address": "35 Whitechapel, Liverpool, L1 6DA",
+  "postcode": "L1 6DA",
+  "lat": 53.406844,
+  "lng": -2.985823,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue, Wed and Thu; often more than one screening a day (09:00–13:45); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Maida Vale",
+  "address": "215 Sutherland Avenue, London, W9 1RU",
+  "postcode": "W9 1RU",
+  "lat": 51.527927,
+  "lng": -0.181828,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:45",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:45",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 17 Sep show Tue and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Manchester St. John's",
+  "address": "ABC Building, Manchester, M3 4AS",
+  "postcode": "M3 4AS",
+  "lat": 53.478626,
+  "lng": -2.253064,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "12:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Wed 23 Sep show Tue, Wed and Thu; often more than one screening a day (10:30–14:15); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Marlow",
+  "address": "1 Market Square, Marlow, SL7  1BE",
+  "postcode": "SL7 1BE",
+  "lat": 51.5717,
+  "lng": -0.7771,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–13:00); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Muswell Hill",
+  "address": "Fortis Green Road, London, N10 3HP",
+  "postcode": "N10 3HP",
+  "lat": 51.590047,
+  "lng": -0.146766,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:00–13:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Newcastle",
+  "address": "75-85 Grey Street, Newcastle Upon Tyne, NE1 6EF",
+  "postcode": "NE1 6EF",
+  "lat": 54.972581,
+  "lng": -1.612864,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:00–14:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Northallerton",
+  "address": "Treadmills, East Rd, Northallerton, DL6 1NW",
+  "postcode": "DL6 1NW",
+  "lat": 54.338194,
+  "lng": -1.431201,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:15",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; start times vary a little (10:00–11:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Oxted",
+  "address": "7 Station Road West, Oxted, RH8 9EE",
+  "postcode": "RH8 9EE",
+  "lat": 51.25763,
+  "lng": -0.005593,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–14:15); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Plymouth",
+  "address": "Melville Building Royal William Yard, Plymouth, PL1 3RP",
+  "postcode": "PL1 3RP",
+  "lat": 50.361885,
+  "lng": -4.164103,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:00–13:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Reigate",
+  "address": "Bancroft Road, Reigate, RH2 7RP",
+  "postcode": "RH2 7RP",
+  "lat": 51.236621,
+  "lng": -0.203735,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; start times vary a little (10:15–11:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Salisbury",
+  "address": "17 Endless Street, Salisbury, SP1 1DP",
+  "postcode": "SP1 1DP",
+  "lat": 51.070934,
+  "lng": -1.794458,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:20",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:00–13:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Screen on the Green",
+  "address": "83 Upper Street, London, N1 0NP",
+  "postcode": "N1 0NP",
+  "lat": 51.537188,
+  "lng": -0.103333,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; start times vary a little (11:30–11:50); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Stratford International",
+  "address": "4 Redman Place, London, E20 1JQ",
+  "postcode": "E20 1JQ",
+  "lat": 51.542499,
+  "lng": -0.011361,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:15",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:45",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:15–14:10); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Stratford-upon-Avon",
+  "address": "Bell Court - Wood Street, Stratford-upon-Avon, CV37 6LP",
+  "postcode": "CV37 6LP",
+  "lat": 52.192411,
+  "lng": -1.709752,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:00–12:45); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman The Whiteley",
+  "address": "8 Porchester Gardens, London, W2 4DB",
+  "postcode": "W2 4DB",
+  "lat": 51.513649,
+  "lng": -0.188393,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; start times vary a little (10:00–10:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Walton",
+  "address": "85-89 High Street, Walton-on-Thames, KT12 1DN",
+  "postcode": "KT12 1DN",
+  "lat": 51.384082,
+  "lng": -0.41683,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:00–13:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Winchester",
+  "address": "Southgate Street, Winchester, SO23 9EG",
+  "postcode": "SO23 9EG",
+  "lat": 51.061692,
+  "lng": -1.318342,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:50",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; start times vary a little (10:00–11:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman Wokingham",
+  "address": "Elms Walk, Wokingham, RG40 2FE",
+  "postcode": "RG40 2FE",
+  "lat": 51.408885,
+  "lng": -0.836819,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:40",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (10:30–13:45); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Everyman",
+  "category": "cinema",
+  "venue": "Everyman York",
+  "address": "Blossom Street, York, YO24 1AJ",
+  "postcode": "YO24 1AJ",
+  "lat": 53.955316,
+  "lng": -1.092426,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby Club runs weekly on Tuesday and Thursday mornings; listings Tue 15 Sep–Thu 24 Sep show Tue and Thu; often more than one screening a day (09:30–12:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a hot drink and cake or small popcorn",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Morning screening of a new release with the volume down and soft lighting, with a hot drink and cake included.",
+  "url": "https://www.everymancinema.com/films-baby-club/",
+  "phone": "",
+  "source": "everymancinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screening",
+  "provider": "Exeter Phoenix",
+  "category": "cinema",
+  "venue": "Exeter Phoenix",
+  "address": "Bradninch Place, Gandy Street, Exeter EX4 3LS",
+  "postcode": "EX4 3LS",
+  "lat": 50.724789,
+  "lng": -3.531281,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Weekly film in Studio 74; latest listing Wed 23 Sep 2026 11:00",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£9 / £7 members / £5 under 25s",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening with the lights up a little and the sound turned down.",
+  "url": "https://exeterphoenix.org.uk/genre/baby-friendly-screening",
+  "phone": "01392 667080",
+  "source": "exeterphoenix.org.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent and Baby",
+  "provider": "Genesis Cinema",
+  "category": "cinema",
+  "venue": "Genesis Cinema",
+  "address": "93-95 Mile End Road, Whitechapel, London E1 4NJ",
+  "postcode": "E1 4NJ",
+  "lat": 51.52116,
+  "lng": -0.045705,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Parent and baby screenings appear in listings (e.g. Sat 14:30); no fixed day published",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening with the lights up a little and the sound turned down.",
+  "url": "https://genesiscinema.co.uk/",
+  "phone": "",
+  "source": "genesiscinema.co.uk",
+  "confidence": "low"
+ },
+ {
+  "name": "Parent & Baby Screenings",
+  "provider": "Hebden Bridge Picture House",
+  "category": "cinema",
+  "venue": "Hebden Bridge Picture House",
+  "address": "New Road, Hebden Bridge HX7 8AY",
+  "postcode": "HX7 8AY",
+  "lat": 53.740522,
+  "lng": -2.010289,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Regular screenings; latest listing Tue 29 Sep 2026 11:00, check listings",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Relaxed screenings for adults attending with a baby under 12 months.",
+  "url": "https://www.hebdenbridgepicturehouse.co.uk/",
+  "phone": "",
+  "source": "hebdenbridgepicturehouse.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Bring Your Own Baby",
+  "provider": "Hyde Park Picture House",
+  "category": "cinema",
+  "venue": "Hyde Park Picture House",
+  "address": "73 Brudenell Road, Leeds LS6 1JS",
+  "postcode": "LS6 1JS",
+  "lat": 53.810442,
+  "lng": -1.571895,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Every Wednesday; doors 10:30, U/PG/12A films",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Ticket includes a free hot drink",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly baby-friendly screening with raised lights, lower volume and unreserved seating.",
+  "url": "https://hpph.co.uk/strands/bring-your-own-baby",
+  "phone": "0113 275 2045",
+  "source": "hpph.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Babykino",
+  "provider": "JW3",
+  "category": "cinema",
+  "venue": "JW3 Cinema",
+  "address": "341-351 Finchley Road, London NW3 6ET",
+  "postcode": "NW3 6ET",
+  "lat": 51.5512,
+  "lng": -0.18478,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Weekday morning baby screenings; latest listing Mon 28 Sep 2026 11:00",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£9 / £15",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby-friendly weekday morning film screening at the JW3 cinema.",
+  "url": "https://www.jw3.org.uk/whats-on/babykino-pressure-89ts",
+  "phone": "",
+  "source": "jw3.org.uk",
+  "confidence": "low"
+ },
+ {
+  "name": "Parent and Baby Screenings",
+  "provider": "Kiln Theatre",
+  "category": "cinema",
+  "venue": "Kiln Cinema",
+  "address": "269 Kilburn High Road, London NW6 7JR",
+  "postcode": "NW6 7JR",
+  "lat": 51.543725,
+  "lng": -0.200394,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Every Wednesday; film changes each week",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening with the lights up a little and the sound turned down.",
+  "url": "https://kilntheatre.com/parent-and-baby-screenings/",
+  "phone": "020 7328 1000",
+  "source": "kilntheatre.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent and Baby Screenings",
+  "provider": "Lumiere Cinema",
+  "category": "cinema",
+  "venue": "Lumiere Cinema Romford",
+  "address": "Level 3, The Mercury Shopping Centre, Mercury Gardens, Romford RM1 3EE",
+  "postcode": "RM1 3EE",
+  "lat": 51.579434,
+  "lng": 0.185693,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Two parent and baby screenings every Monday; times vary, check Monday listings",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Relaxed Monday screenings for parents and carers with babies under one, with subtitles and buggy parking.",
+  "url": "https://www.lumiereromford.com/accessible-screenings",
+  "phone": "",
+  "source": "lumiereromford.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch With Baby",
+  "provider": "Phoenix Cinema",
+  "category": "cinema",
+  "venue": "Phoenix Cinema",
+  "address": "52 High Road, East Finchley, London N2 9PJ",
+  "postcode": "N2 9PJ",
+  "lat": 51.587709,
+  "lng": -0.16391,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Usually Wednesday 11:00 (current listing); term time",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "The latest films for parents and carers with little ones of twelve months and under in a relaxed setting.",
+  "url": "https://www.phoenixcinema.co.uk/PhoenixCinemaLondon.dll/Page?p=281557&m=m&sp=282881",
+  "phone": "020 8444 6789",
+  "source": "phoenixcinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Cameo Picturehouse",
+  "address": "38 Home Street, Edinburgh, EH3 9LZ",
+  "postcode": "EH3 9LZ",
+  "lat": 55.942871,
+  "lng": -3.20398,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Thu 17 Sep–Thu 24 Sep show Thu; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Chester Picturehouse",
+  "address": "Exchange Square, Chester, CH1 2AR",
+  "postcode": "CH1 2AR",
+  "lat": 53.192281,
+  "lng": -2.893619,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Tue 15 Sep–Tue 22 Sep show Tue; start times vary a little (11:00–12:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Cinema City",
+  "address": "St Andrew's Street, Norwich, NR2 4AD",
+  "postcode": "NR2 4AD",
+  "lat": 52.630338,
+  "lng": 1.295375,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Thu 17 Sep–Thu 24 Sep show Thu; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "City Screen Picturehouse",
+  "address": "13-17 Coney Street, York, YO1 9QL",
+  "postcode": "YO1 9QL",
+  "lat": 53.958984,
+  "lng": -1.084208,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 23 Sep–Wed 23 Sep show Wed; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Clapham Picturehouse",
+  "address": "76 Venn Street, London, SW4 0AT",
+  "postcode": "SW4 0AT",
+  "lat": 51.463573,
+  "lng": -0.138102,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Thu 17 Sep–Thu 1 Oct show Thu; start times vary a little (11:00–11:20); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Crouch End Picturehouse",
+  "address": "165 Tottenham Lane, London, N8 9FD",
+  "postcode": "N8 9FD",
+  "lat": 51.5817,
+  "lng": -0.1208,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "12:15",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 16 Sep–Wed 23 Sep show Wed; start times vary a little (12:15–12:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Duke of York's Picturehouse",
+  "address": "Preston Circus, Brighton, BN1 4NA",
+  "postcode": "BN1 4NA",
+  "lat": 50.833918,
+  "lng": -0.138515,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 16 Sep–Wed 30 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Duke's at Komedia",
+  "address": "44-47 Gardner Street, Brighton, BN1 1UN",
+  "postcode": "BN1 1UN",
+  "lat": 50.824919,
+  "lng": -0.139327,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Thu 17 Sep–Thu 24 Sep show Thu; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Ealing Picturehouse",
+  "address": "Filmworks Walk, London, W5 5AL",
+  "postcode": "W5 5AL",
+  "lat": 51.51268,
+  "lng": -0.307752,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "13:10",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Thu 17 Sep–Thu 17 Sep show Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "East Dulwich Picturehouse",
+  "address": "116A Lordship Lane, London, SE22 8HD",
+  "postcode": "SE22 8HD",
+  "lat": 51.455995,
+  "lng": -0.076473,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 16 Sep–Wed 30 Sep show Wed; start times vary a little (10:40–12:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Epsom Picturehouse",
+  "address": "Epsom Square, Epsom, KT19 8AG",
+  "postcode": "KT19 8AG",
+  "lat": 51.334357,
+  "lng": -0.266339,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:15",
+    "end": null
+   },
+   {
+    "day": "Fri",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 16 Sep–Wed 30 Sep show Wed and Fri; start times vary a little (11:00–11:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Exeter Picturehouse",
+  "address": "51 Bartholomew Street West, Exeter, EX4 3AJ",
+  "postcode": "EX4 3AJ",
+  "lat": 50.720625,
+  "lng": -3.536118,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "12:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Tue 15 Sep–Tue 22 Sep show Tue; start times vary a little (12:30–12:45); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Greenwich Picturehouse",
+  "address": "180 Greenwich High Road, London, SE10 8NN",
+  "postcode": "SE10 8NN",
+  "lat": 51.478,
+  "lng": -0.011275,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   },
+   {
+    "day": "Fri",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 16 Sep–Wed 30 Sep show Wed and Fri; start times vary a little (10:30–11:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Harbour Lights Picturehouse",
+  "address": "Ocean Village, Southampton, SO14 3TL",
+  "postcode": "SO14 3TL",
+  "lat": 50.894681,
+  "lng": -1.393244,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "12:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Thu 17 Sep–Thu 1 Oct show Thu; start times vary a little (12:00–12:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Phoenix Picturehouse",
+  "address": "57 Walton Street, Oxford, OX2 6AE",
+  "postcode": "OX2 6AE",
+  "lat": 51.760212,
+  "lng": -1.266521,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 16 Sep–Wed 23 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Picturehouse at FACT",
+  "address": "88 Wood Street, Liverpool, L1 4DQ",
+  "postcode": "L1 4DQ",
+  "lat": 53.402308,
+  "lng": -2.977731,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "13:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Wed 16 Sep–Wed 30 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "Ritzy Picturehouse",
+  "address": "Brixton Oval, London, SW2 1JG",
+  "postcode": "SW2 1JG",
+  "lat": 51.4614,
+  "lng": -0.1148,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:35",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Mon 21 Sep–Mon 21 Sep show Mon; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Watch with Baby",
+  "provider": "Picturehouse",
+  "category": "cinema",
+  "venue": "West Norwood Picturehouse",
+  "address": "1-7 Norwood High Street, London, SE27 0JW",
+  "postcode": "SE27 0JW",
+  "lat": 51.4326,
+  "lng": -0.1045,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "12:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly parent and baby screening (formerly Big Scream); listings Tue 15 Sep–Tue 15 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Adult ticket price varies by cinema; see booking page",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby screening of a current film for grown-ups with babies under one, with the lights up a little and the sound lower.",
+  "url": "https://www.picturehouses.com/event-details/0000000008/big-scream-parent-baby/100",
+  "phone": "",
+  "source": "picturehouses.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Blackburn",
+  "address": "Nab Lane, Blackburn, Lancashire, BB2 1LN",
+  "postcode": "BB2 1LN",
+  "lat": 53.748463,
+  "lng": -2.487664,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel says Parent + Baby runs every Tuesday morning; nothing listed at this cinema right now, so check before going.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/blackburn/parentandbaby",
+  "phone": "01254 677611",
+  "source": "reelcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Borehamwood",
+  "address": "Metropolis Centre, 84 Shenley Road, Borehamwood, Hertfordshire, WD6 1EH",
+  "postcode": "WD6 1EH",
+  "lat": 51.655608,
+  "lng": -0.275783,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/borehamwood/parentandbaby",
+  "phone": "0208 207 2028",
+  "source": "reelcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Bridgnorth",
+  "address": "Whitburn Street, Bridgnorth, Shropshire, WV16 4QP",
+  "postcode": "WV16 4QP",
+  "lat": 52.535941,
+  "lng": -2.421953,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel says Parent + Baby runs every Tuesday morning; nothing listed at this cinema right now, so check before going.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/bridgnorth/parentandbaby",
+  "phone": "0174 676 1815",
+  "source": "reelcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Burnley",
+  "address": "REEL Cinema Burnley, Pioneer Place, Curzon Street, Burnley, BB11 1FB",
+  "postcode": "BB11 1FB",
+  "lat": 53.791753,
+  "lng": -2.245629,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel says Parent + Baby runs every Tuesday morning; nothing listed at this cinema right now, so check before going.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/burnley/parentandbaby",
+  "phone": "",
+  "source": "reelcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Chippenham",
+  "address": "Marshfield Road, Chippenham, Wiltshire, SN15 1JR",
+  "postcode": "SN15 1JR",
+  "lat": 51.462353,
+  "lng": -2.121823,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/chippenham/parentandbaby",
+  "phone": "0124 965 2498",
+  "source": "reelcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Chorley",
+  "address": "Unit 6, Market Walk Extension, Union Street, Chorley, PR7 1FD",
+  "postcode": "PR7 1FD",
+  "lat": 53.654167,
+  "lng": -2.628889,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/chorley/parentandbaby",
+  "phone": "01257 267 444",
+  "source": "reelcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Fareham",
+  "address": "Unit 4, 3 Vannes Parade, Market Quay, Fareham, Hampshire, PO16 0BX",
+  "postcode": "PO16 0BX",
+  "lat": 50.851635,
+  "lng": -1.178624,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel says Parent + Baby runs every Tuesday morning; nothing listed at this cinema right now, so check before going.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/fareham/parentandbaby",
+  "phone": "01329 821 890",
+  "source": "reelcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Farnham",
+  "address": "8 Old Market Place, Farnham, Surrey, GU9 7SF",
+  "postcode": "GU9 7SF",
+  "lat": 51.21525,
+  "lng": -0.795444,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel says Parent + Baby runs every Tuesday morning; nothing listed at this cinema right now, so check before going.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/farnham/parentandbaby",
+  "phone": "",
+  "source": "reelcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Hull",
+  "address": "St Stephens Shopping Centre, 110 Ferensway, Hull, North Humberside, HU2 8LN",
+  "postcode": "HU2 8LN",
+  "lat": 53.745453,
+  "lng": -0.347501,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel says Parent + Baby runs every Tuesday morning; nothing listed at this cinema right now, so check before going.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/hull/parentandbaby",
+  "phone": "01482 223 113",
+  "source": "reelcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Morecambe",
+  "address": "Central Drive, Morecambe, Lancashire, LA4 4DW",
+  "postcode": "LA4 4DW",
+  "lat": 54.071043,
+  "lng": -2.873722,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/morecambe/parentandbaby",
+  "phone": "01524 413 935",
+  "source": "reelcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Port Talbot",
+  "address": "Hollywood Park, Port Talbot, Neath, SA12 6QW",
+  "postcode": "SA12 6QW",
+  "lat": 51.591679,
+  "lng": -3.812787,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel says Parent + Baby runs every Tuesday morning; nothing listed at this cinema right now, so check before going.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/port-talbot/parentandbaby",
+  "phone": "01639 897 002",
+  "source": "reelcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Quinton",
+  "address": "Hagley Road West, Halesowen, West Midlands, B62 9AS",
+  "postcode": "B62 9AS",
+  "lat": 52.462644,
+  "lng": -2.014757,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel says Parent + Baby runs every Tuesday morning; nothing listed at this cinema right now, so check before going.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/quinton/parentandbaby",
+  "phone": "0121 421 5316",
+  "source": "reelcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Rochdale",
+  "address": "Unit 22, Rochdale Riverside, Riverside Walk, OL16 1BE",
+  "postcode": "OL16 1BE",
+  "lat": 53.617726,
+  "lng": -2.155076,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/rochdale/parentandbaby",
+  "phone": "01706 523 420",
+  "source": "reelcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Wakefield",
+  "address": "The Ridings Shopping Centre, Almshouse Lane, Wakefield, WF1 1DS",
+  "postcode": "WF1 1DS",
+  "lat": 53.681938,
+  "lng": -1.495452,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/wakefield/parentandbaby",
+  "phone": "01924 299 619",
+  "source": "reelcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent + Baby",
+  "provider": "Reel",
+  "category": "cinema",
+  "venue": "Reel Cinema Widnes",
+  "address": "Unit 4, Venture Fields, Earle Road, Widnes, Cheshire, WA8 0GY",
+  "postcode": "WA8 0GY",
+  "lat": 53.36186,
+  "lng": -2.723815,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Reel runs Parent + Baby every Tuesday morning; listings Tue 22 Sep–Tue 22 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£4.99 including hot drinks and refills",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Tuesday morning screening just for parents and carers with babies under 12 months, with lower volume and softer lighting.",
+  "url": "https://reelcinemas.co.uk/widnes/parentandbaby",
+  "phone": "0151 423 0424",
+  "source": "reelcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Carers & Babies",
+  "provider": "Rio Cinema",
+  "category": "cinema",
+  "venue": "Rio Cinema",
+  "address": "107 Kingsland High Street, Dalston, London E8 2PB",
+  "postcode": "E8 2PB",
+  "lat": 51.549468,
+  "lng": -0.075546,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Usually Monday 11:00 (current listings); film changes each week",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Relaxed film show for carers and their babies.",
+  "url": "https://riocinema.org.uk/Rio.dll/WhatsOn",
+  "phone": "020 7241 9410",
+  "source": "riocinema.org.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Bring a Baby",
+  "provider": "Robert Burns Centre Film Theatre",
+  "category": "cinema",
+  "venue": "Robert Burns Centre Film Theatre",
+  "address": "Mill Road, Dumfries DG2 7BE",
+  "postcode": "DG2 7BE",
+  "lat": 55.067591,
+  "lng": -3.617084,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Usually 10:30 on a weekday, day varies (Wed 9 Sep, Thu 1 Oct 2026); book by phone or in person",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Regular adult price, babies free",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screenings for adults with babies under one, with no adverts, soft lighting and buggy parking.",
+  "url": "https://rbcfilmtheatre.co.uk/bring-a-baby",
+  "phone": "01387 264808",
+  "source": "rbcfilmtheatre.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Savoy Cinemas",
+  "category": "cinema",
+  "venue": "Savoy Cinema Boston",
+  "address": "West Street, Boston, Lincolnshire, PE21 8QH",
+  "postcode": "PE21 8QH",
+  "lat": 52.976143,
+  "lng": -0.025529,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent & Baby screenings of U, PG and 12A films; tickets from the cinema on the day; listings Wed 16 Sep–Wed 23 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; under-18-months free",
+  "free": false,
+  "booking": "drop-in",
+  "indoor": true,
+  "description": "Screening for parents with young babies, with low lights left on and the soundtrack volume reduced.",
+  "url": "https://savoyboston.co.uk/SavoyBoston.dll/Page?p=1&m=mm&sp=2",
+  "phone": "01205 363634",
+  "source": "savoyboston.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Savoy Cinemas",
+  "category": "cinema",
+  "venue": "Savoy Cinema Corby",
+  "address": "Parkland Gateway, George Street, Corby, NN17 1QG",
+  "postcode": "NN17 1QG",
+  "lat": 52.488037,
+  "lng": -0.704488,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent & Baby screenings of U, PG and 12A films; tickets from the cinema on the day; listings Wed 16 Sep–Wed 23 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; under-18-months free",
+  "free": false,
+  "booking": "drop-in",
+  "indoor": true,
+  "description": "Screening for parents with young babies, with low lights left on and the soundtrack volume reduced.",
+  "url": "https://savoycorby.co.uk/SavoyCorby.dll/Page?p=1&m=mm&sp=2",
+  "phone": "01536 266 685",
+  "source": "savoycorby.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Savoy Cinemas",
+  "category": "cinema",
+  "venue": "Savoy Cinema Doncaster",
+  "address": "Sir Nigel Gresley Square, Waterdale, Doncaster, DN1 3BU",
+  "postcode": "DN1 3BU",
+  "lat": 53.520064,
+  "lng": -1.131067,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent & Baby screenings of U, PG and 12A films; tickets from the cinema on the day; listings Wed 16 Sep–Wed 23 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; under-18-months free",
+  "free": false,
+  "booking": "drop-in",
+  "indoor": true,
+  "description": "Screening for parents with young babies, with low lights left on and the soundtrack volume reduced.",
+  "url": "https://savoydoncaster.uk/SavoyDoncaster.dll/Page?p=1&m=mm&sp=2",
+  "phone": "01302 760007",
+  "source": "savoydoncaster.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Savoy Cinemas",
+  "category": "cinema",
+  "venue": "Savoy Cinema Grantham",
+  "address": "St Catherine's Rd, Grantham, NG31 6TT",
+  "postcode": "NG31 6TT",
+  "lat": 52.910149,
+  "lng": -0.637557,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent & Baby screenings of U, PG and 12A films; tickets from the cinema on the day; listings Wed 16 Sep–Wed 16 Sep show Wed; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; under-18-months free",
+  "free": false,
+  "booking": "drop-in",
+  "indoor": true,
+  "description": "Screening for parents with young babies, with low lights left on and the soundtrack volume reduced.",
+  "url": "https://savoygrantham.co.uk/SavoyGrantham.dll/Page?p=1&m=mm&sp=2",
+  "phone": "01476 571200",
+  "source": "savoygrantham.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Savoy Cinemas",
+  "category": "cinema",
+  "venue": "Savoy Cinema Worksop",
+  "address": "Bridge Street, Worksop, S80 1HP",
+  "postcode": "S80 1HP",
+  "lat": 53.301085,
+  "lng": -1.123405,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent & Baby screenings of U, PG and 12A films; tickets from the cinema on the day; listings Wed 16 Sep–Wed 23 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; under-18-months free",
+  "free": false,
+  "booking": "drop-in",
+  "indoor": true,
+  "description": "Screening for parents with young babies, with low lights left on and the soundtrack volume reduced.",
+  "url": "https://savoyworksop.co.uk/SavoyWorksop.dll/Page?p=1&m=mm&sp=2",
+  "phone": "",
+  "source": "savoyworksop.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Little Screeners",
+  "provider": "Scott Cinemas",
+  "category": "cinema",
+  "venue": "Scott Cinemas Barnstaple",
+  "address": "Boutport Street, Barnstaple, Devon, EX31 1SR",
+  "postcode": "EX31 1SR",
+  "lat": 51.079462,
+  "lng": -4.058416,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Wednesdays at noon: doors 11:45, film starts 12:25.",
+  "age_min_months": 0,
+  "age_max_months": 24,
+  "price": "Ticket includes tea/coffee or a small fountain drink and a Twix",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Wednesday parent and baby screening for babies under two, with house lights on low and the sound turned down.",
+  "url": "https://barnstaple.scottcinemas.co.uk/offers/parent-and-baby",
+  "phone": "01271 370 022",
+  "source": "scottcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Little Screeners",
+  "provider": "Scott Cinemas",
+  "category": "cinema",
+  "venue": "Scott Cinemas Bridgwater",
+  "address": "Mount Street, Bridgwater, Somerset, TA6 3FQ",
+  "postcode": "TA6 3FQ",
+  "lat": 51.130034,
+  "lng": -3.00638,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Scott says Little Screeners runs Wednesdays at noon (doors 11:45, film 12:25); listings Wed 23 Sep–Wed 23 Sep show Wed; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 24,
+  "price": "Ticket includes tea/coffee or a small fountain drink and a Twix",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Wednesday parent and baby screening for babies under two, with house lights on low and the sound turned down.",
+  "url": "https://bridgwater.scottcinemas.co.uk/offers/parent-and-baby",
+  "phone": "01278 422 383",
+  "source": "scottcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Little Screeners",
+  "provider": "Scott Cinemas",
+  "category": "cinema",
+  "venue": "Scott Cinemas Bristol, Westbury Park",
+  "address": "Northumbria Drive, Westbury Park, Bristol, BS9 4HN",
+  "postcode": "BS9 4HN",
+  "lat": 51.480553,
+  "lng": -2.612318,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Wednesdays at noon: doors 11:45, film starts 12:25.",
+  "age_min_months": 0,
+  "age_max_months": 24,
+  "price": "Ticket includes tea/coffee or a small fountain drink and a Twix",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Wednesday parent and baby screening for babies under two, with house lights on low and the sound turned down.",
+  "url": "https://bristolwestburypark.scottcinemas.co.uk/offers/parent-and-baby",
+  "phone": "01179 625 852",
+  "source": "scottcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Little Screeners",
+  "provider": "Scott Cinemas",
+  "category": "cinema",
+  "venue": "Scott Cinemas Exmouth",
+  "address": "Strand Gardens, Exmouth, Devon, EX8 1HP",
+  "postcode": "EX8 1HP",
+  "lat": 50.619907,
+  "lng": -3.413209,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Wednesdays at noon: doors 11:45, film starts 12:25.",
+  "age_min_months": 0,
+  "age_max_months": 24,
+  "price": "Ticket includes tea/coffee or a small fountain drink and a Twix",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Wednesday parent and baby screening for babies under two, with house lights on low and the sound turned down.",
+  "url": "https://exmouth.scottcinemas.co.uk/offers/parent-and-baby",
+  "phone": "01395 26 82 20",
+  "source": "scottcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Little Screeners",
+  "provider": "Scott Cinemas",
+  "category": "cinema",
+  "venue": "Scott Cinemas Newton Abbot",
+  "address": "Market Street, Newton Abbot, TQ12 2RB",
+  "postcode": "TQ12 2RB",
+  "lat": 50.53056,
+  "lng": -3.612253,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Wednesdays at noon: doors 11:45, film starts 12:25.",
+  "age_min_months": 0,
+  "age_max_months": 24,
+  "price": "Ticket includes tea/coffee or a small fountain drink and a Twix",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Wednesday parent and baby screening for babies under two, with house lights on low and the sound turned down.",
+  "url": "https://newtonabbot.scottcinemas.co.uk/offers/parent-and-baby",
+  "phone": "01626 36 53 68",
+  "source": "scottcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Little Screeners",
+  "provider": "Scott Cinemas",
+  "category": "cinema",
+  "venue": "Scott Cinemas Sidmouth",
+  "address": "Radway Place, Sidmouth, Devon, EX10 8TL",
+  "postcode": "EX10 8TL",
+  "lat": 50.682796,
+  "lng": -3.238693,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Wednesdays at noon: doors 11:45, film starts 12:25.",
+  "age_min_months": 0,
+  "age_max_months": 24,
+  "price": "Ticket includes tea/coffee or a small fountain drink and a Twix",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Wednesday parent and baby screening for babies under two, with house lights on low and the sound turned down.",
+  "url": "https://sidmouth.scottcinemas.co.uk/offers/parent-and-baby",
+  "phone": "01395 51 64 63",
+  "source": "scottcinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Bluewater",
+  "address": "Bluewater Plaza, Greenhithe, DA9 9SG",
+  "postcode": "DA9 9SG",
+  "lat": 51.437683,
+  "lng": 0.270449,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; start times vary a little (10:30–10:35); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "01322 422722",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Coventry",
+  "address": "Gielgud Way, Walsgrave, Coventry, CV2 2SZ",
+  "postcode": "CV2 2SZ",
+  "lat": 52.434724,
+  "lng": -1.429163,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0247 6602555",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Derby",
+  "address": "Level 3 - West Mall, Derbion, Derby, DE1 2PQ",
+  "postcode": "DE1 2PQ",
+  "lat": 52.91942,
+  "lng": -1.4727,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "01332 258555",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Leeds",
+  "address": "Gelderd Road, Batley, WF17 9TB",
+  "postcode": "WF17 9TB",
+  "lat": 53.743286,
+  "lng": -1.641565,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0192 4420622",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Leicester",
+  "address": "7 Highcross Lane, Leicester, LE1 4SD",
+  "postcode": "LE1 4SD",
+  "lat": 52.636393,
+  "lng": -1.138469,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0116 2615959",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Liverpool",
+  "address": "340 East Lancashire Road, Norris Green, Liverpool, L11 9YJ",
+  "postcode": "L11 9YJ",
+  "lat": 53.456846,
+  "lng": -2.913621,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 24 Sep–Thu 24 Sep show Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0151 5492044",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Nottingham",
+  "address": "Redfield Way Lenton, Nottingham, NG7 2UW",
+  "postcode": "NG7 2UW",
+  "lat": 52.935405,
+  "lng": -1.176693,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0115 9862505",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Peterborough",
+  "address": "Mallory Road, Boon Gate, Peterborough, PE1 5AU",
+  "postcode": "PE1 5AU",
+  "lat": 52.57433,
+  "lng": -0.221618,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; start times vary a little (11:00–11:40); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0173 3555636",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Reading",
+  "address": "Loddon Bridge, Reading Road, Winnersh, Wokingham, RG41 5HG",
+  "postcode": "RG41 5HG",
+  "lat": 51.436903,
+  "lng": -0.89797,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0118 9788766",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Southampton",
+  "address": "Level 4, Westquay South, Southampton, SO15 1DE",
+  "postcode": "SO15 1DE",
+  "lat": 50.902207,
+  "lng": -1.407083,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0238 0205555",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinema de Lux Teesside",
+  "address": "Aintree Oval Teesside Leisure Park, Stockton-on-Tees, TS17 7BU",
+  "postcode": "TS17 7BU",
+  "lat": 54.560746,
+  "lng": -1.272405,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:25",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; start times vary a little (11:25–11:30); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0164 2633111",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinemas Bristol Avonmeads",
+  "address": "Avonmeads, St Philips Causeway, Bristol, BS2 0SP",
+  "postcode": "BS2 0SP",
+  "lat": 51.448005,
+  "lng": -2.559789,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0117 9724001",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinemas Cardiff Nantgarw",
+  "address": "Heol-Yr-Odyn - Park Nantgarw, Pontypridd, CF15 7QX",
+  "postcode": "CF15 7QX",
+  "lat": 51.565596,
+  "lng": -3.276072,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; start times vary a little (11:00–11:15); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0144 3844437",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinemas Dudley",
+  "address": "Castlegate Way, Dudley, DY1 4TA",
+  "postcode": "DY1 4TA",
+  "lat": 52.515844,
+  "lng": -2.071126,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:40",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:40",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; start times vary a little (10:40–10:45); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0138 4216800",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinemas Glasgow Coatbridge",
+  "address": "Barrbridge Leisure Centre Baillieston, Glasgow, G69 7TZ",
+  "postcode": "G69 7TZ",
+  "lat": 55.847643,
+  "lng": -4.065391,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0123 6434434",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "Showcase",
+  "category": "cinema",
+  "venue": "Showcase Cinemas Glasgow Paisley",
+  "address": "Griffen Avenue Phoenix Business Park, Paisley, PA1 2BH",
+  "postcode": "PA1 2BH",
+  "lat": 55.847139,
+  "lng": -4.474881,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:30",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Baby friendly screenings every Monday and Thursday morning; listings Thu 17 Sep–Thu 24 Sep show Mon and Thu; start times vary a little (11:30–11:35); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "From £5.99 per parent and baby in cinema (£7.99 at Bluewater)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Monday and Thursday morning screenings with soft lighting, lower volume and pram parking at the front.",
+  "url": "https://www.showcasecinemas.co.uk/baby-cinema/",
+  "phone": "0141 8870150",
+  "source": "showcasecinemas.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "Storyhouse",
+  "category": "cinema",
+  "venue": "Storyhouse",
+  "address": "Hunter Street, Chester CH1 2AR",
+  "postcode": "CH1 2AR",
+  "lat": 53.192281,
+  "lng": -2.893619,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Every Wednesday; no trailers or adverts",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£9.90 (£8.90 members) incl. hot drink and cake",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly parent and baby screening with dimmed lights, lower volume, and a hot drink and cake included.",
+  "url": "https://www.storyhouse.com/cinema/parent-and-baby/",
+  "phone": "01244 409113",
+  "source": "storyhouse.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Parent & Baby",
+  "provider": "The Castle Cinema",
+  "category": "cinema",
+  "venue": "The Castle Cinema",
+  "address": "64-66 Brooksby's Walk, Homerton, London E5 0LH",
+  "postcode": "E5 0LH",
+  "lat": 51.553287,
+  "lng": -0.044963,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:00",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Tuesdays and Thursdays at 11:00; cafe opens 10:00, often sells out",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screenings for parents and carers with babies under one, with unallocated seats and help with buggies.",
+  "url": "https://thecastlecinema.com/calendar/",
+  "phone": "",
+  "source": "thecastlecinema.com",
+  "confidence": "high"
+ },
+ {
+  "name": "Bring Your Baby Screenings",
+  "provider": "The Garden Cinema",
+  "category": "cinema",
+  "venue": "The Garden Cinema",
+  "address": "39-41 Parker Street, London WC2B 5PQ",
+  "postcode": "WC2B 5PQ",
+  "lat": 51.516228,
+  "lng": -0.12137,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Regular strand; latest listing Mon 21 Sep 2026 11:00, check the strand page",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£10 incl. tea or coffee, babies free (book a ticket)",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Latest releases with raised lighting, reduced volume and subtitles for carers with babies up to 12 months.",
+  "url": "https://www.thegardencinema.co.uk/strand/bring-your-baby-screenings/",
+  "phone": "",
+  "source": "thegardencinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Baby-Friendly Screenings",
+  "provider": "The Lexi Cinema",
+  "category": "cinema",
+  "venue": "The Lexi Cinema",
+  "address": "194b Chamberlayne Road, Kensal Rise, London NW10 3JU",
+  "postcode": "NW10 3JU",
+  "lat": 51.537514,
+  "lng": -0.222398,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Every Monday; bar open for hot drinks from 10:30, pauses over summer",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "£8 / £6",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Relaxed Monday morning 'bring a baby' screening with buggy parking at the front of the screen.",
+  "url": "https://thelexicinema.co.uk/",
+  "phone": "",
+  "source": "thelexicinema.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Addlestone",
+  "address": "Addlestone One, KT15 2GN",
+  "postcode": "KT15 2GN",
+  "lat": 51.370802,
+  "lng": -0.489871,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 16 Sep–Wed 30 Sep show Wed; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://addlestone.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Banbury",
+  "address": "Spiceball Park Road, Banbury, Oxfordshire, OX16 2PA",
+  "postcode": "OX16 2PA",
+  "lat": 52.063517,
+  "lng": -1.332737,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 16 Sep–Wed 30 Sep show Wed; start times vary a little (10:00–10:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://banbury.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Bolton",
+  "address": "Market Place Shopping Centre, Bolton, BL1 2AL",
+  "postcode": "BL1 2AL",
+  "lat": 53.581308,
+  "lng": -2.429656,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 16 Sep–Wed 30 Sep show Wed; start times vary a little (11:00–11:50); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://bolton.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Bradford",
+  "address": "The Broadway, Hall Ings, Bradford, BD1 1JR",
+  "postcode": "BD1 1JR",
+  "lat": 53.793918,
+  "lng": -1.748672,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Tue 29 Sep–Tue 29 Sep show Tue; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://bradford.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Cambridge",
+  "address": "Cambridge Leisure Park, Clifton Way, Cambridge, CB1 7DY",
+  "postcode": "CB1 7DY",
+  "lat": 52.190164,
+  "lng": 0.13715,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "10:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Fri 18 Sep–Fri 25 Sep show Fri; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://cambridge.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Huddersfield",
+  "address": "Kingsgate Shopping Centre, King Street, Huddersfield, HD1 2QB",
+  "postcode": "HD1 2QB",
+  "lat": 53.645926,
+  "lng": -1.779108,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 16 Sep–Wed 30 Sep show Wed; start times vary a little (10:30–11:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://huddersfield.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light New Brighton",
+  "address": "Marine Point, New Brighton, CH45 2HZ",
+  "postcode": "CH45 2HZ",
+  "lat": 53.439598,
+  "lng": -3.053316,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Fri 18 Sep–Fri 25 Sep show Fri; start times vary a little (10:00–11:00); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://newbrighton.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Redhill",
+  "address": "3-11 Gallery Walk, High Street, Redhill, RH1 1RA",
+  "postcode": "RH1 1RA",
+  "lat": null,
+  "lng": null,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 23 Sep–Wed 30 Sep show Wed; often more than one screening a day (10:30–11:10); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://redhill.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Sheffield",
+  "address": "The Moor, Sheffield, S1 4PF",
+  "postcode": "S1 4PF",
+  "lat": 53.376352,
+  "lng": -1.473032,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 16 Sep–Wed 30 Sep show Wed; start times vary a little (10:30–12:10); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://sheffield.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Sittingbourne",
+  "address": "Bourne Place, St Michaels Road, Sittingbourne, ME10 3JY",
+  "postcode": "ME10 3JY",
+  "lat": 51.341405,
+  "lng": 0.73415,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "09:50",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 16 Sep–Wed 30 Sep show Wed; start times vary a little (09:50–10:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://sittingbourne.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Stockport",
+  "address": "Redrock, Bridgefield Street, Stockport, SK1 1SA",
+  "postcode": "SK1 1SA",
+  "lat": 53.411811,
+  "lng": -2.162088,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:00",
+    "end": null
+   },
+   {
+    "day": "Wed",
+    "start": "10:45",
+    "end": null
+   },
+   {
+    "day": "Thu",
+    "start": null,
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Tue 22 Sep–Wed 30 Sep show Tue and Wed; start times vary a little (10:45–11:00); some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://stockport.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Thetford",
+  "address": "Bridge Street, 1 Anchor Place, Thetford, IP24 3AQ",
+  "postcode": "IP24 3AQ",
+  "lat": 52.413312,
+  "lng": 0.74603,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:45",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 23 Sep–Wed 23 Sep show Wed; some days seen only once so far; film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://thetford.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Walsall",
+  "address": "Walsall Waterfront Development, Walsall, WS2 8DD",
+  "postcode": "WS2 8DD",
+  "lat": 52.586625,
+  "lng": -1.992823,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 23 Sep–Wed 30 Sep show Wed; start times vary a little (10:30–10:50); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://walsall.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Friendly Screenings",
+  "provider": "The Light",
+  "category": "cinema",
+  "venue": "The Light Wisbech",
+  "address": "Cromwell Road, Wisbech, PE14 0RG",
+  "postcode": "PE14 0RG",
+  "lat": 52.651948,
+  "lng": 0.143416,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly baby friendly screening; listings Wed 16 Sep–Wed 30 Sep show Wed; start times vary a little (11:00–11:30); film changes each week.",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Standard ticket; free refill on fountain or hot drinks",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screening only for parents and carers with babies under one, with the sound lowered and the lights dimmed but not off.",
+  "url": "https://wisbech.thelight.co.uk/baby-friendly",
+  "phone": "",
+  "source": "thelight.co.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Club",
+  "provider": "Tyneside Cinema",
+  "category": "cinema",
+  "venue": "Tyneside Cinema",
+  "address": "10 Pilgrim Street, Newcastle upon Tyne NE1 6QG",
+  "postcode": "NE1 6QG",
+  "lat": 54.973808,
+  "lng": -1.611774,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Regular Baby Club screenings; day not published, check listings",
+  "age_min_months": 0,
+  "age_max_months": 24,
+  "price": "£8.50 incl. hot drink and biscuit",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Baby Club screenings for grown-ups with under-2s, with room for prams in the auditorium.",
+  "url": "https://tynesidecinema.co.uk/access-cinema/baby-club/",
+  "phone": "0191 227 5500",
+  "source": "tynesidecinema.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Cinébabies",
+  "provider": "Watershed",
+  "category": "cinema",
+  "venue": "Watershed",
+  "address": "1 Canons Road, Harbourside, Bristol BS1 5TX",
+  "postcode": "BS1 5TX",
+  "lat": 51.451771,
+  "lng": -2.598131,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": null
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Usually Wednesday late morning; film changes each week",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Screenings for parents and carers with babies under 12 months, with safe buggy parking and changing facilities.",
+  "url": "https://www.watershed.co.uk/whatson/cinebabies",
+  "phone": "0117 927 5100",
+  "source": "watershed.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby Friendly Screening",
+  "provider": "WTW Cinemas",
+  "category": "cinema",
+  "venue": "WTW Lighthouse Newquay",
+  "address": "King Street, Newquay, Cornwall, TR7 1AA",
+  "postcode": "TR7 1AA",
+  "lat": 50.413661,
+  "lng": -5.08732,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Occasional parent & baby screenings, no fixed weekly day; check the cinema's What's On filter.",
+  "age_min_months": 0,
+  "age_max_months": 36,
+  "price": "See cinema for prices",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby friendly screening with the house lights left on and the film volume reduced.",
+  "url": "https://wtwcinemas.co.uk/newquay/cinema-details/accessible-screenings/",
+  "phone": "01637 878650",
+  "source": "wtwcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby Friendly Screening",
+  "provider": "WTW Cinemas",
+  "category": "cinema",
+  "venue": "WTW Plaza Truro",
+  "address": "69 Lemon Street, Truro, Cornwall, TR1 2PN",
+  "postcode": "TR1 2PN",
+  "lat": 50.261904,
+  "lng": -5.052176,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Occasional parent & baby screenings, no fixed weekly day; check the cinema's What's On filter.",
+  "age_min_months": 0,
+  "age_max_months": 36,
+  "price": "See cinema for prices",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby friendly screening with the house lights left on and the film volume reduced.",
+  "url": "https://wtwcinemas.co.uk/truro/cinema-details/accessible-screenings/",
+  "phone": "01872272894",
+  "source": "wtwcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby Friendly Screening",
+  "provider": "WTW Cinemas",
+  "category": "cinema",
+  "venue": "WTW Regal Wadebridge",
+  "address": "The Platt, Wadebridge, Cornwall, PL27 7AD",
+  "postcode": "PL27 7AD",
+  "lat": 50.515714,
+  "lng": -4.83581,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Occasional parent & baby screenings, no fixed weekly day; check the cinema's What's On filter.",
+  "age_min_months": 0,
+  "age_max_months": 36,
+  "price": "See cinema for prices",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby friendly screening with the house lights left on and the film volume reduced.",
+  "url": "https://wtwcinemas.co.uk/wadebridge/cinema-details/accessible-screenings/",
+  "phone": "01208 812791",
+  "source": "wtwcinemas.co.uk",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent & Baby Friendly Screening",
+  "provider": "WTW Cinemas",
+  "category": "cinema",
+  "venue": "WTW White River St Austell",
+  "address": "White River Place, St. Austell, Cornwall, PL25 5AZ",
+  "postcode": "PL25 5AZ",
+  "lat": 50.337331,
+  "lng": -4.794024,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Occasional parent & baby screenings, no fixed weekly day; check the cinema's What's On filter.",
+  "age_min_months": 0,
+  "age_max_months": 36,
+  "price": "See cinema for prices",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Parent and baby friendly screening with the house lights left on and the film volume reduced.",
+  "url": "https://wtwcinemas.co.uk/st-austell/cinema-details/accessible-screenings/",
+  "phone": "01726 66301",
+  "source": "wtwcinemas.co.uk",
+  "confidence": "medium"
+ }
+]

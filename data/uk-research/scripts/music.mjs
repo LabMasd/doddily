@@ -190,7 +190,8 @@ const TOKEN_RE = new RegExp(
   String.raw`(?<day>\b(?:${DAY_ALT})\b)|(?<![£\d.:/])(?<t1>\d{1,2})(?:[.:](?<m1>\d{2}))?\s*(?<a1>am|pm)?(?:\s*(?:-|–|—|to|until)\s*(?<t2>\d{1,2})(?:[.:](?<m2>\d{2}))?\s*(?<a2>am|pm)?)?(?![\d])`,
   'gi',
 );
-const MONTH_AHEAD = /^\s*\d{1,2}(?:st|nd|rd|th)?\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i;
+const TOKEN_RE_HAS_DAY = new RegExp(`\\b(?:${DAY_ALT})\\b`, 'i');
+const MONTH_AHEAD =/^\s*\d{1,2}(?:st|nd|rd|th)?\s+(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i;
 
 function to24(h, m, ap) {
   h = Number(h); m = Number(m || 0);
@@ -277,8 +278,8 @@ function item(o) {
     name: o.name,
     provider: o.provider,
     category: 'music',
-    venue: o.venue || '',
-    address: o.address || '',
+    venue: (o.venue || '').replace(/\s+/g, ' ').trim(),
+    address: (o.address || '').replace(/\s+,/g, ',').replace(/(,\s*)+,/g, ',').replace(/\s+/g, ' ').replace(/^,\s*|,\s*$/g, '').trim(),
     postcode: o.postcode,
     lat: 0,
     lng: 0,
@@ -361,7 +362,8 @@ function jjAges(title, queried) {
     const toM = (n, u) => (/^y/.test(u) ? Number(n) * 12 : Number(n));
     return { min: toM(range[1], unitA), max: toM(range[3], range[4]) };
   }
-  if (/baby|walking/.test(t)) return { min: 3, max: 15 };
+  if (/walking to 2/.test(t)) return { min: 12, max: 24 };
+  if (/baby|to walking/.test(t)) return { min: 3, max: 15 };
   if (/mixed|family/.test(t)) return { min: 3, max: 48 };
   if (/toddler/.test(t)) return { min: 12, max: 24 };
   if (queried.has(0)) return { min: 3, max: 12 };
@@ -398,7 +400,7 @@ async function mooMusic() {
         address,
         postcode,
         sessions,
-        schedule_note: notes || 'Session times on the provider booking page',
+        schedule_note: notes && (sessions.length || TOKEN_RE_HAS_DAY.test(notes)) ? notes : 'Session times on the provider booking page',
         age_min_months: 0,
         age_max_months: 60,
         booking: 'book',
@@ -496,7 +498,8 @@ async function musicalBumps() {
     for (const v of venueLines) {
       const single = venueLines.length === 1;
       const parts = v.line.split(',').map((s) => s.trim()).filter(Boolean);
-      const venue = parts.length > 1 && !normPc(parts[0]) ? parts[0].replace(/\.$/, '') : `Musical Bumps ${area}`;
+      const stripped = parts[0].replace(PC_RE, '').replace(/[.,\s]+$/, '').trim();
+      const venue = stripped.length > 2 ? stripped : `Musical Bumps ${area}`;
       out.push(item({
         brand: 'Musical Bumps',
         name: 'Musical Bumps',
@@ -548,7 +551,7 @@ async function bachToBaby() {
     const priceM = toText(html).match(/Tickets cost (£\d+(?:\.\d{2})?)/i);
     const fmt = (e) => {
       const d = new Date(e.start.replace(' ', 'T') + 'Z');
-      return `${DAY_ORDER[(d.getUTCDay() + 6) % 7]} ${d.getUTCDate()} ${d.toLocaleString('en-GB', { month: 'short', timeZone: 'UTC' })} ${e.start.slice(11, 16)}`;
+      return `${DAY_ORDER[(d.getUTCDay() + 6) % 7]} ${d.getUTCDate()} ${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getUTCMonth()]} ${e.start.slice(11, 16)}`;
     };
     evs.sort((a, b) => a.start.localeCompare(b.start));
     out.push(item({

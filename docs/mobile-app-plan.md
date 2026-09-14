@@ -10,7 +10,7 @@ Parents open it, see baby activities near them today, and go. Every card answers
 |---|---|---|
 | App framework | **Expo (React Native, TypeScript)** with expo-router | One codebase for iOS and Android, genuinely native. Store builds happen in the cloud (EAS), so no Android Studio is needed. |
 | Maps | **react-native-maps**: Apple Maps on iOS, Google Maps on Android | Free on phones. OpenStreetMap's own tile servers don't allow app traffic. |
-| Backend | **Supabase** (open source Postgres + PostGIS) | Fast "near me" queries over UK-wide data, optional sign-in, saved lists synced between two parents, "report wrong info". Free tier to start; can be self-hosted later. |
+| Backend | **Static location tiles for now**; Supabase (open source Postgres + PostGIS) only if the data outgrows tiles | Tiles need no server and work offline. The schema is ready if "near me" queries or anonymous "report wrong info" need a database. No sign-in either way. |
 | Data refresh | Claude Code `/little-days refresh` and research runs, imported into Supabase by script | No servers or API keys; the same workflow as now. |
 | Parks, playgrounds, pools, soft play | Built from an OpenStreetMap UK extract **by a monthly GitHub Action** (cloud, not your Mac), imported into Supabase | The public Overpass API isn't meant for app traffic. |
 | Accounts | **No login at all.** Saved items stay on the phone. | "Buy, download, use". Apple and Google handle payment. The simplest privacy labels ("Data not collected"). |
@@ -30,12 +30,12 @@ Parents open it, see baby activities near them today, and go. Every card answers
 ### Phase 1: data backend (I can do most of this now)
 - [x] UK-wide research into `data/uk-research/*.json` (9 national sources, running)
 - [x] Merge into location tiles (`scripts/merge.mjs`)
-- [ ] Supabase schema: `activities` (PostGIS point, sessions, tier, source, confidence, checked date), `places` (OSM), `reports`, `saved` (`supabase/migrations/0001_init.sql`)
-- [ ] `activities_near(lat, lng, radius, day)` query function
+- [x] Supabase schema (written, not deployed): `activities` (PostGIS point, sessions, tier, source, confidence, checked date), `places` (OSM), `reports`, `saved` (`supabase/migrations/0001_init.sql`)
+- [x] `activities_near(lat, lng, radius, day)` query function (in the migration)
 - [ ] Import script: research JSON → Supabase (upsert by id, keep manual fixes)
 - [ ] GitHub Action: monthly OSM extract → playgrounds, parks, libraries, pools, soft play, farms, museums, baby change → Supabase
 
-### Phase 2: app MVP (Expo)
+### Phase 2: app MVP (Expo): screens built 2026-09-15, verified in web preview; iOS simulator build in progress
 Screens:
 1. **Welcome:** "Use my location" or type a postcode; optional baby birth month. Location is only used to find things nearby.
 2. **Today** (home): the week strip, sessions in time order, "Classes nearby, check times", "Go any time" places. Pull to refresh.
@@ -86,3 +86,15 @@ little-days/
   data/                   research + tiles
   docs/                   this plan
 ```
+
+## Progress log
+- **2026-09-15:**
+  - **Data:** UK-wide research running (family hubs 3,084, library rhyme times 414, play and farms 320, groups, plus class chains still crawling). The web version now loads location tiles; Leeds confirmed working.
+  - **App:** Expo app built with Welcome, Today, Map, Saved, Activity and Settings screens. Type check passes. In the web preview, the flow from postcode to Today to detail to Saved works.
+  - **iOS:** needs a local patch for Xcode 26.3 (see HANDOVER).
+- **Before store submission:**
+  - A contact email for the privacy policy and store listing
+  - Move data hosting to Cloudflare
+  - Pre-build OSM places instead of live Overpass
+  - Google Maps API key for Android
+  - Expo, Apple and Google accounts

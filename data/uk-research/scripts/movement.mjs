@@ -266,9 +266,8 @@ async function crawlBabyballet() {
     let html;
     try { html = await get(u); } catch (e) { console.warn('[babyballet]', e.message); continue; }
     if (!/Tots:\s*6\s*[-–]\s*18\s*months/i.test(html)) { noTots++; continue; }
-    const title = clean((html.match(/<title>([^<]*)<\/title>/i) || [])[1] || '').replace(/\s*[|»–-].*$/, '');
-    const slugName = u.split('/').filter(Boolean).pop().replace(/-/g, ' ');
-    const provider = /babyballet\s+\S/i.test(title) ? title.replace(/^babyballet/i, 'babyballet') : `babyballet ${slugName}`;
+    const slugName = u.split('/').filter(Boolean).pop().split('-').map(w => w === 'and' ? '&' : w[0].toUpperCase() + w.slice(1)).join(' ');
+    const provider = `babyballet ${slugName}`;
     const i = html.indexOf('Get directions to our venues');
     if (i < 0) { noPc++; continue; }
     const block = html.slice(i, html.indexOf('</article>', i) > 0 ? html.indexOf('</article>', i) : i + 6000);
