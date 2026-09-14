@@ -43,7 +43,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     (async () => {
       try {
         const [s, sv] = await Promise.all([AsyncStorage.getItem(KEY), AsyncStorage.getItem(SAVED_KEY)]);
-        if (s) setSettings({ ...DEFAULTS, ...JSON.parse(s) });
+        // Always open on Everything; a remembered filter makes the list look empty days later.
+        if (s) setSettings({ ...DEFAULTS, ...JSON.parse(s), group: 'all' });
         if (sv) setSaved(JSON.parse(sv));
       } catch { /* start fresh */ }
       setReady(true);
