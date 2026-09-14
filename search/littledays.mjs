@@ -236,7 +236,10 @@ async function main() {
   if (!cfg.home) { cfg.home = near; cfg.radius = radius; fs.writeFileSync(CONFIG, JSON.stringify(cfg, null, 2)); }
 
   // Preflight: both local services up?
-  try { await getJSON(`${OLLAMA}/api/tags`, {}, 3000); } catch { console.log(red('Ollama is not running. Start it with: ollama serve')); process.exit(1); }
+  let tags;
+  try { tags = await getJSON(`${OLLAMA}/api/tags`, {}, 3000); } catch { console.log(red('Ollama is not running. Start it with: brew services start ollama')); process.exit(1); }
+  const want = model.includes(':') ? model : `${model}:latest`;
+  if (!(tags.models || []).some((m) => m.name === want)) { console.log(red(`The model ${model} isn't downloaded yet. Get it with: ollama pull ${model}`)); process.exit(1); }
   try { await searx('test'); } catch { console.log(red('SearXNG is not running. Start it with: docker start littledays-searxng')); process.exit(1); }
 
   const place = await geocode(near);
