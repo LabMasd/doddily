@@ -23,12 +23,8 @@ Re-run the research (Claude Code, web search) into `data/research/*.json`, then 
 ## Local
 `python3 -m http.server 8230` in this folder → http://127.0.0.1:8230
 
-## Live search from the terminal (local, free)
-`littledays "baby swimming"` searches the web and reads the pages with a local model, then prints cards as it finds them.
-- **Pieces:** SearXNG (Docker container `littledays-searxng`, 127.0.0.1:8888, settings in `search/searxng/`) finds pages. The script fetches each page and keeps the timetable-looking lines. Ollama (`qwen3:8b`, brew service on :11434) extracts cards to JSON with a schema. postcodes.io places them and drops anything outside the radius.
-- **Options:** `--near E17`, `-r 5`, `-p 20` (pages to read), `-m qwen3:14b`, `--json`, `--add`. `--add` saves to `data/research/cli-DATE.json` and runs the merge; then commit and push to publish.
-- **Local config:** home postcode and default radius live in `~/.littledays.json`, not in the repo.
-- **Confidence:** found items are `medium` when the postcode and time were found, `low` otherwise.
-- **If it fails:**
-  - "Ollama is not running": run `brew services start ollama`.
-  - "SearXNG is not running": open OrbStack, then `docker start littledays-searxng`.
+## Searching and refreshing (Claude Code)
+No local model or API key. In Claude Code:
+- `/little-days <what> [near <postcode>] [<n> miles]`: searches the web, checks the providers' pages, prints cards in the terminal, then asks whether to add them to the app.
+- `/little-days refresh`: re-checks the saved timetables, then updates and publishes.
+- The command is a user skill at `~/.claude/skills/little-days/SKILL.md`.
