@@ -301,7 +301,8 @@ async function crawlBloom() {
     const groups = new Map();
     for (const c of cards) {
       if (!c.postcode || !c.day) continue;
-      const type = (c.title.includes('–') ? c.title.slice(c.title.lastIndexOf('–') + 1) : '').replace(/[^\p{L}\p{N}&' -]/gu, '').trim() || 'Baby Class';
+      let type = (c.title.includes('–') ? c.title.slice(c.title.lastIndexOf('–') + 1) : '').replace(/[^\p{L}\p{N}&' -]/gu, '').trim();
+      if (!/^[A-Za-z][A-Za-z&' ]{2,30}$/.test(type) || /spaces|term|payg/i.test(type)) type = 'Baby Class';
       if (/special/i.test(type)) continue; // one-off themed specials
       const key = `${c.postcode}|${type.toLowerCase()}`;
       if (!groups.has(key)) groups.set(key, { type, cards: [] });
@@ -384,7 +385,7 @@ async function crawlBabySparks() {
     for (const c of classes) {
       const desc = clean(c.description || '');
       if (/special|party|christmas|halloween|easter|stroll|pumpkin|meet ?up|farm/i.test(desc + ' ' + c.name)) continue;
-      const program = clean(desc.replace(/\(.*?\)/g, '')) || 'Baby Sparks';
+      const program = clean(desc.replace(/\(.*?\)/g, '').replace(/^.*?\bcourse\s+(?:for\s+)?/i, '')) || 'Baby Sparks';
       if (program.length > 45 || !/spark/i.test(program)) { skipped.push({ url: pageUrl, reason: `non-class event skipped: ${c.name.slice(0, 60)}` }); continue; }
       const key = `${c.locationName}|${program.toLowerCase()}`;
       if (!groups.has(key)) groups.set(key, { program, classes: [] });
@@ -477,10 +478,12 @@ async function geocode(items) {
     if (pc && result.has(pc)) {
       const g = result.get(pc);
       it.lat = g.latitude; it.lng = g.longitude; it._region = g.country === 'England' ? g.region : g.country;
+      if (!['England', 'Scotland', 'Wales', 'Northern Ireland'].includes(g.country)) it._drop = true;
+      if (!it.address) it.address = g.admin_district || '';
       continue;
     }
     const oc = (pc || it._needsOutcode || '').toUpperCase().match(/^([A-Z]{1,2}\d[A-Z\d]?)\b/);
-    if (!oc) { it._drop = true; continue; }
+    if (!oc || /^(GY|JE|IM)/.test(oc[1])) { it._drop = true; continue; } // Channel Islands / Isle of Man out of scope
     if (!outcodes.has(oc[1])) {
       const r = await get(`https://api.postcodes.io/outcodes/${oc[1]}`, { skipRobots: true });
       try { outcodes.set(oc[1], JSON.parse(r.text).result || null); } catch { outcodes.set(oc[1], null); }
