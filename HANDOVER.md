@@ -51,3 +51,4 @@ No local model or API key. In Claude Code:
   - `data/uk-research/*.json` come from national sources (family hubs, class chains, cinemas, libraries and so on), with crawl scripts in `data/uk-research/scripts/`.
   - `node scripts/merge.mjs` builds `data/tiles/`.
   - `tier`: timetable = day and time known; venue = runs there, times on the provider's site; place = open hours.
+- **Xcode 26.3 patch:** `app/patches/expo-modules-jsi+57.1.0.patch` removes `SWIFT_RETURNS_RETAINED` from two `RuntimeScheduler` constructors, which the Xcode 26.3 compiler rejects. It re-applies on `npm install` via `postinstall: patch-package`. Delete the patch once Expo ships a fix.

@@ -163,7 +163,16 @@ const orgPhone = (p) => {
   const d = String(p || '').replace(/[^\d+]/g, '');
   if (!/^(0|\+44)/.test(d)) return '';
   if (/^(07|\+447)/.test(d)) return ''; // mobiles are usually personal volunteer numbers
-  return d.length >= 10 && d.length <= 13 ? String(p).trim() : '';
+  if (d.length !== 11) return '';
+  return /^02/.test(d) ? `${d.slice(0, 3)} ${d.slice(3, 7)} ${d.slice(7)}` : `${d.slice(0, 5)} ${d.slice(5)}`;
+};
+const cleanUrl = (u) => {
+  try {
+    const x = new URL(String(u || '').trim());
+    return /^https?:$/.test(x.protocol) && /\.[a-z]{2,}$/i.test(x.hostname) ? x.href : '';
+  } catch {
+    return '';
+  }
 };
 
 // ---------------------------------------------------------------- NCT
@@ -233,9 +242,11 @@ function nctRows() {
   const rows = [];
   for (const g of groups.values()) {
     if (g.dates.size < 2) continue; // recurring only
+    if (/photoshoot|fundrais|home birth|free-?cycle|sling hire|christmas|halloween/i.test(g.title)) continue;
     const pc = normPc(g.venue);
     if (!pc) continue;
     const t = parseTimeRange(g.time);
+    if (t && t.start >= '18:00') continue; // evening events are not baby groups
     const days = [...g.wds];
     const dates = [...g.dates].sort();
     const gaps = dates.slice(1).map((d, i) => (new Date(d) - new Date(dates[i])) / 864e5);
@@ -315,7 +326,7 @@ function bfnRows() {
       booking: /eventbrite|book|appointment/i.test(hours + ' ' + x.store) ? 'book' : 'drop-in',
       indoor: true,
       description: 'Free breastfeeding support session run by trained Breastfeeding Network peer supporters.',
-      url: /^https?:/.test(x.url || '') ? x.url : 'https://www.breastfeedingnetwork.org.uk/drop-in-centres-map/',
+      url: cleanUrl(x.url) || 'https://www.breastfeedingnetwork.org.uk/drop-in-centres-map/',
       phone: orgPhone(x.phone),
       source: 'breastfeedingnetwork.org.uk',
       confidence: sessions.some((s) => s.start) ? 'high' : 'medium',
@@ -347,24 +358,32 @@ async function fetchAbm() {
   console.log('ABM stores via finder:', all.size, 'queries', queries, 'saturated 5mi cells', saturated);
   // REST total for coverage comparison
   const ids = [];
+  const modified = {};
   for (let p = 1; p <= 20; p++) {
     let d;
     try {
-      d = await get(`https://abm.me.uk/wp-json/wp/v2/wpsl_stores?per_page=100&page=${p}&_fields=id`, { json: true });
+      d = await get(`https://abm.me.uk/wp-json/wp/v2/wpsl_stores?per_page=100&page=${p}&_fields=id,modified`, { json: true });
     } catch {
       break;
     }
     if (!d.length) break;
-    ids.push(...d.map((x) => String(x.id)));
+    for (const x of d) {
+      ids.push(String(x.id));
+      modified[x.id] = x.modified;
+    }
     if (d.length < 100) break;
   }
   const missing = ids.filter((i) => !all.has(i));
+  fs.writeFileSync(path.join(WORK, 'abm-modified.json'), JSON.stringify(modified));
   fs.writeFileSync(path.join(WORK, 'abm-coverage.json'), JSON.stringify({ rest: ids.length, finder: all.size, missing: missing.length }, null, 1));
   console.log('ABM REST ids:', ids.length, 'missing from finder sweep:', missing.length);
 }
+let abmSkippedPreCovid = 0;
 function abmRows() {
   const f = path.join(WORK, 'abm.json');
   if (!fs.existsSync(f)) return [];
+  const mf = path.join(WORK, 'abm-modified.json');
+  const modified = fs.existsSync(mf) ? JSON.parse(fs.readFileSync(mf, 'utf8')) : {};
   const rows = [];
   for (const x of JSON.parse(fs.readFileSync(f, 'utf8'))) {
     const name = strip(x.store);
@@ -373,22 +392,31 @@ function abmRows() {
     if (!isGroup) continue;
     if (/maternity unit|labour ward|hospital\b(?!.*group)|helpline|infant feeding team\b(?!.*group)/i.test(name) && !/group|drop|caf/i.test(name)) continue;
     if (/zoom|online|virtual|facebook group only/i.test(name)) continue;
+    if (/not currently running|no longer running|closed permanently|suspended|on hold|appointment only|call for appointment|home visits/i.test(text) && !/\d\s*(?:am|pm|[.:]\d\d)/i.test(text.replace(/09\.00-16\.00/, ''))) continue;
     const sessions = parseSessions(text);
     if (sessions.length >= 5) continue; // service opening hours rather than a group
     const t = sessions.find((s) => s.start);
     const days = sessions;
     const isNct = /\bNCT\b/.test(name);
     const isBfn = /\bBfN\b|breastfeeding network/i.test(name);
+    const isLll = /\bLLL\b|la leche/i.test(name);
+    const isAbm = /\bABM\b|association of breastfeeding mothers/i.test(name);
+    const note = monthlyNote(text);
+    const noteDay = (note.match(/\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun) of the month/) || [])[1];
+    const conflict = noteDay && !sessions.some((s) => s.day === noteDay);
+    const mod = modified[x.id] ? new Date(modified[x.id]) : null;
+    if (!mod || mod < new Date('2020-03-01')) { abmSkippedPreCovid++; continue; } // pre-pandemic entries are too likely to be defunct
+    const stale = mod < new Date('2023-01-01');
     rows.push({
       name,
-      provider: isNct ? 'NCT' : isBfn ? 'Breastfeeding Network' : 'Local breastfeeding support group',
+      provider: isNct ? 'NCT' : isBfn ? 'Breastfeeding Network' : isLll ? 'La Leche League' : isAbm ? 'Association of Breastfeeding Mothers' : 'Local breastfeeding support group',
       category: 'support',
       venue: name,
       address: [x.address, x.address2, x.city].map(strip).filter(Boolean).join(', '),
       postcode: normPc(x.zip),
       srcLat: +x.lat, srcLng: +x.lng,
       sessions,
-      schedule_note: monthlyNote(text),
+      schedule_note: [note, stale ? `Directory entry last updated ${mod ? mod.getFullYear() : 'unknown'}; check with organiser` : ''].filter(Boolean).join('; '),
       age_min_months: 0,
       age_max_months: 24,
       price: /£\s?\d/.test(text) ? (text.match(/£\s?\d+(?:\.\d\d)?/) || [''])[0] : 'Free',
@@ -396,10 +424,10 @@ function abmRows() {
       booking: /book|booking|register|appointment/i.test(text) ? 'book' : 'drop-in',
       indoor: !/walk/i.test(name),
       description: 'Local breastfeeding support group listed in the Association of Breastfeeding Mothers directory.',
-      url: /^https?:/.test(x.url || '') ? x.url : 'https://abm.me.uk/find-a-local-breastfeeding-support-group/',
+      url: cleanUrl(x.url) || 'https://abm.me.uk/find-a-local-breastfeeding-support-group/',
       phone: orgPhone(x.fax) || orgPhone(/^[\d\s+()]+$/.test(x.phone || '') ? x.phone : ''),
       source: 'abm.me.uk',
-      confidence: t && days.length ? 'medium' : 'low',
+      confidence: !t || conflict || stale ? 'low' : 'medium',
     });
   }
   return rows;
@@ -493,6 +521,7 @@ async function geocode(pcs) {
 async function build() {
   const parts = { nct: nctRows(), bfn: bfnRows(), abm: abmRows(), lll: lllRows() };
   for (const [k, v] of Object.entries(parts)) console.log(`${k}: ${v.length} candidate rows`);
+  console.log('abm entries skipped (last updated before Mar 2020):', abmSkippedPreCovid);
   let rows = Object.values(parts).flat().filter((r) => r.postcode);
   const geo = await geocode(rows.map((r) => r.postcode));
   const dropped = rows.filter((r) => !geo[r.postcode]).length;
