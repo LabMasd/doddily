@@ -1,0 +1,1260 @@
+[
+  {
+    "name": "Baby Sensory",
+    "provider": "Baby Sensory Hackney & Stoke Newington",
+    "category": "sensory",
+    "venue": "Abney Park Cafe by Sabel",
+    "address": "Abney Park Cafe by Sabel, 3 Stoke Newington High Street, London N16 0LH",
+    "postcode": "N16 0LH",
+    "lat": 51.56275,
+    "lng": -0.073904,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:45",
+        "end": "11:35"
+      },
+      {
+        "day": "Mon",
+        "start": "11:45",
+        "end": "12:35"
+      },
+      {
+        "day": "Mon",
+        "start": "12:45",
+        "end": "13:35"
+      },
+      {
+        "day": "Mon",
+        "start": "13:45",
+        "end": "14:35"
+      }
+    ],
+    "schedule_note": "Alternating 0-6 month (11:45, 13:45) and 6-13 month (10:45, 12:45) groups; runs all year",
+    "age_min_months": 0,
+    "age_max_months": 13,
+    "price": "£13 per class",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Light, music, bubbles and props in short themed activities for young babies and parents.",
+    "url": "https://www.babysensory.com/hackney/",
+    "phone": "07795213224",
+    "confidence": "high"
+  },
+  {
+    "name": "Zip Zap Babies",
+    "provider": "Zip Zap",
+    "category": "sensory",
+    "venue": "St Mary's Church Stoke Newington",
+    "address": "St Mary's Church, Stoke Newington Church Street, London N16 9ES",
+    "postcode": "N16 9ES",
+    "lat": 51.560635,
+    "lng": -0.084222,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "11:45"
+      }
+    ],
+    "schedule_note": "Term time only; toddler class runs before at 10:00",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "From £12 per class; £126 for the term",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Weekly interactive music, drama and sensory class with songs, puppets and props.",
+    "url": "https://www.happity.co.uk/schedules/zip-zap-london-st-mary-s-church-stoke-newington-zip-zap-babies",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Baby Sparkles Music",
+    "provider": "Lucy Sparkles & Friends",
+    "category": "music",
+    "venue": "St Mary's Centres at St Mary's Church",
+    "address": "St Mary's Church, Stoke Newington Church Street, London N16 9ES",
+    "postcode": "N16 9ES",
+    "lat": 51.560635,
+    "lng": -0.084222,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "11:20",
+        "end": "11:50"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "£9.50-£10 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Short, gentle singalong music class with instruments and rhymes for babies.",
+    "url": "https://www.lucysparkles.com/find-a-class/music-dance-hackney-stoke-newington/",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Musical Hatchlings",
+    "provider": "Pelican Music",
+    "category": "music",
+    "venue": "Pelican Music",
+    "address": "Pelican Music, Stoke Newington, London N16 0UL",
+    "postcode": "N16 0UL",
+    "lat": 51.561142,
+    "lng": -0.082758,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:15",
+        "end": "11:00"
+      },
+      {
+        "day": "Wed",
+        "start": "10:15",
+        "end": "11:00"
+      },
+      {
+        "day": "Sat",
+        "start": "09:30",
+        "end": "10:15"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 6,
+    "age_max_months": 24,
+    "price": "£14 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Live-music class for older babies and early toddlers run by a local Stoke Newington music school.",
+    "url": "https://www.happity.co.uk/schedules/pelican-music-london-pelican-music-musical-hatchlings-with-pelican-music",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Mini Mozart Baby Class",
+    "provider": "Mini Mozart",
+    "category": "music",
+    "venue": "Room 71-73",
+    "address": "71-73 Stoke Newington Church Street, London N16 0AS",
+    "postcode": "N16 0AS",
+    "lat": 51.562065,
+    "lng": -0.078175,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "10:25",
+        "end": "11:15"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 0,
+    "age_max_months": 13,
+    "price": "£22.77 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Classical music class with live professional musicians playing to babies up close.",
+    "url": "https://www.minimozart.com/",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Mama & Baby Yoga",
+    "provider": "Mudra Yoga London",
+    "category": "fitness",
+    "venue": "Mudra Yoga London",
+    "address": "Mudra Yoga London, Stoke Newington, London N16 9HS",
+    "postcode": "N16 9HS",
+    "lat": 51.558566,
+    "lng": -0.08692,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "10:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Runs all year",
+    "age_min_months": 0,
+    "age_max_months": 10,
+    "price": "£12 per class (packs up to £50)",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Postnatal yoga for mums with babies on the mat alongside, plus baby-focused movement.",
+    "url": "https://www.happity.co.uk/schedules/mudra-yoga-london-london-mudra-yoga-london-mama-baby-yoga",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Postnatal Yoga with Baby",
+    "provider": "Yogahome",
+    "category": "fitness",
+    "venue": "Yogahome",
+    "address": "Yogahome, 14 Allen Road, London N16 8SD",
+    "postcode": "N16 8SD",
+    "lat": 51.555102,
+    "lng": -0.080214,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "11:15",
+        "end": "12:15"
+      }
+    ],
+    "schedule_note": "Weekly; babies welcome until crawling; tea and chat after",
+    "age_min_months": 0,
+    "age_max_months": 9,
+    "price": "£19 studio drop-in (intro 2 classes for £19)",
+    "free": false,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Gentle postnatal recovery yoga with baby on a blanket beside you.",
+    "url": "https://yogahome.com/offer/pregnancy-birth-beyond/",
+    "phone": "020 7249 2425",
+    "confidence": "medium"
+  },
+  {
+    "name": "Baby Massage Drop-in",
+    "provider": "Yogahome",
+    "category": "massage",
+    "venue": "Yogahome",
+    "address": "Yogahome, 14 Allen Road, London N16 8SD",
+    "postcode": "N16 8SD",
+    "lat": 51.555102,
+    "lng": -0.080214,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "11:15",
+        "end": "12:15"
+      }
+    ],
+    "schedule_note": "Weekly drop-in; IAIM-certified teacher; price taken from studio drop-in rate",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "£19 studio drop-in (check on booking)",
+    "free": false,
+    "booking": "drop-in",
+    "indoor": true,
+    "description": "Baby-led massage class where feeding, crying and sleeping are all fine, building a routine week by week.",
+    "url": "https://yogahome.com/offer/pregnancy-birth-beyond/",
+    "phone": "020 7249 2425",
+    "confidence": "medium"
+  },
+  {
+    "name": "Buggy Belles Postnatal Fitness",
+    "provider": "Buggy Belles",
+    "category": "fitness",
+    "venue": "Clissold Park",
+    "address": "Clissold Park (meet by the café at Clissold House), Green Lanes, London N16 9HJ",
+    "postcode": "N16 9HJ",
+    "lat": 51.561199,
+    "lng": -0.086247,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "12:00",
+        "end": "13:00"
+      },
+      {
+        "day": "Fri",
+        "start": "11:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "Outdoor, all year; text ahead for drop-in",
+    "age_min_months": 2,
+    "age_max_months": 18,
+    "price": "£13 drop-in; £100 for 10; £10 booked trial",
+    "free": false,
+    "booking": "drop-in",
+    "indoor": false,
+    "description": "Outdoor buggy workout with cardio, power walking and core while babies stay in the pram.",
+    "url": "https://www.buggy-belles.com/classes/",
+    "phone": "07980 727528",
+    "confidence": "high"
+  },
+  {
+    "name": "Buggy Belles Postnatal Fitness",
+    "provider": "Buggy Belles",
+    "category": "fitness",
+    "venue": "Highbury Fields",
+    "address": "Highbury Fields (meet at Oasis in the Park café by the tennis courts), London N5 1UU",
+    "postcode": "N5 1UU",
+    "lat": 51.552642,
+    "lng": -0.10256,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:30",
+        "end": "11:30"
+      },
+      {
+        "day": "Wed",
+        "start": "10:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Outdoor, all year",
+    "age_min_months": 2,
+    "age_max_months": 18,
+    "price": "£13 drop-in; £100 for 10; £10 booked trial",
+    "free": false,
+    "booking": "drop-in",
+    "indoor": false,
+    "description": "Outdoor buggy workout with cardio, power walking and core while babies stay in the pram.",
+    "url": "https://www.buggy-belles.com/classes/",
+    "phone": "07980 727528",
+    "confidence": "high"
+  },
+  {
+    "name": "Strength and Cardio (Mum & Baby)",
+    "provider": "Strong Mums Club",
+    "category": "fitness",
+    "venue": "Clissold Park",
+    "address": "Clissold Park, Green Lanes, London N16 9HJ",
+    "postcode": "N16 9HJ",
+    "lat": 51.561199,
+    "lng": -0.086247,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:30",
+        "end": "12:30"
+      }
+    ],
+    "schedule_note": "Outdoor, runs all year",
+    "age_min_months": 2,
+    "age_max_months": 18,
+    "price": "£14 single; £120 pack (£12 per session)",
+    "free": false,
+    "booking": "book",
+    "indoor": false,
+    "description": "Outdoor strength and cardio circuit for mums with babies alongside in the park.",
+    "url": "https://www.happity.co.uk/schedules/strong-mums-club-london-clissold-park-strength-and-cardio-mum-baby",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Hartbeeps Baby Bells",
+    "provider": "Hartbeeps Islington",
+    "category": "sensory",
+    "venue": "St James' Hall",
+    "address": "St James' Hall, Islington, London N1 8PF",
+    "postcode": "N1 8PF",
+    "lat": 51.536683,
+    "lng": -0.096605,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "11:30",
+        "end": "12:10"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 1,
+    "age_max_months": 8,
+    "price": "£13.50-£15 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Music, puppets, massage and sensory play in a themed story for pre-crawling babies.",
+    "url": "https://www.hartbeeps.com/islington",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Hartbeeps Baby Bells",
+    "provider": "Hartbeeps",
+    "category": "sensory",
+    "venue": "Union Church & Community Centre",
+    "address": "Union Church & Community Centre, Crouch End, London N8 9PX",
+    "postcode": "N8 9PX",
+    "lat": 51.57998,
+    "lng": -0.117631,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "12:00",
+        "end": "12:40"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 1,
+    "age_max_months": 8,
+    "price": "£10-£12 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Music, puppets, massage and sensory play in a themed story for pre-crawling babies.",
+    "url": "https://www.happity.co.uk/schedules/hartbeeps-london-union-church-community-centre-crouch-end-baby-bells",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Hartbeeps Baby Beeps",
+    "provider": "Hartbeeps",
+    "category": "sensory",
+    "venue": "Union Church & Community Centre",
+    "address": "Union Church & Community Centre, Crouch End, London N8 9PX",
+    "postcode": "N8 9PX",
+    "lat": 51.57998,
+    "lng": -0.117631,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": "11:40"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 8,
+    "age_max_months": 18,
+    "price": "£10-£12 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Livelier Hartbeeps session with music, puppets and movement for crawlers and early walkers.",
+    "url": "https://www.happity.co.uk/schedules/hartbeeps-london-union-church-community-centre-crouch-end-baby-beeps",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Baby Sensory",
+    "provider": "Baby Sensory Wood Green, Crouch End & Highgate",
+    "category": "sensory",
+    "venue": "The Harringay Club",
+    "address": "The Harringay Club (opposite Hornsey station), 50 Tottenham Lane, London N8 7EE",
+    "postcode": "N8 7EE",
+    "lat": 51.585481,
+    "lng": -0.114675,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:50",
+        "end": "11:40"
+      },
+      {
+        "day": "Mon",
+        "start": "12:00",
+        "end": "12:50"
+      }
+    ],
+    "schedule_note": "Term time only; 10:50 is 7-13 months, 12:00 is 0-6 months",
+    "age_min_months": 0,
+    "age_max_months": 13,
+    "price": "£12.95 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Light, music, bubbles and props in short themed activities for young babies and parents.",
+    "url": "https://www.babysensory.com/woodgreen/",
+    "phone": "07764759211",
+    "confidence": "high"
+  },
+  {
+    "name": "Monkey Music Rock 'n' Roll",
+    "provider": "Monkey Music Highbury & Islington",
+    "category": "music",
+    "venue": "St Mary's Church Islington",
+    "address": "St Mary's Church, Upper Street, London N1 2TX",
+    "postcode": "N1 2TX",
+    "lat": 51.538407,
+    "lng": -0.101984,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:40",
+        "end": "12:10"
+      }
+    ],
+    "schedule_note": "Termly; first class free, join any time, pay monthly",
+    "age_min_months": 3,
+    "age_max_months": 12,
+    "price": "From £12.75 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Structured baby music class with songs, percussion and sensory props, grouped by age.",
+    "url": "https://www.monkeymusic.co.uk/area/highbury-n5-upper-street-islington-de-beauvoir-town-n1-upper-holloway-n7",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Mini Mozart Baby Class",
+    "provider": "Mini Mozart",
+    "category": "music",
+    "venue": "Crouch End Picturehouse",
+    "address": "Crouch End Picturehouse, 165 Tottenham Lane, London N8 9BY",
+    "postcode": "N8 9BY",
+    "lat": 51.581404,
+    "lng": -0.12066,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "10:00",
+        "end": "10:45"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 0,
+    "age_max_months": 13,
+    "price": "£22.77 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Classical music class with live professional musicians playing to babies up close.",
+    "url": "https://www.minimozart.com/",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Mini Boo Sensory Theatre",
+    "provider": "Little Boo Stories",
+    "category": "sensory",
+    "venue": "Christ Church Highbury",
+    "address": "Christ Church Highbury, 155 Highbury Grove, London N5 1SA",
+    "postcode": "N5 1SA",
+    "lat": 51.552454,
+    "lng": -0.098702,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "11:45"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 6,
+    "age_max_months": 18,
+    "price": "From £6 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Interactive sensory storytelling with props and songs acted out for babies.",
+    "url": "https://www.happity.co.uk/schedules/little-boo-stories-london-christ-church-highbury-mini-boo-sensory-theatre",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Infant Massage Class",
+    "provider": "The Wonderful Calm Baby Massage",
+    "category": "massage",
+    "venue": "Cookie's Cafe",
+    "address": "Cookie's Cafe, 216 Essex Road, London N1 3AP",
+    "postcode": "N1 3AP",
+    "lat": 51.540897,
+    "lng": -0.094742,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:30",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Also runs as a 4-week course",
+    "age_min_months": 1,
+    "age_max_months": 10,
+    "price": "£12.50 per class",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Calm, small café-based class teaching a baby massage routine step by step.",
+    "url": "https://www.happity.co.uk/schedules/the-wonderful-calm-london-cookie-s-cafe-infant-massage-class-islington",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Baby Massage, Movement and More",
+    "provider": "Babyin Babyout",
+    "category": "massage",
+    "venue": "Elizabeth House",
+    "address": "Elizabeth House, Highbury, London N5 1ED",
+    "postcode": "N5 1ED",
+    "lat": 51.559708,
+    "lng": -0.099092,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "13:30",
+        "end": "15:00"
+      }
+    ],
+    "schedule_note": "Selected dates",
+    "age_min_months": 1,
+    "age_max_months": 12,
+    "price": "£15 per session (£50 course)",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Relaxed afternoon session mixing baby massage, gentle movement and parent chat.",
+    "url": "https://www.happity.co.uk/schedules/babyin-babyout-london-elizabeth-house-baby-massage-movement-and-more",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Sing and Sign (Babes & Stage 1)",
+    "provider": "Sing and Sign Islington",
+    "category": "music",
+    "venue": "St Mary's Neighbourhood Centre",
+    "address": "St Mary's Neighbourhood Centre, Upper Street, London N1 2TX",
+    "postcode": "N1 2TX",
+    "lat": 51.538407,
+    "lng": -0.101984,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:30",
+        "end": "12:15"
+      },
+      {
+        "day": "Mon",
+        "start": "12:30",
+        "end": "13:00"
+      }
+    ],
+    "schedule_note": "Term time only; 11:30 is Stage 1 (6-14 months), 12:30 is Babes (1-6 months)",
+    "age_min_months": 1,
+    "age_max_months": 14,
+    "price": "From £16 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Songs and nursery rhymes teaching simple baby signs to help early communication.",
+    "url": "https://www.happity.co.uk/schedules/sing-and-sign-islington-st-mary-s-neighbourhood-centre-stage-1-baby-signing-music-class-6-14m",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Sing and Sign Stage One",
+    "provider": "Sing and Sign",
+    "category": "music",
+    "venue": "Hampden Chapel",
+    "address": "Hampden Chapel, Hackney, London E9 7EU",
+    "postcode": "E9 7EU",
+    "lat": 51.541234,
+    "lng": -0.047989,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "11:00",
+        "end": "11:50"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 5,
+    "age_max_months": 14,
+    "price": "£12.50 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Songs and nursery rhymes teaching simple baby signs to help early communication.",
+    "url": "https://www.happity.co.uk/schedules/sing-and-sign-london-hampden-chapel-sing-and-sign-stage-one",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Adventure Babies Little Babies",
+    "provider": "Adventure Babies",
+    "category": "sensory",
+    "venue": "Prideaux House Community Centre",
+    "address": "Prideaux House Community Centre, Hackney, London E9 7DL",
+    "postcode": "E9 7DL",
+    "lat": 51.540905,
+    "lng": -0.045551,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "11:35",
+        "end": "12:20"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 0,
+    "age_max_months": 8,
+    "price": "£10.50-£11.50 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Themed sensory and music class for young babies before they are mobile.",
+    "url": "https://www.happity.co.uk/schedules/adventure-babies-london-prideaux-house-community-centre-little-babies",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Puddle Ducks Baby Swimming",
+    "provider": "Puddle Ducks",
+    "category": "swim",
+    "venue": "Courthouse Hotel Shoreditch",
+    "address": "Courthouse Hotel Shoreditch, 335-337 Old Street, London EC1V 9LL",
+    "postcode": "EC1V 9LL",
+    "lat": 51.527437,
+    "lng": -0.078912,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "10:30"
+      },
+      {
+        "day": "Mon",
+        "start": "10:30",
+        "end": "11:00"
+      }
+    ],
+    "schedule_note": "10:00 Floaties (0-6 months), 10:30 Splashers (6-15 months); other slots through the week",
+    "age_min_months": 0,
+    "age_max_months": 15,
+    "price": "£24 per lesson, booked as a course",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Small-group baby swimming lessons in a warm hotel pool with songs and water-confidence skills.",
+    "url": "https://www.puddleducks.com/local-teams/south-west-london/our-pools-classes",
+    "phone": "020 8546 8470",
+    "confidence": "high"
+  },
+  {
+    "name": "Water Babies",
+    "provider": "Water Babies London North East",
+    "category": "swim",
+    "venue": "Ickburgh School",
+    "address": "Ickburgh School, Kenworthy Road, Hackney, London E9 5RB",
+    "postcode": "E9 5RB",
+    "lat": 51.546603,
+    "lng": -0.036682,
+    "sessions": [],
+    "schedule_note": "Days, times and prices not published on venue page; shown after postcode search on booking system",
+    "age_min_months": 0,
+    "age_max_months": 48,
+    "price": "Termly course; price on enquiry",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Structured baby swimming lessons in a warm hydrotherapy-style school pool, from birth.",
+    "url": "https://www.waterbabies.co.uk/baby-swimming/london-north-east/ickburgh-school/",
+    "phone": "",
+    "confidence": "low"
+  },
+  {
+    "name": "Water Babies",
+    "provider": "Water Babies London North East",
+    "category": "swim",
+    "venue": "Bridge School - Holloway",
+    "address": "Bridge School, 251 Hungerford Road, Holloway, London N7 9LD",
+    "postcode": "N7 9LD",
+    "lat": 51.549577,
+    "lng": -0.125578,
+    "sessions": [],
+    "schedule_note": "Days, times and prices not published on venue page; shown after postcode search on booking system",
+    "age_min_months": 0,
+    "age_max_months": 48,
+    "price": "Termly course; price on enquiry",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Structured baby swimming lessons in a warm school pool, from birth.",
+    "url": "https://www.waterbabies.co.uk/baby-swimming/london-north-east/bridge-school-holloway/",
+    "phone": "",
+    "confidence": "low"
+  },
+  {
+    "name": "SWIMBiES Parent & Baby Swim",
+    "provider": "Better (Clissold Leisure Centre)",
+    "category": "swim",
+    "venue": "Clissold Leisure Centre",
+    "address": "Clissold Leisure Centre, 63 Clissold Road, London N16 9EX",
+    "postcode": "N16 9EX",
+    "lat": 51.557889,
+    "lng": -0.084583,
+    "sessions": [],
+    "schedule_note": "Timetable only in the Better booking system (book up to 7 days ahead); lesson price not published",
+    "age_min_months": 3,
+    "age_max_months": 48,
+    "price": "Price not published; check Better booking",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Instructor-led parent and baby swim sessions with songs and games to build water confidence.",
+    "url": "https://www.better.org.uk/leisure-centre/london/hackney/clissold-leisure-centre/childrens-activities",
+    "phone": "",
+    "confidence": "low"
+  },
+  {
+    "name": "Mum & Baby Workout",
+    "provider": "MissionBodyFit",
+    "category": "fitness",
+    "venue": "Islington Studios",
+    "address": "Islington Studios, London N19 4NF",
+    "postcode": "N19 4NF",
+    "lat": 51.566223,
+    "lng": -0.122238,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:00",
+        "end": "11:00"
+      },
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "12:00"
+      },
+      {
+        "day": "Wed",
+        "start": "10:00",
+        "end": "11:00"
+      },
+      {
+        "day": "Wed",
+        "start": "11:00",
+        "end": "12:00"
+      },
+      {
+        "day": "Thu",
+        "start": "10:00",
+        "end": "11:00"
+      },
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "Selected dates",
+    "age_min_months": 1,
+    "age_max_months": 12,
+    "price": "£25 per class",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Indoor postnatal workout class with babies in the room.",
+    "url": "https://www.happity.co.uk/schedules/missionbodyfit-london-islington-studios-mum-baby-workout-class-mondays-10-00-11-00",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Postnatal Fitness with Hayley",
+    "provider": "Postnatal Fitness with Hayley",
+    "category": "fitness",
+    "venue": "Spirelight Studios",
+    "address": "Spirelight Studios, Holloway, London N7 0SF",
+    "postcode": "N7 0SF",
+    "lat": 51.554206,
+    "lng": -0.122604,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "10:00",
+        "end": "11:00"
+      }
+    ],
+    "schedule_note": "Selected dates",
+    "age_min_months": 2,
+    "age_max_months": 12,
+    "price": "£15 per class (£50 pack)",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Postnatal strength and fitness class where babies come along.",
+    "url": "https://www.happity.co.uk/schedules/postnatal-fitness-with-hayley-london-spirelight-studios-postnatal-fitness",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Sensory Messy Play",
+    "provider": "Kids At Play",
+    "category": "sensory",
+    "venue": "The Ramsay Scout Centre",
+    "address": "The Ramsay Scout Centre, 319 Holloway Road, London N7 9FU",
+    "postcode": "N7 9FU",
+    "lat": 51.553904,
+    "lng": -0.114422,
+    "sessions": [
+      {
+        "day": "Fri",
+        "start": "10:30",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "Runs all year",
+    "age_min_months": 6,
+    "age_max_months": 60,
+    "price": "£7.50 per session (£44 pack)",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Messy sensory play with trays of textures, paint and food-safe materials for sitting babies up.",
+    "url": "https://www.happity.co.uk/schedules/kids-at-play-london-the-ramsay-scout-centre-sensory-messy-play",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Little Buds Messy Play",
+    "provider": "Little Buds Messy Play",
+    "category": "sensory",
+    "venue": "Priory Park",
+    "address": "Priory Park, Crouch End, London N8 8LJ",
+    "postcode": "N8 8LJ",
+    "lat": 51.586386,
+    "lng": -0.123486,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "10:30",
+        "end": "11:15"
+      },
+      {
+        "day": "Thu",
+        "start": "10:30",
+        "end": "11:15"
+      }
+    ],
+    "schedule_note": "Selected dates; outdoors in the park",
+    "age_min_months": 9,
+    "age_max_months": 48,
+    "price": "£12 per session",
+    "free": false,
+    "booking": "book",
+    "indoor": false,
+    "description": "Outdoor messy play in the park with themed trays and materials.",
+    "url": "https://www.happity.co.uk/schedules/little-buds-messy-play-london-priory-park-little-buds-messy-play-mondays-10-30-11-15",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Tiny Tykes Gymnastics",
+    "provider": "My Gym Crouch End",
+    "category": "movement",
+    "venue": "My Gym Crouch End",
+    "address": "My Gym Crouch End, Basement Unit, 2-4 The Broadway, London N8 9SN",
+    "postcode": "N8 9SN",
+    "lat": 51.578312,
+    "lng": -0.123516,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "11:50"
+      }
+    ],
+    "schedule_note": "Selected dates; other weekday slots on the My Gym timetable",
+    "age_min_months": 6,
+    "age_max_months": 13,
+    "price": "From £30.50 per class",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Soft-gym class with music, rolling, climbing and parachute play for babies.",
+    "url": "https://www.mygym.com/crouchend",
+    "phone": "07419 332169",
+    "confidence": "medium"
+  },
+  {
+    "name": "Zip Zap Babies",
+    "provider": "Zip Zap",
+    "category": "sensory",
+    "venue": "Maynard Arms",
+    "address": "Maynard Arms, Crouch End, London N8 8SX",
+    "postcode": "N8 8SX",
+    "lat": 51.581698,
+    "lng": -0.126119,
+    "sessions": [
+      {
+        "day": "Wed",
+        "start": "10:45",
+        "end": "11:30"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "£11 per class; £112 for the term",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Weekly interactive music, drama and sensory class with songs, puppets and props.",
+    "url": "https://www.happity.co.uk/schedules/zip-zap-london-maynard-arms-zip-zap-babies",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Hartbeeps Baby Beeps",
+    "provider": "Hartbeeps NE London",
+    "category": "sensory",
+    "venue": "St Mary's Welcome Centre",
+    "address": "St Mary's Welcome Centre, 8 Church End, Walthamstow, London E17 9RJ",
+    "postcode": "E17 9RJ",
+    "lat": 51.584354,
+    "lng": -0.012118,
+    "sessions": [
+      {
+        "day": "Tue",
+        "start": "11:15",
+        "end": "12:00"
+      },
+      {
+        "day": "Thu",
+        "start": "11:30",
+        "end": "12:15"
+      }
+    ],
+    "schedule_note": "Term time only; Baby Bells for younger babies Tue 12:30-13:15",
+    "age_min_months": 8,
+    "age_max_months": 18,
+    "price": "£14 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Music, puppets and movement in a themed story for crawlers and early walkers.",
+    "url": "https://www.happity.co.uk/venues/baby-groups-walthamstow-st-mary-s-welcome-centre",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Adventure Babies",
+    "provider": "Adventure Babies",
+    "category": "sensory",
+    "venue": "Trinity URC",
+    "address": "Trinity URC, Walthamstow, London E17 9QU",
+    "postcode": "E17 9QU",
+    "lat": 51.58041,
+    "lng": -0.017097,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "11:55",
+        "end": "12:40"
+      },
+      {
+        "day": "Thu",
+        "start": "13:00",
+        "end": "13:45"
+      }
+    ],
+    "schedule_note": "Term time only; 11:55 little babies (0-8 months), 13:00 sitting babies",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "£10.50-£11.50 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Themed sensory and music class for babies, split by stage.",
+    "url": "https://www.happity.co.uk/schedules/adventure-babies-london-trinity-urc-adventure-babies-little-babies",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "Zip Zap Babies",
+    "provider": "Zip Zap",
+    "category": "sensory",
+    "venue": "Orford House",
+    "address": "Orford House Social Club, 73 Orford Road, Walthamstow, London E17 9QR",
+    "postcode": "E17 9QR",
+    "lat": 51.581512,
+    "lng": -0.015302,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "11:45"
+      }
+    ],
+    "schedule_note": "Term time only",
+    "age_min_months": 0,
+    "age_max_months": 18,
+    "price": "From £10 per class",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Weekly interactive music, drama and sensory class with songs, puppets and props.",
+    "url": "https://www.happity.co.uk/schedules/zip-zap-london-orford-house-walthamstow-village-zip-zap-babies",
+    "phone": "",
+    "confidence": "high"
+  },
+  {
+    "name": "TinyTalk Baby Signing",
+    "provider": "TinyTalk Walthamstow & Leytonstone",
+    "category": "music",
+    "venue": "Walthamstow Toy Library",
+    "address": "Walthamstow Toy Library, Walthamstow, London E17 6RX",
+    "postcode": "E17 6RX",
+    "lat": 51.584524,
+    "lng": -0.026979,
+    "sessions": [
+      {
+        "day": "Thu",
+        "start": "13:00",
+        "end": "14:00"
+      }
+    ],
+    "schedule_note": "13-week term; price given on enquiry; payment plans and free places available",
+    "age_min_months": 1,
+    "age_max_months": 24,
+    "price": "Termly; contact for price",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Baby signing class using British Sign Language signs through songs, rhymes and stories.",
+    "url": "https://bookwhen.com/rosevtinytalk",
+    "phone": "07770531075",
+    "confidence": "medium"
+  },
+  {
+    "name": "Baby Massage Course",
+    "provider": "The Tiny Reset",
+    "category": "massage",
+    "venue": "98b St Paul St",
+    "address": "98b St Paul Street, Islington, London N1 7DF",
+    "postcode": "N1 7DF",
+    "lat": 51.536135,
+    "lng": -0.095518,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "09:30",
+        "end": "10:30"
+      }
+    ],
+    "schedule_note": "Fixed course dates",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "From £10 per session (course)",
+    "free": false,
+    "booking": "term",
+    "indoor": true,
+    "description": "Small-group baby massage course teaching a full routine over several weeks.",
+    "url": "https://www.happity.co.uk/schedules/the-tiny-reset-london-98b-st-paul-st-baby-massage-course-mondays-09-30-10-30",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "IAIM Baby Massage",
+    "provider": "Highbury Community Nursery",
+    "category": "massage",
+    "venue": "Highbury Community Nursery",
+    "address": "Highbury Community Nursery, Highbury, London N5 1TL",
+    "postcode": "N5 1TL",
+    "lat": 51.555334,
+    "lng": -0.099938,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "12:15"
+      },
+      {
+        "day": "Mon",
+        "start": "13:30",
+        "end": "14:45"
+      }
+    ],
+    "schedule_note": "Runs all year",
+    "age_min_months": 0,
+    "age_max_months": 12,
+    "price": "From £7 per session",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Low-cost IAIM baby massage sessions in a community nursery setting.",
+    "url": "https://www.happity.co.uk/schedules/highbury-community-nursery-london-highbury-community-nursery-iaim-baby-massage",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Mum and Baby Postnatal Group PT",
+    "provider": "Form Personal Training",
+    "category": "fitness",
+    "venue": "Form",
+    "address": "Form Personal Training, Broadway Market Mews, London E8 4TS",
+    "postcode": "E8 4TS",
+    "lat": 51.536194,
+    "lng": -0.062408,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "12:00"
+      },
+      {
+        "day": "Thu",
+        "start": "11:00",
+        "end": "12:00"
+      }
+    ],
+    "schedule_note": "Max 6 mums; runs all year",
+    "age_min_months": 0,
+    "age_max_months": 24,
+    "price": "£20-£25 per session",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Small-group personal training for mums with babies in the studio.",
+    "url": "https://www.instagram.com/formhackney/",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Postnatal Pilates Mums & Babies",
+    "provider": "ArtQiNature Pilates",
+    "category": "fitness",
+    "venue": "Hackney Showroom HQ",
+    "address": "Hackney Showroom HQ, 4 Murrain Road, London N4 2BN",
+    "postcode": "N4 2BN",
+    "lat": 51.562541,
+    "lng": -0.092438,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:00",
+        "end": "11:50"
+      }
+    ],
+    "schedule_note": "Runs all year",
+    "age_min_months": 1,
+    "age_max_months": 9,
+    "price": "£16 per class (£78 pack)",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Postnatal Pilates focused on core and pelvic floor with babies on the mat.",
+    "url": "https://www.happity.co.uk/schedules/artqinature-pilates-london-hackney-showroom-hq-postnatal-pilates-mums-babies",
+    "phone": "",
+    "confidence": "medium"
+  },
+  {
+    "name": "Postnatal Yoga (pre-crawling babies)",
+    "provider": "LIFE by Margot",
+    "category": "fitness",
+    "venue": "LIFE by Margot",
+    "address": "LIFE by Margot, 84 Park Road, Crouch End, London N8 8JQ",
+    "postcode": "N8 8JQ",
+    "lat": 51.582146,
+    "lng": -0.126577,
+    "sessions": [
+      {
+        "day": "Mon",
+        "start": "11:30",
+        "end": "12:30"
+      }
+    ],
+    "schedule_note": "Runs all year; from 6 weeks postpartum (8 after caesarean)",
+    "age_min_months": 1,
+    "age_max_months": 9,
+    "price": "From £17 per class",
+    "free": false,
+    "booking": "book",
+    "indoor": true,
+    "description": "Postnatal yoga with breathwork and pelvic floor work while babies rest on a blanket in front.",
+    "url": "https://www.lifebymargot.co.uk/",
+    "phone": "",
+    "confidence": "medium"
+  }
+]
