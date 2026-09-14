@@ -118,11 +118,46 @@ function parseTimeRange(text) {
   return null;
 }
 function monthlyNote(text) {
-  const m = String(text).match(/\b(first|second|third|fourth|last|1st|2nd|3rd|4th)\b[^.]{0,20}?\b(mon|tue|wed|thu|fri|sat|sun)[a-z]*/i);
-  if (m) return `Monthly (${m[1].toLowerCase()} ${DAYS[dayIdx(m[2])]} of the month)`;
-  if (/fortnight|every other/i.test(text)) return 'Fortnightly';
-  if (/term[- ]time/i.test(text)) return 'Term time only';
-  return '';
+  const s = String(text);
+  const notes = [];
+  const m = s.match(/\b((?:first|second|third|fourth|last|1st|2nd|3rd|4th)(?:\s*(?:&|and|,)\s*(?:first|second|third|fourth|last|1st|2nd|3rd|4th))?)\b[^.]{0,20}?\b(mon|tue|wed|thu|fri|sat|sun)[a-z]*/i);
+  if (m) notes.push(`${m[1].toLowerCase().replace(/\s+/g, ' ')} ${DAYS[dayIdx(m[2])]} of the month`);
+  else if (/fortnight|every other|alternate/i.test(s)) notes.push('Fortnightly');
+  if (/term[- ]time/i.test(s)) notes.push('term time only');
+  if (/bank holiday/i.test(s)) notes.push('not on bank holidays');
+  if (/appointment|booking (?:is )?(?:essential|required)|must be booked/i.test(s)) notes.push('booking may be needed');
+  const out = notes.join('; ');
+  return out ? out[0].toUpperCase() + out.slice(1) : '';
+}
+// Pair each day mention with the nearest time range that follows it (before the next day mention).
+function parseSessions(text) {
+  const s = String(text)
+    .replace(/\b(mon|tues?|wed(?:nes)?|thu(?:rs)?|fri|satur|sun)days?\s*:?\s*closed\b/gi, ' ')
+    .replace(/\s+/g, ' ');
+  const hits = [...s.matchAll(DAY_RE)].map((m) => ({ i: m.index, d: dayIdx(m[1]) })).filter((h) => h.d >= 0);
+  const global = parseTimeRange(s);
+  const out = [];
+  hits.forEach((h, k) => {
+    const seg = s.slice(h.i, k + 1 < hits.length ? hits[k + 1].i : h.i + 120);
+    let t = parseTimeRange(seg);
+    if (!t) {
+      // "Mon & Wed 10-12" style: borrow the next segment's time when this one is only a day list
+      const nxt = k + 1 < hits.length ? s.slice(hits[k + 1].i, hits[k + 1].i + 80) : '';
+      t = /^\w+\s*(?:&|and|,|\/)\s*$/i.test(seg.trim()) || seg.trim().length < 14 ? parseTimeRange(nxt) || global : null;
+    }
+    out.push({ day: DAYS[h.d], start: t?.start ?? null, end: t?.end ?? null });
+  });
+  // "Mon-Fri" ranges
+  const range = s.match(/\b(mon|tue|wed|thu|fri|sat|sun)[a-z]*\s*(?:-|–|to)\s*(mon|tue|wed|thu|fri|sat|sun)[a-z]*\b/i);
+  if (range) {
+    const a = dayIdx(range[1]), b = dayIdx(range[2]);
+    for (let i = a + 1; i < b; i++) out.push({ day: DAYS[i], start: global?.start ?? null, end: global?.end ?? null });
+  }
+  // prefer a timed entry over an untimed one for the same day
+  const best = new Map();
+  for (const x of out) if (!best.has(x.day) || (!best.get(x.day).start && x.start)) best.set(x.day, x);
+  const timed = [...best.values()];
+  return DAYS.flatMap((d) => [...new Set(out.filter((x) => x.day === d && x.start).map((x) => JSON.stringify(x)))].map((j) => JSON.parse(j))).concat(timed.filter((x) => !x.start));
 }
 const orgPhone = (p) => {
   const d = String(p || '').replace(/[^\d+]/g, '');
@@ -261,13 +296,7 @@ function bfnRows() {
   for (const x of JSON.parse(fs.readFileSync(f, 'utf8'))) {
     if (!/drop-in/i.test(x.terms || '')) continue;
     const hours = strip(x.hours);
-    const parts = hours.split(/(?<=\d(?:am|pm)?)\s+(?=(?:mon|tue|wed|thu|fri|sat|sun))/i);
-    const sessions = [];
-    for (const p of parts.length ? parts : [hours]) {
-      const days = parseDays(p);
-      const t = parseTimeRange(p);
-      for (const d of days) sessions.push({ day: d, start: t?.start ?? null, end: t?.end ?? null });
-    }
+    const sessions = parseSessions(hours);
     const city = strip(x.city) || strip(x.state);
     rows.push({
       name: `Breastfeeding drop-in – ${strip(x.store)}`,
@@ -283,9 +312,9 @@ function bfnRows() {
       age_max_months: 24,
       price: 'Free',
       free: true,
-      booking: 'drop-in',
+      booking: /eventbrite|book|appointment/i.test(hours + ' ' + x.store) ? 'book' : 'drop-in',
       indoor: true,
-      description: 'Breastfeeding drop-in run with trained peer supporters; no appointment needed.',
+      description: 'Free breastfeeding support session run by trained Breastfeeding Network peer supporters.',
       url: /^https?:/.test(x.url || '') ? x.url : 'https://www.breastfeedingnetwork.org.uk/drop-in-centres-map/',
       phone: orgPhone(x.phone),
       source: 'breastfeedingnetwork.org.uk',
@@ -344,10 +373,10 @@ function abmRows() {
     if (!isGroup) continue;
     if (/maternity unit|labour ward|hospital\b(?!.*group)|helpline|infant feeding team\b(?!.*group)/i.test(name) && !/group|drop|caf/i.test(name)) continue;
     if (/zoom|online|virtual|facebook group only/i.test(name)) continue;
-    const days = parseDays(text);
-    if (days.length >= 5) continue; // service opening hours rather than a group
-    const t = parseTimeRange(text);
-    const sessions = days.map((d) => ({ day: d, start: t?.start ?? null, end: t?.end ?? null }));
+    const sessions = parseSessions(text);
+    if (sessions.length >= 5) continue; // service opening hours rather than a group
+    const t = sessions.find((s) => s.start);
+    const days = sessions;
     const isNct = /\bNCT\b/.test(name);
     const isBfn = /\bBfN\b|breastfeeding network/i.test(name);
     rows.push({
