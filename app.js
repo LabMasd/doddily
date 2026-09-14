@@ -365,6 +365,8 @@
       if (timed.length) {
         html += `<h2 class="group-title">Sessions</h2>`;
         for (const r of timed) { html += cardHTML(r, { start: r.s.start || 'Time?', end: r.s.end }); mapRows.push(r); }
+      } else if (past.length) {
+        html += `<div class="empty"><h3>That's everything for today</h3><p><button class="btn" data-day="1">See tomorrow</button></p></div>`;
       } else if (state.group !== 'parks' && state.group !== 'change') {
         html += `<div class="empty"><h3>Nothing timetabled ${dayName}</h3><p>Try a wider distance, another day, or the places below.</p></div>`;
       }
@@ -555,7 +557,7 @@
     document.body.classList.toggle('show-map', which === 'map');
     $('#tabList').setAttribute('aria-pressed', which === 'list');
     $('#tabMap').setAttribute('aria-pressed', which === 'map');
-    if (which === 'map') render();
+    if (which === 'map') { render(); setTimeout(() => map && map.invalidateSize(), 60); }
   }
   window.addEventListener('resize', () => map && map.invalidateSize());
 
