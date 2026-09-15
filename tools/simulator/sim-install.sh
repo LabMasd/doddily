@@ -6,7 +6,7 @@ set -euo pipefail
 
 URL="${1:?Usage: sim-install.sh <artifact-url> [simulator name]}"
 NAME="${2:-}"
-BUNDLE=cc.masd.littledays
+BUNDLE=app.doddily
 
 if [ -n "$NAME" ]; then
   U=$(xcrun simctl list devices | grep -F "$NAME (" | head -1 | sed -E 's/.*\(([0-9A-F-]{36})\).*/\1/')

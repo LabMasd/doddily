@@ -32,7 +32,7 @@ export function WeekStrip({ day, onChange }: Props) {
 const s = StyleSheet.create({
   row: { flexDirection: 'row', gap: 4 },
   day: { flex: 1, alignItems: 'center', paddingTop: 6, paddingBottom: 8, borderRadius: 14 },
-  on: { backgroundColor: C.marigold },
+  on: { backgroundColor: C.accent },
   top: { fontFamily: F.textMedium, fontSize: 12, color: C.muted },
   topOn: { color: C.ink },
   big: { fontFamily: F.display, fontSize: 20, lineHeight: 24, color: C.ink, fontVariant: ['tabular-nums'] },

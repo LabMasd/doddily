@@ -97,7 +97,7 @@ async function loadOverpass(loc: Loc, r: number) {
       nwr${around}[tourism=museum];
     );out center tags;`;
     const headers: Record<string, string> = { 'Content-Type': 'application/x-www-form-urlencoded' };
-    if (Platform.OS !== 'web') headers['User-Agent'] = 'LittleDays/0.1 (family app)';
+    if (Platform.OS !== 'web') headers['User-Agent'] = 'Doddily/0.1 (family app)';
     let lastErr: unknown;
     for (const ep of ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter']) {
       try {

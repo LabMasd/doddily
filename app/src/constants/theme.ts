@@ -1,13 +1,14 @@
-// Little Days palette: cool milk and navy ink, one marigold accent, leaf green for "free".
+// Doddily palette: cool milk and navy ink, one pastel purple accent, leaf green for "free".
 export const C = {
   milk: '#F4F6F8',
   card: '#FFFFFF',
   ink: '#1E2536',
   muted: '#667085',
   line: '#DFE3E9',
-  marigold: '#F2A007',
-  marigoldSoft: '#FFF1D3',
-  marigoldText: '#7A4E00',
+  accent: '#C7B5F5', // fills: selected day, active tiles, flower
+  accentLine: '#8A6FD6', // lines on light or map backgrounds
+  accentSoft: '#F0EAFE', // tag and tile backgrounds
+  accentText: '#4B3A8C', // text on accentSoft
   leaf: '#2F7A52',
   leafSoft: '#E3F2EA',
   rain: '#3D6FB6',

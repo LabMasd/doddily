@@ -1,11 +1,11 @@
 ---
 name: little-days
-description: Search the web for baby activities (classes, groups, swims, cinema, outings) near a postcode and show them as tidy cards in the terminal, optionally adding them to the Little Days app; or refresh the app's saved timetables. Use for "/little-days <what> [near <postcode>] [<n> miles]" or "/little-days refresh".
+description: Search the web for baby activities (classes, groups, swims, cinema, outings) near a postcode and show them as tidy cards in the terminal, optionally adding them to the Doddily app; or refresh the app's saved timetables. Use for "/little-days <what> [near <postcode>] [<n> miles]" or "/little-days refresh".
 ---
 
-# Little Days: search and refresh
+# Doddily: search and refresh
 
-Little Days is a UK baby activity app. The code is in `~/little-days`; it's live at https://labmasd.github.io/little-days/ and published from the GitHub repo LabMasd/little-days (branch main).
+Doddily is a UK baby activity app. The code is in `~/little-days`; it's live at https://labmasd.github.io/little-days/ and published from the GitHub repo LabMasd/little-days (branch main).
 Activity data: `data/research/*.json`. `node scripts/merge.mjs` merges it into `data/activities.json`. The field list is in `scripts/merge.mjs` and the existing research files.
 
 Defaults: ask for a postcode if none is given (never store a home postcode in the repo). Radius **3 miles**. Babies 0–18 months with a parent.
@@ -23,7 +23,7 @@ Defaults: ask for a postcode if none is given (never store a home postcode in th
 
    Skip social media and forums except as leads.
 4. **Check before trusting:** WebFetch the actual page for each promising result to get the day, start/end time, price, ages, booking type and venue postcode.
-   - If a site blocks fetching, try `https://r.jina.ai/<url>`.
+   - If a site blocks fetching (403, captcha or robots.txt), don't work around it: skip it and say so.
    - Never invent a time or price. If you can't confirm one, keep the item but set `confidence: "low"` and say why.
    - For more than about 8 pages, fan out with parallel general-purpose subagents.
 5. **Place each result:** geocode the venue postcodes with postcodes.io, work out the distance from the search location, and drop anything outside the radius.

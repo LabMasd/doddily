@@ -36,5 +36,8 @@ export type Activity = {
 
 export type Loc = { lat: number; lng: number; name: string; postcode: string };
 
+/** A child in the family; `born` is the birth month as YYYY-MM. */
+export type Kid = { id: string; name: string; born: string };
+
 /** An activity placed relative to the user; `s` is the session on the chosen day. */
 export type Row = { it: Activity; d: number; s?: Session };

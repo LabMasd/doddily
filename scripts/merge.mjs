@@ -44,8 +44,9 @@ function readDir(dir, local) {
       it.tier = it.sessions.some((s) => s.start) ? 'timetable' : it.tier === 'place' ? 'place' : (it.tier === 'venue' || !local ? 'venue' : 'place');
       if (local && !it.sessions.length) it.tier = 'place';
       if (local) it.local = true;
-      // Same brand + category at the same postcode = the same class, whichever source found it.
-      const dupe = `${pcKey(it.postcode)}|${it.category}|${brand(it.name)}`;
+      // Same brand + category + age group at the same postcode = the same class, whichever source found it.
+      // (Age is part of the key: one venue often runs a baby class and a toddler class.)
+      const dupe = `${pcKey(it.postcode)}|${it.category}|${brand(it.name)}|${it.age_min_months ?? ''}-${it.age_max_months ?? ''}`;
       if (it.postcode && byDupe.has(dupe)) continue;
       let id = slug(`${it.name}-${it.venue || it.provider}-${pcKey(it.postcode)}`) || slug(`${it.name}-${it.lat}`);
       if (byId.has(id)) continue;

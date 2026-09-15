@@ -73,7 +73,7 @@ export function Tags({ it }: { it: Activity }) {
 
 const tone = StyleSheet.create({
   free: { backgroundColor: C.leafSoft, color: C.leaf },
-  drop: { backgroundColor: C.marigoldSoft, color: C.marigoldText },
+  drop: { backgroundColor: C.accentSoft, color: C.accentText },
   warn: { backgroundColor: C.warnSoft, color: C.warn },
 });
 

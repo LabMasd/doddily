@@ -1,4 +1,4 @@
-# Little Days: iPhone and Android app plan
+# Doddily: iPhone and Android app plan
 
 Started 2026-09-15. The web version (labmasd.github.io/little-days) is the working prototype. This plan turns it into a store app for the UK.
 
@@ -16,16 +16,19 @@ Parents open it, see baby activities near them today, and go. Every card answers
 | Accounts | **No login at all.** Saved items stay on the phone. | "Buy, download, use". Apple and Google handle payment. The simplest privacy labels ("Data not collected"). |
 | Business model | **Paid upfront (e.g. £2.99)** to start, with Family Sharing on. Alternative: free download plus a one-time unlock. | No purchase code or accounts; one purchase covers both parents. Price is a store setting and can change later. |
 | Data hosting | GitHub Pages for now → **Cloudflare Pages/R2** before a paid launch | GitHub Pages isn't meant to back a commercial product; Cloudflare's free tier covers static tiles comfortably. |
-| Name | "Little Days" (working name) | Check App Store, Play and trademarks before launch. |
+| Name | **Doddily** (chosen 2026-09-15; formerly Little Days) | No UK App Store apps with the name; doddily.com, .co.uk, .uk and .app unregistered on 2026-09-15. Internal ids (Expo slug, bundle id, repo) still say little-days until store setup. |
 
 ## Phases
 
 ### Phase 0: you (accounts and admin)
-- [ ] Apple Developer Program: £79/yr (developer.apple.com/programs)
+- [x] Apple Developer Program: £79/yr (individual account)
 - [ ] Google Play Console: $25 once
-- [ ] Check the name "Little Days" is free on both stores, then pick a fallback
+- [x] Name: Doddily (App Store and domains checked 2026-09-15)
+- [ ] Register doddily.com and doddily.co.uk
+- [ ] UK trademark search (ipo.gov.uk, classes 9 and 41)
+- [x] Bundle id renamed to `app.doddily` for iOS and Android (2026-09-15). Expo slug, scheme and repo still say little-days.
 - [x] Expo account (for cloud builds). Supabase is only needed later, if at all.
-- [ ] A contact email for the store listing and privacy policy
+- [x] Contact email: hello@doddily.app (forwards to hello@masd.cc)
 
 ### Phase 1: data backend (I can do most of this now)
 - [x] UK-wide research into `data/uk-research/*.json` (9 national sources, running)
@@ -44,7 +47,7 @@ Screens:
 5. **Map:** native map with clustered pins, a distance circle, and a tap-through to details.
 6. **Saved:** list; a reminder toggle ("Remind me 1 hour before").
 
-Built in: offline cache of the last area, local notifications for reminders, the same visual system as the web (milk and navy, marigold accent, Bricolage Grotesque + Figtree), iPhone and Android back-gesture behaviour, and accessibility (Dynamic Type, VoiceOver labels).
+Built in: offline cache of the last area, local notifications for reminders, the same visual system as the web (milk and navy, pastel purple accent, Bricolage Grotesque + Figtree), iPhone and Android back-gesture behaviour, and accessibility (Dynamic Type, VoiceOver labels).
 
 ### Phase 3: trust
 - No accounts. Family Sharing (Apple) and the Play family library let both parents use one purchase.
@@ -58,7 +61,7 @@ Built in: offline cache of the last area, local notifications for reminders, the
 - Review risk: Apple rejects "just a website in an app" (guideline 4.2). A native map, calendar, reminders and offline mode avoid that.
 
 ### Phase 5: after launch
-- Provider submissions ("Add your class" form → reviewed before it goes live)
+- No self-submitted listings: Doddily only lists classes and places that are published online (decided 2026-09-15)
 - Partnerships: Happity (data feed or booking commission), class franchises (official feeds)
 - Coverage dashboard: timetabled classes per area, oldest data, open reports
 

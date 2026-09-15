@@ -13,6 +13,7 @@ export default function AppTabs() {
           <TabTrigger name="index" href="/" asChild><TabButton>Today</TabButton></TabTrigger>
           <TabTrigger name="map" href="/map" asChild><TabButton>Map</TabButton></TabTrigger>
           <TabTrigger name="saved" href="/saved" asChild><TabButton>Saved</TabButton></TabTrigger>
+          <TabTrigger name="you" href="/you" asChild><TabButton>You</TabButton></TabTrigger>
         </View>
       </TabList>
     </Tabs>

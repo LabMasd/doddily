@@ -1,4 +1,4 @@
-/* Little Days — baby activities near you */
+/* Doddily: baby and toddler activities near you */
 (() => {
   'use strict';
 
@@ -11,7 +11,7 @@
   const CATS = {
     library:  { e: '📚', label: 'Rhymes & stories' },
     stayplay: { e: '🧸', label: 'Stay & play' },
-    support:  { e: '💬', label: 'Baby group' },
+    support:  { e: '💬', label: 'Baby & toddler group' },
     music:    { e: '🎵', label: 'Music' },
     sensory:  { e: '✨', label: 'Sensory' },
     movement: { e: '🤸', label: 'Movement' },
@@ -39,8 +39,9 @@
     { id: 'rhymes', label: 'Rhymes & stay-and-play', cats: ['library', 'stayplay', 'support'] },
     { id: 'classes', label: 'Classes', cats: ['music', 'sensory', 'movement', 'massage', 'fitness'] },
     { id: 'swim', label: 'Swim', cats: ['swim', 'pool'] },
+    { id: 'softplay', label: 'Soft play', cats: ['softplay', 'softplace'] },
     { id: 'cinema', label: 'Cinema', cats: ['cinema'] },
-    { id: 'out', label: 'Days out', cats: ['museum', 'farm', 'softplay', 'cafe', 'outdoor', 'softplace', 'farmplace', 'museumplace'] },
+    { id: 'out', label: 'Days out', cats: ['museum', 'farm', 'cafe', 'outdoor', 'farmplace', 'museumplace'] },
     { id: 'parks', label: 'Parks & playgrounds', cats: ['playground', 'park'] },
     { id: 'change', label: 'Baby change', cats: ['change', 'libplace'] },
   ];
@@ -382,6 +383,8 @@
         const ss = (r.it.sessions || []).filter((s) => s.day === wd);
         if (ss.length) {
           for (const s of ss) {
+            // A session with no start time can't sit in the timetable; show it with "check times".
+            if (!s.start) { venues.push(r); break; }
             const end = toMin(s.end) ?? (toMin(s.start) ?? 0) + 60;
             const entry = { ...r, s };
             (s.start && end < nowMin ? past : timed).push(entry);
@@ -456,7 +459,7 @@
     layer.clearLayers(); homeLayer.clearLayers();
     if (!state.loc) return;
     const c = [state.loc.lat, state.loc.lng];
-    const circle = L.circle(c, { radius: state.radius * MI, color: '#F2A007', weight: 2, fillOpacity: 0.05 }).addTo(homeLayer);
+    const circle = L.circle(c, { radius: state.radius * MI, color: '#8A6FD6', weight: 2, fillOpacity: 0.05 }).addTo(homeLayer);
     L.marker(c, { icon: L.divIcon({ className: '', html: '<div class="pin home">🏠</div>', iconSize: [30, 30] }) }).addTo(homeLayer);
     const seen = new Set();
     for (const r of rows) {
@@ -490,9 +493,9 @@
           <div class="hint" id="radHint"></div>
         </div>
         <div class="field">
-          <label for="born">Baby's birth month <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+          <label for="born">Child's birth month <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
           <input class="input plain" type="month" id="born" value="${esc(state.born)}">
-          <div class="hint">Hides classes she's too young or too old for.</div>
+          <div class="hint">Hides classes your child is too young or too old for.</div>
         </div>
         <button class="btn wide" id="sheetSave">Show activities</button>
       </div>`;
@@ -553,8 +556,8 @@
     const d = dateFor(state.day);
     const stamp = (hm) => { const [h, m] = hm.split(':'); return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}T${h.padStart(2, '0')}${m}00`; };
     const endHM = end || (() => { const t = toMin(start) + 60; return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}`; })();
-    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Little Days//EN', 'BEGIN:VEVENT',
-      `UID:${Date.now()}@littledays`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Doddily//EN', 'BEGIN:VEVENT',
+      `UID:${Date.now()}@doddily`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
       `DTSTART;TZID=Europe/London:${stamp(start)}`, `DTEND;TZID=Europe/London:${stamp(endHM)}`,
       `SUMMARY:${it.name}`, `LOCATION:${[it.venue, it.address, it.postcode].filter(Boolean).join(', ')}`,
       `DESCRIPTION:${[it.price, it.url].filter(Boolean).join(' — ')}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
