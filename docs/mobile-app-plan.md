@@ -93,11 +93,10 @@ little-days/
   - **App:** Expo app built with Welcome, Today, Map, Saved, Activity and Settings screens. Type check passes. In the web preview, the flow from postcode to Today to detail to Saved works.
   - **iOS:** needs a local patch for Xcode 26.3 (see HANDOVER).
 - **2026-09-15, overnight:**
-  - **iOS app running (EAS dev build on the simulator):** Welcome, Today (27 sessions near N16), the Apple Maps map with 64 pins and a 3-mile circle, activity detail, reminders (notification permission, then "Reminder on"), and "Add to calendar" (native pre-filled form) all verified.
+  - **iOS app running (EAS dev build on the simulator):** Welcome, Today (27 sessions near N16), the Apple Maps map with 64 pins and a 3-mile circle, activity detail, reminders (notification permission, then "Reminder on"), and "Add to calendar" all verified. Calendar uses add-only access on iOS: the system form via `expo-calendar/legacy`, because the newer API's default calendar needs full access.
   - **Places:** 129,535 UK places are prebuilt monthly by a GitHub Action; web and app load them.
   - **Data:** 8,144 activities; Bloom excluded.
 - **Before store submission:**
-  - Switch calendar to write-only access (less to review): `writeOnlyCalendarPermission` in the expo-calendar plugin plus `requestCalendarPermissions(true)`. Needs a new native build.
   - A contact email for the privacy policy and store listing
   - Move data hosting to Cloudflare
   - Pre-build OSM places instead of live Overpass

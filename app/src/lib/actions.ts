@@ -1,4 +1,5 @@
 import * as Calendar from 'expo-calendar';
+import * as CalendarLegacy from 'expo-calendar/legacy';
 import * as WebBrowser from 'expo-web-browser';
 import { Linking, Platform, Share } from 'react-native';
 
@@ -70,15 +71,7 @@ export async function addToCalendar(it: Activity, next: { date: Date; session: S
     // iOS: add-only access is enough for the system "new event" form, and asks less of the parent.
     const perm = await Calendar.requestCalendarPermissions(Platform.OS === 'ios');
     if (!perm.granted) return 'error';
-    let calendar: Calendar.ExpoCalendar | undefined;
-    if (Platform.OS === 'ios') {
-      calendar = Calendar.getDefaultCalendarSync();
-    } else {
-      const all = await Calendar.getCalendars();
-      calendar = all.find((c) => c.isPrimary && c.allowsModifications) ?? all.find((c) => c.allowsModifications);
-    }
-    if (!calendar) return 'error';
-    const res = await calendar.addEventWithForm({
+    const details = {
       title: it.name,
       startDate: start,
       endDate: end,
@@ -86,7 +79,17 @@ export async function addToCalendar(it: Activity, next: { date: Date; session: S
       location: [it.venue, it.address, it.postcode].filter(Boolean).join(', '),
       notes: [it.price, it.booking === 'drop-in' ? 'Drop in' : 'Book ahead', it.url].filter(Boolean).join('\n'),
       url: it.url,
-    });
+    };
+    if (Platform.OS === 'ios') {
+      // The system form works with add-only access and needs no calendar picked in code
+      // (the newer API's getDefaultCalendarSync fails without full access).
+      const res = await CalendarLegacy.createEventInCalendarAsync(details);
+      return res.action === 'saved' ? 'added' : 'canceled';
+    }
+    const all = await Calendar.getCalendars();
+    const calendar = all.find((c) => c.isPrimary && c.allowsModifications) ?? all.find((c) => c.allowsModifications);
+    if (!calendar) return 'error';
+    const res = await calendar.addEventWithForm(details);
     return res.action === 'saved' ? 'added' : 'canceled';
   } catch (e) {
     console.warn('[calendar]', e);
