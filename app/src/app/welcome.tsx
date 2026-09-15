@@ -15,7 +15,7 @@ export default function WelcomeScreen() {
         <Text style={s.title}>Little Days</Text>
         <Text style={s.sub}>Baby and toddler classes, groups and places near you, sorted by day and time.</Text>
         <View style={s.card}>
-          <LocationForm submitLabel="Show what’s on" onDone={() => router.replace('/')} />
+          <LocationForm submitLabel="Show what’s on" onDone={() => router.replace('/')} askChild />
         </View>
         <Text style={s.privacy}>Your location stays on this phone. It’s only used to find things nearby.</Text>
       </ScrollView>

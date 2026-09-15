@@ -3,12 +3,12 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 
 import type { GroupId } from './categories';
 import { loadActivities, loadPlaces } from './data';
-import type { Activity, Loc } from './types';
+import type { Activity, Kid, Loc } from './types';
 
 const KEY = 'ld:settings:v1';
 const SAVED_KEY = 'ld:saved:v1';
 
-export type Settings = { loc: Loc | null; radius: number; born: string | null; group: GroupId; onboarded: boolean };
+export type Settings = { loc: Loc | null; radius: number; group: GroupId; onboarded: boolean; name: string; kids: Kid[] };
 type Toggles = { free: boolean; drop: boolean; indoor: boolean; ageFit: boolean };
 type Status = 'idle' | 'loading' | 'ready' | 'offline';
 
@@ -18,6 +18,9 @@ type Ctx = {
   update: (patch: Partial<Settings>) => void;
   toggles: Toggles;
   flip: (k: keyof Toggles) => void;
+  /** Which child the list is filtered for. */
+  forKid: 'all' | string;
+  setForKid: (id: 'all' | string) => void;
   day: number | 'week';
   setDay: (d: number | 'week') => void;
   saved: Record<string, Activity>;
@@ -28,13 +31,16 @@ type Ctx = {
 
 const StoreContext = createContext<Ctx | null>(null);
 
-const DEFAULTS: Settings = { loc: null, radius: 3, born: null, group: 'all', onboarded: false };
+const DEFAULTS: Settings = { loc: null, radius: 3, group: 'all', onboarded: false, name: '', kids: [] };
+
+export const newKidId = () => `k${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`;
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
   const [settings, setSettings] = useState<Settings>(DEFAULTS);
   const [toggles, setToggles] = useState<Toggles>({ free: false, drop: false, indoor: false, ageFit: true });
   const [day, setDay] = useState<number | 'week'>(0);
+  const [forKid, setForKid] = useState<'all' | string>('all');
   const [saved, setSaved] = useState<Record<string, Activity>>({});
   const [data, setData] = useState<Ctx['data']>({ items: [], places: [], checked: '', status: 'idle', placesStatus: 'idle' });
   const loadId = useRef(0);
@@ -44,7 +50,13 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       try {
         const [s, sv] = await Promise.all([AsyncStorage.getItem(KEY), AsyncStorage.getItem(SAVED_KEY)]);
         // Always open on Everything; a remembered filter makes the list look empty days later.
-        if (s) setSettings({ ...DEFAULTS, ...JSON.parse(s), group: 'all' });
+        if (s) {
+          const raw = JSON.parse(s);
+          // Older versions kept one birth month; it becomes the first child.
+          const kids: Kid[] = raw.kids ?? (raw.born ? [{ id: 'k1', name: '', born: raw.born }] : []);
+          delete raw.born;
+          setSettings({ ...DEFAULTS, ...raw, kids, group: 'all' });
+        }
         if (sv) setSaved(JSON.parse(sv));
       } catch { /* start fresh */ }
       setReady(true);
@@ -99,8 +111,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const value = useMemo<Ctx>(() => ({
     ready, settings, update, toggles,
     flip: (k) => setToggles((t) => ({ ...t, [k]: !t[k] })),
+    forKid, setForKid,
     day, setDay, saved, toggleSaved, data, reload,
-  }), [ready, settings, update, toggles, day, saved, toggleSaved, data, reload]);
+  }), [ready, settings, update, toggles, forKid, day, saved, toggleSaved, data, reload]);
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }

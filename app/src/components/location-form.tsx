@@ -5,17 +5,19 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from 
 
 import { C, F, R } from '@/constants/theme';
 import { lookupPostcode, postcodeFor } from '@/lib/data';
-import { useStore } from '@/lib/store';
+import { newKidId, useStore } from '@/lib/store';
 import type { Loc } from '@/lib/types';
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-export function LocationForm({ submitLabel, onDone }: { submitLabel: string; onDone: () => void }) {
+/** `askChild`: also ask for a first child's name and birth month (used on the welcome screen). */
+export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: string; onDone: () => void; askChild?: boolean }) {
   const { settings, update } = useStore();
   const [pc, setPc] = useState(settings.loc?.postcode ?? '');
   const [pending, setPending] = useState<Loc | null>(null);
   const [radius, setRadius] = useState(settings.radius);
-  const [born, setBorn] = useState<string | null>(settings.born);
+  const [born, setBorn] = useState<string | null>(settings.kids[0]?.born ?? null);
+  const [childName, setChildName] = useState(settings.kids[0]?.name ?? '');
   const [busy, setBusy] = useState<'geo' | 'save' | null>(null);
   const [error, setError] = useState('');
 
@@ -49,7 +51,10 @@ export function LocationForm({ submitLabel, onDone }: { submitLabel: string; onD
     }
     loc = loc ?? settings.loc;
     if (!loc) { setError('Add a postcode or use where you are.'); return; }
-    update({ loc, radius, born, onboarded: true });
+    const kids = askChild && born
+      ? [{ id: settings.kids[0]?.id ?? newKidId(), name: childName.trim(), born }, ...settings.kids.slice(1)]
+      : settings.kids;
+    update({ loc, radius, kids, onboarded: true });
     onDone();
   }
 
@@ -104,14 +109,26 @@ export function LocationForm({ submitLabel, onDone }: { submitLabel: string; onD
       </View>
       <Text style={s.hint}>About {Math.round(radius * 25)} minutes’ walk with a buggy at the edge.</Text>
 
-      <Text style={[s.label, s.gap]}>Child’s birth month <Text style={s.optional}>(optional)</Text></Text>
+      {askChild && (<>
+      <Text style={[s.label, s.gap]}>Your child <Text style={s.optional}>(optional)</Text></Text>
+      <TextInput
+        value={childName}
+        onChangeText={setChildName}
+        placeholder="Name"
+        placeholderTextColor={C.muted}
+        autoCapitalize="words"
+        textContentType="givenName"
+        style={[s.input, s.nameInput]}
+        accessibilityLabel="Child's name"
+      />
       <View style={s.row}>
         <Pressable onPress={() => shiftBorn(-1)} style={s.step} accessibilityLabel="Earlier month"><Text style={s.stepText}>‹</Text></Pressable>
         <Text style={[s.value, s.month]}>{bornLabel}</Text>
         <Pressable onPress={() => shiftBorn(1)} style={s.step} accessibilityLabel="Later month"><Text style={s.stepText}>›</Text></Pressable>
         {born && <Pressable onPress={() => setBorn(null)} style={s.clear}><Text style={s.ghostText}>Clear</Text></Pressable>}
       </View>
-      <Text style={s.hint}>Hides classes your child is too young or too old for.</Text>
+      <Text style={s.hint}>Birth month. Hides classes they’re too young or too old for. Add more children in You.</Text>
+      </>)}
 
       <Pressable onPress={save} style={({ pressed }) => [s.primary, pressed && { opacity: 0.85 }]} accessibilityRole="button">
         {busy === 'save' ? <ActivityIndicator color="#fff" /> : <Text style={s.primaryText}>{submitLabel}</Text>}
@@ -137,6 +154,7 @@ const s = StyleSheet.create({
   step: { width: 44, height: 44, borderRadius: R.md, borderWidth: 1, borderColor: C.line, alignItems: 'center', justifyContent: 'center', backgroundColor: C.milk },
   stepText: { fontFamily: F.display, fontSize: 22, color: C.ink },
   clear: { paddingHorizontal: 8, paddingVertical: 10 },
+  nameInput: { flex: 0, textTransform: 'none', marginBottom: 6 },
   primary: { marginTop: 26, backgroundColor: C.ink, borderRadius: R.md, paddingVertical: 15, alignItems: 'center' },
   primaryText: { fontFamily: F.textSemi, fontSize: 17, color: '#fff' },
 });

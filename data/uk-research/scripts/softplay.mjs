@@ -31,7 +31,7 @@ export async function rawGet(url, opts = {}) {
 }
 
 // ---------------------------------------------------------------- robots
-const AI_AGENTS = /^(claudebot|claude-web|claude-user|claude-searchbot|anthropic-ai|gptbot|chatgpt-user|oai-searchbot|ccbot|google-extended|perplexitybot|perplexity-user|bytespider|applebot-extended|meta-externalagent|cohere-ai|cohere-training-data-crawler|diffbot|omgili|ai2bot|amazonbot|youbot|timpibot|imagesiftbot|petalbot)$/;
+const AI_AGENTS = /^(claudebot|claude-web|claude-user|claude-searchbot|anthropic-ai|gptbot|chatgpt-user|oai-searchbot|ccbot|google-extended|perplexitybot|perplexity-user|bytespider|applebot-extended|meta-externalagent|cohere-ai|cohere-training-data-crawler|diffbot|omgili|ai2bot)$/;
 const OUR_AI = /^(claudebot|claude-web|claude-user|claude-searchbot|anthropic-ai)$/;
 function parseRobots(txt) {
   const groups = []; let cur = null; let lastUA = false; const signals = [];
@@ -86,17 +86,3 @@ export async function get(url) {
   return r;
 }
 
-const isMain = import.meta.url === 'file://' + process.argv[1];
-if (isMain) {
-  const cmd = process.argv[2];
-  if (cmd === 'fetch') { for (const u of process.argv.slice(3)) { const r = await get(u); console.log(r.status, r.blocked || '', r.url, r.text.length); } }
-  if (cmd === 'robots') {
-    for (const d of process.argv.slice(3)) {
-      const origin = d.startsWith('http') ? new URL(d).origin : 'https://' + d;
-      const st = await siteStatus(origin);
-      let home = '';
-      if (st.ok) { const r = await get(origin + '/'); home = `${r.status} ${r.blocked || ''} ${r.url} ${(r.text.match(/<title[^>]*>([^<]*)/i) || [])[1] || ''}`.replace(/\s+/g, ' ').slice(0, 140); }
-      console.log(origin, st.ok ? 'OK' : 'SKIP: ' + st.why, '|', home);
-    }
-  }
-}
