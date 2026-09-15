@@ -3,8 +3,8 @@ import { Image, Pressable, StyleSheet, Text, View, type ImageSourcePropType } fr
 
 import { C, F } from '@/constants/theme';
 
-// Web only: drawn to match the iPhone's floating tab bar (same icons, labels and selected state).
-const BLUE = '#0A84FF';
+// Web only: drawn to match the iPhone’s floating tab bar (same icons, labels and selected colour).
+const SELECTED = C.accentLine; // brand purple, matching the phone
 
 export default function AppTabs() {
   return (
@@ -25,7 +25,7 @@ export default function AppTabs() {
 function TabButton({ children, icon, isFocused, ...props }: TabTriggerSlotProps & { icon: ImageSourcePropType }) {
   return (
     <Pressable {...props} style={[s.btn, isFocused && s.on]}>
-      <Image source={icon} style={[s.icon, { tintColor: isFocused ? BLUE : C.ink }]} />
+      <Image source={icon} style={[s.icon, { tintColor: isFocused ? SELECTED : C.ink }]} />
       <Text style={s.label}>{children}</Text>
     </Pressable>
   );
