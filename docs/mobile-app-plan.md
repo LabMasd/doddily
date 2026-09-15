@@ -11,8 +11,8 @@ Parents open it, see baby activities near them today, and go. Every card answers
 | App framework | **Expo (React Native, TypeScript)** with expo-router | One codebase for iOS and Android, genuinely native. Store builds happen in the cloud (EAS), so no Android Studio is needed. |
 | Maps | **react-native-maps**: Apple Maps on iOS, Google Maps on Android | Free on phones. OpenStreetMap's own tile servers don't allow app traffic. |
 | Backend | **Static location tiles for now**; Supabase (open source Postgres + PostGIS) only if the data outgrows tiles | Tiles need no server and work offline. The schema is ready if "near me" queries or anonymous "report wrong info" need a database. No sign-in either way. |
-| Data refresh | Claude Code `/little-days refresh` and research runs, imported into Supabase by script | No servers or API keys; the same workflow as now. |
-| Parks, playgrounds, pools, soft play | Built from an OpenStreetMap UK extract **by a monthly GitHub Action** (cloud, not your Mac), imported into Supabase | The public Overpass API isn't meant for app traffic. |
+| Data refresh | Claude Code `/little-days refresh` and research runs → `node scripts/merge.mjs` → static tiles | No servers or API keys; the same workflow as now. |
+| Parks, playgrounds, pools, soft play | Built from an OpenStreetMap UK extract **by a monthly GitHub Action** (cloud, not your Mac) into `data/places` tiles | The public Overpass API isn't meant for app traffic. |
 | Accounts | **No login at all.** Saved items stay on the phone. | "Buy, download, use". Apple and Google handle payment. The simplest privacy labels ("Data not collected"). |
 | Business model | **Paid upfront (e.g. £2.99)** to start, with Family Sharing on. Alternative: free download plus a one-time unlock. | No purchase code or accounts; one purchase covers both parents. Price is a store setting and can change later. |
 | Data hosting | GitHub Pages for now → **Cloudflare Pages/R2** before a paid launch | GitHub Pages isn't meant to back a commercial product; Cloudflare's free tier covers static tiles comfortably. |
@@ -24,7 +24,7 @@ Parents open it, see baby activities near them today, and go. Every card answers
 - [ ] Apple Developer Program: £79/yr (developer.apple.com/programs)
 - [ ] Google Play Console: $25 once
 - [ ] Check the name "Little Days" is free on both stores, then pick a fallback
-- [ ] Supabase account (free), or say the word and I'll plan self-hosting on the home server
+- [x] Expo account (for cloud builds). Supabase is only needed later, if at all.
 - [ ] A contact email for the store listing and privacy policy
 
 ### Phase 1: data backend (I can do most of this now)
@@ -33,9 +33,9 @@ Parents open it, see baby activities near them today, and go. Every card answers
 - [x] Supabase schema (written, not deployed): `activities` (PostGIS point, sessions, tier, source, confidence, checked date), `places` (OSM), `reports`, `saved` (`supabase/migrations/0001_init.sql`)
 - [x] `activities_near(lat, lng, radius, day)` query function (in the migration)
 - [ ] Import script: research JSON → Supabase (upsert by id, keep manual fixes)
-- [ ] GitHub Action: monthly OSM extract → playgrounds, parks, libraries, pools, soft play, farms, museums, baby change → Supabase
+- [x] GitHub Action: monthly OSM extract → playgrounds, parks, libraries, pools, soft play, farms, museums, baby change → `data/places` tiles (129,535 places)
 
-### Phase 2: app MVP (Expo): screens built 2026-09-15, verified in web preview; iOS simulator build in progress
+### Phase 2: app MVP (Expo): built and verified on the iOS simulator 2026-09-15; Android not yet built
 Screens:
 1. **Welcome:** "Use my location" or type a postcode; optional baby birth month. Location is only used to find things nearby.
 2. **Today** (home): the week strip, sessions in time order, "Classes nearby, check times", "Go any time" places. Pull to refresh.
@@ -91,7 +91,7 @@ little-days/
 - **2026-09-15:**
   - **Data:** UK-wide research running (family hubs 3,084, library rhyme times 414, play and farms 320, groups, plus class chains still crawling). The web version now loads location tiles; Leeds confirmed working.
   - **App:** Expo app built with Welcome, Today, Map, Saved, Activity and Settings screens. Type check passes. In the web preview, the flow from postcode to Today to detail to Saved works.
-  - **iOS:** needs a local patch for Xcode 26.3 (see HANDOVER).
+  - **iOS:** local Xcode 26.3 can't build Expo 57, so cloud (EAS) builds are used instead (see HANDOVER).
 - **2026-09-15, overnight:**
   - **iOS app running (EAS dev build on the simulator):** Welcome, Today (27 sessions near N16), the Apple Maps map with 64 pins and a 3-mile circle, activity detail, reminders (notification permission, then "Reminder on"), and "Add to calendar" all verified. Calendar uses add-only access on iOS: the system form via `expo-calendar/legacy`, because the newer API's default calendar needs full access.
   - **Places:** 129,535 UK places are prebuilt monthly by a GitHub Action; web and app load them.
@@ -99,6 +99,6 @@ little-days/
 - **Before store submission:**
   - A contact email for the privacy policy and store listing
   - Move data hosting to Cloudflare
-  - Pre-build OSM places instead of live Overpass
   - Google Maps API key for Android
-  - Expo, Apple and Google accounts
+  - Apple and Google developer accounts
+  - Release builds (without the dev-tools button) for the final store screenshots
