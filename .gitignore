@@ -6,3 +6,4 @@ app/ios/
 app/android/
 .env*
 tools/simulator/tap
+tools/simulator/swipe

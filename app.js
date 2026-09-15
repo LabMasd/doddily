@@ -383,6 +383,8 @@
         const ss = (r.it.sessions || []).filter((s) => s.day === wd);
         if (ss.length) {
           for (const s of ss) {
+            // A session with no start time can't sit in the timetable; show it with "check times".
+            if (!s.start) { venues.push(r); break; }
             const end = toMin(s.end) ?? (toMin(s.start) ?? 0) + 60;
             const entry = { ...r, s };
             (s.start && end < nowMin ? past : timed).push(entry);

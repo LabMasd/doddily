@@ -75,6 +75,8 @@ export function daySections(rows: Row[], offset: number, group: GroupId, now = n
     const today = r.it.sessions.filter((s) => s.day === wd);
     if (today.length) {
       for (const s of today) {
+        // A session with no start time can't sit in the timetable; show it with "check times".
+        if (!s.start) { venues.push(r); break; }
         const end = toMin(s.end) ?? (toMin(s.start) ?? 0) + 60;
         (s.start && end < nowMin ? past : timed).push({ ...r, s });
       }
