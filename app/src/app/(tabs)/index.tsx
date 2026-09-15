@@ -9,11 +9,11 @@ import { BrandHeader, useIntro } from '@/components/brand-header';
 import { FilterBar } from '@/components/filter-bar';
 import { WeekStrip } from '@/components/week-strip';
 import { C, F, GUTTER, MaxContentWidth, R } from '@/constants/theme';
-import { DAY_LONG, daySections, filterRows, weekSections, type Section } from '@/lib/schedule';
+import { DAY_LONG, daySections, filterRows, selectedAges, weekSections, type Section } from '@/lib/schedule';
 import { useStore } from '@/lib/store';
 
 export default function TodayScreen() {
-  const { ready, settings, toggles, day, setDay, data, reload } = useStore();
+  const { ready, settings, toggles, forKid, day, setDay, data, reload } = useStore();
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const [refreshing, setRefreshing] = useState(false);
@@ -21,8 +21,8 @@ export default function TodayScreen() {
   const intro = useIntro();
 
   const rows = useMemo(
-    () => (settings.loc ? filterRows([...data.items, ...data.places], settings.loc, settings.radius, { group: settings.group, ...toggles }, settings.born) : []),
-    [data.items, data.places, settings.loc, settings.radius, settings.group, settings.born, toggles]
+    () => (settings.loc ? filterRows([...data.items, ...data.places], settings.loc, settings.radius, { group: settings.group, ...toggles }, selectedAges(settings.kids, forKid)) : []),
+    [data.items, data.places, settings.loc, settings.radius, settings.group, settings.kids, forKid, toggles]
   );
 
   const view = useMemo(() => {

@@ -17,6 +17,10 @@ export default function AppTabs() {
         <NativeTabs.Trigger.Label>Saved</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon src={require('@/assets/images/tabIcons/saved.png')} renderingMode="template" />
       </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="you">
+        <NativeTabs.Trigger.Label>You</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon src={require('@/assets/images/tabIcons/you.png')} renderingMode="template" />
+      </NativeTabs.Trigger>
     </NativeTabs>
   );
 }
