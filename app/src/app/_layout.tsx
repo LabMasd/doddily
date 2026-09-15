@@ -5,7 +5,7 @@ import { Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import { Platform } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 
 import { C } from '@/constants/theme';
 import { hydrateReminderActivities } from '@/lib/reminders';
@@ -39,9 +39,9 @@ export default function RootLayout() {
     return () => sub.remove();
   }, [router]);
 
-  if (!loaded) return null;
+  if (!loaded) return <View style={[s.page, { backgroundColor: C.milk }]} />;
 
-  return (
+  const app = (
     <StoreProvider>
       <StatusBar style="dark" />
       <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: C.milk } }}>
@@ -58,4 +58,17 @@ export default function RootLayout() {
       </Stack>
     </StoreProvider>
   );
+
+  // On the web, show the app at phone width so it looks like the iPhone version on a computer too.
+  if (Platform.OS !== 'web') return app;
+  return (
+    <View style={s.page}>
+      <View style={s.phone}>{app}</View>
+    </View>
+  );
 }
+
+const s = StyleSheet.create({
+  page: { flex: 1, alignItems: 'center', backgroundColor: '#E7EAF0' },
+  phone: { flex: 1, width: '100%', maxWidth: 430, backgroundColor: C.milk, overflow: 'hidden', boxShadow: '0 0 40px rgba(30,37,54,0.10)' },
+});

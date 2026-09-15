@@ -74,7 +74,7 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
         <TextInput
           value={pc}
           onChangeText={(t) => { setPc(t); setPending(null); }}
-          placeholder="E8 3PB"
+          placeholder="E8 1EA"
           placeholderTextColor={C.muted}
           autoCapitalize="characters"
           autoCorrect={false}
