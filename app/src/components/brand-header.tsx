@@ -6,7 +6,7 @@ import { BrandMark, MARK } from '@/components/brand-mark';
 import { C, F } from '@/constants/theme';
 
 // Opening sequence: the icon pops in, winds back and sweeps round in the middle of the screen,
-// "Little" and "Days" slide out either side, and the wordmark rises to the top, where it stays.
+// "D" and "ddily" slide out either side (the flower is the "o"), and the wordmark rises to the top, where it stays.
 
 // Arrivals decelerate, travel eases both ways.
 const EASE_OUT = Easing.bezierFn(0.22, 1, 0.36, 1); // quick start, long gentle settle
@@ -20,19 +20,19 @@ const P = {
   appear: [0, 550],
   windUp: [0, 200],
   spin: [200, 1100],
-  little: [350, 950],
-  days: [420, 1020], // a beat after "Little"
+  little: [350, 950], // "D"
+  days: [420, 1020], // "ddily", a beat after "D"
   up: [1050, 1750],
   content: [1350, 2100],
 } as const;
 const ROW = 40; // height of the header row
 const HEADER_TOP = 8; // matches the Today header's paddingTop
-const GAP = 6; // between the icon and "Little" / "Days"
+const GAP = 1; // between the icon and "D" / "ddily": tight, so the flower reads as the "o"
 const WIND_DEG = -14;
 const SPIN_DEG = 216; // three petals' worth: the five-petal flower ends looking as it started
 const APPEAR_SCALE = 0.4;
 const CENTRE_SCALE = 1.8;
-const WORD_BOX = 120; // room for "Little" / "Days" beside the icon
+const WORD_BOX = 120; // room for "D" / "ddily" beside the icon
 
 let played = false; // once per app launch
 
@@ -58,7 +58,7 @@ export function useIntro() {
   return { t, start, contentStyle };
 }
 
-/** "Little ✿ Days", centred at the top of Today, with the opening sequence. */
+/** "D✿ddily", centred at the top of Today, with the opening sequence. */
 export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<number>; t: SharedValue<number>; onReady: () => void }) {
   const insets = useSafeAreaInsets();
   const { height } = useWindowDimensions();
@@ -90,13 +90,13 @@ export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<numb
   }));
 
   return (
-    <View style={s.row} accessibilityRole="header" accessibilityLabel="Little Days" onLayout={() => onReady()}>
+    <View style={s.row} accessibilityRole="header" accessibilityLabel="Doddily" onLayout={() => onReady()}>
       <Animated.View style={[s.group, group]}>
         <View style={[s.mask, s.littleMask]}>
-          <Animated.Text style={[s.word, little]} numberOfLines={1} onLayout={(e) => { littleW.value = e.nativeEvent.layout.width; }}>Little</Animated.Text>
+          <Animated.Text style={[s.word, little]} numberOfLines={1} onLayout={(e) => { littleW.value = e.nativeEvent.layout.width; }}>D</Animated.Text>
         </View>
         <View style={[s.mask, s.daysMask]}>
-          <Animated.Text style={[s.word, days]} numberOfLines={1} onLayout={(e) => { daysW.value = e.nativeEvent.layout.width; }}>Days</Animated.Text>
+          <Animated.Text style={[s.word, days]} numberOfLines={1} onLayout={(e) => { daysW.value = e.nativeEvent.layout.width; }}>ddily</Animated.Text>
         </View>
         {/* Last, so the words slide out from behind the icon. */}
         <BrandMark scrollY={scrollY} spin={spin} />

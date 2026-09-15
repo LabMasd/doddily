@@ -1,11 +1,11 @@
 ---
 name: little-days
-description: Search the web for baby activities (classes, groups, swims, cinema, outings) near a postcode and show them as tidy cards in the terminal, optionally adding them to the Little Days app; or refresh the app's saved timetables. Use for "/little-days <what> [near <postcode>] [<n> miles]" or "/little-days refresh".
+description: Search the web for baby activities (classes, groups, swims, cinema, outings) near a postcode and show them as tidy cards in the terminal, optionally adding them to the Doddily app; or refresh the app's saved timetables. Use for "/little-days <what> [near <postcode>] [<n> miles]" or "/little-days refresh".
 ---
 
-# Little Days: search and refresh
+# Doddily: search and refresh
 
-Little Days is a UK baby activity app. The code is in `~/little-days`; it's live at https://labmasd.github.io/little-days/ and published from the GitHub repo LabMasd/little-days (branch main).
+Doddily is a UK baby activity app. The code is in `~/little-days`; it's live at https://labmasd.github.io/little-days/ and published from the GitHub repo LabMasd/little-days (branch main).
 Activity data: `data/research/*.json`. `node scripts/merge.mjs` merges it into `data/activities.json`. The field list is in `scripts/merge.mjs` and the existing research files.
 
 Defaults: ask for a postcode if none is given (never store a home postcode in the repo). Radius **3 miles**. Babies 0–18 months with a parent.

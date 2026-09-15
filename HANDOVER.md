@@ -1,4 +1,4 @@
-# Little Days — handover
+# Doddily (formerly Little Days): handover
 
 Baby activity finder for UK parents. A static PWA with no backend. It opens on a phone and can be added to the home screen.
 

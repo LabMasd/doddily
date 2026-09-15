@@ -1,4 +1,4 @@
-# Little Days: store listing drafts
+# Doddily: store listing drafts
 
 These are drafts to edit before submitting. Anything in [brackets] needs your input.
 
@@ -6,8 +6,8 @@ These are drafts to edit before submitting. Anything in [brackets] needs your in
 
 | Field | Draft |
 |---|---|
-| Name (30 chars) | Little Days: Baby Activities |
-| Subtitle (30 chars) | Classes & groups near you |
+| Name (30 chars) | Doddily |
+| Subtitle (30 chars) | Baby & toddler classes nearby |
 | Category | Primary: Lifestyle · Secondary: Education |
 | Age rating | 4+ (no objectionable content) |
 | Price | [£2.99 suggested] · Family Sharing: **on** |
@@ -17,7 +17,7 @@ These are drafts to edit before submitting. Anything in [brackets] needs your in
 | Privacy policy URL | [host `docs/privacy-policy.md` as a page first] |
 
 ### Description
-Little Days shows you what's on for your baby near you today.
+Doddily shows you what's on for your baby or toddler near you today.
 
 Pick a day and see sessions in time order, with how far away each one is. Baby sensory, music, swimming, library rhyme times, free stay and play, parent and baby cinema, soft play, farms and parks, all in one place.
 
@@ -40,7 +40,7 @@ Listings come from providers' own pages, councils and libraries across the UK. T
 
 | Field | Draft |
 |---|---|
-| App name (30) | Little Days: Baby Activities |
+| App name (30) | Doddily: Baby & Toddler Days |
 | Short description (80) | Baby classes, rhyme times and stay and play near you, sorted by day and time. |
 | Category | Parenting |
 | Content rating | Everyone |
@@ -60,14 +60,14 @@ Full description: the same as the App Store description above.
 
 # Privacy policy (draft), docs/privacy-policy.md content
 
-**Little Days privacy policy.** Last updated [date].
+**Doddily privacy policy.** Last updated [date].
 
-Little Days doesn't ask you to create an account and doesn't collect personal data.
+Doddily doesn't ask you to create an account and doesn't collect personal data.
 
 - **Location:** if you choose "Use where I am", your phone's location is used to find activities near you. It is sent only to look up the nearest postcode (postcodes.io) and to load listings for your area. We don't store it.
 - **Postcode, distance and baby's birth month:** saved on your phone only.
 - **Saved items and reminders:** stored on your phone only. Reminders use your phone's own notifications.
-- **Calendar:** Little Days only adds an event when you tap "Add to calendar" and confirm it.
+- **Calendar:** Doddily only adds an event when you tap "Add to calendar" and confirm it.
 - **Analytics, advertising and tracking:** none.
 - **Listings:** from providers' public pages, councils and libraries. Map and place data © OpenStreetMap contributors.
 - **Contact and listing corrections:** [email]

@@ -1,4 +1,4 @@
-/* Little Days — baby activities near you */
+/* Doddily: baby and toddler activities near you */
 (() => {
   'use strict';
 
@@ -556,8 +556,8 @@
     const d = dateFor(state.day);
     const stamp = (hm) => { const [h, m] = hm.split(':'); return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}T${h.padStart(2, '0')}${m}00`; };
     const endHM = end || (() => { const t = toMin(start) + 60; return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}`; })();
-    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Little Days//EN', 'BEGIN:VEVENT',
-      `UID:${Date.now()}@littledays`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
+    const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Doddily//EN', 'BEGIN:VEVENT',
+      `UID:${Date.now()}@doddily`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`,
       `DTSTART;TZID=Europe/London:${stamp(start)}`, `DTEND;TZID=Europe/London:${stamp(endHM)}`,
       `SUMMARY:${it.name}`, `LOCATION:${[it.venue, it.address, it.postcode].filter(Boolean).join(', ')}`,
       `DESCRIPTION:${[it.price, it.url].filter(Boolean).join(' — ')}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');

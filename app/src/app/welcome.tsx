@@ -12,7 +12,7 @@ export default function WelcomeScreen() {
     <KeyboardAvoidingView style={s.screen} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <ScrollView contentContainerStyle={[s.content, { paddingTop: insets.top + 40, paddingBottom: insets.bottom + 24 }]} keyboardShouldPersistTaps="handled">
         <View style={s.mark}><Text style={s.markText}>✿</Text></View>
-        <Text style={s.title}>Little Days</Text>
+        <Text style={s.title}>Doddily</Text>
         <Text style={s.sub}>Baby and toddler classes, groups and places near you, sorted by day and time.</Text>
         <View style={s.card}>
           <LocationForm submitLabel="Show what’s on" onDone={() => router.replace('/')} askChild />

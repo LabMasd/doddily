@@ -1,4 +1,4 @@
-# Little Days: iPhone and Android app plan
+# Doddily: iPhone and Android app plan
 
 Started 2026-09-15. The web version (labmasd.github.io/little-days) is the working prototype. This plan turns it into a store app for the UK.
 
@@ -16,14 +16,17 @@ Parents open it, see baby activities near them today, and go. Every card answers
 | Accounts | **No login at all.** Saved items stay on the phone. | "Buy, download, use". Apple and Google handle payment. The simplest privacy labels ("Data not collected"). |
 | Business model | **Paid upfront (e.g. £2.99)** to start, with Family Sharing on. Alternative: free download plus a one-time unlock. | No purchase code or accounts; one purchase covers both parents. Price is a store setting and can change later. |
 | Data hosting | GitHub Pages for now → **Cloudflare Pages/R2** before a paid launch | GitHub Pages isn't meant to back a commercial product; Cloudflare's free tier covers static tiles comfortably. |
-| Name | "Little Days" (working name) | Check App Store, Play and trademarks before launch. |
+| Name | **Doddily** (chosen 2026-09-15; formerly Little Days) | No UK App Store apps with the name; doddily.com, .co.uk, .uk and .app unregistered on 2026-09-15. Internal ids (Expo slug, bundle id, repo) still say little-days until store setup. |
 
 ## Phases
 
 ### Phase 0: you (accounts and admin)
 - [ ] Apple Developer Program: £79/yr (developer.apple.com/programs)
 - [ ] Google Play Console: $25 once
-- [ ] Check the name "Little Days" is free on both stores, then pick a fallback
+- [x] Name: Doddily (App Store and domains checked 2026-09-15)
+- [ ] Register doddily.com and doddily.co.uk
+- [ ] UK trademark search (ipo.gov.uk, classes 9 and 41)
+- [ ] Before store setup: rename the bundle id (`cc.masd.littledays`), Expo slug and repo if wanted
 - [x] Expo account (for cloud builds). Supabase is only needed later, if at all.
 - [ ] A contact email for the store listing and privacy policy
 

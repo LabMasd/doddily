@@ -1,4 +1,4 @@
-// Little Days palette: cool milk and navy ink, one pastel purple accent, leaf green for "free".
+// Doddily palette: cool milk and navy ink, one pastel purple accent, leaf green for "free".
 export const C = {
   milk: '#F4F6F8',
   card: '#FFFFFF',
