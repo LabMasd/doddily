@@ -1,14 +1,15 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 
 import type { GroupId } from './categories';
 import { loadActivities, loadPlaces } from './data';
-import type { Activity, Kid, Loc } from './types';
+import type { Activity, Kid, Loc, MapApp } from './types';
 
 const KEY = 'ld:settings:v1';
 const SAVED_KEY = 'ld:saved:v1';
 
-export type Settings = { loc: Loc | null; radius: number; group: GroupId; onboarded: boolean; name: string; kids: Kid[] };
+export type Settings = { loc: Loc | null; radius: number; group: GroupId; onboarded: boolean; name: string; kids: Kid[]; mapApp: MapApp };
 type Toggles = { free: boolean; drop: boolean; indoor: boolean; ageFit: boolean };
 type Status = 'idle' | 'loading' | 'ready' | 'offline';
 
@@ -31,7 +32,7 @@ type Ctx = {
 
 const StoreContext = createContext<Ctx | null>(null);
 
-const DEFAULTS: Settings = { loc: null, radius: 3, group: 'all', onboarded: false, name: '', kids: [] };
+const DEFAULTS: Settings = { loc: null, radius: 3, group: 'all', onboarded: false, name: '', kids: [], mapApp: Platform.OS === 'ios' ? 'apple' : 'google' };
 
 export const newKidId = () => `k${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`;
 

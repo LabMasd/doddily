@@ -86,7 +86,7 @@ export default function ActivityScreen() {
       <Tags it={it} />
 
       <View style={s.actions}>
-        <Pressable onPress={() => openDirections(it)} style={({ pressed }) => [s.primary, pressed && s.pressed]} accessibilityRole="button">
+        <Pressable onPress={() => openDirections(it, settings.mapApp)} style={({ pressed }) => [s.primary, pressed && s.pressed]} accessibilityRole="button">
           <SymbolView name={{ ios: 'arrow.triangle.turn.up.right.diamond.fill', android: 'directions', web: 'directions' }} size={20} tintColor="#fff" />
           <Text style={s.primaryText}>Directions</Text>
         </Pressable>
