@@ -177,6 +177,10 @@ const LK_PLACE_WORDS = /\b(hall|centre|center|school|academy|church|club|gym|gym
 function cleanLKVenue(raw, address) {
   let s = decode(raw).replace(/[   ]/g, ' ').replace(/\*\*[^*]*\*\*/g, ' ')
     .replace(/\(\s*see notes[^)]*\)/gi, ' ').replace(/\bclasses\s*(?=\()/gi, ' ')
+    .replace(/\b(?:classes\s+)?for\s+(?:children\s+)?(?:aged\s+)?[\d.]+\s*(?:months?|years?)?\s*(?:to|-|–)\s*[\d.]+\+?\s*(?:months?|years?)(?:\s+of\s+age)?(?:\s+at\b)?/gi, ' ')
+    .replace(/[–-]?\s*[\d.]+\s*(?:months?|years?)\s*(?:to|-|–)\s*[\d.]+\+?\s*(?:months?|years?)\b/gi, ' ')
+    .replace(/\bfrom\s+\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]+\s*@\s*/gi, ' ').replace(/[–-]?\s*\bclasses\s+ou[rt]side\b.*$/i, ' ').replace(/\bclasses\s*[–-]\s*$/i, ' ')
+    .replace(/["“]\s*summer\b.*$/i, ' ').replace(/\bnow\s+available\s+to\s+book\b/gi, ' ').replace(/\bsummer\s+hol[’']?s\b/gi, ' ').replace(/\b[AP]\.M\b\.?/g, ' ')
     .replace(/\b(e-?mail|registration|classes\s+available|free\s+parking|coming\s+soon)\b.*$/i, ' ')
     .replace(/\b(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|jun|jul|aug|sept?|oct|nov|dec)\s*(?:\/\s*\w+\s*)?start\b.*$/i, ' ')
     .replace(/\(\s*year[\s-]+round[^)]*\)/gi, ' ').replace(/\b(mon|tues|wednes|thurs|fri|satur|sun)days?\s*(?:’|')s\b/gi, ' ')
@@ -263,11 +267,21 @@ async function crawlRugbytots() {
     const start = parseSingle(sum[2]);
     const provider = clean((txt.match(/This class is run by:\s*(.+?)\s+(?:Call|Email|This class takes place)/i) || [])[1] || 'Rugbytots');
     const phone = clean((txt.match(/This class is run by:.*?Call\s+([\d ]{10,14})/i) || [])[1] || '');
-    const placeHtml = (r.text.match(/This class takes place at:([\s\S]*?)Meet the coach/i) || [])[1] || '';
-    const parts = strip(placeHtml).split('\n').map(clean).filter(Boolean);
-    let venue = parts[0] || ''; let address = parts.slice(1).join(', ');
-    if (parts.length === 1) { const t2 = clean(strip((r.text.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || '')).split('|')[0].replace(/^[\s,]+/, '').trim(); if (t2 && venue.startsWith(t2)) { address = venue.slice(t2.length).trim(); venue = t2; } }
-    const pc = normPc(address || venue);
+    // "This class takes place at:<br /><strong>venue label</strong><br /><strong>address</strong></p>"
+    const placeHtml = (r.text.match(/This class takes place at:([\s\S]*?)<\/p>/i) || [])[1] || '';
+    const strongs = [...placeHtml.matchAll(/<strong>([\s\S]*?)<\/strong>/gi)].map((m) => clean(strip(m[1])));
+    const noEmail = (s) => s.replace(/\S+@\S+/g, ' ').replace(/\s+/g, ' ').trim();
+    let address = noEmail(strongs.slice(1).join(', '));
+    const fullLabel = noEmail(decode(strongs[0] || ''));
+    if (/private\s+class|attending\s+the\s+nursery|pupils\s+only|children\s+only|closed\s+school|lunchtime\s+club|after[\s-]?school\s+club|breakfast\s+club|nursery\s+children|school\s+pupils/i.test(fullLabel)) { note(SRC, 'school_only_class'); continue; }
+    let label = fullLabel.split(/\s*●\s*/)[0];
+    label = label.replace(/^[A-Z][A-Z &'’-]{2,}\s*(?::|\s-\s)\s*(?=\S)/, '') // "HALESOWEN: Leasowes Sports Centre"
+      .replace(/\([^)]*\b(session|click|link|available|spaces?)\b[^)]*\)/gi, ' ').replace(/["“]?\b(summer|autumn|spring|winter)\s+term\b.*$/i, ' ')
+      .replace(/[–—-]?\s*\bclasses\s+only\b/gi, ' ').replace(/,?\s*\b[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}\b/gi, ' ');
+    let venue = cleanLKVenue(label, address).replace(/[.,;:"\s–-]+$/, '').replace(/^[.,;:"\s–-]+/, '');
+    if (!venue || venue.length < 3 || /^(book|contact|join|call)\b/i.test(venue)) venue = (address.split(',')[0] || '').trim();
+    if (!address && normPc(venue)) { address = venue; }
+    const pc = normPc(address) || normPc(label);
     const price = (txt.match(/£\s?(\d+(?:\.\d{2})?)\s*per session/i) || [])[1];
     rows.push({
       name: 'Rugbytots', provider, category: 'movement', venue, address: address || venue, postcode: pc,
