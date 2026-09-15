@@ -34,9 +34,9 @@ jobs:
       - name: Filter and export
         run: |
           osmium tags-filter uk.osm.pbf \
-            nwr/leisure=playground,park,indoor_play,sports_centre \
-            nwr/amenity=library,toilets \
-            nwr/tourism=zoo,museum \
+            nwr/leisure=playground,park,indoor_play,sports_centre,amusement_arcade,trampoline_park \
+            nwr/amenity=library,toilets,cafe \
+            nwr/tourism=zoo,museum,attraction \
             -o filtered.osm.pbf
           osmium export filtered.osm.pbf -f geojsonseq \
             --add-unique-id=type_id \
@@ -54,5 +54,5 @@ jobs:
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Update places from OpenStreetMap"
           # Other commits may land during the ~10 minute build; replay ours on top.
-          for i in 1 2 3; do git pull --rebase -X theirs origin main && git push && exit 0; sleep 10; done
+          for i in 1 2 3; do git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" && git push && exit 0; sleep 10; done
           exit 1

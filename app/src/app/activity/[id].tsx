@@ -1,3 +1,4 @@
+import { SymbolView, type SymbolViewProps } from 'expo-symbols';
 import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState, type ReactNode } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -57,7 +58,25 @@ export default function ActivityScreen() {
       setReminderState(await setReminder(it, next));
     }
   };
-  const reminderLabel = { none: 'Remind me', set: '🔔 Reminder on', denied: 'Notifications are off', 'too-late': 'Starts too soon', error: 'Couldn’t set reminder' }[reminder];
+  const reminderLabel = { none: 'Remind me', set: 'Reminder on', denied: 'Alerts off', 'too-late': 'Too soon', error: 'Try again' }[reminder];
+
+  const tiles: TileProps[] = [];
+  if (it.url) {
+    const book = !(it.booking === 'drop-in' || it.osm);
+    tiles.push({ label: book ? 'Book' : 'Website', a11y: book ? 'Book or check times' : 'Open website', icon: { ios: 'safari', android: 'language', web: 'language' }, onPress: () => openLink(it.url!) });
+  }
+  if (it.phone) tiles.push({ label: 'Call', icon: { ios: 'phone', android: 'call', web: 'call' }, onPress: () => callPhone(it.phone!) });
+  tiles.push({ label: isSaved ? 'Saved' : 'Save', icon: { ios: isSaved ? 'heart.fill' : 'heart', android: 'favorite', web: 'favorite' }, active: isSaved, onPress: () => toggleSaved(it) });
+  if (next && Platform.OS !== 'web') {
+    tiles.push({ label: calState === 'added' ? 'Added' : calState === 'error' ? 'Unavailable' : 'Calendar', a11y: 'Add to calendar', icon: { ios: 'calendar.badge.plus', android: 'calendar_add_on', web: 'calendar_add_on' }, active: calState === 'added', onPress: onCalendar });
+  }
+  if (next?.session.start && Platform.OS !== 'web') {
+    tiles.push({ label: reminderLabel, icon: { ios: reminder === 'set' ? 'bell.fill' : 'bell', android: reminder === 'set' ? 'notifications_active' : 'notifications', web: 'notifications' }, active: reminder === 'set', onPress: onReminder });
+  }
+  tiles.push({ label: 'Send', a11y: 'Send to someone', icon: { ios: 'square.and.arrow.up', android: 'share', web: 'ios_share' }, onPress: () => shareActivity(it) });
+  // Four fit on one row; more go three to a row, padded so every tile is the same width.
+  const perRow = tiles.length <= 4 ? tiles.length : 3;
+  const rows = Array.from({ length: Math.ceil(tiles.length / perRow) }, (_, i) => tiles.slice(i * perRow, (i + 1) * perRow));
 
   return (
     <ScrollView style={s.screen} contentContainerStyle={[s.content, { paddingBottom: insets.bottom + 32 }]}>
@@ -67,15 +86,16 @@ export default function ActivityScreen() {
       <Tags it={it} />
 
       <View style={s.actions}>
-        <Action label="Directions" primary onPress={() => openDirections(it)} />
-        {!!it.url && <Action label={it.booking === 'drop-in' || it.osm ? 'Website' : 'Book or check'} onPress={() => openLink(it.url!)} />}
-        {!!it.phone && <Action label="Call" onPress={() => callPhone(it.phone!)} />}
-        <Action label={isSaved ? '♥ Saved' : '♡ Save'} active={isSaved} onPress={() => toggleSaved(it)} />
-        {next && Platform.OS !== 'web' && (
-          <Action label={calState === 'added' ? 'Added to calendar' : calState === 'error' ? 'Calendar unavailable' : 'Add to calendar'} onPress={onCalendar} />
-        )}
-        {next?.session.start && Platform.OS !== 'web' && <Action label={reminderLabel} active={reminder === 'set'} onPress={onReminder} />}
-        <Action label="Send" onPress={() => shareActivity(it)} />
+        <Pressable onPress={() => openDirections(it)} style={({ pressed }) => [s.primary, pressed && s.pressed]} accessibilityRole="button">
+          <SymbolView name={{ ios: 'arrow.triangle.turn.up.right.diamond.fill', android: 'directions', web: 'directions' }} size={20} tintColor="#fff" />
+          <Text style={s.primaryText}>Directions</Text>
+        </Pressable>
+        {rows.map((row, i) => (
+          <View key={i} style={s.tileRow}>
+            {row.map((t) => <Tile key={t.label + (t.a11y ?? '')} {...t} />)}
+            {Array.from({ length: perRow - row.length }, (_, j) => <View key={`pad${j}`} style={s.tilePad} />)}
+          </View>
+        ))}
       </View>
 
       {(it.sessions.length > 0 || !!it.schedule_note) && (
@@ -121,10 +141,19 @@ export default function ActivityScreen() {
   );
 }
 
-function Action({ label, onPress, primary, active }: { label: string; onPress: () => void; primary?: boolean; active?: boolean }) {
+type TileProps = { label: string; a11y?: string; icon: SymbolViewProps['name']; onPress: () => void; active?: boolean };
+
+function Tile({ label, a11y, icon, onPress, active }: TileProps) {
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => [s.act, primary && s.actPrimary, active && s.actActive, pressed && { opacity: 0.8 }]} accessibilityRole="button">
-      <Text style={[s.actText, primary && s.actTextPrimary]}>{label}</Text>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [s.tile, active && s.tileActive, pressed && s.pressed]}
+      accessibilityRole="button"
+      accessibilityLabel={a11y ?? label}
+      accessibilityState={{ selected: !!active }}
+    >
+      <SymbolView name={icon} size={22} tintColor={active ? C.accentText : C.ink} />
+      <Text style={[s.tileText, active && s.tileTextActive]} numberOfLines={1}>{label}</Text>
     </Pressable>
   );
 }
@@ -146,12 +175,16 @@ const s = StyleSheet.create({
   cat: { fontFamily: F.textMedium, fontSize: 15, color: C.muted },
   title: { fontFamily: F.display, fontSize: 30, lineHeight: 34, color: C.ink, marginTop: 6 },
   venue: { fontFamily: F.text, fontSize: 16, color: C.muted, marginTop: 6 },
-  actions: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 18 },
-  act: { borderRadius: R.pill, borderWidth: 1, borderColor: C.line, backgroundColor: C.card, paddingHorizontal: 16, paddingVertical: 11 },
-  actPrimary: { backgroundColor: C.ink, borderColor: C.ink },
-  actActive: { backgroundColor: C.marigold, borderColor: C.marigold },
-  actText: { fontFamily: F.textSemi, fontSize: 15, color: C.ink },
-  actTextPrimary: { color: '#fff' },
+  actions: { gap: 8, marginTop: 20 },
+  primary: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, backgroundColor: C.ink, borderRadius: R.md, paddingVertical: 15 },
+  primaryText: { fontFamily: F.textSemi, fontSize: 17, color: '#fff' },
+  pressed: { opacity: 0.8 },
+  tileRow: { flexDirection: 'row', gap: 8 },
+  tile: { flex: 1, alignItems: 'center', gap: 6, backgroundColor: C.card, borderRadius: R.md, borderWidth: 1, borderColor: C.line, paddingVertical: 12, paddingHorizontal: 4 },
+  tilePad: { flex: 1 },
+  tileActive: { backgroundColor: C.accentSoft, borderColor: C.accent },
+  tileText: { fontFamily: F.textSemi, fontSize: 13, color: C.ink },
+  tileTextActive: { color: C.accentText },
   block: { marginTop: 24, backgroundColor: C.card, borderRadius: R.lg, padding: 16, gap: 6, borderWidth: 1, borderColor: C.line },
   blockTitle: { fontFamily: F.display, fontSize: 17, color: C.ink, marginBottom: 2 },
   line: { fontFamily: F.text, fontSize: 16, lineHeight: 22, color: C.ink },

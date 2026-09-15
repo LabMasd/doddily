@@ -29,7 +29,14 @@ function centroid(g) {
   return { lng: x / ring.length, lat: y / ring.length };
 }
 
+// Soft play is rarely tagged leisure=indoor_play in the UK; many are cafés, attractions or leisure venues named for it.
+const SOFT_PLAY_NAME = /soft ?play|play ?(centre|center|barn|zone|land|world|house|caf[eé])|jungle|fun ?(house|factory|zone)|toddler/i;
+const SOFT_PLAY_HOSTS = new Set(['sports_centre', 'amusement_arcade', 'trampoline_park', 'indoor_play']);
+
 function kindOf(t) {
+  if (t.leisure === 'indoor_play') return 'softplace';
+  if (t.leisure === 'playground' && t.indoor === 'yes') return 'softplace';
+  if (t.name && SOFT_PLAY_NAME.test(t.name) && (SOFT_PLAY_HOSTS.has(t.leisure) || t.amenity === 'cafe' || t.tourism === 'attraction')) return 'softplace';
   if (t.leisure === 'playground') return 'playground';
   if (t.leisure === 'park' && t.name) return 'park';
   if (t.amenity === 'library') return 'libplace';

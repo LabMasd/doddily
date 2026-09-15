@@ -8,22 +8,22 @@ import { WeekStrip } from '@/components/week-strip';
 import { C, F, GUTTER, R } from '@/constants/theme';
 import { CATS } from '@/lib/categories';
 import { MI } from '@/lib/geo';
-import { daySections, filterRows } from '@/lib/schedule';
+import { daySections, filterRows, selectedAges } from '@/lib/schedule';
 import { useStore } from '@/lib/store';
 import type { Row } from '@/lib/types';
 
 export default function MapScreen() {
-  const { ready, settings, toggles, day, setDay, data } = useStore();
+  const { ready, settings, toggles, forKid, day, setDay, data } = useStore();
   const router = useRouter();
   const insets = useSafeAreaInsets();
 
   const rows = useMemo(() => {
     if (!settings.loc) return [] as Row[];
-    const all = filterRows([...data.items, ...data.places], settings.loc, settings.radius, { group: settings.group, ...toggles }, settings.born);
+    const all = filterRows([...data.items, ...data.places], settings.loc, settings.radius, { group: settings.group, ...toggles }, selectedAges(settings.kids, forKid));
     const list = day === 'week' ? all : daySections(all, day, settings.group).sections.filter((x) => x.key !== 'past').flatMap((x) => x.data);
     const seen = new Set<string>();
     return list.filter((r) => (seen.has(r.it.id) ? false : (seen.add(r.it.id), true))).slice(0, 300);
-  }, [data.items, data.places, settings, toggles, day]);
+  }, [data.items, data.places, settings, toggles, forKid, day]);
 
   if (!ready) return <View style={s.screen} />;
   if (!settings.onboarded || !settings.loc) return <Redirect href="/welcome" />;
@@ -38,7 +38,7 @@ export default function MapScreen() {
         initialRegion={{ latitude: lat, longitude: lng, latitudeDelta: span, longitudeDelta: span / Math.cos((lat * Math.PI) / 180) }}
         showsUserLocation
         showsPointsOfInterests={false}>
-        <Circle center={{ latitude: lat, longitude: lng }} radius={settings.radius * MI} strokeColor={C.marigold} strokeWidth={2} fillColor="rgba(242,160,7,0.06)" />
+        <Circle center={{ latitude: lat, longitude: lng }} radius={settings.radius * MI} strokeColor={C.accentLine} strokeWidth={2} fillColor="rgba(138,111,214,0.08)" />
         {rows.map((r) => (
           <Marker
             key={r.it.id}

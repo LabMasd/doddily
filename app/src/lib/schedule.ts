@@ -1,6 +1,6 @@
 import { GROUPS, QUIET_IN_ALL, type GroupId } from './categories';
 import { miles } from './geo';
-import type { Activity, Day, Loc, Row } from './types';
+import type { Activity, Day, Kid, Loc, Row } from './types';
 
 export const DAYS: Day[] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as Day[];
 export const DAY_LONG = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -40,9 +40,27 @@ export function sessionsText(it: Activity) {
   return it.sessions.map((s) => `${s.day}${s.start ? ' ' + s.start : ''}${s.end ? '–' + s.end : ''}`).join(', ');
 }
 
-export function filterRows(items: Activity[], loc: Loc, radius: number, f: Filters, born: string | null): Row[] {
+/** Right for a child of `months`: not too young for it, not too old. */
+export function fitsAge(it: Activity, months: number) {
+  if ((it.age_min_months ?? 0) > months + 1) return false;
+  return it.age_max_months == null || it.age_max_months >= months;
+}
+
+export function ageLabel(months: number) {
+  if (months < 24) return `${months} month${months === 1 ? '' : 's'}`;
+  const y = Math.floor(months / 12);
+  return `${y} year${y === 1 ? '' : 's'}`;
+}
+
+/** Ages in months of the children the list is filtered for. */
+export function selectedAges(kids: Kid[], forKid: 'all' | string) {
+  const chosen = forKid === 'all' ? kids : kids.filter((k) => k.id === forKid);
+  return chosen.map((k) => babyMonths(k.born)).filter((m): m is number => m != null);
+}
+
+/** `ages`: months of the selected children; an activity shows if it suits any of them. */
+export function filterRows(items: Activity[], loc: Loc, radius: number, f: Filters, ages: number[]): Row[] {
   const g = GROUPS.find((x) => x.id === f.group)!;
-  const age = babyMonths(born);
   const rows: Row[] = [];
   const seen = new Set<string>();
   for (const it of items) {
@@ -54,10 +72,7 @@ export function filterRows(items: Activity[], loc: Loc, radius: number, f: Filte
     if (f.free && !it.free) continue;
     if (f.drop && it.booking !== 'drop-in') continue;
     if (f.indoor && !it.indoor) continue;
-    if (f.ageFit && age != null && !it.osm) {
-      if ((it.age_min_months ?? 0) > age + 1) continue;
-      if (it.age_max_months != null && it.age_max_months < age) continue;
-    }
+    if (f.ageFit && ages.length && !it.osm && !ages.some((a) => fitsAge(it, a))) continue;
     seen.add(it.id);
     rows.push({ it, d });
   }
@@ -75,6 +90,8 @@ export function daySections(rows: Row[], offset: number, group: GroupId, now = n
     const today = r.it.sessions.filter((s) => s.day === wd);
     if (today.length) {
       for (const s of today) {
+        // A session with no start time can't sit in the timetable; show it with "check times".
+        if (!s.start) { venues.push(r); break; }
         const end = toMin(s.end) ?? (toMin(s.start) ?? 0) + 60;
         (s.start && end < nowMin ? past : timed).push({ ...r, s });
       }
