@@ -4,19 +4,28 @@ import * as WebBrowser from 'expo-web-browser';
 import { Linking, Platform, Share } from 'react-native';
 
 import { DAYS } from './schedule';
-import type { Activity, Session } from './types';
+import type { Activity, MapApp, Session } from './types';
 
-export function openDirections(it: Activity) {
+/** Maps apps a parent can pick in You for directions. Apple Maps is iPhone only. */
+export const MAP_APPS: { id: MapApp; label: string }[] = [
+  ...(Platform.OS === 'ios' ? [{ id: 'apple' as const, label: 'Apple Maps' }] : []),
+  { id: 'google', label: 'Google Maps' },
+  { id: 'waze', label: 'Waze' },
+  { id: 'citymapper', label: 'Citymapper' },
+];
+
+/** Walking directions in the maps app picked in You. If that app isn’t installed, Google Maps opens on the web. */
+export function openDirections(it: Activity, app: MapApp) {
   const { lat, lng } = it;
   const label = encodeURIComponent(it.venue || it.name);
-  const url = Platform.select({
-    ios: `maps://?daddr=${lat},${lng}&dirflg=w&q=${label}`,
-    android: `google.navigation:q=${lat},${lng}&mode=w`,
-    default: `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=walking`,
-  });
-  Linking.openURL(url).catch(() =>
-    Linking.openURL(`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=walking`)
-  );
+  const web = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=walking`;
+  const urls: Record<MapApp, string> = {
+    apple: Platform.OS === 'ios' ? `maps://?daddr=${lat},${lng}&dirflg=w&q=${label}` : web,
+    google: Platform.select({ ios: `comgooglemaps://?daddr=${lat},${lng}&directionsmode=walking`, android: `google.navigation:q=${lat},${lng}&mode=w`, default: web }),
+    waze: `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`,
+    citymapper: `https://citymapper.com/directions?endcoord=${lat},${lng}&endname=${label}`,
+  };
+  Linking.openURL(urls[app]).catch(() => Linking.openURL(web));
 }
 
 export function openLink(url: string) {
