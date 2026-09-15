@@ -4,7 +4,7 @@
 set -e
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 OUT=$(mktemp -d)
-cd "$ROOT/app" && npx expo export -p web --output-dir "$OUT"
+cd "$ROOT/app" && DODDILY_WEB=1 npx expo export -p web --output-dir "$OUT"
 cd "$ROOT"
 
 # Remove the previous export, as listed in .web-files, before copying the new one.

@@ -63,8 +63,7 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true,
-      "baseUrl": "/doddily"
+      "reactCompiler": true
     },
     "extra": {
       "router": {},

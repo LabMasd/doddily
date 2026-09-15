@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { LocationForm } from '@/components/location-form';
 import { C, F, GUTTER, MaxContentWidth, R } from '@/constants/theme';
+import { MAP_APPS } from '@/lib/actions';
 import { ageLabel, babyMonths } from '@/lib/schedule';
 import { newKidId, useStore } from '@/lib/store';
 import type { Kid } from '@/lib/types';
@@ -38,6 +39,19 @@ export default function YouScreen() {
               setTimeout(() => setSaved(false), 1800);
             }}
           />
+        </View>
+
+        <Text style={s.section}>Directions</Text>
+        <Text style={s.hint}>The app that opens when you tap Directions.</Text>
+        <View style={s.options}>
+          {MAP_APPS.map((m) => {
+            const on = settings.mapApp === m.id;
+            return (
+              <Pressable key={m.id} onPress={() => update({ mapApp: m.id })} style={[s.option, on && s.optionOn]} accessibilityRole="radio" accessibilityState={{ selected: on }}>
+                <Text style={[s.optionText, on && s.optionTextOn]}>{m.label}</Text>
+              </Pressable>
+            );
+          })}
         </View>
 
         <Text style={s.section}>Children</Text>
@@ -128,4 +142,9 @@ const s = StyleSheet.create({
   add: { borderRadius: R.md, borderWidth: 1, borderColor: C.line, borderStyle: 'dashed', paddingVertical: 14, alignItems: 'center', backgroundColor: C.card },
   addText: { fontFamily: F.textSemi, fontSize: 16, color: C.ink },
   pressed: { opacity: 0.8 },
+  options: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  option: { borderRadius: R.pill, borderWidth: 1, borderColor: C.line, backgroundColor: C.card, paddingHorizontal: 14, paddingVertical: 10 },
+  optionOn: { backgroundColor: C.ink, borderColor: C.ink },
+  optionText: { fontFamily: F.textMedium, fontSize: 15, color: C.ink },
+  optionTextOn: { color: '#fff' },
 });
