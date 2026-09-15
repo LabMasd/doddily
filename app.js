@@ -11,7 +11,7 @@
   const CATS = {
     library:  { e: '📚', label: 'Rhymes & stories' },
     stayplay: { e: '🧸', label: 'Stay & play' },
-    support:  { e: '💬', label: 'Baby group' },
+    support:  { e: '💬', label: 'Baby & toddler group' },
     music:    { e: '🎵', label: 'Music' },
     sensory:  { e: '✨', label: 'Sensory' },
     movement: { e: '🤸', label: 'Movement' },
