@@ -1,5 +1,4 @@
 import { Redirect, useRouter } from 'expo-router';
-import { useMemo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import MapView, { Circle, Marker } from 'react-native-maps';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -8,22 +7,14 @@ import { WeekStrip } from '@/components/week-strip';
 import { C, F, GUTTER, R } from '@/constants/theme';
 import { CATS } from '@/lib/categories';
 import { MI } from '@/lib/geo';
-import { daySections, filterRows, selectedAges } from '@/lib/schedule';
+import { useMapRows } from '@/lib/map-rows';
 import { useStore } from '@/lib/store';
-import type { Row } from '@/lib/types';
 
 export default function MapScreen() {
-  const { ready, settings, toggles, forKid, day, setDay, data } = useStore();
+  const { ready, settings, day, setDay } = useStore();
+  const rows = useMapRows();
   const router = useRouter();
   const insets = useSafeAreaInsets();
-
-  const rows = useMemo(() => {
-    if (!settings.loc) return [] as Row[];
-    const all = filterRows([...data.items, ...data.places], settings.loc, settings.radius, { group: settings.group, ...toggles }, selectedAges(settings.kids, forKid));
-    const list = day === 'week' ? all : daySections(all, day, settings.group).sections.filter((x) => x.key !== 'past').flatMap((x) => x.data);
-    const seen = new Set<string>();
-    return list.filter((r) => (seen.has(r.it.id) ? false : (seen.add(r.it.id), true))).slice(0, 300);
-  }, [data.items, data.places, settings, toggles, forKid, day]);
 
   if (!ready) return <View style={s.screen} />;
   if (!settings.onboarded || !settings.loc) return <Redirect href="/welcome" />;
