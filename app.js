@@ -39,8 +39,9 @@
     { id: 'rhymes', label: 'Rhymes & stay-and-play', cats: ['library', 'stayplay', 'support'] },
     { id: 'classes', label: 'Classes', cats: ['music', 'sensory', 'movement', 'massage', 'fitness'] },
     { id: 'swim', label: 'Swim', cats: ['swim', 'pool'] },
+    { id: 'softplay', label: 'Soft play', cats: ['softplay', 'softplace'] },
     { id: 'cinema', label: 'Cinema', cats: ['cinema'] },
-    { id: 'out', label: 'Days out', cats: ['museum', 'farm', 'softplay', 'cafe', 'outdoor', 'softplace', 'farmplace', 'museumplace'] },
+    { id: 'out', label: 'Days out', cats: ['museum', 'farm', 'cafe', 'outdoor', 'farmplace', 'museumplace'] },
     { id: 'parks', label: 'Parks & playgrounds', cats: ['playground', 'park'] },
     { id: 'change', label: 'Baby change', cats: ['change', 'libplace'] },
   ];
@@ -490,9 +491,9 @@
           <div class="hint" id="radHint"></div>
         </div>
         <div class="field">
-          <label for="born">Baby's birth month <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+          <label for="born">Child's birth month <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
           <input class="input plain" type="month" id="born" value="${esc(state.born)}">
-          <div class="hint">Hides classes she's too young or too old for.</div>
+          <div class="hint">Hides classes your child is too young or too old for.</div>
         </div>
         <button class="btn wide" id="sheetSave">Show activities</button>
       </div>`;

@@ -26,15 +26,16 @@ export const CATS: Record<Category, { e: string; label: string }> = {
   museumplace: { e: '🏛️', label: 'Museum' },
 };
 
-export type GroupId = 'all' | 'rhymes' | 'classes' | 'swim' | 'cinema' | 'out' | 'parks' | 'change';
+export type GroupId = 'all' | 'rhymes' | 'classes' | 'swim' | 'softplay' | 'cinema' | 'out' | 'parks' | 'change';
 
 export const GROUPS: { id: GroupId; label: string; cats?: Category[] }[] = [
   { id: 'all', label: 'Everything' },
   { id: 'rhymes', label: 'Rhymes & stay-and-play', cats: ['library', 'stayplay', 'support'] },
   { id: 'classes', label: 'Classes', cats: ['music', 'sensory', 'movement', 'massage', 'fitness'] },
   { id: 'swim', label: 'Swim', cats: ['swim', 'pool'] },
+  { id: 'softplay', label: 'Soft play', cats: ['softplay', 'softplace'] },
   { id: 'cinema', label: 'Cinema', cats: ['cinema'] },
-  { id: 'out', label: 'Days out', cats: ['museum', 'farm', 'softplay', 'cafe', 'outdoor', 'softplace', 'farmplace', 'museumplace'] },
+  { id: 'out', label: 'Days out', cats: ['museum', 'farm', 'cafe', 'outdoor', 'farmplace', 'museumplace'] },
   { id: 'parks', label: 'Parks & playgrounds', cats: ['playground', 'park'] },
   { id: 'change', label: 'Baby change', cats: ['change', 'libplace'] },
 ];

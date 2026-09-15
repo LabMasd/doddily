@@ -104,14 +104,14 @@ export function LocationForm({ submitLabel, onDone }: { submitLabel: string; onD
       </View>
       <Text style={s.hint}>About {Math.round(radius * 25)} minutes’ walk with a buggy at the edge.</Text>
 
-      <Text style={[s.label, s.gap]}>Baby’s birth month <Text style={s.optional}>(optional)</Text></Text>
+      <Text style={[s.label, s.gap]}>Child’s birth month <Text style={s.optional}>(optional)</Text></Text>
       <View style={s.row}>
         <Pressable onPress={() => shiftBorn(-1)} style={s.step} accessibilityLabel="Earlier month"><Text style={s.stepText}>‹</Text></Pressable>
         <Text style={[s.value, s.month]}>{bornLabel}</Text>
         <Pressable onPress={() => shiftBorn(1)} style={s.step} accessibilityLabel="Later month"><Text style={s.stepText}>›</Text></Pressable>
         {born && <Pressable onPress={() => setBorn(null)} style={s.clear}><Text style={s.ghostText}>Clear</Text></Pressable>}
       </View>
-      <Text style={s.hint}>Hides classes your baby is too young or too old for.</Text>
+      <Text style={s.hint}>Hides classes your child is too young or too old for.</Text>
 
       <Pressable onPress={save} style={({ pressed }) => [s.primary, pressed && { opacity: 0.85 }]} accessibilityRole="button">
         {busy === 'save' ? <ActivityIndicator color="#fff" /> : <Text style={s.primaryText}>{submitLabel}</Text>}
