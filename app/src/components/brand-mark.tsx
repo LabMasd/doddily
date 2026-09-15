@@ -71,5 +71,5 @@ export function BrandMark({ scrollY, spin }: { scrollY: SharedValue<number>; spi
 const s = StyleSheet.create({
   mark: { width: MARK, height: MARK, borderRadius: 8, backgroundColor: C.ink, alignItems: 'center', justifyContent: 'center' },
   flower: { width: FLOWER, height: FLOWER },
-  petal: { position: 'absolute', width: PETAL, height: PETAL, borderRadius: PETAL / 2, backgroundColor: C.marigold },
+  petal: { position: 'absolute', width: PETAL, height: PETAL, borderRadius: PETAL / 2, backgroundColor: C.accent },
 });

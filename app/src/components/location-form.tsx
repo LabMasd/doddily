@@ -95,9 +95,9 @@ export function LocationForm({ submitLabel, onDone }: { submitLabel: string; onD
           step={0.5}
           value={radius}
           onValueChange={setRadius}
-          minimumTrackTintColor={C.marigold}
+          minimumTrackTintColor={C.accentLine}
           maximumTrackTintColor={C.line}
-          thumbTintColor={C.marigold}
+          thumbTintColor={C.accent}
           accessibilityLabel="Distance in miles"
         />
         <Text style={s.value}>{radius} mi</Text>

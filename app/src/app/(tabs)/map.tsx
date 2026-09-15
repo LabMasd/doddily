@@ -38,7 +38,7 @@ export default function MapScreen() {
         initialRegion={{ latitude: lat, longitude: lng, latitudeDelta: span, longitudeDelta: span / Math.cos((lat * Math.PI) / 180) }}
         showsUserLocation
         showsPointsOfInterests={false}>
-        <Circle center={{ latitude: lat, longitude: lng }} radius={settings.radius * MI} strokeColor={C.marigold} strokeWidth={2} fillColor="rgba(242,160,7,0.06)" />
+        <Circle center={{ latitude: lat, longitude: lng }} radius={settings.radius * MI} strokeColor={C.accentLine} strokeWidth={2} fillColor="rgba(138,111,214,0.08)" />
         {rows.map((r) => (
           <Marker
             key={r.it.id}

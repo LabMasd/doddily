@@ -459,7 +459,7 @@
     layer.clearLayers(); homeLayer.clearLayers();
     if (!state.loc) return;
     const c = [state.loc.lat, state.loc.lng];
-    const circle = L.circle(c, { radius: state.radius * MI, color: '#F2A007', weight: 2, fillOpacity: 0.05 }).addTo(homeLayer);
+    const circle = L.circle(c, { radius: state.radius * MI, color: '#8A6FD6', weight: 2, fillOpacity: 0.05 }).addTo(homeLayer);
     L.marker(c, { icon: L.divIcon({ className: '', html: '<div class="pin home">🏠</div>', iconSize: [30, 30] }) }).addTo(homeLayer);
     const seen = new Set();
     for (const r of rows) {

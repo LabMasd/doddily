@@ -44,7 +44,7 @@ Screens:
 5. **Map:** native map with clustered pins, a distance circle, and a tap-through to details.
 6. **Saved:** list; a reminder toggle ("Remind me 1 hour before").
 
-Built in: offline cache of the last area, local notifications for reminders, the same visual system as the web (milk and navy, marigold accent, Bricolage Grotesque + Figtree), iPhone and Android back-gesture behaviour, and accessibility (Dynamic Type, VoiceOver labels).
+Built in: offline cache of the last area, local notifications for reminders, the same visual system as the web (milk and navy, pastel purple accent, Bricolage Grotesque + Figtree), iPhone and Android back-gesture behaviour, and accessibility (Dynamic Type, VoiceOver labels).
 
 ### Phase 3: trust
 - No accounts. Family Sharing (Apple) and the Play family library let both parents use one purchase.
