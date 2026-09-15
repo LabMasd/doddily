@@ -1,5 +1,5 @@
 import { useFocusEffect } from 'expo-router';
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, { useAnimatedReaction, useAnimatedStyle, useFrameCallback, useReducedMotion, useSharedValue, type SharedValue } from 'react-native-reanimated';
 
@@ -16,13 +16,20 @@ export const MARK = 28;
 const FLOWER = 18;
 const PETAL = 7.2; // petal diameter
 const RING = 5.4; // centre to petal centre; petals overlap slightly, leaving notches and a small gap in the middle
-const PETALS = [0, 1, 2, 3, 4].map((i) => {
-  const a = ((-90 + i * 72) * Math.PI) / 180;
-  return { left: FLOWER / 2 + RING * Math.cos(a) - PETAL / 2, top: FLOWER / 2 + RING * Math.sin(a) - PETAL / 2 };
-});
+/** Petal positions for a flower drawn `k` times the base size. */
+function petals(k: number) {
+  return [0, 1, 2, 3, 4].map((i) => {
+    const a = ((-90 + i * 72) * Math.PI) / 180;
+    return { left: k * (FLOWER / 2 + RING * Math.cos(a) - PETAL / 2), top: k * (FLOWER / 2 + RING * Math.sin(a) - PETAL / 2) };
+  });
+}
 
-/** The flower in the wordmark: breathes while the list is still, spins as it scrolls. `spin` adds extra turn in degrees. */
-export function BrandMark({ scrollY, spin }: { scrollY: SharedValue<number>; spin?: SharedValue<number> }) {
+/**
+ * The flower in the wordmark: breathes while the list is still, spins as it scrolls. `spin` adds extra turn in degrees.
+ * `size` draws it that many times bigger than the 28pt mark; draw big and scale down, since scaling up blurs on iOS.
+ */
+export function BrandMark({ scrollY, spin, size = 1 }: { scrollY: SharedValue<number>; spin?: SharedValue<number>; size?: number }) {
+  const pts = useMemo(() => petals(size), [size]);
   const reduceMotion = useReducedMotion();
   const rotation = useSharedValue(0);
   const scale = useSharedValue(1);
@@ -60,16 +67,15 @@ export function BrandMark({ scrollY, spin }: { scrollY: SharedValue<number>; spi
   const turn = useAnimatedStyle(() => ({ transform: [{ rotate: `${rotation.value + (spin ? spin.value : 0)}deg` }, { scale: scale.value }] }));
 
   return (
-    <View style={s.mark}>
-      <Animated.View style={[s.flower, turn]}>
-        {PETALS.map((p, i) => <View key={i} style={[s.petal, p]} />)}
+    <View style={[s.mark, { width: MARK * size, height: MARK * size, borderRadius: 8 * size }]}>
+      <Animated.View style={[{ width: FLOWER * size, height: FLOWER * size }, turn]}>
+        {pts.map((p, i) => <View key={i} style={[s.petal, { width: PETAL * size, height: PETAL * size, borderRadius: (PETAL * size) / 2 }, p]} />)}
       </Animated.View>
     </View>
   );
 }
 
 const s = StyleSheet.create({
-  mark: { width: MARK, height: MARK, borderRadius: 8, backgroundColor: C.ink, alignItems: 'center', justifyContent: 'center' },
-  flower: { width: FLOWER, height: FLOWER },
-  petal: { position: 'absolute', width: PETAL, height: PETAL, borderRadius: PETAL / 2, backgroundColor: C.accent },
+  mark: { backgroundColor: C.ink, alignItems: 'center', justifyContent: 'center' },
+  petal: { position: 'absolute', backgroundColor: C.accent },
 });
