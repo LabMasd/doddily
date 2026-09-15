@@ -21,14 +21,14 @@ Parents open it, see baby activities near them today, and go. Every card answers
 ## Phases
 
 ### Phase 0: you (accounts and admin)
-- [ ] Apple Developer Program: £79/yr (developer.apple.com/programs)
+- [x] Apple Developer Program: £79/yr (individual account)
 - [ ] Google Play Console: $25 once
 - [x] Name: Doddily (App Store and domains checked 2026-09-15)
 - [ ] Register doddily.com and doddily.co.uk
 - [ ] UK trademark search (ipo.gov.uk, classes 9 and 41)
-- [ ] Before store setup: rename the bundle id (`cc.masd.littledays`), Expo slug and repo if wanted
+- [x] Bundle id renamed to `app.doddily` for iOS and Android (2026-09-15). Expo slug, scheme and repo still say little-days.
 - [x] Expo account (for cloud builds). Supabase is only needed later, if at all.
-- [ ] A contact email for the store listing and privacy policy
+- [x] Contact email: hello@doddily.app (forwards to hello@masd.cc)
 
 ### Phase 1: data backend (I can do most of this now)
 - [x] UK-wide research into `data/uk-research/*.json` (9 national sources, running)
