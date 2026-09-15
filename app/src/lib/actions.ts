@@ -67,6 +67,8 @@ export async function addToCalendar(it: Activity, next: { date: Date; session: S
     } else {
       end.setHours(start.getHours() + 1);
     }
+    const perm = await Calendar.requestCalendarPermissions();
+    if (!perm.granted) return 'error';
     let calendar: Calendar.ExpoCalendar | undefined;
     if (Platform.OS === 'ios') {
       calendar = Calendar.getDefaultCalendarSync();
@@ -85,7 +87,8 @@ export async function addToCalendar(it: Activity, next: { date: Date; session: S
       url: it.url,
     });
     return res.action === 'saved' ? 'added' : 'canceled';
-  } catch {
+  } catch (e) {
+    console.warn('[calendar]', e);
     return 'error';
   }
 }
