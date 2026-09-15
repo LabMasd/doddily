@@ -5,7 +5,7 @@ description: Search the web for baby activities (classes, groups, swims, cinema,
 
 # Doddily: search and refresh
 
-Doddily is a UK baby activity app. The code is in `~/little-days`; it's live at https://labmasd.github.io/little-days/ and published from the GitHub repo LabMasd/little-days (branch main).
+Doddily is a UK baby activity app. The code is in `~/little-days`; it's live at https://labmasd.github.io/doddily/ and published from the GitHub repo LabMasd/doddily (branch main).
 Activity data: `data/research/*.json`. `node scripts/merge.mjs` merges it into `data/activities.json`. The field list is in `scripts/merge.mjs` and the existing research files.
 
 Defaults: ask for a postcode if none is given (never store a home postcode in the repo). Radius **3 miles**. Babies 0–18 months with a parent.
