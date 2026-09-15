@@ -1,6 +1,6 @@
-# Little Days
+# Doddily
 
-A baby activity finder for UK parents: a web prototype (GitHub Pages) plus an Expo iPhone and Android app heading to the stores as a paid app with no login.
+Doddily (formerly Little Days) is a baby and toddler activity finder for UK parents: a web prototype (GitHub Pages) plus an Expo iPhone and Android app heading to the stores as a paid app with no login.
 
 **Read first:**
 - `START-HERE.md`: setting up on a new machine

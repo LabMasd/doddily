@@ -235,6 +235,7 @@ function addressFromText(t, hint) {
   for (const m of t.matchAll(PC)) {
     const pc = `${m[1]} ${m[2]}`; const w = t.slice(Math.max(0, m.index - 160), m.index).toLowerCase();
     if (/^(GU15 3YL|BN8 6AG|SE18 6SX|WC1X 8QR)$/.test(pc)) continue; // operator head offices
+    if (/car ?parks?|parking|nearest station/i.test(t.slice(Math.max(0, m.index - 60), m.index))) continue; // car park postcodes
     if (/regist|company|ltd\.? ?(?:\||,)? ?(?:reg|no)|vat|office address|head office|charity/.test(w.slice(-110))) continue;
     hits.push({ pc, i: m.index, w: t.slice(Math.max(0, m.index - 140), m.index) });
   }
@@ -375,7 +376,7 @@ async function generic(seed, provider, sourceName) {
   for (const l of subLinks(p, scope, 3)) { const s = await page(l); if (s.html && !s.closed) subs.push(s); }
   const texts = [p.text, ...subs.map((s) => s.text)]; const htmls = [p.html, ...subs.map((s) => s.html)];
   const c = common(texts, htmls);
-  if (!/soft[ -]?play|play ?caf[eé]|play centre|play center|playcentre|indoor play|play barn|playbarn|role[ -]?play|play village|play ?zone|adventure play|play area|play frame|play structure/i.test(c.t)) { report.dropped.push(`${seed.url} not soft play`); return null; }
+  if (!provider && !/soft[ -]?play|play ?caf[eé]|play centre|play center|playcentre|indoor play|play barn|playbarn|role[ -]?play|play village|play ?zone|adventure play|play area|play frame|play structure/i.test(c.t)) { report.dropped.push(`${seed.url} not soft play`); return null; }
   if (!provider && !/toddler|baby|babies|under[ -]?(?:5|4|3|2|1|five|four)s?|pre-?school|little ones|crawl|\b0\s*[-–]\s*\d|tots?\b|infant/i.test(c.t)) { report.dropped.push(`${seed.url} no toddler mention`); return null; }
   // address
   let addr = null; const lb = c.lds.find((o) => o.address && typeof o.address === 'object' && o.address.postalCode);

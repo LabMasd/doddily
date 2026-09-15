@@ -1,4 +1,4 @@
--- Little Days: core schema
+-- Doddily: core schema
 create extension if not exists postgis;
 
 -- Classes, groups, screenings and outings (from research + submissions)

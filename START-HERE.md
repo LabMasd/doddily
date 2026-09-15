@@ -26,7 +26,7 @@ You don't need Xcode 27 or a new cloud build to see the app. The latest developm
    ../tools/simulator/sim-install.sh https://expo.dev/artifacts/eas/nl4s2Gt7WfZiF0ibfcoewSuOG2d19K5uK-0-TbxIOuo.tar.gz "iPhone 17 Pro"
    ```
    That link is the latest development build (from commit 37f6af9) and downloads without a login. `npx eas-cli build:list --platform ios` lists newer builds (Expo account: labmasd).
-4. When iOS asks "Open in Little Days?", tap **Open**. The first time, Expo shows a developer-menu notice; tap **Continue**.
+4. When iOS asks "Open in Doddily?" (older builds say "Little Days"), tap **Open**. The first time, Expo shows a developer-menu notice; tap **Continue**.
 
 - **Replay the intro:** tap the blue gear button, then **Reload**.
 - **New native build** (only when native modules change): `cd app && npx eas-cli build --profile development --platform ios` (about 12 minutes). Building on the Mac itself needs Xcode 27.

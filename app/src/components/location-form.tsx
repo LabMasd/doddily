@@ -26,7 +26,7 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
     setBusy('geo');
     try {
       const perm = await Location.requestForegroundPermissionsAsync();
-      if (!perm.granted) { setError('Location is off for Little Days. Type a postcode instead.'); return; }
+      if (!perm.granted) { setError('Location is off for Doddily. Type a postcode instead.'); return; }
       const pos = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.Balanced });
       const { latitude: lat, longitude: lng } = pos.coords;
       const postcode = await postcodeFor(lat, lng);

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Little Days",
+    "name": "Doddily",
     "slug": "little-days",
     "version": "0.1.0",
     "orientation": "portrait",
@@ -47,15 +47,15 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Little Days uses your location to show baby activities near you. It isn't stored or shared."
+          "locationWhenInUsePermission": "Doddily uses your location to show baby activities near you. It isn't stored or shared."
         }
       ],
       [
         "expo-calendar",
         {
-          "calendarPermission": "Little Days adds the classes you choose to your calendar.",
+          "calendarPermission": "Doddily adds the classes you choose to your calendar.",
           "writeOnlyAccess": true,
-          "writeOnlyCalendarPermission": "Little Days adds the classes you choose to your calendar. It never reads your events."
+          "writeOnlyCalendarPermission": "Doddily adds the classes you choose to your calendar. It never reads your events."
         }
       ],
       "expo-font",

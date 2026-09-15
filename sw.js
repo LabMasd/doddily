@@ -1,4 +1,4 @@
-// Little Days service worker: app shell offline, data always fresh when online.
+// Doddily service worker: app shell offline, data always fresh when online.
 const CACHE = 'littledays-v4';
 const SHELL = ['./', 'index.html', 'app.js', 'manifest.webmanifest', 'icon.svg', 'data/tiles/index.json'];
 

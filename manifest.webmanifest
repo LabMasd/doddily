@@ -1,7 +1,7 @@
 {
-  "name": "Little Days",
-  "short_name": "Little Days",
-  "description": "Baby activities near you, sorted by day, time and distance.",
+  "name": "Doddily",
+  "short_name": "Doddily",
+  "description": "Baby and toddler activities near you, sorted by day, time and distance.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
