@@ -64,3 +64,27 @@ No local model or API key. In Claude Code:
   - Bloom Baby Classes is not included: its robots.txt blocks ClaudeBot and says ai-train=no.
   - Hartbeeps, ODEON, Turtle Tots and most of Babyballet block crawlers.
   - Happity isn't scraped (partner with them instead).
+
+## Where we left off (2026-09-15, branch `app-intro-timetables`)
+At home: `git fetch && git switch app-intro-timetables`, then `./scripts/setup.sh`.
+
+- **Today intro:** the flower icon pops in, winds back and sweeps round in the middle of the screen, "Little" and "Days" slide out, and the wordmark rises to the top centre and stays there (`app/src/components/brand-header.tsx`). It plays once per launch and is skipped with Reduce Motion. We decided against a name field and a time-of-day greeting.
+- **Flower mark:** breathes when the list is still and spins with the scroll (`app/src/components/brand-mark.tsx`). It's drawn from views, not the ✿ glyph, so it turns about its true centre.
+- **Activity buttons:** Directions is full width; Website, Call, Save, Send, Calendar and Remind are icon tiles using `expo-symbols` (already in the dev build).
+- **iOS gotcha:** text absolutely positioned inside a small view is squeezed to that view's width on iOS (the web preview hides it). Give it an explicit width.
+- **Performance** (iPhone 17 Pro simulator, dev build): the intro averages about 57 fps with 7 slow frames while the list renders; idle holds 60. To do:
+  - Build the list after the intro.
+  - Move the scroll spin to `useAnimatedScrollHandler`.
+  - Add `CADisableMinimumFrameDurationOnPhone` in the next EAS build for 120 Hz.
+- **Simulator on a Mac:**
+  - Xcode 26.6 is enough to run the EAS dev build.
+  - Download the iOS runtime with `xcodebuild -downloadPlatform iOS`, never while Xcode's own window is downloading it.
+  - Never delete a duplicate runtime image without `--keep-asset`, or the shared download goes too.
+  - `tools/simulator/frametimes.swift` and `fps_report.py` measure frame rate from a `simctl io recordVideo` capture.
+- **Timetable gap:** 5,634 listings have no times. `data/uk-research/scripts/timetables/classify-access.mjs` sorts them by website:
+  - **Open to read (4,364):** robots.txt allows them.
+    - **Baby Sensory** publishes full timetables the old crawler missed. `collect-babysensory.mjs` reads them; partial results are in `collected/babysensory.json`, so re-run it to finish.
+    - **Sing and Sign:** the times are behind each area's "See Availability" buttons (checked by hand for area 232). `collect-singandsign.mjs` returned no classes on its first run; fix how it finds and clicks those buttons.
+  - **Blocked (1,403):** Water Babies and Moo Music by robots.txt, Tumble Tots' booking system (classforkids.io returns 403), and some councils. Don't work around these. `docs/timetable-captures.html` is the screenshot checklist, also published as the "Little Days Timetable Captures" artifact. Name screenshots by listing code in `~/Desktop/little-days-captures`, then ask Claude to read them in. Ticks are saved per browser.
+  - **Still to do:** match collected classes back to listings, then run `node scripts/merge.mjs`.
+- **Fix:** step 4 of `.claude/skills/little-days/SKILL.md` suggests the `r.jina.ai` proxy for blocked sites, which contradicts the CLAUDE.md rules. Remove that line.

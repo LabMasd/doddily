@@ -1,0 +1,7 @@
+{
+  "name": "little-days-timetables",
+  "private": true,
+  "type": "module",
+  "description": "Collect class times from provider pages that robots.txt allows",
+  "dependencies": { "playwright-core": "^1.63.0" }
+}
