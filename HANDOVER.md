@@ -18,7 +18,7 @@ Baby activity finder for UK parents. A static PWA with no backend. It opens on a
 Re-run the research (Claude Code, web search) into `data/research/*.json`, then `node scripts/merge.mjs`, then commit and push.
 
 ## Setup link (keeps the home postcode out of the public repo)
-`https://labmasd.github.io/little-days/#at=<POSTCODE>&r=3&born=YYYY-MM`. It saves the settings on that phone, then clears the address bar.
+`https://labmasd.github.io/doddily/#at=<POSTCODE>&r=3&born=YYYY-MM`. It saves the settings on that phone, then clears the address bar.
 
 ## Local
 `python3 -m http.server 8230` in this folder → http://127.0.0.1:8230
@@ -39,7 +39,7 @@ No local model or API key. In Claude Code:
   - `activity/[id]`: directions, website, call, save, add to calendar (native form), send
   - `settings`: form sheet
 - **Data:**
-  - Listings: `src/lib/data.ts` loads the tiles from `https://labmasd.github.io/little-days/data/tiles/`. They're cached on the phone and still work offline.
+  - Listings: `src/lib/data.ts` loads the tiles from `https://labmasd.github.io/doddily/data/tiles/`. They're cached on the phone and still work offline.
   - Places: parks, playgrounds, libraries, pools, soft play, farms, museums and baby change come live from Overpass. The plan moves them to a pre-built import before launch.
 - **No login.** Model: a paid-upfront app with Family Sharing (see the plan).
 - **Run:**
@@ -53,7 +53,7 @@ No local model or API key. In Claude Code:
   - `tier`: timetable = day and time known; venue = runs there, times on the provider's site; place = open hours.
 - **Reminders:** `app/src/lib/reminders.ts`. The activity page's "Remind me" schedules a local notification an hour before, or 15 minutes if the class is sooner. Tapping it opens the class.
 - **Prebuilt places:** `.github/workflows/places.yml` runs monthly on GitHub (it can also be started by hand). It downloads the Geofabrik UK extract and filters it with osmium, then `scripts/build-places.mjs` writes `data/places/` tiles. The app and web load those and fall back to live Overpass if the tiles are missing.
-- **Cloud builds (EAS):** the project is `@labmasd/little-days`.
+- **Cloud builds (EAS):** the project is `@LabMasd/doddily`.
   - Development simulator build: `cd app && npx eas-cli build --profile development --platform ios`
   - Run it: install the build on the simulator, then `npx expo start --dev-client`.
 - **Store drafts:** `docs/store-listing.md` (App Store and Play text, privacy labels, screenshots list, privacy policy draft) and `docs/partner-emails.md` (Babyballet, Happity).

@@ -4,7 +4,7 @@ import { Platform } from 'react-native';
 import { miles, tileKeys } from './geo';
 import type { Activity, Category, Loc } from './types';
 
-const BASE = 'https://labmasd.github.io/little-days/data/tiles';
+const BASE = 'https://labmasd.github.io/doddily/data/tiles';
 const PLACE_MAX_MI = 5;
 const HOUR = 36e5;
 
@@ -54,7 +54,7 @@ export async function loadActivities(loc: Loc, radius: number) {
 // ---------- live places from OpenStreetMap ----------
 type OsmEl = { type: string; id: number; lat?: number; lon?: number; center?: { lat: number; lon: number }; tags?: Record<string, string> };
 
-const PLACES_BASE = 'https://labmasd.github.io/little-days/data/places';
+const PLACES_BASE = 'https://labmasd.github.io/doddily/data/places';
 
 export async function loadPlaces(loc: Loc, radius: number, curated: Activity[]) {
   const r = Math.min(radius, PLACE_MAX_MI);

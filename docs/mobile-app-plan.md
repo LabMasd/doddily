@@ -1,6 +1,6 @@
 # Doddily: iPhone and Android app plan
 
-Started 2026-09-15. The web version (labmasd.github.io/little-days) is the working prototype. This plan turns it into a store app for the UK.
+Started 2026-09-15. The web version (labmasd.github.io/doddily) is the working prototype. This plan turns it into a store app for the UK.
 
 ## What the app is
 Parents open it, see baby activities near them today, and go. Every card answers: when, where, how far, how much, do I need to book, is it right for my baby's age.
