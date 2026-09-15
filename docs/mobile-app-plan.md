@@ -61,7 +61,7 @@ Built in: offline cache of the last area, local notifications for reminders, the
 - Review risk: Apple rejects "just a website in an app" (guideline 4.2). A native map, calendar, reminders and offline mode avoid that.
 
 ### Phase 5: after launch
-- Provider submissions ("Add your class" form → reviewed before it goes live)
+- No self-submitted listings: Doddily only lists classes and places that are published online (decided 2026-09-15)
 - Partnerships: Happity (data feed or booking commission), class franchises (official feeds)
 - Coverage dashboard: timetabled classes per area, oldest data, open reports
 
