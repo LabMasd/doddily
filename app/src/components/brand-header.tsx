@@ -73,8 +73,9 @@ export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<numb
     const centre = APPEAR_SCALE + (CENTRE_SCALE - APPEAR_SCALE) * appear;
     return {
       opacity: Math.min(1, t.value / 150),
-      // Eases left as the name comes out, so icon and name end up centred as one logo.
-      transform: [{ translateX: -((nameW.value + GAP) / 2) * seg(t.value, P.name, EASE_OUT) }, { translateY: centreY * (1 - up) }, { scale: centre + (1 - centre) * up }],
+      // Eases left as the name comes out, so icon and name stay centred as one logo.
+      // The shift comes after the scale so it grows with it (the name appears while the logo is enlarged).
+      transform: [{ translateY: centreY * (1 - up) }, { scale: centre + (1 - centre) * up }, { translateX: -((nameW.value + GAP) / 2) * seg(t.value, P.name, EASE_OUT) }],
     };
   });
 
