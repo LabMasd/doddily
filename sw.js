@@ -1,20 +1,10 @@
-// Doddily service worker: app shell offline, data always fresh when online.
-const CACHE = 'littledays-v4';
-const SHELL = ['./', 'index.html', 'app.js', 'manifest.webmanifest', 'icon.svg', 'data/tiles/index.json'];
-
-self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
-});
+// The old web version's offline worker. The web version is now the Expo app, so this removes itself and its cache.
+self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', (e) => {
-  e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
-});
-self.addEventListener('fetch', (e) => {
-  const url = new URL(e.request.url);
-  if (e.request.method !== 'GET' || url.origin !== location.origin) return;
-  // Network first so new timetables and fixes show up; cache is the offline fallback.
-  e.respondWith(
-    fetch(e.request, { cache: 'no-cache' })
-      .then((res) => { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(e.request, copy)); return res; })
-      .catch(() => caches.match(e.request, { ignoreSearch: true }))
+  e.waitUntil(
+    caches.keys().then((ks) => Promise.all(ks.map((k) => caches.delete(k))))
+      .then(() => self.registration.unregister())
+      .then(() => self.clients.matchAll())
+      .then((cs) => cs.forEach((c) => c.navigate(c.url)))
   );
 });

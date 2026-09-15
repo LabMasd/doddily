@@ -11,7 +11,7 @@ cd little-days
 The repo is public, so cloning needs no login. To push changes, log in to GitHub as LabMasd (`gh auth login`).
 
 ## 2. See it working
-- **Web version:** `python3 -m http.server 8230`, then open http://127.0.0.1:8230/#at=E83PB&r=3 (any UK postcode works).
+- **Web version:** `cd app && npx expo start --web`. To publish it, run `scripts/build-web.sh`, commit, and merge to `main`.
 - **App in the browser:** `cd app && npx expo start --web`. Maps, calendar and reminders only work on a phone or simulator.
 
 ## 3. iPhone simulator

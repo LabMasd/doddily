@@ -82,7 +82,7 @@ Built in: offline cache of the last area, local notifications for reminders, the
 ## Repo layout
 ```
 little-days/
-  index.html, app.js …    web prototype (GitHub Pages)
+  index.html, _expo/ …    the app exported for the web (GitHub Pages)
   app/                    Expo app (iOS + Android)
   supabase/migrations/    database schema
   scripts/                merge + import scripts

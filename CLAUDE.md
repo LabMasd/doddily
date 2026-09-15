@@ -9,7 +9,7 @@ Doddily (formerly Little Days) is a baby and toddler activity finder for UK pare
 - `docs/store-listing.md` and `docs/partner-emails.md`: drafts
 
 ## Layout
-- **Web version:** `index.html`, `app.js`, `sw.js`. Live at https://labmasd.github.io/doddily/, and pushing to `main` publishes it.
+- **Web version:** the app itself, exported for the web by `scripts/build-web.sh` into the repo root (`index.html`, `_expo/`, `assets/`, listed in `.web-files`). Live at https://labmasd.github.io/doddily/ once merged to `main`. Don’t edit the exported files by hand.
 - **App:** `app/`, Expo SDK 57 (expo-router, TypeScript). Follow `app/AGENTS.md`: check the Expo v57 docs or type definitions before using an API.
 - **Data:**
   - `data/research/`: hand-checked local research
@@ -24,9 +24,9 @@ Doddily (formerly Little Days) is a baby and toddler activity finder for UK pare
 - **Excluded sources:**
   - Happity: partner with them instead of scraping.
   - Bloom Baby Classes: its robots.txt blocks ClaudeBot.
-- **Personal data:** no home postcodes or family names in the repo. The home location is set on each phone with the setup link `#at=POSTCODE`.
+- **Personal data:** no home postcodes or family names in the repo. The home location is set on each phone in the You tab.
 - **Privacy:** no login, tracking or ads. On iOS the calendar uses add-only access through the system form in `expo-calendar/legacy`.
 - **iOS builds:** use EAS cloud builds (`cd app && npx eas-cli build --profile development --platform ios`). Expo 57 needs Xcode 27 to build locally. Don't patch `expo-modules-jsi`: that left `ExpoModulesJSI.framework` out of the app, and it crashed on launch.
 - **Filters:** the list always opens on "Everything", so don't save the chosen category.
-- **Keep web and app in sync:** categories and groups live in both `app.js` (`CATS`/`GROUPS`) and `app/src/lib/categories.ts`.
+- **Keep the web version current:** after app changes, run `scripts/build-web.sh` and commit, so the web version matches the iPhone app. The map is phone-only for now.
 - **Design:** plain, short, sentence-case copy. Tokens are in `app/src/constants/theme.ts` (milk, navy and a pastel purple accent; Bricolage Grotesque + Figtree).
