@@ -152,7 +152,7 @@ function Tile({ label, a11y, icon, onPress, active }: TileProps) {
       accessibilityLabel={a11y ?? label}
       accessibilityState={{ selected: !!active }}
     >
-      <SymbolView name={icon} size={22} tintColor={active ? C.marigoldText : C.ink} />
+      <SymbolView name={icon} size={22} tintColor={active ? C.accentText : C.ink} />
       <Text style={[s.tileText, active && s.tileTextActive]} numberOfLines={1}>{label}</Text>
     </Pressable>
   );
@@ -182,9 +182,9 @@ const s = StyleSheet.create({
   tileRow: { flexDirection: 'row', gap: 8 },
   tile: { flex: 1, alignItems: 'center', gap: 6, backgroundColor: C.card, borderRadius: R.md, borderWidth: 1, borderColor: C.line, paddingVertical: 12, paddingHorizontal: 4 },
   tilePad: { flex: 1 },
-  tileActive: { backgroundColor: C.marigoldSoft, borderColor: C.marigold },
+  tileActive: { backgroundColor: C.accentSoft, borderColor: C.accent },
   tileText: { fontFamily: F.textSemi, fontSize: 13, color: C.ink },
-  tileTextActive: { color: C.marigoldText },
+  tileTextActive: { color: C.accentText },
   block: { marginTop: 24, backgroundColor: C.card, borderRadius: R.lg, padding: 16, gap: 6, borderWidth: 1, borderColor: C.line },
   blockTitle: { fontFamily: F.display, fontSize: 17, color: C.ink, marginBottom: 2 },
   line: { fontFamily: F.text, fontSize: 16, lineHeight: 22, color: C.ink },

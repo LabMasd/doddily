@@ -29,4 +29,4 @@ A baby activity finder for UK parents: a web prototype (GitHub Pages) plus an Ex
 - **iOS builds:** use EAS cloud builds (`cd app && npx eas-cli build --profile development --platform ios`). Expo 57 needs Xcode 27 to build locally. Don't patch `expo-modules-jsi`: that left `ExpoModulesJSI.framework` out of the app, and it crashed on launch.
 - **Filters:** the list always opens on "Everything", so don't save the chosen category.
 - **Keep web and app in sync:** categories and groups live in both `app.js` (`CATS`/`GROUPS`) and `app/src/lib/categories.ts`.
-- **Design:** plain, short, sentence-case copy. Tokens are in `app/src/constants/theme.ts` (milk, navy and a marigold accent; Bricolage Grotesque + Figtree).
+- **Design:** plain, short, sentence-case copy. Tokens are in `app/src/constants/theme.ts` (milk, navy and a pastel purple accent; Bricolage Grotesque + Figtree).

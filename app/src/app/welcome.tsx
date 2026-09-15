@@ -27,7 +27,7 @@ const s = StyleSheet.create({
   screen: { flex: 1, backgroundColor: C.milk },
   content: { paddingHorizontal: 20, width: '100%', maxWidth: MaxContentWidth, alignSelf: 'center' },
   mark: { width: 64, height: 64, borderRadius: 18, backgroundColor: C.ink, alignItems: 'center', justifyContent: 'center' },
-  markText: { fontSize: 34, color: C.marigold },
+  markText: { fontSize: 34, color: C.accent },
   title: { fontFamily: F.display, fontSize: 40, lineHeight: 44, color: C.ink, marginTop: 20 },
   sub: { fontFamily: F.text, fontSize: 18, lineHeight: 25, color: C.muted, marginTop: 8, maxWidth: 360 },
   card: { backgroundColor: C.card, borderRadius: 20, padding: 18, marginTop: 28, borderWidth: 1, borderColor: C.line },
