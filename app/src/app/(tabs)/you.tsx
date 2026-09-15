@@ -1,7 +1,8 @@
-import { useRouter } from 'expo-router';
+import { useState } from 'react';
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { LocationForm } from '@/components/location-form';
 import { C, F, GUTTER, MaxContentWidth, R } from '@/constants/theme';
 import { ageLabel, babyMonths } from '@/lib/schedule';
 import { newKidId, useStore } from '@/lib/store';
@@ -12,8 +13,8 @@ const ym = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(
 
 export default function YouScreen() {
   const { settings, update } = useStore();
-  const router = useRouter();
   const insets = useSafeAreaInsets();
+  const [saved, setSaved] = useState(false);
 
   const setKids = (kids: Kid[]) => update({ kids });
   const addKid = () => {
@@ -28,17 +29,16 @@ export default function YouScreen() {
         <Text style={s.title}>You</Text>
         <Text style={s.sub}>Saved on this phone only. It helps Today show what suits your family.</Text>
 
-        <Text style={s.section}>Your name</Text>
-        <TextInput
-          value={settings.name}
-          onChangeText={(name) => update({ name })}
-          placeholder="Optional"
-          placeholderTextColor={C.muted}
-          autoCapitalize="words"
-          textContentType="givenName"
-          style={s.input}
-          accessibilityLabel="Your name"
-        />
+        <Text style={s.section}>Where</Text>
+        <View style={s.card}>
+          <LocationForm
+            submitLabel={saved ? 'Saved' : 'Save location'}
+            onDone={() => {
+              setSaved(true);
+              setTimeout(() => setSaved(false), 1800);
+            }}
+          />
+        </View>
 
         <Text style={s.section}>Children</Text>
         {settings.kids.length === 0 && <Text style={s.hint}>Add your children so Today only shows classes that suit their ages.</Text>}
@@ -55,11 +55,17 @@ export default function YouScreen() {
           <Text style={s.addText}>+ Add a child</Text>
         </Pressable>
 
-        <Text style={s.section}>Where</Text>
-        <Pressable onPress={() => router.push('/settings')} style={({ pressed }) => [s.rowBtn, pressed && s.pressed]} accessibilityRole="button">
-          <Text style={s.rowText}>{settings.loc ? `${settings.loc.name}, within ${settings.radius} mi` : 'Add a postcode'}</Text>
-          <Text style={s.chev}>›</Text>
-        </Pressable>
+        <Text style={s.section}>Your name</Text>
+        <TextInput
+          value={settings.name}
+          onChangeText={(name) => update({ name })}
+          placeholder="Optional"
+          placeholderTextColor={C.muted}
+          autoCapitalize="words"
+          textContentType="givenName"
+          style={s.input}
+          accessibilityLabel="Your name"
+        />
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -121,8 +127,5 @@ const s = StyleSheet.create({
   age: { fontFamily: F.textSemi, fontSize: 15, color: C.accentText, backgroundColor: C.accentSoft, alignSelf: 'flex-start', borderRadius: R.pill, overflow: 'hidden', paddingHorizontal: 10, paddingVertical: 3 },
   add: { borderRadius: R.md, borderWidth: 1, borderColor: C.line, borderStyle: 'dashed', paddingVertical: 14, alignItems: 'center', backgroundColor: C.card },
   addText: { fontFamily: F.textSemi, fontSize: 16, color: C.ink },
-  rowBtn: { flexDirection: 'row', alignItems: 'center', backgroundColor: C.card, borderRadius: R.md, borderWidth: 1, borderColor: C.line, paddingHorizontal: 14, paddingVertical: 14 },
-  rowText: { flex: 1, fontFamily: F.textMedium, fontSize: 16, color: C.ink },
-  chev: { fontFamily: F.display, fontSize: 22, color: C.muted },
   pressed: { opacity: 0.8 },
 });
