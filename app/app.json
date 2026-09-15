@@ -71,6 +71,12 @@
         "projectId": "6e5e6bd3-d2e6-488b-80d3-f8804abb9fc1"
       }
     },
-    "owner": "labmasd"
+    "owner": "labmasd",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/6e5e6bd3-d2e6-488b-80d3-f8804abb9fc1"
+    }
   }
 }
