@@ -9,7 +9,7 @@ Doddily (formerly Little Days) is a baby and toddler activity finder for UK pare
 - `docs/store-listing.md` and `docs/partner-emails.md`: drafts
 
 ## Layout
-- **Web version:** `index.html`, `app.js`, `sw.js`. Live at https://labmasd.github.io/little-days/, and pushing to `main` publishes it.
+- **Web version:** `index.html`, `app.js`, `sw.js`. Live at https://labmasd.github.io/doddily/, and pushing to `main` publishes it.
 - **App:** `app/`, Expo SDK 57 (expo-router, TypeScript). Follow `app/AGENTS.md`: check the Expo v57 docs or type definitions before using an API.
 - **Data:**
   - `data/research/`: hand-checked local research
