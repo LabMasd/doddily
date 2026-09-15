@@ -2,21 +2,21 @@
   "expo": {
     "name": "Doddily",
     "slug": "little-days",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "littledays",
     "userInterfaceStyle": "light",
     "backgroundColor": "#F4F6F8",
     "ios": {
-      "bundleIdentifier": "cc.masd.littledays",
+      "bundleIdentifier": "app.doddily",
       "supportsTablet": false,
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "cc.masd.littledays",
+      "package": "app.doddily",
       "adaptiveIcon": {
         "backgroundColor": "#1E2536",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
