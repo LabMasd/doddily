@@ -17,11 +17,11 @@ Baby activity finder for UK parents. A static PWA with no backend. It opens on a
 ## Refreshing the timetable
 Re-run the research (Claude Code, web search) into `data/research/*.json`, then `node scripts/merge.mjs`, then commit and push.
 
-## Setup link (keeps the home postcode out of the public repo)
-`https://labmasd.github.io/doddily/#at=<POSTCODE>&r=3&born=YYYY-MM`. It saves the settings on that phone, then clears the address bar.
+## Home location (keeps the home postcode out of the public repo)
+Set the postcode and children in the You tab on each phone. The old `#at=` setup link belonged to the previous web version, which the exported app replaced on 2026-09-15.
 
 ## Local
-`python3 -m http.server 8230` in this folder → http://127.0.0.1:8230
+`cd app && npx expo start --web` for the web version. `scripts/build-web.sh` rebuilds the published copy at the repo root.
 
 ## Searching and refreshing (Claude Code)
 No local model or API key. In Claude Code:

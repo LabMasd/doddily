@@ -46,7 +46,7 @@ Listings come from providers' own pages, councils and libraries across the UK. T
 ### Notes for App Review
 Doddily lists baby and toddler activities in the United Kingdom only, and needs no login.
 
-If you are outside the UK, "Use where I am" will find nothing nearby. Instead, type the postcode **E8 3PB** (London) on the first screen, or later under You > Where. Today then lists that day's sessions. Tap one for details, directions, add to calendar and reminders. The Map tab shows the same listings on a map.
+If you are outside the UK, "Use where I am" will find nothing nearby. Instead, type the postcode **E8 1EA** (London) on the first screen, or later under You > Where. Today then lists that day's sessions. Tap one for details, directions, add to calendar and reminders. The Map tab shows the same listings on a map.
 
 ## Google Play
 
