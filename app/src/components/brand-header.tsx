@@ -6,7 +6,7 @@ import { BrandMark, MARK } from '@/components/brand-mark';
 import { C, F } from '@/constants/theme';
 
 // Opening sequence: the icon pops in, winds back and sweeps round in the middle of the screen,
-// "D" and "ddily" slide out either side (the flower is the "o"), and the wordmark rises to the top, where it stays.
+// "Doddily" slides out to the right of the icon, and the logo rises to the top, where it stays.
 
 // Arrivals decelerate, travel eases both ways.
 const EASE_OUT = Easing.bezierFn(0.22, 1, 0.36, 1); // quick start, long gentle settle
@@ -20,19 +20,18 @@ const P = {
   appear: [0, 550],
   windUp: [0, 200],
   spin: [200, 1100],
-  little: [350, 950], // "D"
-  days: [420, 1020], // "ddily", a beat after "D"
+  name: [350, 1000], // "Doddily" slides out from behind the icon
   up: [1050, 1750],
   content: [1350, 2100],
 } as const;
 const ROW = 40; // height of the header row
 const HEADER_TOP = 8; // matches the Today header's paddingTop
-const GAP = 1; // between the icon and "D" / "ddily": tight, so the flower reads as the "o"
+const GAP = 8; // between the icon and "Doddily"
 const WIND_DEG = -14;
 const SPIN_DEG = 216; // three petals' worth: the five-petal flower ends looking as it started
 const APPEAR_SCALE = 0.4;
 const CENTRE_SCALE = 1.8;
-const WORD_BOX = 120; // room for "D" / "ddily" beside the icon
+const WORD_BOX = 140; // room for "Doddily" beside the icon
 
 let played = false; // once per app launch
 
@@ -58,12 +57,11 @@ export function useIntro() {
   return { t, start, contentStyle };
 }
 
-/** "D✿ddily", centred at the top of Today, with the opening sequence. */
+/** Icon then "Doddily", centred together at the top of Today, with the opening sequence. */
 export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<number>; t: SharedValue<number>; onReady: () => void }) {
   const insets = useSafeAreaInsets();
   const { height } = useWindowDimensions();
-  const littleW = useSharedValue(0);
-  const daysW = useSharedValue(0);
+  const nameW = useSharedValue(0);
   const centreY = height / 2 - (insets.top + HEADER_TOP + ROW / 2);
 
   // Winds back a little as it pops in, then sweeps forward and settles.
@@ -75,30 +73,24 @@ export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<numb
     const centre = APPEAR_SCALE + (CENTRE_SCALE - APPEAR_SCALE) * appear;
     return {
       opacity: Math.min(1, t.value / 150),
-      transform: [{ translateY: centreY * (1 - up) }, { scale: centre + (1 - centre) * up }],
+      // Eases left as the name comes out, so icon and name end up centred as one logo.
+      transform: [{ translateX: -((nameW.value + GAP) / 2) * seg(t.value, P.name, EASE_OUT) }, { translateY: centreY * (1 - up) }, { scale: centre + (1 - centre) * up }],
     };
   });
 
   // Each style reads t.value itself, so Reanimated knows to update it as the clock runs.
-  const little = useAnimatedStyle(() => ({
-    opacity: littleW.value ? 1 : 0,
-    transform: [{ translateX: (1 - seg(t.value, P.little, EASE_OUT)) * (littleW.value + GAP) }],
-  }));
-  const days = useAnimatedStyle(() => ({
-    opacity: daysW.value ? 1 : 0,
-    transform: [{ translateX: -(1 - seg(t.value, P.days, EASE_OUT)) * (daysW.value + GAP) }],
+  const name = useAnimatedStyle(() => ({
+    opacity: nameW.value ? 1 : 0,
+    transform: [{ translateX: -(1 - seg(t.value, P.name, EASE_OUT)) * (nameW.value + GAP) }],
   }));
 
   return (
     <View style={s.row} accessibilityRole="header" accessibilityLabel="Doddily" onLayout={() => onReady()}>
       <Animated.View style={[s.group, group]}>
-        <View style={[s.mask, s.littleMask]}>
-          <Animated.Text style={[s.word, little]} numberOfLines={1} onLayout={(e) => { littleW.value = e.nativeEvent.layout.width; }}>D</Animated.Text>
+        <View style={[s.mask, s.nameMask]}>
+          <Animated.Text style={[s.word, name]} numberOfLines={1} onLayout={(e) => { nameW.value = e.nativeEvent.layout.width; }}>Doddily</Animated.Text>
         </View>
-        <View style={[s.mask, s.daysMask]}>
-          <Animated.Text style={[s.word, days]} numberOfLines={1} onLayout={(e) => { daysW.value = e.nativeEvent.layout.width; }}>ddily</Animated.Text>
-        </View>
-        {/* Last, so the words slide out from behind the icon. */}
+        {/* Last, so the name slides out from behind the icon. */}
         <BrandMark scrollY={scrollY} spin={spin} />
       </Animated.View>
     </View>
@@ -110,7 +102,6 @@ const s = StyleSheet.create({
   group: { width: MARK, height: MARK },
   // Masks get explicit widths: on iOS an absolute child of the 28pt group is otherwise squeezed to that width.
   mask: { position: 'absolute', top: -8, bottom: -8, justifyContent: 'center', overflow: 'hidden' },
-  littleMask: { right: MARK + GAP, width: WORD_BOX, alignItems: 'flex-end' },
-  daysMask: { left: MARK + GAP, width: WORD_BOX, alignItems: 'flex-start' },
-  word: { fontFamily: F.display, fontSize: 16, color: C.ink },
+  nameMask: { left: MARK + GAP, width: WORD_BOX, alignItems: 'flex-start' },
+  word: { fontFamily: F.display, fontSize: 18, color: C.ink },
 });
