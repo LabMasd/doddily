@@ -158,6 +158,7 @@ function dayTimePairs(snip) {
   return out;
 }
 function groupHours(map) { // {Mon:'09:00–17:00'}
+  const ks = DAYS.filter((d) => map[d]); if (ks.length < 3 && ks.join() !== 'Sat,Sun') return ''; // partial day lists are unreliable
   const out = []; let i = 0; const keys = DAYS.filter((d) => map[d]);
   if (keys.length === 7 && new Set(keys.map((d) => map[d])).size === 1) return 'Daily ' + map.Mon;
   while (i < DAYS.length) { if (!map[DAYS[i]]) { i++; continue; } let j = i; while (j + 1 < 7 && map[DAYS[j + 1]] === map[DAYS[i]]) j++; out.push(`${DAYS[i]}${j > i ? '–' + DAYS[j] : ''} ${map[DAYS[i]]}`); i = j + 1; }
@@ -176,21 +177,28 @@ function hoursFromText(t) {
   for (const i of idxs) {
     const snip = t.slice(i, i + 420);
     if (/part(y|ies)|swim|gym\b|pool|caf[eé] (opening|hours)|term dates|bank holiday hours/i.test(snip.slice(0, 40))) continue;
-    const pairs = dayTimePairs(snip).filter((p) => !/toddler|tots|sen\b|send|autism|quiet|adult/i.test(snip.slice(Math.max(0, p.at - 60), p.at)));
+    const dur = (p) => { const [a, b] = [p.start, p.end].map((x) => +x.slice(0, 2) * 60 + +x.slice(3)); return b - a; };
+    const pairs = dayTimePairs(snip).filter((p) => dur(p) >= 180 && !/toddler|tots|sen\b|send|autism|quiet|adult|class|lesson|session/i.test(snip.slice(Math.max(0, p.at - 60), p.at)));
     if (!pairs.length) continue;
     const map = {}; for (const p of pairs) for (const d of p.days) if (!map[d]) map[d] = `${p.start}–${p.end}`;
     return groupHours(map);
   }
   return '';
 }
+const TODDLER_TRIG2 = /(?:session|club|play time)s? (?:for|aimed at) (?:pre-?school(?: aged)?|toddlers|under[ -]?(?:5|4|3)s?|babies and toddlers)/gi;
 const TODDLER_TRIG = /(toddler|tots?\b|tiny|little ones|under[ -]?(?:5|4|3|five|four|three)s?\b|pre-?school(?:ers?)?|baby (?:&|and) toddler|mini ?(?:monkeys|explorers)|bumps? (?:&|and) babies|parent (?:&|and) (?:toddler|baby))[^|]{0,40}?(session|time|club|morning|play|hour|only|mornings)/gi;
 function toddlerSessions(t) {
   const found = [];
-  for (const m of t.matchAll(TODDLER_TRIG)) {
+  for (const m of [...t.matchAll(TODDLER_TRIG), ...t.matchAll(TODDLER_TRIG2)]) {
     const head = t.slice(Math.max(0, m.index - 30), m.index + m[0].length);
-    if (/\bsen\b|send\b|autis|sensory friendly|quiet|part(y|ies)|adult|swim|gymnast|class|lesson|toddler area|toddler zone/i.test(head)) continue;
-    const snip = t.slice(m.index, m.index + 260);
-    for (const p of dayTimePairs(snip)) { if (p.at > 200) continue; found.push({ ...p, trigger: m[0], snippet: clean(t.slice(Math.max(0, m.index - 40), m.index + 260)) }); }
+    if (/\bsen\b|send\b|autis|sensory friendly|quiet|part(y|ies)|adult|swim|gymnast|class|lesson|toddler area|toddler zone|play zone|little ones at/i.test(head)) continue;
+    const snip = t.slice(m.index, m.index + 360);
+    for (const p of dayTimePairs(snip)) {
+      if (p.at > 320) continue;
+      const between = snip.slice(0, p.at);
+      if (/\bsen\b|\bsend\b|autis|part(y|ies)|we(?:'re| are) open|open (?:during|from|daily)|opening|swim|pool|£\d{2,}/i.test(between)) continue;
+      found.push({ ...p, trigger: m[0], snippet: clean(t.slice(Math.max(0, m.index - 40), m.index + 360)) });
+    }
   }
   const sessions = []; const seen = new Set(); let snippet = '';
   for (const f of found) for (const d of f.days) { const k = d + f.start + f.end; if (seen.has(k)) continue; seen.add(k); sessions.push({ day: d, start: f.start, end: f.end }); snippet = snippet || f.snippet; }
@@ -227,34 +235,37 @@ function booking(t) {
 function phoneFrom(html, t) {
   const tel = (String(html).match(/href="tel:([^"]+)"/i) || [])[1];
   const raw = tel ? decodeURIComponent(tel) : (t.match(/(?:tel|call|phone)[^0-9+]{0,12}((?:\+44\s?|0)\d[\d\s]{8,12}\d)/i) || [])[1];
-  const d = String(raw || '').replace(/[^\d+]/g, ''); return /^(\+44|0)\d{9,10}$/.test(d) ? raw.trim().replace(/\s+/g, ' ') : '';
+  const d = String(raw || '').replace(/[^\d+]/g, ''); return /^(\+44|0)\d{9,10}$/.test(d) && !/1234\s?567|0000000|123456/.test(d) ? raw.trim().replace(/\s+/g, ' ') : '';
 }
+const JUNK_SEG = /centre info|read more|book now|book tickets|more info|find out more|leave this field|submit|facebook|instagram|twitter|photography policy|privacy|collapsible|all rights|your enquiry|plenty of offers|how to find us|whats our address|what is the address|faq|about us|team xoxo|terms|menu|click|bookings? and enquiries|enquir/i;
 // postcode + address from text: skip registered-office/company lines
 function addressFromText(t, hint) {
   const hits = [];
   for (const m of t.matchAll(PC)) {
     const pc = `${m[1]} ${m[2]}`; const w = t.slice(Math.max(0, m.index - 160), m.index).toLowerCase();
-    if (/^(GU15 3YL|BN8 6AG|SE18 6SX|WC1X 8QR)$/.test(pc)) continue; // operator head offices
-    if (/car ?parks?|parking|nearest station/i.test(t.slice(Math.max(0, m.index - 60), m.index))) continue; // car park postcodes
-    if (/regist|company|ltd\.? ?(?:\||,)? ?(?:reg|no)|vat|office address|head office|charity/.test(w.slice(-110))) continue;
+    if (/^(GU15 3YL|BN8 6AG|SE18 6SX|WC1X 8QR|IV2 6BZ)$/.test(pc) && /headquarters|office|regist/i.test(t.slice(Math.max(0, m.index - 200), m.index))) continue; // operator head offices
+    if (/car ?parks?:?|parking:|nearest station/i.test(t.slice(Math.max(0, m.index - 28), m.index))) continue; // car park postcodes
+    if (/regist|company|ltd\.? ?(?:\||,)? ?(?:reg|no)|vat|office address|head ?office|headquarters|\bhq\b|charity/.test(w.slice(-110))) continue;
     hits.push({ pc, i: m.index, w: t.slice(Math.max(0, m.index - 140), m.index) });
   }
   if (!hits.length) return null;
   let pick = hint ? hits.find((h) => h.pc === normPC(hint)) : null;
   const counts = {}; hits.forEach((h) => (counts[h.pc] = (counts[h.pc] || 0) + 1));
   const distinct = Object.keys(counts);
+  if (!pick && hint && distinct.length > 1) return { multi: distinct, hintMissing: true };
   if (!pick) { if (distinct.length > 3 && !hint) return { multi: distinct }; pick = hits.sort((a, b) => counts[b.pc] - counts[a.pc] || a.i - b.i)[0]; }
   let segs = pick.w.split(/\s*\|\s*/).map(clean).filter(Boolean);
   const keep = [];
   for (let k = segs.length - 1; k >= 0 && keep.length < 4; k--) {
-    let sg = segs[k].replace(/^(address|find us|location|visit us|where to find us|contact( us)?|get in touch)\s*:?\s*/i, '');
-    if (!sg || sg.length > 90 || /[.!?]\s|@|www\.|tel\b|phone|email|open|£|\d{4,}|©|copyright|cookie/i.test(sg)) break;
+    let sg = segs[k].replace(/^(address|find us|location|visit us|where to find us|contact( us)?|get in touch|our address|book tickets|for the sat nav)\s*:?\s*/i, '');
+    if (JUNK_SEG.test(sg)) { if (keep.length) break; continue; }
+    if (!sg || sg.length > 90 || sg.split(/\s+/).length > 9 || /[.!?]\s|@|www\.|tel\b|phone|email|open|£|\d{4,}|©|copyright|cookie|\?/i.test(sg)) break;
     keep.unshift(sg);
     if (keep.join(', ').length > 70) break;
   }
   let addr = keep.join(', ');
   // text like "Unit 3, Foo Park, Town" before postcode in the same segment
-  if (!addr) { const seg = pick.w.split(/[.!?|]\s/).pop(); addr = clean(seg).slice(-90); }
+  if (!addr) { const seg = clean(pick.w.split(/[.!?|]\s|\|/).pop()); addr = seg.length <= 70 && seg.split(/\s+/).length <= 9 && !JUNK_SEG.test(seg) ? seg : ''; }
   return { postcode: pick.pc, address: clean(addr.replace(/,\s*,/g, ',')) };
 }
 function siteName(html, t) {
@@ -294,7 +305,7 @@ function subLinks(p, scope, max = 3) {
 
 // ================================================================ seeds
 const COVERED = /wacky warehouse|little street|rugrats|halfpints|kidspace|gambado|clambers|tumble tots|gymboree|little gym/i;
-const NOT_SOFTPLAY = /trampoline|ninja|laser|flip ?out|jump ?(?:space|zone|in\b|360)|air ?(?:park|haus|nation)|bounce|freerun|gymnastic|bowl|inflata|climb|go ?kart|escape|golf|skate|museum|library|nursery|children'?s centre|toy library|swimming pool|stemex|legends/i;
+const NOT_SOFTPLAY = /trampoline|ninja|laser|flip ?out|jump ?(?:space|zone|in\b|360)|air ?(?:park|haus|nation)|bounce|freerun|gymnastic|bowl|inflata|climb|go ?kart|escape|golf|skate|museum|library|nursery|children'?s centre|toy library|swimming pool|stemex|legends|sm[aå]land|ikea/i;
 const CHAINS = [
   { provider: '360 Play', urls: ['basildon', 'farnborough', 'leicester', 'milton-keynes', 'redditch', 'rushden-lakes', 'stevenage'].map((s) => `https://360play.co.uk/360-play-${s}/`) },
   { provider: 'Monkey Bizness', urls: ['lewes', 'sheffield', 'hull', 'gosport', 'southampton', 'rochford', 'braintree'].map((s) => `https://www.monkey-bizness.co.uk/${s}/`) },
@@ -307,9 +318,12 @@ const CHAINS = [
   { provider: 'Safari Play', urls: ['milton-keynes', 'peterborough'].map((s) => `https://www.safariplay.co.uk/${s}/`) },
   { provider: 'Monster Kidz', urls: ['bramley', 'beeston'].map((s) => `https://monsterkidz.co.uk/monster-kidz-${s}/`) },
   { provider: "Frankie & Lola's", urls: ['inverness', 'liverpool', 'burnley', 'walsall'].map((s) => `https://frankieandlolas.co.uk/venue/${s}`) },
+  { provider: 'Live Borders', urls: [{ url: 'https://www.liveborders.org.uk/kids-activities/soft-play/treasure-land/', label: 'Treasure Land' }, { url: 'https://www.liveborders.org.uk/kids-activities/soft-play/tumbliboo/', label: 'Tumbliboo' }] },
+  { provider: 'Glasgow Life', urls: [{ url: 'https://www.glasgowlife.org.uk/museums/venues/kelvin-hall/play-and-climb/soft-play-at-kelvin-hall', label: 'Kelvin Hall soft play' }] },
+  { provider: 'Denbighshire Leisure', urls: [{ url: 'https://denbighshireleisure.co.uk/softplay/', label: 'soft play' }, { url: 'https://denbighshireleisure.co.uk/nova-adventure-play/', label: 'Nova Adventure Play' }] },
   { provider: 'Funky Monkeys', urls: ['cityside-belfast', 'dundonald', 'newport-spytty-wales', 'west-bromwich'].map((s) => `https://funkymonkeys.co/centre-locator/${s}/`) },
 ];
-const CHAIN_HOSTS = new Set(CHAINS.flatMap((c) => c.urls.map(hostOf)));
+const CHAIN_HOSTS = new Set(CHAINS.flatMap((c) => c.urls.map((u) => hostOf(u.url || u))));
 function osmSeeds() {
   const els = [];
   for (const f of ['osm.json', 'osm2.json']) { try { els.push(...JSON.parse(fs.readFileSync(SCRATCH + f, 'utf8')).elements); } catch {} }
@@ -323,7 +337,7 @@ function osmSeeds() {
     if (!site) { stats.noSite++; continue; }
     if (!/^https?:/i.test(site)) site = 'https://' + site;
     let u; try { u = new URL(site); } catch { stats.noSite++; continue; }
-    if (/facebook|instagram|familiesonline|dayoutwiththekids|happity|yell\.com|google|tripadvisor|linktr|zzz\.site|events\.|wixsite|queenstreet/i.test(u.host)) { stats.social++; continue; }
+    if (/facebook|instagram|familiesonline|dayoutwiththekids|happity|yell\.com|google|tripadvisor|linktr|zzz\.site|events\.|wixsite|queenstreet|ikea/i.test(u.host)) { stats.social++; continue; }
     if (/\.ie$/.test(u.host) || /^[A-Z]\d{2} ?[A-Z\d]{4}$/i.test(t['addr:postcode'] || '')) { stats.ireland++; continue; }
     if (CHAIN_HOSTS.has(u.host.replace(/^www\./, '')) || /everyoneactive|better\.org|freedom-leisure|placesleisure|dobbies|inflatanation|flipout|ninjawarrior/i.test(u.host)) { stats.chain++; continue; }
     out.push({ url: u.href, osmName: nm, hint: t['addr:postcode'] || '' });
@@ -382,7 +396,9 @@ async function generic(seed, provider, sourceName) {
   let addr = null; const lb = c.lds.find((o) => o.address && typeof o.address === 'object' && o.address.postalCode);
   if (lb && normPC(lb.address.postalCode)) addr = { postcode: normPC(lb.address.postalCode), address: [lb.address.streetAddress, lb.address.addressLocality].filter(Boolean).map(ent).join(', ') };
   if (seed.hint && (!addr || addr.postcode !== normPC(seed.hint))) { const a2 = addressFromText(texts.join(' | '), seed.hint); if (a2 && a2.postcode === normPC(seed.hint)) addr = a2; }
-  if (!addr) for (const tx of texts) { const a = addressFromText(tx, seed.hint); if (a && a.postcode) { addr = a; break; } }
+  let hintMissing = false;
+  if (!addr) for (const tx of texts) { const a = addressFromText(tx, seed.hint); if (a && a.hintMissing) hintMissing = true; if (a && a.postcode) { addr = a; break; } }
+  if (!addr && hintMissing) { report.dropped.push(`${seed.url} multi-site page, OSM venue postcode not on site`); return null; }
   if (!addr || !addr.postcode) { report.dropped.push(`${seed.url} no postcode on site`); return null; }
   const nm = siteName(p.html, p.text);
   const titleName = clean((nm.title.split(/\s[|–—-]\s|\s:\s/)[0] || ''));
@@ -390,6 +406,10 @@ async function generic(seed, provider, sourceName) {
     : (seed.osmName && c.t.toLowerCase().includes(seed.osmName.toLowerCase().replace(/’/g, "'")) ? seed.osmName : nm.ld || (nm.og && nm.og.length < 40 ? nm.og : '') || (titleName.length <= 45 ? titleName : '') || seed.osmName);
   venue = clean(venue.replace(/\s*[-|–]\s*(home|welcome)$/i, '').replace(/^(home|welcome to)\s*[-|–:]?\s*/i, ''));
   if (!venue) venue = seed.osmName;
+  if (seed.osmName) {
+    const fw = (seed.osmName.toLowerCase().replace(/’/g, "'").match(/[a-z']{4,}/) || [''])[0];
+    if ((!/\s/.test(venue) && /^[a-z0-9-]+$/.test(venue)) || (fw && !venue.toLowerCase().includes(fw) && c.t.toLowerCase().includes(fw))) venue = seed.osmName;
+  }
   const cafe = /play ?caf[eé]/i.test(venue + ' ' + c.t.slice(0, 3000));
   DEBUG.push({ url: seed.url, venue, hours: c.hours, sessions: c.ts.sessions, snippet: c.ts.snippet, addr, price: c.price, ages: c.ag, subs: subs.map((s) => s.url) });
   return row({
@@ -401,13 +421,17 @@ async function generic(seed, provider, sourceName) {
   });
 }
 
-async function leisure(provider, source, softUrl, centreUrl, centreLabel) {
+const FACILITY = /\|\s*(?:adventure )?soft play\s*\|(?!\s*(?:and|&))|(?:\d|two|three|four|five|multi)[- ]?stor(?:e)?y soft play|soft play (?:area|facility|centre|zone|adventure)(?! shapes)/i;
+async function leisure(provider, source, softUrl, centreUrl, centreLabel, sectionOnly = false) {
   const sp = await page(softUrl);
   if (sp.blocked) { skip(hostOf(softUrl), sp.blocked); return null; }
   if (!sp.html) { report.dropped.push(`${softUrl} ${sp.err || 'closed'}`); return null; }
   if (!/soft[ -]?play|play ?zone|playworld|toddlers? world|play area|monster zone/i.test(sp.text)) { report.dropped.push(`${softUrl} no soft play text`); return null; }
   const cp = centreUrl ? await page(centreUrl) : {};
-  const c = common([sp.text], [sp.html]);
+  let secText = sp.text;
+  if (sectionOnly) { const i = sp.text.search(FACILITY); secText = sp.text.slice(i, i + 900); }
+  const c = common([secText], sectionOnly ? [] : [sp.html]);
+  if (sectionOnly) { const full = toddlerSessions(sp.text); c.ts = full; }
   let addr = null; const lds = [...jsonLd(sp.html), ...jsonLd(cp.html || '')]; const lb = lds.find((o) => o.address && o.address.postalCode);
   if (lb) addr = { postcode: normPC(lb.address.postalCode), address: [lb.address.streetAddress, lb.address.addressLocality].filter(Boolean).map(ent).join(', ') };
   if (!addr || !addr.postcode) addr = addressFromText(sp.text) || (cp.text ? addressFromText(cp.text) : null);
@@ -416,10 +440,11 @@ async function leisure(provider, source, softUrl, centreUrl, centreLabel) {
   if (!centre && cp.html) centre = clean(siteName(cp.html, cp.text).title.split(/\s[|–-]\s/)[0]);
   centre = clean(centre.replace(/^soft play( at)?\s*/i, ''));
   // soft play hours: only from the soft play page itself
-  let hours = hoursFromText(sp.text);
-  const m7 = sp.text.match(/open (?:7 days a week|seven days a week|daily|every day) (?:from )?(\d{1,2}(?:[:.]\d{2})?\s*(?:am|pm))\s*(?:to|-|–|until)\s*(\d{1,2}(?:[:.]\d{2})?\s*(?:am|pm))/i);
+  let hours = hoursFromText(secText);
+  const m7 = secText.match(/open (?:7 days a week|seven days a week|daily|every day) (?:from )?(\d{1,2}(?:[:.]\d{2})?\s*(?:am|pm))\s*(?:to|-|–|until)\s*(\d{1,2}(?:[:.]\d{2})?\s*(?:am|pm))/i);
   if (!hours && m7) { const tr = timeRange(m7[1], m7[2]); if (tr) hours = `Daily ${tr[0]}–${tr[1]}`; }
   const venue = `${provider === 'Better' ? 'Better' : provider} soft play – ${centre}`.replace(/ – $/, '');
+  if (c.price && +c.price.replace(/[^\d.]/g, '') >= 12) c.price = ''; // leisure soft play entry is under £12; higher figures are party prices
   DEBUG.push({ url: softUrl, venue, hours, sessions: c.ts.sessions, snippet: c.ts.snippet, addr, price: c.price, ages: c.ag });
   return row({
     name: 'Soft Play', provider, venue: centre ? `${centre}` : venue, address: addr.address, postcode: addr.postcode,
@@ -432,6 +457,17 @@ async function leisure(provider, source, softUrl, centreUrl, centreLabel) {
 const readXml = async (u) => { const r = await get(u); return r.blocked ? (skip(hostOf(u), r.blocked), '') : r.text || ''; };
 const locs = (x) => [...x.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => ent(m[1]));
 
+async function leisureCentreCom() {
+  const idx = await readXml('https://www.leisurecentre.com/sitemap.xml'); let urls = locs(idx);
+  for (const sx of urls.filter((u) => /\.xml/.test(u))) urls.push(...locs(await readXml(sx)));
+  const soft = [...new Set(urls.filter((u) => /\/[^/]+\/kids-activities\/soft-play$/i.test(u)))];
+  const rows = [];
+  for (const u of soft) {
+    const r = await leisure('leisurecentre.com', 'leisurecentre.com', u, u.replace(/\/kids-activities\/soft-play$/i, ''));
+    if (r) { const p = await page(u); const og = p.html ? siteName(p.html, p.text).og : ''; if (og) r.provider = og; rows.push(r); }
+  }
+  return rows;
+}
 async function better() {
   const sm = locs(await readXml('https://www.better.org.uk/sitemap/leisure-centres.xml'));
   const soft = sm.filter((u) => /\/(soft-?play[^/]*|toddlers-world|play-area|softplay-[^/]*)$/i.test(u));
@@ -457,9 +493,9 @@ async function places() {
   const rows = [];
   for (const u of fam) {
     const p = await page(u); if (!p.text) continue;
-    const nonParty = [...p.text.matchAll(/soft[ -]?play/gi)].some((m) => !/part(y|ies)/i.test(p.text.slice(Math.max(0, m.index - 250), m.index + 80)));
-    if (!nonParty) continue;
-    const r = await leisure('Places Leisure', 'placesleisure.org', u, u.replace(/centre-activities\/family-kids\/$/, '')); if (r) rows.push(r);
+    const fac = p.text.search(FACILITY);
+    if (fac < 0) { report.dropped.push(`${u} Places page has no soft play facility (only sessions using soft play shapes)`); continue; }
+    const r = await leisure('Places Leisure', 'placesleisure.org', u, u.replace(/centre-activities\/family-kids\/$/, ''), '', true); if (r) rows.push(r);
   }
   return rows;
 }
@@ -483,9 +519,10 @@ async function main() {
   if (want('ea')) add('Everyone Active', await everyoneActive());
   if (want('freedom')) add('Freedom Leisure', await freedom());
   if (want('places')) add('Places Leisure', await places());
+  if (want('lcc')) add('leisurecentre.com', await leisureCentreCom());
   if (want('chains')) for (const ch of CHAINS) {
     const rows = [];
-    for (const u of ch.urls) { const label = u.replace(/\/(home)?\/?$/, '').split('/').pop().replace(/^360-play-|^pirates-landing-|^monster-kidz-|-\d$/g, '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()); const r = await generic({ url: u, label }, ch.provider, hostOf(u)); if (r) rows.push(r); }
+    for (let u of ch.urls) { if (u.url) { const r = await generic({ url: u.url, label: u.label }, ch.provider, hostOf(u.url)); if (r) rows.push(r); continue; } const label = u.replace(/\/(home)?\/?$/, '').split('/').pop().replace(/^360-play-|^pirates-landing-|^monster-kidz-|-\d$/g, '').replace(/^highwycombe$/, 'high wycombe').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()); const r = await generic({ url: u, label }, ch.provider, hostOf(u)); if (r) rows.push(r); }
     add(ch.provider, rows);
   }
   if (want('osm')) {
@@ -508,19 +545,39 @@ async function main() {
   }
   const geo = await geocode(final);
   const valid = [];
-  for (const r of final) { const g = geo[r.postcode]; if (!g) { report.dropped.push(`bad postcode ${r.postcode} ${r.venue}`); continue; } r.lat = g.latitude; r.lng = g.longitude; r._country = g.country; r._region = g.region || g.country; valid.push(r); }
+  for (const r of final) { const g = geo[r.postcode]; if (!g) { report.dropped.push(`bad postcode ${r.postcode} ${r.venue}`); continue; } r.lat = g.latitude; r.lng = g.longitude; r._district = g.admin_district || g.parish || ''; if (!r.address || r.address.length < 4) r.address = r._district; r._country = g.country; r._region = g.region || g.country; valid.push(r); }
+  const nameCount = {}; valid.forEach((r) => (nameCount[r.venue] = (nameCount[r.venue] || 0) + 1));
+  for (const r of valid) if (nameCount[r.venue] > 1 && r._district && !r.venue.includes(r._district)) { r.venue = `${r.venue} (${r._district})`; if (r.provider !== 'Better' && !/Leisure|Active/.test(r.provider)) r.name = r.venue; }
   // manual overrides
   for (const r of valid) { const o = OVERRIDES[r.url]; if (o) Object.assign(r, o); if (r.sessions.length === 0) r.tier = 'place'; }
   const outRows = valid.filter((r) => !r._drop);
   fs.writeFileSync(SCRATCH + 'report.json', JSON.stringify({ ...report, spread: outRows.reduce((a, r) => ((a[r._region] = (a[r._region] || 0) + 1), a), {}) }, null, 1));
   fs.writeFileSync(SCRATCH + 'debug.json', JSON.stringify(DEBUG, null, 1));
-  for (const r of outRows) { delete r._country; delete r._region; }
+  for (const r of outRows) { delete r._country; delete r._region; delete r._district; }
   const OUT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../softplay.json');
   fs.writeFileSync(OUT, JSON.stringify(outRows, null, 1));
   log('wrote', outRows.length, 'rows ->', OUT);
 }
 // Per-URL corrections after manual review of extracted snippets (facts checked against the venue page).
-const OVERRIDES = {};
+const OVERRIDES = {
+  // Toddlers World session times read from the page (first pass matched them; the party sentence before them now blocks the automatic match)
+  'https://www.better.org.uk/leisure-centre/london/barnet/barnet-burnt-oak-leisure-centre/soft-play': { sessions: [{ day: 'Mon', start: '09:00', end: '10:30' }, { day: 'Wed', start: '09:00', end: '10:30' }], tier: 'timetable', schedule_note: 'Toddlers World sessions Mon and Wed 09:00–10:30', description: 'Soft play area at Barnet Burnt Oak Leisure Centre with Toddlers World sessions for young children.' },
+  // Term-time slots only (holiday Tuesday afternoon slot excluded)
+  'https://www.better.org.uk/leisure-centre/york/burnholme/soft-play': { sessions: [{ day: 'Tue', start: '10:00', end: '12:00' }, { day: 'Thu', start: '10:00', end: '12:00' }], schedule_note: 'Toddlers World sessions term time Tue and Thu 10:00–12:00; school holidays Tue 13:30–15:30' },
+  // General open sessions for the whole venue, not toddler-only
+  'https://funtivityplayvillage.co.uk/': { sessions: [], tier: 'place', schedule_note: 'Open play sessions Mon, Thu, Fri 09:30–11:30 and 12:00–14:00', description: 'Role-play village for young children with bookable play sessions.' },
+  // Address lines as printed on each venue page
+  'https://wonder-imagination.co.uk/': { address: '11-13 Westbury Mall, Fareham Shopping Centre, Fareham', venue: 'Wonder Fareham', name: 'Wonder Fareham' },
+  'https://www.planetkidzredcar.com/': { address: '5-8 Esplanade, Redcar' },
+  'https://totsinlondon.com/': { address: "10 Tanner's Hill, Deptford, London", venue: 'Tots in London Deptford', name: 'Tots in London Deptford' },
+  'https://avasplaycafe.co.uk/': { address: '70 Reading Road, Fleet, Hampshire' },
+  'https://rugratz.co.uk/': { address: 'Armley, Leeds' },
+  'https://www.jollyjumpersplayzone.co.uk/': { address: 'Market Way, Bridgwater' },
+  'https://www.cheekychopsplaycafe.co.uk/': { address: '37-39 York Street, Twickenham' },
+  'https://www.monkeyplayland.co.uk/': { address: 'Unit 10 Commerce Street, Haslingden' },
+  // Page only prints the operator head office postcode, not the venue's
+  'https://www.glasgowlife.org.uk/museums/venues/kelvin-hall/play-and-climb/soft-play-at-kelvin-hall': { _drop: true },
+};
 
 const isMain = import.meta.url === 'file://' + process.argv[1];
 if (isMain) {

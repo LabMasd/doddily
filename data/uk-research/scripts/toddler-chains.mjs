@@ -172,6 +172,40 @@ const note = (src, k, n = 1) => { counts[src] = counts[src] || {}; counts[src][k
 const sitemapLocs = (xml) => [...String(xml).matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((m) => decode(m[1]));
 
 // ---------------- Little Kickers ----------------
+// Venue titles are franchise-edited and can carry promotions, day tags, room notes or a coach's first name; keep the place only.
+const LK_PLACE_WORDS = /\b(hall|centre|center|school|academy|church|club|gym|gymnasium|leisure|park|pavilion|village|community|college|sports?|arena|studio|house|room|library|chapel|scout|hut|institute|trust|dome|barn|court|rooms?|primary|junior|infant|high|grammar|free|methodist|baptist|united|parish|memorial|recreation|ground|field|pitch|campus|university|hub|lodge|garden|farm|fc|rfc|cc)\b/i;
+function cleanLKVenue(raw, address) {
+  let s = decode(raw).replace(/[   ]/g, ' ').replace(/\*\*[^*]*\*\*/g, ' ')
+    .replace(/\(\s*see notes[^)]*\)/gi, ' ').replace(/\bclasses\s*(?=\()/gi, ' ')
+    .replace(/\b(e-?mail|registration|classes\s+available|free\s+parking|coming\s+soon)\b.*$/i, ' ')
+    .replace(/\b(january|february|march|april|may|june|july|august|september|october|november|december|jan|feb|mar|apr|jun|jul|aug|sept?|oct|nov|dec)\s*(?:\/\s*\w+\s*)?start\b.*$/i, ' ')
+    .replace(/\(\s*year[\s-]+round[^)]*\)/gi, ' ').replace(/\b(mon|tues|wednes|thurs|fri|satur|sun)days?\s*(?:’|')s\b/gi, ' ')
+    .replace(/\*\*[^*]*\*\*/g, ' ').replace(/\b1st month free\b!*/gi, ' ').replace(/\busually\s*£?\s*\d+\b!*/gi, ' ').replace(/\bfree (trial|taster)s?\b/gi, ' ')
+    .replace(/\b(re-?)?opening\b.*$/i, ' ').replace(/\b(now open|new venue|coming soon|new|email for)\b!*/gi, ' ')
+    .replace(/\b(mon|tues|wednes|thurs|fri|satur|sun)days?\b/gi, ' ').replace(/\((?:\s*(?:mon|tue|tues|wed|thu|thur|thurs|fri|sat|sun)\s*[/&,]?\s*)+\)/gi, ' ')
+    .replace(/\b(mon|tue|tues|wed|thu|thur|thurs|fri|sat|sun)\b\.?/gi, ' ').replace(/\b(am|pm|morning|afternoon)s?\b/gi, ' ')
+    .replace(/\(\s*(?:indoors?|outdoors?)\s*\)|\b(?:indoors?|outdoors?)\b(?![\s-]*(?:sports|hall|centre|arena|pitch))/gi, ' ')
+    .replace(/[!*]+/g, ' ')
+    .replace(/\b(inside|outside)\b/gi, ' ').replace(/\(\s*(?:indoor|outdoor)?\s*venue\s*\)/gi, ' ').replace(/\bterm time only\b/gi, ' ')
+    .replace(/[   ]/g, ' ')
+    .replace(/\b(opens?|launching|starting|starts?|register|join|book\s+now|enquire|e-?mail|waitlist|classes?\s+(?:running|starts?)|new\s+classes?)\b.*$/i, ' ')
+    .replace(/\b(january|february|march|april|may|june|july|august|september|october|november|december)\s+start\b.*$/i, ' ')
+    .replace(/\b\d{1,2}(?::\d{2})?\s*(?:am|pm)?\s*-\s*\d{1,2}(?::\d{2})?\s*(?:am|pm)?\b.*$/i, ' ').replace(/\bschool year\b.*$/i, ' ')
+    .replace(/\b(?:girls?|boys?)\s+(?:only|class(?:es)?|football)\b(?:\s+class(?:es)?)?/gi, ' ').replace(/\b(?:mega|mighty|junior|little)\s+kick(?:er)?s?\b.*$/i, ' ')
+    .replace(/\s+class(?:es)?\s*\)/gi, ')').replace(/\(\s*class(?:es)?\s*\)/gi, ' ').replace(/[–—-]\s*class(?:es)?\s*$/i, ' ').replace(/\s+classes\s*$/i, ' ');
+  s = s.replace(/^\s*\(([^()]+)\)\s*$/, '$1');
+  // tidy brackets: drop symbol-only openings, unbalanced or empty brackets
+  s = s.replace(/\(\s*[&/–—-]+\s*/g, '(').replace(/\(\s*\)/g, ' ');
+  if ((s.match(/\(/g) || []).length > (s.match(/\)/g) || []).length) s = s.replace(/\([^)]*$/, ' ');
+  let segs = s.split(/\s+[–—-]\s+|\s*[–—]\s*|\s+-(?=[A-Z])/).map((x) => x.replace(/^[^\p{L}\d(]+|[^\p{L}\d)]+$/gu, '').trim()).filter(Boolean);
+  segs = segs.filter((seg) => !(segs.length > 1 && /^[A-Z][a-z]{1,11}$/.test(seg) && !LK_PLACE_WORDS.test(seg))); // lone first names between dashes
+  const addrLc = String(address || '').toLowerCase();
+  if (segs.length > 1 && segs.some((x) => LK_PLACE_WORDS.test(x))) segs = segs.filter((seg) => LK_PLACE_WORDS.test(seg) || !addrLc.includes(seg.toLowerCase().replace(/\s+[a-z]{1,2}\d{1,2}[a-z]?$/i, '')));
+  s = segs.join(' – ').replace(/\s*[–—-]\s*(?=\()/g, ' ').replace(/\s+/g, ' ').replace(/\s+([,)])/g, '$1').replace(/\(\s+/g, '(').replace(/^[\s,–-]+|[\s,–-]+$/g, '');
+  const lead = s.match(/^([A-Z][A-Z'’&-]{2,}(?:\s+[A-Z][A-Z'’&-]{2,})*)\s+(?=[A-Z][a-z])/); // e.g. "BEXLEYHEATH Townley Grammar School"
+  if (lead && new RegExp(lead[1].replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i').test(address || '')) s = s.slice(lead[0].length);
+  return s.trim();
+}
 async function crawlLittleKickers() {
   const SRC = 'littlekickers.co.uk';
   const sm = await get('https://www.littlekickers.co.uk/jpl_venue-sitemap.xml');
@@ -189,11 +223,9 @@ async function crawlLittleKickers() {
     const pc = normPc(addrLines.join(' '));
     const title = clean(strip((t.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || ''));
     const provider = clean((title.split('|')[1] || '').trim()) || 'Little Kickers';
-    const venue = rawName.replace(/\*\*[^*]*\*\*/g, ' ').replace(/\b1st month free\b!*/gi, ' ').replace(/\busually\s*£?\s*\d+\b!*/gi, ' ')
-      .replace(/\bfree trial\b/gi, ' ').replace(/\bopening\b.*$/i, ' ').replace(/\b(mon|tues|wednes|thurs|fri|satur|sun)days?\b/gi, ' ')
-      .replace(/\b(now open|new venue|coming soon)\b!*/gi, ' ').replace(/[!*]+/g, ' ').replace(/\s*[–—-]\s*$/, '').replace(/^\s*[–—-]\s*/, '').replace(/\s+/g, ' ').trim() || rawName;
+    const venue = cleanLKVenue(rawName, addrLines.join(' ')) || rawName.replace(/[*!]+/g, '').trim();
     const phone = clean((t.match(/href="tel:([^"]+)"/) || [])[1] || '').replace(/[^\d+ ]/g, '');
-    const trs = [...t.matchAll(/<tr data-class_program="([^"]+)" data-class_day="([^"]+)"\s*>([\s\S]*?)<\/tr>/g)];
+    const trs = [...t.matchAll(/<tr\s+data-class_program="([^"]+)"\s+data-class_day="([^"]+)"[^>]*>([\s\S]*?)<\/tr>/g)];
     if (!trs.length) note(SRC, 'venue_without_classes');
     for (const [, prog, day, body] of trs) {
       const ages = PROG[decode(prog)]; if (!ages) continue;
@@ -258,13 +290,14 @@ async function crawlSocatots() {
   for (const url of urls) {
     const r = await get(url); if (r.status !== 200) { note(SRC, `http_${r.status}`); continue; }
     const t = r.text;
-    const town = clean(strip((t.match(/<h2[^>]*dmach-post-title">([\s\S]*?)<\/h2>/) || [])[1] || '')).replace(/^.*?\bin\s+/i, '');
+    const town = clean(strip((t.match(/<h2[^>]*dmach-post-title">([\s\S]*?)<\/h2>/) || [])[1] || '')).replace(/^.*?\bin\s+/i, '').replace(/\b(toddlers?|kids|children'?s?)?\s*football\s*(classes|clubs?)\b/gi, '').replace(/\s+/g, ' ').trim();
+    const addrOf = (v) => [...new Set([v, town])].filter(Boolean).concat(pc ? [] : []).join(', ');
     const body = (t.match(/<div class="dmach-acf-value\s*">([\s\S]*?)<\/div>/) || [])[1] || '';
     const txt = clean(strip(body));
     const pc = normPc(decode((t.match(/[?&](?:amp;)?Postcode=([A-Z0-9+%]+)/i) || [])[1] || '').replace(/\+|%20/g, ' ')) || normPc(txt);
     if (!pc) { note(SRC, 'no_postcode'); continue; }
     const venueM = txt.match(/\b(?:runs|run|held|takes place|are held)\b[^.]*?\b(?:in|at)\s+(?:the\s+)?([A-Z][A-Za-z0-9'’&\- ]{3,60}?)(?:,|\.|\s+(?:a|an|which|on|every|from)\b)/);
-    const venue = venueM ? venueM[1].trim() : `Socatots ${town}`;
+    const venue = venueM ? venueM[1].trim() : town;
     const days = [...new Set([...txt.matchAll(/\b(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)s?\b/gi)].map((m) => dayAbbr(m[1])))];
     const phases = [...txt.matchAll(/Phase\s*(\d)\s*[–—-]\s*Ages?\s*(.+?)\s*@\s*([^P]+?)(?=Phase\s*\d|$)/gi)];
     const band = (n) => ({ 1: [6, 12], 2: [12, 36], 3: [36, 60] }[n]);
@@ -309,7 +342,9 @@ async function crawlMiniProfessors() {
   for (const area of areas) {
     const home = await get(area); if (home.status !== 200) { note(SRC, `http_${home.status}`); continue; }
     const title = clean(strip((home.text.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || ''));
-    const provider = /^Mini Professors\s+\S/.test(title) ? title.replace(/\s*[|–-].*$/, '') : `Mini Professors ${titleCase(new URL(area).pathname.replace(/\//g, ''))}`;
+    const slugName = titleCase(new URL(area).pathname.replace(/\//g, ''));
+    const shortTitle = title.replace(/\s*[|–].*$/, '').trim();
+    const provider = /^Mini Professors\s+\S/.test(shortTitle) && shortTitle.length <= 50 && !/\b(science|classes|parties|nursery|schools?|programme)\b/i.test(shortTitle) ? shortTitle : `Mini Professors ${slugName}`;
     const phone = clean((home.text.match(/href="tel:([^"]+)"/i) || [])[1] || '');
     const cid = (home.text.match(/CompanyID=(\d+)/) || [])[1];
     const areaVenues = venues.filter((v) => v.MiniSiteUrl === area);
@@ -322,10 +357,11 @@ async function crawlMiniProfessors() {
       if (aMin > 48) continue;
       const range = parseRange(c.Times);
       const full = (c.Products || []).find((p) => p.fixedTerm && p.price > 0) || (c.Products || []).find((p) => p.price > 0);
-      const pc = normPc(c.Address);
+      const idxVenue = venues.find((v) => v.VenueID === c.VenueID);
+      const pc = normPc(c.Address) || normPc(idxVenue?.PostCode);
       seenVenue.add(c.VenueID);
       rows.push({
-        name: 'Mini Professors', provider, category: 'sensory', venue: clean(c.Venue), address: clean(c.Address), postcode: pc,
+        name: 'Mini Professors', provider, category: 'sensory', venue: clean(c.Venue), address: normPc(c.Address) ? clean(c.Address) : [clean(c.Address), pc].filter(Boolean).join(', '), postcode: pc,
         sessions: (c.DayOfWeek || []).map((d) => ({ day: DAYS[(d - 1 + 7) % 7], start: range?.start, end: range?.end })),
         age_min_months: aMin, age_max_months: Math.min(aMax, 71), price: full ? `£${full.price.toFixed(2)} ${full.fixedTerm ? 'per term' : `for ${full.productSessions || 1} session${full.productSessions > 1 ? 's' : ''}`}` : '',
         booking: 'term', description: DESC, url: area, phone, source: SRC, confidence: 'high',
@@ -357,12 +393,12 @@ async function crawlHartbeeps() {
     const area = title.split('|')[0].trim() || titleCase(url.split('/')[3]);
     const vs = [...r.text.matchAll(/<a href="(https:\/\/www\.hartbeeps\.com\/[^"]+\/venues\/[^"]+)">([\s\S]*?)<\/a>\s*<\/div>\s*<div[^>]*>\s*<a class="regular" href="\1">([\s\S]*?)<\/a>/g)];
     for (const [, , nm, ad] of vs) {
-      const address = clean(strip(ad)).replace(/`/g, ''); const pc = normPc(address);
+      const address = clean(strip(ad)).replace(/`/g, '').replace(/\.\s*,/g, ',').replace(/\s*,\s*,/g, ','); const pc = normPc(address);
       if (!pc) { note(SRC, 'no_postcode'); continue; }
       const venue = clean(strip(nm)).replace(/\.$/, '');
       rows.push({
-        name: 'Hartbeeps Happy House', provider: `Hartbeeps ${area}`, category: 'sensory', venue, address: address.startsWith(venue) ? address : `${venue}, ${address}`, postcode: pc,
-        sessions: [], age_min_months: 12, age_max_months: 48, booking: 'term',
+        name: 'Hartbeeps', provider: `Hartbeeps ${area}`, category: 'sensory', venue, address: address.startsWith(venue) ? address : `${venue}, ${address}`, postcode: pc,
+        sessions: [], age_min_months: 0, age_max_months: 48, booking: 'term',
         schedule_note: 'Venue used by this Hartbeeps area; baby and toddler class times are on the area classes page.',
         description: 'Multi-sensory music, story and play classes for babies and toddlers.', url: url.replace(/\/venues$/, '/classes'), source: SRC, confidence: 'medium',
       });
@@ -415,6 +451,74 @@ async function crawlWLTDO() {
   }
 }
 
+// ---------------- Stagecoach (Mini Stages 2-4, Early Stages 4-6) ----------------
+async function crawlStagecoach() {
+  const SRC = 'stagecoach.co.uk';
+  const dir = await get('https://www.stagecoach.co.uk/schools/');
+  const seg = dir.text.slice(Math.max(0, dir.text.indexOf('class="scdir-school-list')));
+  const schools = [...new Set([...seg.matchAll(/<li data-school="[^"]*"><a href="(https:\/\/www\.stagecoach\.co\.uk\/[^"?#]+)"/g)].map((m) => m[1]))].slice(0, LIMIT);
+  log(`Stagecoach: ${schools.length} school pages`);
+  const seenTerritory = new Set(); const rows = [];
+  for (const url of schools) {
+    const page = await get(url); if (page.status !== 200) { note(SRC, `http_${page.status}`); continue; }
+    const tid = (page.text.match(/id="territory-landing-wrapper"[^>]*data-territory-id="(\d+)"/) || page.text.match(/data-territory-id="(\d+)"/) || [])[1];
+    if (!tid) { note(SRC, 'no_territory_id'); continue; }
+    if (seenTerritory.has(tid)) continue; seenTerritory.add(tid);
+    const api = await get(`https://www.stagecoach.co.uk/api/stagesearch/${tid}`);
+    let j; try { j = JSON.parse(api.text); } catch { note(SRC, 'api_not_json'); continue; }
+    for (const st of j.Stages || []) {
+      const label = clean(st.DisplayName);
+      if (!/\b(mini|early)\s+stages\b/i.test(label)) continue;
+      const am = clean(st.Description).match(/(\d+)\s*-\s*(\d+)/);
+      const ages = am ? [+am[1] * 12, +am[2] * 12] : /mini/i.test(label) ? [24, 48] : [48, 72];
+      if (ages[0] > 48) continue;
+      for (const v of st.Venues || []) {
+        const pc = normPc(v.PostCode); if (!pc) { note(SRC, 'no_postcode'); continue; }
+        const schoolsHere = (v.Schools || []).filter((s) => !s.IsAdultClass);
+        if (!schoolsHere.length) continue;
+        const fee = schoolsHere.map((s) => s.SingleFeeCultured).find((f) => f && f !== '£0.00');
+        const local = clean(v.Territory?.LocalPageUrl) || new URL(url).pathname.replace(/\//g, '');
+        rows.push({
+          name: `Stagecoach ${label}`, provider: `Stagecoach ${clean(v.Territory?.Name) || titleCase(local)}`, category: 'movement', venue: clean(v.Name),
+          address: [clean(v.Name), clean(v.AddressLine1).replace(/^\(.*\)$/, ''), clean(v.AddressLine2), clean(v.Town), clean(v.County), pc].filter(Boolean).filter((p, i, a) => a.indexOf(p) === i).join(', '),
+          postcode: pc, sessions: schoolsHere.map((s) => { const r = parseRange(s.StartEndTime); return { day: dayAbbr(s.Day), start: r?.start, end: r?.end }; }),
+          age_min_months: ages[0], age_max_months: ages[1], price: fee ? `${fee} per term` : '', booking: 'term',
+          schedule_note: schoolsHere[0]?.TermDate?.Season ? `${clean(schoolsHere[0].TermDate.Season)} term: ${clean(schoolsHere[0].TermDate.TermDates)}.` : '',
+          description: 'Weekly performing arts sessions mixing drama, dance and singing for young children.',
+          url: `https://www.stagecoach.co.uk/${local}`, phone: clean(v.Tel), source: SRC, confidence: 'high',
+        });
+      }
+    }
+    note(SRC, 'territories');
+  }
+  groupAdd(rows);
+}
+
+// ---------------- Cylch Ti a Fi (Mudiad Meithrin) ----------------
+const welshTitle = (s) => clean(s).toLowerCase().replace(/(^|[\s\-(/'’])(\p{L})/gu, (m, a, b) => a + b.toUpperCase()).replace(/\b(Yr|Y|A|Ac|Ar|Yn|Of|And|The)\b/g, (w, _, i) => (i === 0 ? w : w.toLowerCase()));
+async function crawlMeithrin() {
+  const SRC = 'meithrin.cymru';
+  const r = await get('https://meithrin.cymru/wp-json/cylch-api/v1/get?get_all=true&types=9150');
+  let list = []; try { list = JSON.parse(r.text); } catch { skip(SRC, 'cylch API not JSON'); return; }
+  log(`Cylch Ti a Fi: ${list.length} groups`);
+  for (const g of list.slice(0, LIMIT)) {
+    const a = g.acf || {};
+    const parts = [a.address_one, a.address_two, a.address_town, a.address_three].map(clean).filter(Boolean);
+    const pc = normPc(parts.join(' ')); if (!pc) { note(SRC, 'no_postcode'); continue; }
+    const venue = welshTitle(a.address_one || a.address_town || '');
+    const place = welshTitle(clean(decode(g.post_title)).replace(/\(\s*ti a fi\s*\)/i, '').trim());
+    add({
+      name: 'Cylch Ti a Fi', provider: `Cylch Ti a Fi ${place}`, category: 'stayplay', venue,
+      address: [...parts.slice(0, -1).map(welshTitle), pc].filter((p, i, arr) => p && arr.indexOf(p) === i).join(', ').replace(/\s*,\s*,/g, ','), postcode: pc,
+      sessions: [], schedule_note: 'Meeting days and times are available from the group through the Mudiad Meithrin listing.',
+      age_min_months: 0, age_max_months: 48, booking: 'drop-in',
+      description: 'Welsh-language parent and toddler groups with play, songs and stories, open to all families.',
+      url: decode(g.permalink) || 'https://meithrin.cymru/cylch-search-listing/?cylch-type=cylch-ti-a-fi', source: SRC, confidence: 'medium',
+    });
+    note(SRC, 'groups');
+  }
+}
+
 // ---------------- geocoding (postcodes.io bulk) ----------------
 async function geocode() {
   const pcs = [...new Set(items.map((i) => i.postcode).filter(Boolean))];
@@ -435,7 +539,7 @@ async function geocode() {
 }
 
 // ---------------- main ----------------
-const SOURCES = { littlekickers: crawlLittleKickers, rugbytots: crawlRugbytots, socatots: crawlSocatots, miniprofessors: crawlMiniProfessors, hartbeeps: crawlHartbeeps, wltdo: crawlWLTDO };
+const SOURCES = { littlekickers: crawlLittleKickers, rugbytots: crawlRugbytots, socatots: crawlSocatots, miniprofessors: crawlMiniProfessors, hartbeeps: crawlHartbeeps, wltdo: crawlWLTDO, stagecoach: crawlStagecoach, meithrin: crawlMeithrin };
 for (const [k, fn] of Object.entries(SOURCES)) {
   if (ONLY && !ONLY.has(k)) continue;
   try { await fn(); } catch (e) { log(`${k} failed: ${e.stack || e}`); skip(k, `crawler error: ${e.message}`); }
