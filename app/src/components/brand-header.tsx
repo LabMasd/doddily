@@ -32,6 +32,8 @@ const SPIN_DEG = 216; // three petals' worth: the five-petal flower ends looking
 const APPEAR_SCALE = 0.4;
 const CENTRE_SCALE = 1.8;
 const WORD_BOX = 140; // room for "Doddily" beside the icon
+// Everything is drawn at the enlarged centre size and scaled down to rest: scaling a view up blurs it on iOS.
+const K = CENTRE_SCALE;
 
 let played = false; // once per app launch
 
@@ -75,14 +77,14 @@ export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<numb
       opacity: Math.min(1, t.value / 150),
       // Eases left as the name comes out, so icon and name stay centred as one logo.
       // The shift comes after the scale so it grows with it (the name appears while the logo is enlarged).
-      transform: [{ translateY: centreY * (1 - up) }, { scale: centre + (1 - centre) * up }, { translateX: -((nameW.value + GAP) / 2) * seg(t.value, P.name, EASE_OUT) }],
+      transform: [{ translateY: centreY * (1 - up) }, { scale: (centre + (1 - centre) * up) / K }, { translateX: -((nameW.value + GAP * K) / 2) * seg(t.value, P.name, EASE_OUT) }],
     };
   });
 
   // Each style reads t.value itself, so Reanimated knows to update it as the clock runs.
   const name = useAnimatedStyle(() => ({
     opacity: nameW.value ? 1 : 0,
-    transform: [{ translateX: -(1 - seg(t.value, P.name, EASE_OUT)) * (nameW.value + GAP) }],
+    transform: [{ translateX: -(1 - seg(t.value, P.name, EASE_OUT)) * (nameW.value + GAP * K) }],
   }));
 
   return (
@@ -92,7 +94,7 @@ export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<numb
           <Animated.Text style={[s.word, name]} numberOfLines={1} onLayout={(e) => { nameW.value = e.nativeEvent.layout.width; }}>Doddily</Animated.Text>
         </View>
         {/* Last, so the name slides out from behind the icon. */}
-        <BrandMark scrollY={scrollY} spin={spin} />
+        <BrandMark scrollY={scrollY} spin={spin} size={K} />
       </Animated.View>
     </View>
   );
@@ -100,9 +102,9 @@ export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<numb
 
 const s = StyleSheet.create({
   row: { height: ROW, alignItems: 'center', justifyContent: 'center', zIndex: 10 },
-  group: { width: MARK, height: MARK },
+  group: { width: MARK * K, height: MARK * K },
   // Masks get explicit widths: on iOS an absolute child of the 28pt group is otherwise squeezed to that width.
-  mask: { position: 'absolute', top: -8, bottom: -8, justifyContent: 'center', overflow: 'hidden' },
-  nameMask: { left: MARK + GAP, width: WORD_BOX, alignItems: 'flex-start' },
-  word: { fontFamily: F.display, fontSize: 18, color: C.ink },
+  mask: { position: 'absolute', top: -8 * K, bottom: -8 * K, justifyContent: 'center', overflow: 'hidden' },
+  nameMask: { left: (MARK + GAP) * K, width: WORD_BOX * K, alignItems: 'flex-start' },
+  word: { fontFamily: F.display, fontSize: 18 * K, color: C.ink },
 });
