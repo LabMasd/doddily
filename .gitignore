@@ -5,3 +5,4 @@ node_modules/
 app/ios/
 app/android/
 .env*
+tools/simulator/tap

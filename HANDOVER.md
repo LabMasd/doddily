@@ -1,6 +1,6 @@
 # Little Days — handover
 
-Baby activity finder for Vicky (and Marigold). A static PWA with no backend. It opens on a phone and can be added to the home screen.
+Baby activity finder for UK parents. A static PWA with no backend. It opens on a phone and can be added to the home screen.
 
 ## What it does
 - **Location:** a postcode or "use where I am", plus a distance slider from 0.5 to 10 miles. Settings are saved on the phone only (localStorage `littledays-v1`).

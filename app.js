@@ -607,7 +607,7 @@
   }
   window.addEventListener('resize', () => map && map.invalidateSize());
 
-  // Setup link: #at=N165UN&r=3&born=2026-01 — stores on the phone, then clears the address bar.
+  // Setup link: #at=E83PB&r=3&born=2026-01 — stores on the phone, then clears the address bar.
   async function applyHash() {
     const p = new URLSearchParams(location.hash.slice(1));
     if (!p.has('at') && !p.has('r') && !p.has('born')) return;

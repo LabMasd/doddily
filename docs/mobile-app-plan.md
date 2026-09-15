@@ -52,7 +52,7 @@ Built in: offline cache of the last area, local notifications for reminders, the
 - A "Last checked" date on every card; low-confidence items marked
 
 ### Phase 4: store release
-- EAS Build → TestFlight (iPhone) + Play internal testing; Vicky is tester #1
+- EAS Build → TestFlight (iPhone) + Play internal testing; family and friends are the first testers
 - Privacy policy page (location stays on the phone apart from the nearby query, no tracking, no ads) and App Store privacy labels
 - Store listing: screenshots, description, category **Lifestyle** or **Parenting**. It's for parents, so **not** the Kids category.
 - Review risk: Apple rejects "just a website in an app" (guideline 4.2). A native map, calendar, reminders and offline mode avoid that.
