@@ -53,7 +53,9 @@
       [
         "expo-calendar",
         {
-          "calendarPermission": "Little Days adds the classes you choose to your calendar."
+          "calendarPermission": "Little Days adds the classes you choose to your calendar.",
+          "writeOnlyAccess": true,
+          "writeOnlyCalendarPermission": "Little Days adds the classes you choose to your calendar. It never reads your events."
         }
       ],
       "expo-font",

@@ -67,7 +67,8 @@ export async function addToCalendar(it: Activity, next: { date: Date; session: S
     } else {
       end.setHours(start.getHours() + 1);
     }
-    const perm = await Calendar.requestCalendarPermissions();
+    // iOS: add-only access is enough for the system "new event" form, and asks less of the parent.
+    const perm = await Calendar.requestCalendarPermissions(Platform.OS === 'ios');
     if (!perm.granted) return 'error';
     let calendar: Calendar.ExpoCalendar | undefined;
     if (Platform.OS === 'ios') {
