@@ -21,7 +21,7 @@ xcrun simctl bootstatus "$UDID" >/dev/null 2>&1 || true
 # A clean status bar: full signal, full battery, and 9:41, the time Apple uses in its own shots.
 xcrun simctl status_bar "$UDID" override --time "9:41" --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100
 
-# Settings the app would have saved after the welcome screen: Hackney, 3 miles, one 14-month-old.
+# Settings the app would have saved after the welcome screen: Hackney, 3 miles, one toddler.
 seed() {
   # Newer versions of async-storage keep the file under Application Support/<bundle id>;
   # older ones used the container root. Write both, so it works either way.
@@ -31,11 +31,10 @@ seed() {
   node - "${dirs[@]}" <<'NODE'
 const fs = require('fs'), path = require('path');
 const dirs = process.argv.slice(2);
-const born = (() => { const d = new Date(); d.setMonth(d.getMonth() - 14); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`; })();
 const settings = {
   loc: { lat: 51.545033, lng: -0.056407, name: 'E8 1EA', postcode: 'E8 1EA' },
   radius: 3, group: 'all', onboarded: true, name: '',
-  kids: [{ id: 'k1', name: 'Ada', born }],
+  kids: [{ id: 'k1', name: 'Ada', band: '1to2' }],
   mapApp: 'apple',
 };
 const manifest = JSON.stringify({
