@@ -9,6 +9,7 @@ export default function AppTabs() {
       backgroundColor={C.card}
       indicatorColor={C.accentSoft}
       tintColor={C.accentLine}
+      disableTransparentOnScrollEdge // iOS 26 otherwise hides the bar background when the list scrolls under it
       iconColor={{ default: C.ink, selected: C.accentLine }}
       labelStyle={{ default: { color: C.ink }, selected: { color: C.ink } }}>
       <NativeTabs.Trigger name="index">
