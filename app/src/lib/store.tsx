@@ -5,6 +5,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { GroupId } from './categories';
 import { loadActivities, loadPlaces } from './data';
 import type { Activity, Kid, Loc, MapApp } from './types';
+import { bandForMonths } from './schedule';
 
 const KEY = 'ld:settings:v1';
 const SAVED_KEY = 'ld:saved:v1';
@@ -53,8 +54,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         // Always open on Everything; a remembered filter makes the list look empty days later.
         if (s) {
           const raw = JSON.parse(s);
-          // Older versions kept one birth month; it becomes the first child.
-          const kids: Kid[] = raw.kids ?? (raw.born ? [{ id: 'k1', name: '', born: raw.born }] : []);
+          // Older settings stored a birth month; turn it into the band that month falls in.
+          const monthsSince = (born: string) => {
+            const [y, m] = born.split("-").map(Number);
+            const now = new Date();
+            return Math.max(0, (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m));
+          };
+          const oldKids: { id: string; name: string; born?: string; band?: Kid["band"] }[] =
+            raw.kids ?? (raw.born ? [{ id: "k1", name: "", born: raw.born }] : []);
+          const kids: Kid[] = oldKids.map((k) => ({
+            id: k.id,
+            name: k.name,
+            band: k.band ?? (k.born ? bandForMonths(monthsSince(k.born)) : "1to2"),
+          }));
           delete raw.born;
           setSettings({ ...DEFAULTS, ...raw, kids, group: 'all' });
         }

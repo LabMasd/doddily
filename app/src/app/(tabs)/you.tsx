@@ -5,12 +5,10 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LocationForm } from '@/components/location-form';
 import { C, F, GUTTER, MaxContentWidth, R } from '@/constants/theme';
 import { MAP_APPS } from '@/lib/actions';
-import { ageLabel, babyMonths } from '@/lib/schedule';
+import { BANDS } from '@/lib/schedule';
 import { newKidId, useStore } from '@/lib/store';
 import type { Kid } from '@/lib/types';
 
-const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-const ym = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
 
 export default function YouScreen() {
   const { settings, update } = useStore();
@@ -18,11 +16,7 @@ export default function YouScreen() {
   const [saved, setSaved] = useState(false);
 
   const setKids = (kids: Kid[]) => update({ kids });
-  const addKid = () => {
-    const d = new Date();
-    d.setMonth(d.getMonth() - 6);
-    setKids([...settings.kids, { id: newKidId(), name: '', born: ym(d) }]);
-  };
+  const addKid = () => setKids([...settings.kids, { id: newKidId(), name: '', band: '1to2' }]);
 
   return (
     <KeyboardAvoidingView style={s.screen} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
@@ -86,13 +80,6 @@ export default function YouScreen() {
 }
 
 function KidCard({ kid, index, onChange, onRemove }: { kid: Kid; index: number; onChange: (k: Kid) => void; onRemove: () => void }) {
-  const months = babyMonths(kid.born);
-  const [y, m] = kid.born.split('-').map(Number);
-  const shift = (delta: number) => {
-    const d = new Date(y, m - 1 + delta, 1);
-    if (d > new Date()) return;
-    onChange({ ...kid, born: ym(d) });
-  };
   return (
     <View style={s.card}>
       <View style={s.cardHead}>
@@ -109,13 +96,24 @@ function KidCard({ kid, index, onChange, onRemove }: { kid: Kid; index: number; 
           <Text style={s.removeText}>Remove</Text>
         </Pressable>
       </View>
-      <Text style={s.small}>Born</Text>
-      <View style={s.stepRow}>
-        <Pressable onPress={() => shift(-1)} style={s.step} accessibilityLabel="Earlier month"><Text style={s.stepText}>‹</Text></Pressable>
-        <Text style={s.month}>{MONTHS[m - 1]} {y}</Text>
-        <Pressable onPress={() => shift(1)} style={s.step} accessibilityLabel="Later month"><Text style={s.stepText}>›</Text></Pressable>
+      <Text style={s.small}>How old are they?</Text>
+      <View style={s.bands}>
+        {BANDS.map((b) => {
+          const on = kid.band === b.id;
+          return (
+            <Pressable
+              key={b.id}
+              onPress={() => onChange({ ...kid, band: b.id })}
+              style={[s.band, on && s.bandOn]}
+              accessibilityRole="radio"
+              accessibilityState={{ selected: on }}
+              accessibilityLabel={`${b.name}, ${b.range}`}>
+              <Text style={[s.bandName, on && s.bandTextOn]}>{b.name}</Text>
+              <Text style={[s.bandRange, on && s.bandTextOn]}>{b.range}</Text>
+            </Pressable>
+          );
+        })}
       </View>
-      {months != null && <Text style={s.age}>{ageLabel(months)} old</Text>}
     </View>
   );
 }
@@ -134,11 +132,12 @@ const s = StyleSheet.create({
   remove: { paddingHorizontal: 8, paddingVertical: 10 },
   removeText: { fontFamily: F.textSemi, fontSize: 15, color: C.warn },
   small: { fontFamily: F.textMedium, fontSize: 14, color: C.muted, marginTop: 4 },
-  stepRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
-  step: { width: 44, height: 44, borderRadius: R.md, borderWidth: 1, borderColor: C.line, alignItems: 'center', justifyContent: 'center', backgroundColor: C.milk },
-  stepText: { fontFamily: F.display, fontSize: 22, color: C.ink },
-  month: { flex: 1, textAlign: 'center', fontFamily: F.display, fontSize: 18, color: C.ink },
-  age: { fontFamily: F.textSemi, fontSize: 15, color: C.accentText, backgroundColor: C.accentSoft, alignSelf: 'flex-start', borderRadius: R.pill, overflow: 'hidden', paddingHorizontal: 10, paddingVertical: 3 },
+  bands: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 2 },
+  band: { borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.milk, paddingHorizontal: 12, paddingVertical: 8 },
+  bandOn: { backgroundColor: C.ink, borderColor: C.ink },
+  bandName: { fontFamily: F.textSemi, fontSize: 15, color: C.ink },
+  bandRange: { fontFamily: F.text, fontSize: 12, color: C.muted, marginTop: 1 },
+  bandTextOn: { color: '#fff' },
   add: { borderRadius: R.md, borderWidth: 1, borderColor: C.line, borderStyle: 'dashed', paddingVertical: 14, alignItems: 'center', backgroundColor: C.card },
   addText: { fontFamily: F.textSemi, fontSize: 16, color: C.ink },
   pressed: { opacity: 0.8 },

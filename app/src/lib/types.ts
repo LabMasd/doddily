@@ -36,11 +36,12 @@ export type Activity = {
 
 export type Loc = { lat: number; lng: number; name: string; postcode: string };
 
-/** A child in the family; `born` is the birth month as YYYY-MM. */
+/** A child in the family. We ask for an age band, never a birthday. */
 /** The app that opens for walking directions. */
 export type MapApp = 'apple' | 'google' | 'waze' | 'citymapper';
 
-export type Kid = { id: string; name: string; born: string };
+export type AgeBandId = 'u6' | '6to12' | '1to2' | '2to3' | '3to5';
+export type Kid = { id: string; name: string; band: AgeBandId };
 
 /** An activity placed relative to the user; `s` is the session on the chosen day. */
 export type Row = { it: Activity; d: number; s?: Session };
