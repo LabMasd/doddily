@@ -1,6 +1,6 @@
 import { GROUPS, QUIET_IN_ALL, type GroupId } from './categories';
 import { miles } from './geo';
-import type { Activity, Day, Kid, Loc, Row } from './types';
+import type { AgeBandId, Activity, Day, Kid, Loc, Row } from './types';
 
 export const DAYS: Day[] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] as Day[];
 export const DAY_LONG = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -22,12 +22,6 @@ export function dateFor(offset: number) {
   return d;
 }
 
-export function babyMonths(born: string | null) {
-  if (!born) return null;
-  const [y, m] = born.split('-').map(Number);
-  const now = new Date();
-  return Math.max(0, (now.getFullYear() - y) * 12 + (now.getMonth() + 1 - m));
-}
 
 export function ageText(it: Activity) {
   const a = it.age_min_months ?? 0, b = it.age_max_months;
@@ -41,25 +35,42 @@ export function sessionsText(it: Activity) {
 }
 
 /** Right for a child of `months`: not too young for it, not too old. */
-export function fitsAge(it: Activity, months: number) {
-  if ((it.age_min_months ?? 0) > months + 1) return false;
-  return it.age_max_months == null || it.age_max_months >= months;
-}
 
-export function ageLabel(months: number) {
-  if (months < 24) return `${months} month${months === 1 ? '' : 's'}`;
-  const y = Math.floor(months / 12);
-  return `${y} year${y === 1 ? '' : 's'}`;
-}
 
 /** Ages in months of the children the list is filtered for. */
-export function selectedAges(kids: Kid[], forKid: 'all' | string) {
+/**
+ * The age bands a parent picks from. They line up with how providers write their own
+ * ranges (0-6, 6-12, 12-24 months and so on), so matching stays honest without a birthday.
+ */
+export const BANDS: { id: AgeBandId; name: string; range: string; min: number; max: number }[] = [
+  { id: 'u6', name: 'Newborns', range: 'Under 6 months', min: 0, max: 6 },
+  { id: '6to12', name: 'Babies', range: '6-12 months', min: 6, max: 12 },
+  { id: '1to2', name: 'Toddlers', range: '1-2 years', min: 12, max: 24 },
+  { id: '2to3', name: 'Older toddlers', range: '2-3 years', min: 24, max: 36 },
+  { id: '3to5', name: 'Pre-school', range: '3-5 years', min: 36, max: 60 },
+];
+
+export const bandById = (id: AgeBandId) => BANDS.find((b) => b.id === id) ?? BANDS[2];
+
+/** The band a child of this many months falls into. Only used to carry old settings over. */
+export function bandForMonths(months: number): AgeBandId {
+  return (BANDS.find((b) => months >= b.min && months < b.max) ?? BANDS[BANDS.length - 1]).id;
+}
+
+/** True when a session's own age range overlaps the band at all. */
+export function fitsBand(it: Activity, band: { min: number; max: number }) {
+  const lo = it.age_min_months ?? 0;
+  const hi = it.age_max_months ?? Infinity;
+  return lo < band.max && hi > band.min;
+}
+
+export function selectedBands(kids: Kid[], forKid: 'all' | string) {
   const chosen = forKid === 'all' ? kids : kids.filter((k) => k.id === forKid);
-  return chosen.map((k) => babyMonths(k.born)).filter((m): m is number => m != null);
+  return chosen.map((k) => bandById(k.band));
 }
 
 /** `ages`: months of the selected children; an activity shows if it suits any of them. */
-export function filterRows(items: Activity[], loc: Loc, radius: number, f: Filters, ages: number[]): Row[] {
+export function filterRows(items: Activity[], loc: Loc, radius: number, f: Filters, bands: { min: number; max: number }[]): Row[] {
   const g = GROUPS.find((x) => x.id === f.group)!;
   const rows: Row[] = [];
   const seen = new Set<string>();
@@ -72,7 +83,7 @@ export function filterRows(items: Activity[], loc: Loc, radius: number, f: Filte
     if (f.free && !it.free) continue;
     if (f.drop && it.booking !== 'drop-in') continue;
     if (f.indoor && !it.indoor) continue;
-    if (f.ageFit && ages.length && !it.osm && !ages.some((a) => fitsAge(it, a))) continue;
+    if (f.ageFit && bands.length && !it.osm && !bands.some((b) => fitsBand(it, b))) continue;
     seen.add(it.id);
     rows.push({ it, d });
   }
