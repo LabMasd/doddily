@@ -4,7 +4,14 @@ import { C } from '@/constants/theme';
 
 export default function AppTabs() {
   return (
-    <NativeTabs backgroundColor={C.card} indicatorColor={C.accentSoft} labelStyle={{ selected: { color: C.ink } }}>
+    // The selected tab uses the brand purple rather than the system blue.
+    <NativeTabs
+      backgroundColor={C.card}
+      indicatorColor={C.accentSoft}
+      tintColor={C.accentLine}
+      disableTransparentOnScrollEdge // iOS 26 otherwise hides the bar background when the list scrolls under it
+      iconColor={{ default: C.ink, selected: C.accentLine }}
+      labelStyle={{ default: { color: C.ink }, selected: { color: C.ink } }}>
       <NativeTabs.Trigger name="index">
         <NativeTabs.Trigger.Label>Today</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon src={require('@/assets/images/tabIcons/today.png')} renderingMode="template" />

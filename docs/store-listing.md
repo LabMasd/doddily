@@ -7,7 +7,7 @@ Ready to paste into App Store Connect. Anything in [brackets] still needs your i
 | Field | Value |
 |---|---|
 | Name (30 chars) | Doddily |
-| Subtitle (30 chars) | Baby & toddler classes nearby |
+| Subtitle (30 chars) | Baby & toddler classes nearby (29) |
 | Bundle ID | app.doddily |
 | SKU | doddily-ios |
 | Category | Primary: Lifestyle · Secondary: Education |
