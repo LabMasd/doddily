@@ -5,10 +5,11 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from 
 
 import { C, F, R } from '@/constants/theme';
 import { lookupPostcode, postcodeFor } from '@/lib/data';
+import { BANDS } from '@/lib/schedule';
+import type { Kid } from '@/lib/types';
 import { newKidId, useStore } from '@/lib/store';
 import type { Loc } from '@/lib/types';
 
-const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 /** `askChild`: also ask for a first child's name and birth month (used on the welcome screen). */
 export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: string; onDone: () => void; askChild?: boolean }) {
@@ -16,7 +17,7 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
   const [pc, setPc] = useState(settings.loc?.postcode ?? '');
   const [pending, setPending] = useState<Loc | null>(null);
   const [radius, setRadius] = useState(settings.radius);
-  const [born, setBorn] = useState<string | null>(settings.kids[0]?.born ?? null);
+  const [band, setBand] = useState<Kid["band"] | null>(settings.kids[0]?.band ?? null);
   const [childName, setChildName] = useState(settings.kids[0]?.name ?? '');
   const [busy, setBusy] = useState<'geo' | 'save' | null>(null);
   const [error, setError] = useState('');
@@ -51,21 +52,13 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
     }
     loc = loc ?? settings.loc;
     if (!loc) { setError('Add a postcode or use where you are.'); return; }
-    const kids = askChild && born
-      ? [{ id: settings.kids[0]?.id ?? newKidId(), name: childName.trim(), born }, ...settings.kids.slice(1)]
+    const kids = askChild && band
+      ? [{ id: settings.kids[0]?.id ?? newKidId(), name: childName.trim(), band }, ...settings.kids.slice(1)]
       : settings.kids;
     update({ loc, radius, kids, onboarded: true });
     onDone();
   }
 
-  const bornLabel = born ? `${MONTHS[+born.split('-')[1] - 1]} ${born.split('-')[0]}` : 'Not set';
-  const shiftBorn = (delta: number) => {
-    const now = new Date();
-    const [y, m] = born ? born.split('-').map(Number) : [now.getFullYear(), now.getMonth() + 1];
-    const d = new Date(y, m - 1 + delta, 1);
-    if (d > now) return;
-    setBorn(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`);
-  };
 
   return (
     <View style={s.wrap}>
@@ -121,13 +114,24 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
         style={[s.input, s.nameInput]}
         accessibilityLabel="Child's name"
       />
-      <View style={s.row}>
-        <Pressable onPress={() => shiftBorn(-1)} style={s.step} accessibilityLabel="Earlier month"><Text style={s.stepText}>‹</Text></Pressable>
-        <Text style={[s.value, s.month]}>{bornLabel}</Text>
-        <Pressable onPress={() => shiftBorn(1)} style={s.step} accessibilityLabel="Later month"><Text style={s.stepText}>›</Text></Pressable>
-        {born && <Pressable onPress={() => setBorn(null)} style={s.clear}><Text style={s.ghostText}>Clear</Text></Pressable>}
+      <View style={s.bands}>
+        {BANDS.map((b) => {
+          const on = band === b.id;
+          return (
+            <Pressable
+              key={b.id}
+              onPress={() => setBand(on ? null : b.id)}
+              style={[s.band, on && s.bandOn]}
+              accessibilityRole="radio"
+              accessibilityState={{ selected: on }}
+              accessibilityLabel={`${b.name}, ${b.range}`}>
+              <Text style={[s.bandName, on && s.bandTextOn]}>{b.name}</Text>
+              <Text style={[s.bandRange, on && s.bandTextOn]}>{b.range}</Text>
+            </Pressable>
+          );
+        })}
       </View>
-      <Text style={s.hint}>Birth month. Hides classes they’re too young or too old for. Add more children in You.</Text>
+      <Text style={s.hint}>We never ask their birthday. Pick a band and Today hides what they're too young or too old for. Add more children in You.</Text>
       </>)}
 
       <Pressable onPress={save} style={({ pressed }) => [s.primary, pressed && { opacity: 0.85 }]} accessibilityRole="button">
@@ -147,6 +151,12 @@ const s = StyleSheet.create({
   ghost: { borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.milk, paddingHorizontal: 14, paddingVertical: 12, minWidth: 130, alignItems: 'center' },
   ghostText: { fontFamily: F.textSemi, fontSize: 15, color: C.ink },
   error: { fontFamily: F.text, fontSize: 14, color: C.warn },
+  bands: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 6 },
+  band: { borderRadius: R.md, borderWidth: 1, borderColor: C.line, backgroundColor: C.milk, paddingHorizontal: 12, paddingVertical: 8 },
+  bandOn: { backgroundColor: C.ink, borderColor: C.ink },
+  bandName: { fontFamily: F.textSemi, fontSize: 15, color: C.ink },
+  bandRange: { fontFamily: F.text, fontSize: 12, color: C.muted, marginTop: 1 },
+  bandTextOn: { color: '#fff' },
   slider: { flex: 1, height: 40 },
   value: { fontFamily: F.display, fontSize: 20, color: C.ink, minWidth: 64, textAlign: 'right' },
   month: { flex: 1, textAlign: 'center', fontSize: 18 },
