@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { KeyboardAvoidingView, Linking, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { LocationForm } from '@/components/location-form';
@@ -9,6 +9,13 @@ import { BANDS } from '@/lib/schedule';
 import { newKidId, useStore } from '@/lib/store';
 import type { Kid } from '@/lib/types';
 
+
+// App Review wants the privacy policy reachable inside the app, not only on the store page.
+const LINKS = [
+  { label: 'Privacy', hint: 'doddily.app/privacy', url: 'https://doddily.app/privacy.html' },
+  { label: 'Website', hint: 'doddily.app', url: 'https://doddily.app' },
+  { label: 'Contact', hint: 'hello@doddily.app', url: 'mailto:hello@doddily.app' },
+];
 
 export default function YouScreen() {
   const { settings, update } = useStore();
@@ -74,6 +81,21 @@ export default function YouScreen() {
           style={s.input}
           accessibilityLabel="Your name"
         />
+
+        <Text style={s.section}>About</Text>
+        <View style={s.links}>
+          {LINKS.map((l, i) => (
+            <Pressable
+              key={l.label}
+              onPress={() => Linking.openURL(l.url)}
+              style={({ pressed }) => [s.link, i > 0 && s.linkDivider, pressed && s.pressed]}
+              accessibilityRole="link"
+            >
+              <Text style={s.linkText}>{l.label}</Text>
+              <Text style={s.linkHint}>{l.hint}</Text>
+            </Pressable>
+          ))}
+        </View>
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -139,6 +161,11 @@ const s = StyleSheet.create({
   bandRange: { fontFamily: F.text, fontSize: 12, color: C.muted, marginTop: 1 },
   bandTextOn: { color: '#fff' },
   add: { borderRadius: R.md, borderWidth: 1, borderColor: C.line, borderStyle: 'dashed', paddingVertical: 14, alignItems: 'center', backgroundColor: C.card },
+  links: { backgroundColor: C.card, borderRadius: R.lg, borderWidth: 1, borderColor: C.line, marginBottom: 24 },
+  link: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 14, paddingVertical: 13 },
+  linkDivider: { borderTopWidth: 1, borderTopColor: C.line },
+  linkText: { fontFamily: F.textSemi, fontSize: 16, color: C.ink },
+  linkHint: { fontFamily: F.text, fontSize: 14, color: C.muted },
   addText: { fontFamily: F.textSemi, fontSize: 16, color: C.ink },
   pressed: { opacity: 0.8 },
   options: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
