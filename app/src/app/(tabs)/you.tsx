@@ -29,7 +29,7 @@ export default function YouScreen() {
     <KeyboardAvoidingView style={s.screen} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <ScrollView contentContainerStyle={[s.content, { paddingTop: insets.top + 12, paddingBottom: insets.bottom + 110 }]} keyboardShouldPersistTaps="handled">
         <Text style={s.title}>You</Text>
-        <Text style={s.sub}>Saved on this phone only. It helps Today show what suits your family.</Text>
+        <Text style={s.sub}>Saved on this phone only. It’s how Doddily shows what suits your family.</Text>
 
         <Text style={s.section}>Where</Text>
         <View style={s.card}>
@@ -56,7 +56,7 @@ export default function YouScreen() {
         </View>
 
         <Text style={s.section}>Children</Text>
-        {settings.kids.length === 0 && <Text style={s.hint}>Add your children so Today only shows classes that suit their ages.</Text>}
+        {settings.kids.length === 0 && <Text style={s.hint}>Add your children and Doddily only shows classes that suit their ages.</Text>}
         {settings.kids.map((k, i) => (
           <KidCard
             key={k.id}
