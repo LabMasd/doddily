@@ -4,25 +4,19 @@ Saved 17 September 2026, just before updating macOS and Xcode.
 To carry on: open Claude Code and say **"pick up Doddily"** — it has the same notes in its memory.
 
 ## 1. Apple
-- Version 1.0 is **waiting for a reviewer**. It shows as "Rejected / Unresolved issues" — that is only because Apple asked for information (Guideline 2.1), not because anything was wrong.
+- The submission now carries **version 1.1 (build 11)**; build 8 has been replaced. It shows as "Rejected / Unresolved issues" — that is only because Apple asked for information (Guideline 2.1), not because anything was wrong.
 - You replied with the screen recording on 16 Sept at 21:03. Nothing more to do. Replies usually get read in 1–2 working days. **Apple emails you when it changes.**
 - It is set to **release automatically** when approved (UK only, £2.99).
 - When approved: tell Claude, so the website can be switched on for Google (it is hidden on purpose until then).
 
-## 2. The next version (1.1) — BUILDING NOW (17 Sept, afternoon)
-**Plan changed:** instead of waiting for Apple, we are swapping the new build into the submission, because it fixes the missing privacy link and is the version you want on sale.
-- Cloud build started: https://expo.dev/accounts/labmasd/projects/little-days/builds/2e756b51-d6da-42c5-8539-d406636223c1
-- When it finishes Claude uploads it to App Store Connect (harmless on its own).
-- **Then you:** install 1.1 from TestFlight, test it, and screen-record the run (Home screen → open app → E8 1EA → a class → Map → Saved → You; keyboard predictions OFF; don't tap Send).
-- **Then Claude:** swaps build 8 for the new build and renames the version to 1.1. **You** post a short message in the Apple thread with the new recording, and it is resubmitted.
-- If your Mac restarted before this finished: say "pick up Doddily" — the build keeps running in the cloud regardless.
+## 2. The next version (1.1) — READY TO RESUBMIT (17 Sept, evening)
+Done: **1.1.0 build 11** is built, uploaded, tested on your phone, and **attached to the Apple submission in place of build 8**. The version is renamed 1.1. It has the age groups, the Privacy / Website / Contact links, and all of today's wording. The App Review notes are updated too.
 
-Two changes, already written and saved on GitHub:
-- asks for an **age group** (Newborns, Babies, Toddlers…) instead of a birth month
-- **Privacy / Website / Contact links** in the You tab (Apple requires the privacy link inside the app)
-
-To do: build it, **test it on your phone through TestFlight**, then send it to Apple.
-Also worth 30 seconds: in App Store Connect → App Privacy, it should say *Location — app functionality — not linked to you — no tracking*.
+**Left to do (you, 2 minutes), on the submission page in App Store Connect:**
+1. **Reply to App Review** → paste the message in `~/Downloads/doddily-apple-message-1.1.txt`
+2. **Attach File** → `~/Downloads/doddily-review-recording-1.1-clean.mp4` (your postcode and name are blurred, the end is trimmed)
+3. Send, then press **Resubmit to App Review** (top right).
+Then tell Claude, who will confirm Apple shows "Waiting for Review".
 
 ## 3. After the Mac update
 1. Update **macOS to 27 first**, then **Xcode 27** from the App Store (Xcode 27 will not install on macOS 15).
