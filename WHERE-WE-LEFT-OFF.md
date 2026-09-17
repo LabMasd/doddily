@@ -9,7 +9,14 @@ To carry on: open Claude Code and say **"pick up Doddily"** — it has the same 
 - It is set to **release automatically** when approved (UK only, £2.99).
 - When approved: tell Claude, so the website can be switched on for Google (it is hidden on purpose until then).
 
-## 2. The next version (1.1) — coded, not built yet
+## 2. The next version (1.1) — BUILDING NOW (17 Sept, afternoon)
+**Plan changed:** instead of waiting for Apple, we are swapping the new build into the submission, because it fixes the missing privacy link and is the version you want on sale.
+- Cloud build started: https://expo.dev/accounts/labmasd/projects/little-days/builds/2e756b51-d6da-42c5-8539-d406636223c1
+- When it finishes Claude uploads it to App Store Connect (harmless on its own).
+- **Then you:** install 1.1 from TestFlight, test it, and screen-record the run (Home screen → open app → E8 1EA → a class → Map → Saved → You; keyboard predictions OFF; don't tap Send).
+- **Then Claude:** swaps build 8 for the new build and renames the version to 1.1. **You** post a short message in the Apple thread with the new recording, and it is resubmitted.
+- If your Mac restarted before this finished: say "pick up Doddily" — the build keeps running in the cloud regardless.
+
 Two changes, already written and saved on GitHub:
 - asks for an **age group** (Newborns, Babies, Toddlers…) instead of a birth month
 - **Privacy / Website / Contact links** in the You tab (Apple requires the privacy link inside the app)
