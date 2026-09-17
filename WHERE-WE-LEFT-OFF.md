@@ -4,19 +4,13 @@ Saved 17 September 2026, just before updating macOS and Xcode.
 To carry on: open Claude Code and say **"pick up Doddily"** — it has the same notes in its memory.
 
 ## 1. Apple
-- The submission now carries **version 1.1 (build 11)**; build 8 has been replaced. It shows as "Rejected / Unresolved issues" — that is only because Apple asked for information (Guideline 2.1), not because anything was wrong.
-- You replied with the screen recording on 16 Sept at 21:03. Nothing more to do. Replies usually get read in 1–2 working days. **Apple emails you when it changes.**
-- It is set to **release automatically** when approved (UK only, £2.99).
-- When approved: tell Claude, so the website can be switched on for Google (it is hidden on purpose until then).
+- **Version 1.1 (build 11) is Waiting for Review** since 17 Sept, 22:04. The earlier 'Rejected' label was only Apple asking for information (Guideline 2.1); that has been answered twice, with recordings.
+- **Apple emails you when it changes.** When approved: tell Claude, so the website can be switched on for Google (it is hidden on purpose until then).
 
-## 2. The next version (1.1) — READY TO RESUBMIT (17 Sept, evening)
-Done: **1.1.0 build 11** is built, uploaded, tested on your phone, and **attached to the Apple submission in place of build 8**. The version is renamed 1.1. It has the age groups, the Privacy / Website / Contact links, and all of today's wording. The App Review notes are updated too.
-
-**Left to do (you, 2 minutes), on the submission page in App Store Connect:**
-1. **Reply to App Review** → paste the message in `~/Downloads/doddily-apple-message-1.1.txt`
-2. **Attach File** → `~/Downloads/doddily-review-recording-1.1-clean.mp4` (your postcode and name are blurred, the end is trimmed)
-3. Send, then press **Resubmit to App Review** (top right).
-Then tell Claude, who will confirm Apple shows "Waiting for Review".
+## 2. Version 1.1 — WITH APPLE (resubmitted 17 Sept, 22:04)
+**1.1.0 build 11** replaced build 8 in the submission. You posted the message and the new recording, and it was resubmitted. Apple shows **Waiting for Review**.
+It has the age groups, the Privacy / Website / Contact links, and all of 17 Sept's wording.
+Nothing to do now but wait; Apple emails you on any change. It is still set to release automatically when approved (UK, £2.99).
 
 ## 3. After the Mac update
 1. Update **macOS to 27 first**, then **Xcode 27** from the App Store (Xcode 27 will not install on macOS 15).
