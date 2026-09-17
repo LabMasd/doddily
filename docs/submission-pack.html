@@ -1,0 +1,289 @@
+<title>Doddily App Store Pack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#F4F6F8; --card:#FFFFFF; --ink:#1E2536; --muted:#5F6878; --line:#DFE3E9;
+  --accent:#C7B5F5; --accent-line:#8A6FD6; --accent-soft:#F0EAFE; --accent-text:#4B3A8C;
+  --leaf:#2F7A52; --leaf-soft:#E3F2EA; --chip:#EEF0F3; --warn:#9A3412; --warn-soft:#FBE9E7;
+  --display:"Bricolage Grotesque","Avenir Next",system-ui,sans-serif;
+  --text:"Figtree","Helvetica Neue",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --ground:#121726; --card:#1A2031; --ink:#EDF0F6; --muted:#A2ABBD; --line:#2B3347;
+  --accent-line:#A98FF0; --accent-soft:#282246; --accent-text:#D8CBFF;
+  --leaf:#72C79A; --leaf-soft:#1B3127; --chip:#242B3D; --warn:#F0A88C; --warn-soft:#3A2119;
+}}
+:root[data-theme="dark"]{
+  --ground:#121726; --card:#1A2031; --ink:#EDF0F6; --muted:#A2ABBD; --line:#2B3347;
+  --accent-line:#A98FF0; --accent-soft:#282246; --accent-text:#D8CBFF;
+  --leaf:#72C79A; --leaf-soft:#1B3127; --chip:#242B3D; --warn:#F0A88C; --warn-soft:#3A2119;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font:17px/1.6 var(--text);-webkit-font-smoothing:antialiased;padding-inline:20px;padding-block:0 96px}
+.wrap{max-width:860px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.015em}
+h1{font-size:clamp(38px,6.5vw,60px);line-height:1;font-weight:800}
+h2{font-size:clamp(25px,3.2vw,32px);line-height:1.1;font-weight:700}
+h3{font-size:18px;font-weight:700}
+p{margin:0}
+a{color:var(--accent-line)}
+:focus-visible{outline:3px solid var(--accent-line);outline-offset:3px;border-radius:6px}
+.muted{color:var(--muted)}
+.small{font-size:14px;line-height:1.5}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:22px;flex-wrap:wrap}
+.wordmark{display:inline-flex;align-items:center;gap:8px;font:700 22px/1 var(--display)}
+.mark{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#1E2536}
+.mark svg{width:19px;height:19px;fill:#C7B5F5}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--accent-text);background:var(--accent-soft);border-radius:999px;padding:6px 12px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--accent-line);display:block}
+.hero{padding-block:36px 8px;display:grid;gap:16px}
+.lede{font-size:19px;line-height:1.5;color:var(--muted);max-width:60ch}
+section{padding-block:48px 0}
+.sechead{display:grid;gap:8px;margin-bottom:22px}
+.eyebrow{font:700 13px var(--text);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-text)}
+/* Field blocks */
+.fields{display:grid;gap:12px}
+.field{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:8px}
+.field .label{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.field .name{font:700 15px var(--text)}
+.field .hint{font-size:13px;color:var(--muted)}
+.value{font:500 16px/1.5 var(--text);white-space:pre-line;background:var(--ground);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.value.mono{font-variant-numeric:tabular-nums}
+.copy{justify-self:start;font:600 14px var(--text);color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:6px 13px;cursor:pointer}
+.copy:hover{border-color:var(--ink)}
+.copy[data-done]{background:var(--leaf-soft);border-color:var(--leaf);color:var(--leaf)}
+.count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.count.over{color:var(--warn);font-weight:700}
+/* Steps */
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start}
+.step::before{counter-increment:s;content:counter(s);font:800 20px/1 var(--display);color:var(--accent-line);padding-top:2px}
+.step h3{margin-bottom:4px}
+.step p{font-size:15px;line-height:1.5}
+.note{background:var(--warn-soft);color:var(--warn);border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5}
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.pair{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:3px}
+.pair b{font:700 15px var(--text)}
+.pair span{font-size:14px;color:var(--muted)}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.shotcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:6px}
+.shotcard b{font:700 14px var(--text)}
+.shotcard span{font-size:13px;color:var(--muted);line-height:1.45}
+.shotcard code{font-size:12.5px;color:var(--accent-text);background:var(--accent-soft);border-radius:6px;padding:2px 6px;justify-self:start}
+footer{padding-block:56px 0;color:var(--muted);font-size:14px}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="flower" viewBox="0 0 18 18"><circle cx="9" cy="3.6" r="3.6"/><circle cx="14.14" cy="7.33" r="3.6"/><circle cx="12.17" cy="13.37" r="3.6"/><circle cx="5.83" cy="13.37" r="3.6"/><circle cx="3.86" cy="7.33" r="3.6"/></symbol></svg>
+
+<div class="wrap">
+  <header class="top">
+    <span class="wordmark"><span class="mark"><svg><use href="#flower"/></svg></span>Doddily</span>
+    <span class="status"><i></i>Submitted · waiting for review</span>
+  </header>
+
+  <div class="hero">
+    <h1>App Store pack</h1>
+    <p class="lede">Every field App Store Connect asks for, written out and ready to paste, in the order the form asks for it. Character counts update as you read, so nothing gets rejected for length.</p>
+  </div>
+
+  <section>
+    <div class="sechead">
+      <span class="eyebrow">Start here</span>
+      <h2>What’s already done</h2>
+    </div>
+    <div class="pairs">
+      <div class="pair"><b>Name and subtitle</b><span>Doddily · “Baby &amp; toddler classes nearby”</span></div>
+      <div class="pair"><b>Description, keywords, links</b><span>Written into version 1.0</span></div>
+      <div class="pair"><b>Screenshots</b><span>Three promo pages, 1320 × 2868</span></div>
+      <div class="pair"><b>Categories</b><span>Lifestyle, then Education</span></div>
+      <div class="pair"><b>Age rating</b><span>Answered: nothing objectionable, 4+</span></div>
+      <div class="pair"><b>App Review contact</b><span>Marcos Silva · hello@doddily.app · +44 7802463484</span></div>
+      <div class="pair"><b>Review notes</b><span>Tell the reviewer to type E8 1EA</span></div>
+      <div class="pair"><b>Build</b><span>Build 8, with the tab bar fix, uploading now</span></div>
+      <div class="pair"><b>Privacy policy live</b><span>doddily.app/privacy.html</span></div>
+      <div class="pair"><b>Contact email live</b><span>hello@doddily.app → hello@masd.cc</span></div>
+    </div>
+    <p class="note" style="margin-top:14px">Before you submit: sign the Paid Apps Agreement and add bank and tax details under Business, or Apple won’t let you set the £2.99 price. And set availability to the United Kingdom only, so you don’t need the EU trader declaration yet.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <span class="eyebrow">App Store Connect · App Information</span>
+      <h2>Name and subtitle</h2>
+    </div>
+    <div class="fields" id="fields1"></div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <span class="eyebrow">App Store Connect · Version 1.0</span>
+      <h2>Description and keywords</h2>
+    </div>
+    <div class="fields" id="fields2"></div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <span class="eyebrow">App Store Connect · App Review</span>
+      <h2>Notes for the reviewer</h2>
+      <p class="muted">The most common reason an app like this gets rejected is a reviewer outside the UK seeing an empty screen. These notes prevent that.</p>
+    </div>
+    <div class="fields" id="fields3"></div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <span class="eyebrow">App Store Connect · App Privacy</span>
+      <h2>Privacy answers</h2>
+      <p class="muted">Answer the questionnaire exactly like this. It matches what the app does and what the privacy page says.</p>
+    </div>
+    <div class="pairs">
+      <div class="pair"><b>Do you collect data?</b><span>No. Choose “Data Not Collected”, then Publish.</span></div>
+      <div class="pair"><b>Tracking</b><span>No. The app has no analytics, ads or third-party SDKs.</span></div>
+      <div class="pair"><b>Location</b><span>Not collected. It’s used on the device and sent only to look up the nearest postcode.</span></div>
+      <div class="pair"><b>Account</b><span>None. No sign-in of any kind.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <span class="eyebrow">App Store Connect · Age Rating and Pricing</span>
+      <h2>The short answers</h2>
+    </div>
+    <div class="pairs">
+      <div class="pair"><b>Age rating</b><span>Answer “None” to every content question. It lands on 4+.</span></div>
+      <div class="pair"><b>Made for Kids</b><span>No. It’s for parents, not children.</span></div>
+      <div class="pair"><b>Category</b><span>Primary: Lifestyle. Secondary: Education.</span></div>
+      <div class="pair"><b>Price</b><span>£2.99 (Tier 3), United Kingdom only</span></div>
+      <div class="pair"><b>Family Sharing</b><span>On</span></div>
+      <div class="pair"><b>Release</b><span>Manually release, so you pick the launch morning</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <span class="eyebrow">Media</span>
+      <h2>Screenshots</h2>
+      <p class="muted">Done and uploaded. Each is a promo page: a caption in Bricolage above the phone, built by <code>tools/simulator/promo.mjs</code> from simulator captures (<code>tools/simulator/shots.sh</code>), at 1320 × 2868 with a 9:41 status bar.</p>
+    </div>
+    <div class="shots">
+      <div class="shotcard"><code>promo-today</code><b>“What’s on today, in time order”</b><span>The list with the search bar and day strip. First, so it’s the one most people see.</span></div>
+      <div class="shotcard"><code>promo-map</code><b>“Everything near you, on one map”</b><span>Pins and the purple distance circle.</span></div>
+      <div class="shotcard"><code>promo-you</code><b>“Only what suits their age”</b><span>Postcode, distance, children’s ages, Directions app.</span></div>
+    </div>
+    <p class="small muted" style="margin-top:12px">Saved was left out on purpose: an empty screen sells nothing. Worth adding later, once there’s something in it.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <span class="eyebrow">The order to do it in</span>
+      <h2>Submitting</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div><h3>Wait for Apple <span class="pill" style="background:var(--accent-soft);color:var(--accent-text)">now</span></h3><p>Usually one to two days. You’ll get an email when review starts and again when it finishes. Nothing to do meanwhile.</p></div></div>
+      <div class="step"><div><h3>If they reject it</h3><p>Apple writes the reason in Resolution Center. Send it to me and I’ll fix the app or the listing and resubmit. A rejection costs a day, not the launch.</p></div></div>
+      <div class="step"><div><h3>When they approve it</h3><p>Release is set to manual, so the app waits for you. Pick a morning, press Release, then post the launch post from the playbook and add the App Store link to every bio.</p></div></div>
+      <div class="step"><div><h3>Then open the website up</h3><p>Remove the <code>noindex</code> line from index.html and privacy.html, and the <code>Disallow</code> from robots.txt, so doddily.app can be found in search. Ask me and it’s a one-minute change.</p></div></div>
+    </div>
+  </section>
+
+  <footer>Doddily · hello@doddily.app · Written 16 September 2026, the night build 5 went up.</footer>
+</div>
+
+<script>
+const F1 = [
+  { name: 'App Name', hint: '30 characters max', limit: 30, value: 'Doddily' },
+  { name: 'Subtitle', hint: '30 characters max', limit: 30, value: 'Baby & toddler classes nearby' },
+  { name: 'Support URL', hint: 'Required', value: 'https://doddily.app' },
+  { name: 'Marketing URL', hint: 'Optional', value: 'https://doddily.app' },
+  { name: 'Privacy Policy URL', hint: 'Required', value: 'https://doddily.app/privacy.html' },
+  { name: 'Copyright', hint: '', value: '2026 Marcos Silva' },
+  { name: 'Contact email', hint: 'App Review contact', value: 'hello@doddily.app' },
+];
+const F2 = [
+  { name: 'Promotional Text', hint: '170 characters max, changeable any time', limit: 170,
+    value: 'Baby classes, toddler groups, rhyme times, stay and play and soft play near you, sorted by day, time and walking distance.' },
+  { name: 'Description', hint: '4000 characters max', limit: 4000,
+    value: `Doddily shows you what's on for your baby or toddler near you today.
+
+Pick a day and see sessions in time order, with how far away each one is. Baby sensory, music, swimming, library rhyme times, free stay and play, toddler football, soft play, farms and parks, all in one place.
+
+TODAY AT A GLANCE
+Sessions in time order, with walking time from your door.
+
+RIGHT FOR YOUR CHILD
+Add your children's birth months and Today only shows what suits their age.
+
+SEARCH
+Find a class, group or venue by name, place or postcode.
+
+FILTERS THAT MATTER
+Free, no booking, rainy day.
+
+EVERY DETAIL IN ONE PLACE
+Times, price, ages, how to book, and the address.
+
+ONE TAP
+Directions in Apple Maps, Google Maps, Waze or Citymapper, the provider's booking page, add to calendar, and reminders.
+
+MAP
+Everything near you on one map, inside the distance you choose.
+
+SAVED
+Keep the ones you like.
+
+NO ACCOUNT
+Open it and go. No sign-up, no ads, no tracking. Your postcode and your children's ages stay on your phone.
+
+Listings come from providers' own pages, councils and libraries across the UK. Timetables change, so each class links to the provider to check before you go.` },
+  { name: 'Keywords', hint: '100 characters max, comma separated, no spaces after commas', limit: 100,
+    value: 'baby,toddler,classes,rhyme time,stay and play,soft play,sensory,swimming,playgroup,things to do' },
+  { name: "What's New in This Version", hint: 'First release', limit: 4000, value: 'First release. Hello.' },
+];
+const F3 = [
+  { name: 'Notes', hint: 'App Review Information', limit: 4000,
+    value: `Doddily lists baby and toddler activities in the United Kingdom only, and needs no login.
+
+If you are outside the UK, "Use where I am" will find nothing nearby. Please type the postcode E8 1EA (London) on the first screen, or later under You > Where. Today then lists that day's sessions.
+
+Tap any session for details, directions, add to calendar and reminders. The Map tab shows the same listings on a map. The You tab is where the postcode, distance and children's ages are set.
+
+There is no account, no subscription and no user-generated content. Listings come from providers' public pages, councils and libraries, and each links back to its source.` },
+  { name: 'Sign-in required?', hint: '', value: 'No' },
+  { name: 'Demo account', hint: '', value: 'Not needed' },
+];
+
+function render(list, el) {
+  document.getElementById(el).innerHTML = list.map((f, i) => {
+    const len = f.value.length;
+    const over = f.limit && len > f.limit;
+    return `<div class="field">
+      <div class="label"><span class="name">${f.name}</span><span class="hint">${f.hint || ''}</span></div>
+      <div class="value${f.value.length < 60 ? ' mono' : ''}">${f.value.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]))}</div>
+      <div class="label">
+        <button class="copy" type="button">Copy</button>
+        ${f.limit ? `<span class="count${over ? ' over' : ''}">${len} / ${f.limit} characters</span>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+render(F1, 'fields1'); render(F2, 'fields2'); render(F3, 'fields3');
+
+document.addEventListener('click', async (e) => {
+  const btn = e.target.closest('.copy');
+  if (!btn) return;
+  const text = btn.closest('.field').querySelector('.value').textContent;
+  let ok = false;
+  try { await navigator.clipboard.writeText(text); ok = true; } catch (err) {
+    try {
+      const a = document.createElement('textarea');
+      a.value = text; a.style.position = 'fixed'; a.style.opacity = '0';
+      document.body.appendChild(a); a.select(); ok = document.execCommand('copy'); a.remove();
+    } catch (err2) { ok = false; }
+  }
+  btn.textContent = ok ? 'Copied' : 'Select it to copy';
+  if (ok) btn.setAttribute('data-done', '');
+  setTimeout(() => { btn.textContent = 'Copy'; btn.removeAttribute('data-done'); }, 1800);
+});
+</script>
