@@ -100,7 +100,7 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
         />
         <Text style={s.value}>{radius} mi</Text>
       </View>
-      <Text style={s.hint}>About {Math.round(radius * 25)} minutes’ walk with a buggy at the edge.</Text>
+      <Text style={s.hint}>Up to about {Math.round(radius * 25)} minutes’ walk with a buggy.</Text>
 
       {askChild && (<>
       <Text style={[s.label, s.gap]}>Your child <Text style={s.optional}>(optional)</Text></Text>
