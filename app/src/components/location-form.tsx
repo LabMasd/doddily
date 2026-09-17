@@ -131,7 +131,7 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
           );
         })}
       </View>
-      <Text style={s.hint}>We never ask their birthday. Pick a band and Today hides what they're too young or too old for. Add more children in You.</Text>
+      <Text style={s.hint}>We never ask for a birthday. Pick an age group and Doddily hides what they’re too young or too old for. You can add more children later, in the You tab.</Text>
       </>)}
 
       <Pressable onPress={save} style={({ pressed }) => [s.primary, pressed && { opacity: 0.85 }]} accessibilityRole="button">
