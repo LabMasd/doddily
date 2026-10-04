@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ActivityRow } from '@/components/activity-row';
 import { BrandHeader, useIntro } from '@/components/brand-header';
+import { Fade } from '@/components/fade';
 import { FilterBar } from '@/components/filter-bar';
 import { SearchField } from '@/components/search-field';
 import { WeekStrip } from '@/components/week-strip';
@@ -41,7 +42,8 @@ export default function TodayScreen() {
       return { sections: weekSections(rows), summary: `${rows.length} things ${where}, any day`, empty: null, dayName: '' };
     }
     const r = daySections(rows, day, settings.group);
-    const dayName = day === 0 ? 'today' : day === 1 ? 'tomorrow' : `on ${DAY_LONG[r.date.getDay()]}`;
+    // Past the first week a weekday alone is ambiguous, so the date goes with it.
+    const dayName = day === 0 ? 'today' : day === 1 ? 'tomorrow' : day < 7 ? `on ${DAY_LONG[r.date.getDay()]}` : `on ${DAY_LONG[r.date.getDay()]} ${r.date.getDate()} ${r.date.toLocaleDateString('en-GB', { month: 'long' })}`;
     const empty = r.timedCount ? null : r.pastCount ? 'done' : 'none';
     return { sections: r.sections, summary: `${r.timedCount} session${r.timedCount === 1 ? '' : 's'} ${dayName} ${where}`, empty, dayName };
   }, [rows, found, q, query, day, settings.group, settings.radius, settings.loc]);
@@ -76,7 +78,7 @@ export default function TodayScreen() {
           stickySectionHeadersEnabled={false}
           onScroll={(e) => { scrollY.value = e.nativeEvent.contentOffset.y; }}
           scrollEventThrottle={16}
-          contentContainerStyle={[s.list, { paddingBottom: insets.bottom + 100 }]}
+          contentContainerStyle={[s.list, { paddingTop: 14, paddingBottom: insets.bottom + 100 }]}
           refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={C.muted} />}
           ListHeaderComponent={
             <View>
@@ -130,6 +132,8 @@ export default function TodayScreen() {
             </View>
           }
         />
+        {/* The list slides under the filters: let it fade out there instead of being cut off mid-line. */}
+        <Fade solid="top" size={22} color={C.milk} style={{ top: 0, left: 0, right: 0 }} />
       </Animated.View>
     </View>
   );

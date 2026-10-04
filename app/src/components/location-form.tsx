@@ -1,10 +1,11 @@
 import Slider from '@react-native-community/slider';
 import * as Location from 'expo-location';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { C, F, R } from '@/constants/theme';
 import { lookupPostcode, postcodeFor } from '@/lib/data';
+import { DIST_STEPS, nearestStep, reachHint } from '@/lib/geo';
 import { BANDS } from '@/lib/schedule';
 import type { Kid } from '@/lib/types';
 import { newKidId, useStore } from '@/lib/store';
@@ -21,6 +22,15 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
   const [childName, setChildName] = useState(settings.kids[0]?.name ?? '');
   const [busy, setBusy] = useState<'geo' | 'save' | null>(null);
   const [error, setError] = useState('');
+
+  // The You tab is built at launch, before the saved settings have been read, and the distance can also be
+  // changed from the map. Without this the form keeps showing an empty postcode and the default distance,
+  // and saving it writes those back over what the family chose.
+  const savedPostcode = settings.loc?.postcode ?? '';
+  useEffect(() => { setPc(savedPostcode); setPending(null); }, [savedPostcode]);
+  useEffect(() => { setRadius(settings.radius); }, [settings.radius]);
+  const firstKid = settings.kids[0];
+  useEffect(() => { if (firstKid) { setBand(firstKid.band); setChildName(firstKid.name); } }, [firstKid?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function useWhereIAm() {
     setError('');
@@ -88,11 +98,11 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
       <View style={s.row}>
         <Slider
           style={s.slider}
-          minimumValue={0.5}
-          maximumValue={10}
-          step={0.5}
-          value={radius}
-          onValueChange={setRadius}
+          minimumValue={0}
+          maximumValue={DIST_STEPS.length - 1}
+          step={1}
+          value={nearestStep(radius)}
+          onValueChange={(i) => setRadius(DIST_STEPS[Math.round(i)])}
           minimumTrackTintColor={C.accentLine}
           maximumTrackTintColor={C.line}
           thumbTintColor={C.accent}
@@ -100,7 +110,7 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
         />
         <Text style={s.value}>{radius} mi</Text>
       </View>
-      <Text style={s.hint}>Up to about {Math.round(radius * 25)} minutes’ walk with a buggy.</Text>
+      <Text style={s.hint}>{reachHint(radius)}</Text>
 
       {askChild && (<>
       <Text style={[s.label, s.gap]}>Your child <Text style={s.optional}>(optional)</Text></Text>

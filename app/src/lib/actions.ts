@@ -14,14 +14,14 @@ export const MAP_APPS: { id: MapApp; label: string }[] = [
   { id: 'citymapper', label: 'Citymapper' },
 ];
 
-/** Walking directions in the maps app picked in You. If that app isn’t installed, Google Maps opens on the web. */
-export function openDirections(it: Activity, app: MapApp) {
+/** Directions in the maps app picked in You: a walking route when it is near, a driving one when it is not. If that app isn’t installed, Google Maps opens on the web. */
+export function openDirections(it: Activity, app: MapApp, drive = false) {
   const { lat, lng } = it;
   const label = encodeURIComponent(it.venue || it.name);
-  const web = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=walking`;
+  const web = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=${drive ? 'driving' : 'walking'}`;
   const urls: Record<MapApp, string> = {
-    apple: Platform.OS === 'ios' ? `maps://?daddr=${lat},${lng}&dirflg=w&q=${label}` : web,
-    google: Platform.select({ ios: `comgooglemaps://?daddr=${lat},${lng}&directionsmode=walking`, android: `google.navigation:q=${lat},${lng}&mode=w`, default: web }),
+    apple: Platform.OS === 'ios' ? `maps://?daddr=${lat},${lng}&dirflg=${drive ? 'd' : 'w'}&q=${label}` : web,
+    google: Platform.select({ ios: `comgooglemaps://?daddr=${lat},${lng}&directionsmode=${drive ? 'driving' : 'walking'}`, android: `google.navigation:q=${lat},${lng}&mode=${drive ? 'd' : 'w'}`, default: web }),
     waze: `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`,
     citymapper: `https://citymapper.com/directions?endcoord=${lat},${lng}&endname=${label}`,
   };

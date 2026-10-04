@@ -17,20 +17,40 @@ async function fetchJSON<T>(url: string, init?: RequestInit): Promise<T> {
   return r.json() as Promise<T>;
 }
 
+/** Listings are megabytes; settings are a few hundred bytes. Both live in the same storage, so the big ones must never crowd the small ones out. */
+const BIG = /^ld:(tile|places):/;
+/** A browser gives a page about 5 MB of storage in all (half that on an iPhone), which two London tiles fill. There the browser's own cache does the job. */
+const KEEP_BIG = Platform.OS !== 'web';
+const memory = new Map<string, unknown>();
+
+/** Free the space taken by downloaded listings. They are only a cache: the next load fetches them again. */
+export async function dropListingCache(keep?: (key: string) => boolean) {
+  try {
+    const keys = (await AsyncStorage.getAllKeys()).filter((k) => BIG.test(k) && !(keep && keep(k)));
+    if (keys.length) await AsyncStorage.multiRemove(keys);
+  } catch { /* nothing to free */ }
+}
+
 /** Fresh from storage if young enough; otherwise network, falling back to stale storage when offline. */
 async function cached<T>(key: string, maxAge: number, load: () => Promise<T>): Promise<T> {
+  const big = BIG.test(key);
+  if (big && memory.has(key)) return memory.get(key) as T;
+  const store = !big || KEEP_BIG;
   let stale: T | undefined;
-  try {
-    const raw = await AsyncStorage.getItem(key);
-    if (raw) {
-      const c = JSON.parse(raw) as { t: number; v: T };
-      if (Date.now() - c.t < maxAge) return c.v;
-      stale = c.v;
-    }
-  } catch { /* unreadable cache */ }
+  if (store) {
+    try {
+      const raw = await AsyncStorage.getItem(key);
+      if (raw) {
+        const c = JSON.parse(raw) as { t: number; v: T };
+        if (Date.now() - c.t < maxAge) { if (big) memory.set(key, c.v); return c.v; }
+        stale = c.v;
+      }
+    } catch { /* unreadable cache */ }
+  }
   try {
     const v = await load();
-    AsyncStorage.setItem(key, JSON.stringify({ t: Date.now(), v })).catch(() => {});
+    if (big) memory.set(key, v);
+    if (store) AsyncStorage.setItem(key, JSON.stringify({ t: Date.now(), v })).catch(() => {});
     return v;
   } catch (e) {
     if (stale !== undefined) return stale;
@@ -43,6 +63,8 @@ type TileIndex = { checked: string; tile: number; tiles: Record<string, number> 
 export async function loadActivities(loc: Loc, radius: number) {
   const index = await cached<TileIndex>('ld:index', 6 * HOUR, () => fetchJSON(`${BASE}/index.json`));
   const keys = tileKeys(loc, radius, index.tile, index.tiles);
+  // Tiles from an earlier data update are never read again; without this they pile up for good.
+  dropListingCache((k) => !k.startsWith('ld:tile:') || k.startsWith(`ld:tile:${index.checked}:`));
   const tiles = await Promise.all(
     keys.map((k) => cached<Activity[]>(`ld:tile:${index.checked}:${k}`, 30 * 24 * HOUR, () => fetchJSON(`${BASE}/${k}.json`)))
   );
@@ -75,6 +97,7 @@ async function loadPlaceTiles(loc: Loc, r: number) {
     fetchJSON(`${PLACES_BASE}/index.json`)
   );
   const keys = tileKeys(loc, r, index.tile, index.tiles);
+  dropListingCache((k) => !k.startsWith('ld:places:') || k.startsWith(`ld:places:${index.built}:`));
   const tiles = await Promise.all(
     keys.map((k) => cached<Activity[]>(`ld:places:${index.built}:${k}`, 60 * 24 * HOUR, () => fetchJSON(`${PLACES_BASE}/${k}.json`)))
   );

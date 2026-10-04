@@ -1,8 +1,10 @@
 import { Redirect, useRouter } from 'expo-router';
+import { useEffect, useRef } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import MapView, { Circle, Marker } from 'react-native-maps';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { DistanceStepper } from '@/components/distance-stepper';
 import { FilterBar } from '@/components/filter-bar';
 import { SearchField } from '@/components/search-field';
 import { WeekStrip } from '@/components/week-strip';
@@ -21,6 +23,15 @@ export default function MapScreen() {
   const rows = useMapRows();
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const map = useRef<MapView>(null);
+  const home = settings.loc;
+
+  // Frame the distance circle again when the place or the distance changes.
+  useEffect(() => {
+    if (!home) return;
+    const d = (settings.radius / 69) * 2.4;
+    map.current?.animateToRegion({ latitude: home.lat, longitude: home.lng, latitudeDelta: d, longitudeDelta: d / Math.cos((home.lat * Math.PI) / 180) }, 350);
+  }, [home?.lat, home?.lng, settings.radius]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!ready) return <View style={s.screen} />;
   if (!settings.onboarded || !settings.loc) return <Redirect href="/welcome" />;
@@ -31,6 +42,7 @@ export default function MapScreen() {
   return (
     <View style={s.screen}>
       <MapView
+        ref={map}
         style={StyleSheet.absoluteFill}
         initialRegion={{ latitude: lat, longitude: lng, latitudeDelta: span, longitudeDelta: span / Math.cos((lat * Math.PI) / 180) }}
         showsUserLocation
@@ -55,8 +67,11 @@ export default function MapScreen() {
           <SearchField />
           <View style={s.gap8} />
           <WeekStrip day={query.trim() ? 'week' : day} onChange={(d) => { setQuery(''); setDay(d); }} />
-          <FilterBar bleed={CARD_PAD} />
-          <Text style={s.count}>{rows.length} on the map · {filters.count ? filters.labels.join(' · ') : 'tap a pin, then its name'}</Text>
+          <FilterBar bleed={CARD_PAD} surface={C.card} />
+          <View style={s.foot}>
+            <Text style={s.count} numberOfLines={1}>{rows.length} on the map · {filters.count ? filters.labels.join(' · ') : 'tap a pin, then its name'}</Text>
+            <DistanceStepper />
+          </View>
         </View>
       </View>
     </View>
@@ -68,7 +83,8 @@ const s = StyleSheet.create({
   top: { position: 'absolute', left: 0, right: 0, paddingHorizontal: GUTTER },
   card: { backgroundColor: C.card, borderRadius: R.lg, padding: CARD_PAD, overflow: 'hidden', shadowColor: '#1E2536', shadowOpacity: 0.12, shadowRadius: 12, shadowOffset: { width: 0, height: 4 }, elevation: 4 },
   gap8: { height: 8 },
-  count: { fontFamily: F.text, fontSize: 13, color: C.muted, textAlign: 'center', marginTop: 2 },
+  foot: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4, paddingLeft: 6 },
+  count: { flex: 1, minWidth: 0, fontFamily: F.text, fontSize: 13, color: C.muted },
   pin: { width: 32, height: 32, borderRadius: 16, backgroundColor: '#fff', borderWidth: 2, borderColor: C.ink, alignItems: 'center', justifyContent: 'center' },
   pinPlace: { width: 26, height: 26, borderRadius: 13, borderWidth: 1.5, borderColor: '#8A93A6' },
   emoji: { fontSize: 16 },
