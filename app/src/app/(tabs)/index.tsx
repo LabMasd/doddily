@@ -18,8 +18,8 @@ import { useStore } from '@/lib/store';
 export default function TodayScreen() {
   const { ready, settings, toggles, forKid, day, setDay, data, reload, query, setQuery, topTick, goTop } = useStore();
   const list = useRef<SectionList<Section['data'][number], Section>>(null);
-  // Today tapped again, or another day picked: back to the top of the list.
-  useEffect(() => { if (topTick) list.current?.getScrollResponder()?.scrollTo({ y: 0, animated: true }); }, [topTick]);
+  // Today tapped again, or another day picked: jump straight to the top of the list (no slow scroll back).
+  useEffect(() => { if (topTick) list.current?.getScrollResponder()?.scrollTo({ y: 0, animated: false }); }, [topTick]);
   // The iPhone tab bar does this itself when it can find the list; this covers it when it cannot.
   const navigation = useNavigation();
   useEffect(() => navigation.addListener('tabPress' as never, () => { if (navigation.isFocused()) goTop(); }), [navigation, goTop]);
