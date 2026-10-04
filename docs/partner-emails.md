@@ -1,5 +1,9 @@
 # Partner emails (drafts, not sent)
 
+**3 Oct 2026:** the full list (14 providers, a contact route for each, the base email and the two lines that change per provider) is now a shared doc for Vicky to review: https://claude.ai/code/artifact/0c8577b7-3479-4bc3-bb05-d8695fa1c0fc. That doc is the current version; the two drafts below are the September originals.
+
+In sending order: Tumble Tots, Water Babies, Hartbeeps, Moo Music, babyballet, Bloom Baby Classes, Rhythm Time, Turtle Tots, diddi dance, ARTventurers, Razzamataz, Mini Movers, ODEON, and Happity (a partnership ask).
+
 Replace the [brackets] before sending.
 
 ---

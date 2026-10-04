@@ -1,24 +1,23 @@
-import { SymbolView } from 'expo-symbols';
 import { Redirect } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { Pressable, RefreshControl, SectionList, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, RefreshControl, SectionList, StyleSheet, Text, View } from 'react-native';
 import Animated, { useSharedValue } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { ActivityRow } from '@/components/activity-row';
 import { BrandHeader, useIntro } from '@/components/brand-header';
 import { FilterBar } from '@/components/filter-bar';
+import { SearchField } from '@/components/search-field';
 import { WeekStrip } from '@/components/week-strip';
 import { C, F, GUTTER, MaxContentWidth, R } from '@/constants/theme';
-import { CATS } from '@/lib/categories';
+import { activeFilters, searchRows } from '@/lib/filters';
 import { DAY_LONG, daySections, filterRows, selectedBands, weekSections, type Section } from '@/lib/schedule';
 import { useStore } from '@/lib/store';
 
 export default function TodayScreen() {
-  const { ready, settings, toggles, forKid, day, setDay, data, reload } = useStore();
+  const { ready, settings, toggles, forKid, day, setDay, data, reload, query, setQuery } = useStore();
   const insets = useSafeAreaInsets();
   const [refreshing, setRefreshing] = useState(false);
-  const [query, setQuery] = useState('');
   const scrollY = useSharedValue(0);
   const intro = useIntro();
 
@@ -29,14 +28,8 @@ export default function TodayScreen() {
 
   // Search looks across the whole week, so a class isn't hidden just because it isn't on today.
   const q = query.trim().toLowerCase();
-  const found = useMemo(() => {
-    if (!q) return rows;
-    const words = q.split(/\s+/);
-    return rows.filter(({ it }) => {
-      const hay = [it.name, it.provider, it.venue, it.address, it.postcode, CATS[it.category]?.label].join(' ').toLowerCase();
-      return words.every((w) => hay.includes(w));
-    });
-  }, [rows, q]);
+  const found = useMemo(() => searchRows(rows, query), [rows, query]);
+  const filters = activeFilters(settings, toggles, forKid);
 
   const view = useMemo((): { sections: Section[]; summary: string; empty: null | 'done' | 'none' | 'search'; dayName: string } => {
     const where = `within ${settings.radius} mi of ${settings.loc?.name ?? 'you'}`;
@@ -69,24 +62,7 @@ export default function TodayScreen() {
       <View style={s.header}>
         <BrandHeader scrollY={scrollY} t={intro.t} onReady={intro.start} />
         <Animated.View style={[s.headerRest, intro.contentStyle]}>
-          <View style={s.search}>
-            <SymbolView name={{ ios: 'magnifyingglass', android: 'search', web: 'search' }} size={18} tintColor={C.muted} />
-            <TextInput
-              value={query}
-              onChangeText={setQuery}
-              placeholder="Search classes, groups and places"
-              placeholderTextColor={C.muted}
-              returnKeyType="search"
-              autoCorrect={false}
-              style={s.searchInput}
-              accessibilityLabel="Search classes, groups and places"
-            />
-            {!!query && (
-              <Pressable onPress={() => setQuery('')} hitSlop={10} accessibilityRole="button" accessibilityLabel="Clear search">
-                <SymbolView name={{ ios: 'xmark.circle.fill', android: 'close', web: 'close' }} size={18} tintColor={C.muted} />
-              </Pressable>
-            )}
-          </View>
+          <SearchField />
           <View style={s.gap12} />
           <WeekStrip day={q ? 'week' : day} onChange={(d) => { setQuery(''); setDay(d); }} />
           <FilterBar />
@@ -105,6 +81,11 @@ export default function TodayScreen() {
           ListHeaderComponent={
             <View>
               <Text style={s.summary}>{data.status === 'loading' && !data.items.length ? 'Finding what’s on…' : view.summary}</Text>
+              {filters.labels.length > 0 && (
+                <Text style={s.showing} accessibilityLabel={`Filters on: ${filters.labels.join(', ')}`}>
+                  Showing <Text style={s.showingOn}>{filters.labels.join(' · ')}</Text>
+                </Text>
+              )}
               {view.empty === 'done' && (
                 <View style={s.empty}>
                   <Text style={s.emptyTitle}>That’s everything for today</Text>
@@ -159,11 +140,11 @@ const s = StyleSheet.create({
   header: { paddingHorizontal: GUTTER, paddingTop: 8, width: '100%', maxWidth: MaxContentWidth, alignSelf: 'center', zIndex: 1 },
   headerRest: { marginTop: 10 },
   fill: { flex: 1 },
-  search: { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: C.card, borderRadius: R.pill, borderWidth: 1, borderColor: C.line, paddingHorizontal: 14, paddingVertical: 2 },
-  searchInput: { flex: 1, fontFamily: F.textMedium, fontSize: 16, color: C.ink, paddingVertical: 10 },
   gap12: { height: 12 },
   list: { paddingHorizontal: GUTTER, width: '100%', maxWidth: MaxContentWidth, alignSelf: 'center' },
   summary: { fontFamily: F.text, fontSize: 15, color: C.muted, marginTop: 8, marginBottom: 4 },
+  showing: { fontFamily: F.text, fontSize: 15, color: C.muted, marginBottom: 4 },
+  showingOn: { fontFamily: F.textSemi, color: C.ink },
   sectionTitle: { fontFamily: F.display, fontSize: 19, color: C.ink, marginTop: 22, marginBottom: 6 },
   count: { fontFamily: F.textMedium, fontSize: 14, color: C.muted },
   empty: { alignItems: 'center', paddingVertical: 28, gap: 6 },

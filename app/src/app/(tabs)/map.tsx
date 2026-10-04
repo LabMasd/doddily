@@ -3,15 +3,21 @@ import { StyleSheet, Text, View } from 'react-native';
 import MapView, { Circle, Marker } from 'react-native-maps';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { FilterBar } from '@/components/filter-bar';
+import { SearchField } from '@/components/search-field';
 import { WeekStrip } from '@/components/week-strip';
 import { C, F, GUTTER, R } from '@/constants/theme';
 import { CATS } from '@/lib/categories';
+import { activeFilters } from '@/lib/filters';
 import { MI } from '@/lib/geo';
 import { useMapRows } from '@/lib/map-rows';
 import { useStore } from '@/lib/store';
 
+const CARD_PAD = 8;
+
 export default function MapScreen() {
-  const { ready, settings, day, setDay } = useStore();
+  const { ready, settings, toggles, forKid, day, setDay, query, setQuery } = useStore();
+  const filters = activeFilters(settings, toggles, forKid);
   const rows = useMapRows();
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -39,15 +45,18 @@ export default function MapScreen() {
             onCalloutPress={() => router.push({ pathname: '/activity/[id]', params: { id: r.it.id } })}
             tracksViewChanges={false}>
             <View style={[s.pin, r.it.osm && s.pinPlace]}>
-              <Text style={r.it.osm ? s.emojiSmall : s.emoji}>{CATS[r.it.category]?.e ?? '📍'}</Text>
+              <Text style={r.it.osm ? s.emojiSmall : s.emoji} allowFontScaling={false}>{CATS[r.it.category]?.e ?? '📍'}</Text>
             </View>
           </Marker>
         ))}
       </MapView>
       <View style={[s.top, { paddingTop: insets.top + 8 }]} pointerEvents="box-none">
         <View style={s.card}>
-          <WeekStrip day={day} onChange={setDay} />
-          <Text style={s.count}>{rows.length} on the map · tap a pin, then its name</Text>
+          <SearchField />
+          <View style={s.gap8} />
+          <WeekStrip day={query.trim() ? 'week' : day} onChange={(d) => { setQuery(''); setDay(d); }} />
+          <FilterBar bleed={CARD_PAD} />
+          <Text style={s.count}>{rows.length} on the map · {filters.count ? filters.labels.join(' · ') : 'tap a pin, then its name'}</Text>
         </View>
       </View>
     </View>
@@ -57,8 +66,9 @@ export default function MapScreen() {
 const s = StyleSheet.create({
   screen: { flex: 1, backgroundColor: C.milk },
   top: { position: 'absolute', left: 0, right: 0, paddingHorizontal: GUTTER },
-  card: { backgroundColor: C.card, borderRadius: R.lg, padding: 8, shadowColor: '#1E2536', shadowOpacity: 0.12, shadowRadius: 12, shadowOffset: { width: 0, height: 4 }, elevation: 4 },
-  count: { fontFamily: F.text, fontSize: 13, color: C.muted, textAlign: 'center', marginTop: 4 },
+  card: { backgroundColor: C.card, borderRadius: R.lg, padding: CARD_PAD, overflow: 'hidden', shadowColor: '#1E2536', shadowOpacity: 0.12, shadowRadius: 12, shadowOffset: { width: 0, height: 4 }, elevation: 4 },
+  gap8: { height: 8 },
+  count: { fontFamily: F.text, fontSize: 13, color: C.muted, textAlign: 'center', marginTop: 2 },
   pin: { width: 32, height: 32, borderRadius: 16, backgroundColor: '#fff', borderWidth: 2, borderColor: C.ink, alignItems: 'center', justifyContent: 'center' },
   pinPlace: { width: 26, height: 26, borderRadius: 13, borderWidth: 1.5, borderColor: '#8A93A6' },
   emoji: { fontSize: 16 },

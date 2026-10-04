@@ -3,9 +3,12 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { FilterBar } from '@/components/filter-bar';
+import { SearchField } from '@/components/search-field';
 import { WeekStrip } from '@/components/week-strip';
 import { C, F, GUTTER, R } from '@/constants/theme';
 import { CATS } from '@/lib/categories';
+import { activeFilters } from '@/lib/filters';
 import { MI } from '@/lib/geo';
 import { useMapRows } from '@/lib/map-rows';
 import { useStore } from '@/lib/store';
@@ -34,8 +37,11 @@ function loadLeaflet(): Promise<any> {
   return leaflet;
 }
 
+const CARD_PAD = 8;
+
 export default function MapScreen() {
-  const { ready, settings, day, setDay } = useStore();
+  const { ready, settings, toggles, forKid, day, setDay, query, setQuery } = useStore();
+  const filters = activeFilters(settings, toggles, forKid);
   const rows = useMapRows();
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -117,8 +123,11 @@ export default function MapScreen() {
       <div ref={box} style={{ position: 'absolute', inset: 0, background: '#E8ECF1' }} />
       <View style={[s.top, { paddingTop: insets.top + 8 }]} pointerEvents="box-none">
         <View style={s.card}>
-          <WeekStrip day={day} onChange={setDay} />
-          <Text style={s.count}>{rows.length} on the map · tap a pin for details</Text>
+          <SearchField />
+          <View style={s.gap8} />
+          <WeekStrip day={query.trim() ? 'week' : day} onChange={(d) => { setQuery(''); setDay(d); }} />
+          <FilterBar bleed={CARD_PAD} />
+          <Text style={s.count}>{rows.length} on the map · {filters.count ? filters.labels.join(' · ') : 'tap a pin for details'}</Text>
         </View>
       </View>
     </View>
@@ -128,6 +137,7 @@ export default function MapScreen() {
 const s = StyleSheet.create({
   screen: { flex: 1, backgroundColor: C.milk },
   top: { position: 'absolute', left: 0, right: 0, paddingHorizontal: GUTTER, zIndex: 1000 },
-  card: { backgroundColor: C.card, borderRadius: R.lg, padding: 8, boxShadow: '0 4px 12px rgba(30,37,54,0.12)' },
-  count: { fontFamily: F.text, fontSize: 13, color: C.muted, textAlign: 'center', marginTop: 4 },
+  card: { backgroundColor: C.card, borderRadius: R.lg, padding: CARD_PAD, overflow: 'hidden', boxShadow: '0 4px 12px rgba(30,37,54,0.12)' },
+  gap8: { height: 8 },
+  count: { fontFamily: F.text, fontSize: 13, color: C.muted, textAlign: 'center', marginTop: 2 },
 });

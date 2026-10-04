@@ -6,6 +6,7 @@ import { C, F, R } from '@/constants/theme';
 import { CATS } from '@/lib/categories';
 import { distLabel } from '@/lib/geo';
 import { ageText } from '@/lib/schedule';
+import { useTextScale } from '@/lib/text-scale';
 import type { Activity, Row } from '@/lib/types';
 
 type Props = { row: Row; when?: { start: string; end: string | null } | null; faded?: boolean };
@@ -14,17 +15,20 @@ export const ActivityRow = memo(function ActivityRow({ row, when, faded }: Props
   const router = useRouter();
   const { it, d } = row;
   const cat = CATS[it.category] ?? { e: '📍', label: '' };
+  // The time column is sized for ordinary text. With larger text it would squeeze the name into a
+  // sliver, so the time moves to a line of its own above the name.
+  const { roomy } = useTextScale();
   return (
     <Pressable
       onPress={() => router.push({ pathname: '/activity/[id]', params: { id: it.id } })}
-      style={({ pressed }) => [s.row, faded && s.faded, pressed && s.pressed]}
+      style={({ pressed }) => [s.row, roomy && s.rowRoomy, faded && s.faded, pressed && s.pressed]}
       accessibilityRole="button"
       accessibilityLabel={`${when ? when.start + ', ' : ''}${it.name}, ${distLabel(d)}`}>
-      <View style={s.when}>
+      <View style={roomy ? s.whenRoomy : s.when}>
         {when ? (
           <>
             <Text style={s.time}>{when.start}</Text>
-            <Text style={s.sub} numberOfLines={2}>{when.end ? `to ${when.end}` : cat.label}</Text>
+            <Text style={[s.sub, roomy && s.subRoomy]} numberOfLines={2}>{when.end ? `to ${when.end}` : cat.label}</Text>
           </>
         ) : (
           <Text style={s.emoji}>{cat.e}</Text>
@@ -81,9 +85,12 @@ const s = StyleSheet.create({
   row: { flexDirection: 'row', gap: 12, paddingVertical: 14, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: C.line },
   faded: { opacity: 0.5 },
   pressed: { opacity: 0.7 },
+  rowRoomy: { flexDirection: 'column', gap: 4 },
   when: { width: 62, paddingTop: 2 },
-  time: { fontFamily: F.display, fontSize: 22, lineHeight: 24, color: C.ink, fontVariant: ['tabular-nums'] },
+  whenRoomy: { flexDirection: 'row', alignItems: 'baseline', gap: 8 },
+  time: { fontFamily: F.display, fontSize: 22, color: C.ink, fontVariant: ['tabular-nums'] },
   sub: { fontFamily: F.textMedium, fontSize: 13, color: C.muted, marginTop: 4 },
+  subRoomy: { marginTop: 0 },
   emoji: { fontSize: 26 },
   body: { flex: 1, minWidth: 0 },
   head: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },
