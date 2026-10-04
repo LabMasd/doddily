@@ -109,7 +109,10 @@ td:first-child{font-weight:700;white-space:nowrap}
 .bigtype{font-weight:800;font-size:10cqi;line-height:.98;letter-spacing:-.03em;text-wrap:balance;position:relative;z-index:1}
 .midtype{font-weight:700;font-size:6.6cqi;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;position:relative;z-index:1}
 .body{text-wrap:balance;font:600 4.2cqi/1.35 var(--text);position:relative;z-index:1}
-.foot{display:flex;align-items:center;justify-content:space-between;gap:2cqi;font:600 3.4cqi var(--text);position:relative;z-index:1}
+.foot{display:flex;align-items:baseline;justify-content:space-between;gap:2cqi;font:600 3.4cqi var(--text);position:relative;z-index:1}
+.foot .brand .m{align-self:center}
+/* a UI card on its own sits exactly between the headline and the footer */
+.frame > .ui{margin:auto 0}
 .brand{display:inline-flex;align-items:center;gap:2cqi;font:700 4.4cqi var(--display)}
 .brand .m{display:inline-grid;place-items:center;width:6.2cqi;height:6.2cqi;border-radius:1.8cqi;background:var(--p-ink)}
 .ink .brand .m{background:var(--p-accent)}
@@ -451,7 +454,6 @@ const art = {
     </div>`,
   story: (a) => `<div class="frame ${a.bg}">
       <div style="display:grid;gap:5cqi">
-        <span class="bars">${[0, 1, 2].map((i) => `<i class="${i === (a.bar ?? 0) ? 'on' : ''}"></i>`).join('')}</span>
         <p class="${a.size === 'mid' ? 'midtype' : 'bigtype'}">${esc(a.big)}</p>
         ${a.sub ? `<p class="body" style="max-width:88%">${esc(a.sub)}</p>` : ''}
       </div>
