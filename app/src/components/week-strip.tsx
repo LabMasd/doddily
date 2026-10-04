@@ -16,7 +16,7 @@ const GAP = 4;
 
 const describe = (i: number) => {
   const d = dateFor(i);
-  const first = d.getDate() === 1 && i > 0;
+  const first = d.getDate() === 1 && i !== 0;
   return {
     key: i,
     // The first of a month says so, the way a calendar does, or the numbers would run 30, 31, 1 with no clue.
@@ -27,15 +27,23 @@ const describe = (i: number) => {
   };
 };
 
+/** Weeks run Monday to Sunday. How many days into its week today is: 0 on a Monday, 6 on a Sunday. */
+const intoWeek = () => (new Date().getDay() + 6) % 7;
+const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
 /**
- * "All" first, then one week of days. The little arrow underneath drops down the next four weeks as a
+ * "All" first, then one week of days, Monday to Sunday. Days of this week that have already gone are greyed out. The little arrow underneath drops down the next four weeks as a
  * calendar; picking a day there closes it and the bar moves to that day's week.
  */
 export function WeekStrip({ day, onChange }: Props) {
   const [open, setOpen] = useState(false);
   // Which week the bar shows. It follows the chosen day, and stays put while "All" is on.
-  const [week, setWeek] = useState(typeof day === 'number' ? Math.floor(day / 7) : 0);
-  useEffect(() => { if (typeof day === 'number') setWeek(Math.floor(day / 7)); }, [day]);
+  const lead = intoWeek();
+  const weekOf = (d: number) => Math.floor((d + lead) / 7);
+  const [week, setWeek] = useState(typeof day === 'number' ? weekOf(day) : 0);
+  useEffect(() => { if (typeof day === 'number') setWeek(weekOf(day)); }, [day]); // eslint-disable-line react-hooks/exhaustive-deps
+  /** The seven days of a week, as days from today; a negative one has already gone. */
+  const daysOf = (w: number) => Array.from({ length: 7 }, (_, i) => describe(w * 7 - lead + i));
 
   const pick = (d: number | 'week') => { setOpen(false); onChange(d); };
   const all = day === 'week';
@@ -46,10 +54,11 @@ export function WeekStrip({ day, onChange }: Props) {
         <Pressable onPress={() => pick('week')} style={[s.day, s.allTab, all && s.on]} accessibilityRole="tab" accessibilityState={{ selected: all }} accessibilityLabel="All, any day">
           <Text style={[s.big, s.all]} maxFontSizeMultiplier={CHROME_MAX} numberOfLines={1}>All</Text>
         </Pressable>
-        {Array.from({ length: 7 }, (_, i) => describe(week * 7 + i)).map((d) => {
+        {daysOf(week).map((d) => {
           const on = day === d.key;
+          const gone = d.key < 0;
           return (
-            <Pressable key={d.key} onPress={() => pick(d.key)} style={[s.day, on && s.on]} accessibilityRole="tab" accessibilityState={{ selected: on }} accessibilityLabel={d.label}>
+            <Pressable key={d.key} onPress={() => pick(d.key)} disabled={gone} style={[s.day, on && s.on, gone && s.gone]} accessibilityRole="tab" accessibilityState={{ selected: on, disabled: gone }} accessibilityLabel={d.label}>
               <Text style={[s.top, d.month && s.month, on && s.topOn]} maxFontSizeMultiplier={CHROME_MAX} numberOfLines={1}>{d.top}</Text>
               <Text style={s.big} maxFontSizeMultiplier={CHROME_MAX}>{d.big}</Text>
             </Pressable>
@@ -65,15 +74,16 @@ export function WeekStrip({ day, onChange }: Props) {
         <View style={s.cal}>
           <View style={s.row}>
             {Array.from({ length: 7 }, (_, i) => (
-              <Text key={i} style={s.head} maxFontSizeMultiplier={CHROME_MAX}>{DAYS[dateFor(i).getDay()]}</Text>
+              <Text key={i} style={s.head} maxFontSizeMultiplier={CHROME_MAX}>{WEEKDAYS[i]}</Text>
             ))}
           </View>
           {Array.from({ length: WEEKS_AHEAD }, (_, w) => (
             <View key={w} style={[s.row, w === week && !all && s.weekOn]}>
-              {Array.from({ length: 7 }, (_, i) => describe(w * 7 + i)).map((d) => {
+              {daysOf(w).map((d) => {
                 const on = day === d.key;
+                const gone = d.key < 0;
                 return (
-                  <Pressable key={d.key} onPress={() => pick(d.key)} style={[s.cell, on && s.on]} accessibilityRole="button" accessibilityState={{ selected: on }} accessibilityLabel={d.label}>
+                  <Pressable key={d.key} onPress={() => pick(d.key)} disabled={gone} style={[s.cell, on && s.on, gone && s.gone]} accessibilityRole="button" accessibilityState={{ selected: on, disabled: gone }} accessibilityLabel={d.label}>
                     {d.month && <Text style={s.calMonth} maxFontSizeMultiplier={CHROME_MAX}>{d.top}</Text>}
                     <Text style={[s.calNum, d.key === 0 && s.today]} maxFontSizeMultiplier={CHROME_MAX}>{d.big}</Text>
                   </Pressable>
@@ -91,6 +101,7 @@ const s = StyleSheet.create({
   row: { flexDirection: 'row', gap: GAP },
   day: { flex: 1, minWidth: 0, alignItems: 'center', paddingTop: 6, paddingBottom: 8, borderRadius: 14 },
   on: { backgroundColor: C.accent },
+  gone: { opacity: 0.32 },
   top: { fontFamily: F.textMedium, fontSize: 12, color: C.muted },
   month: { fontFamily: F.textSemi, color: C.accentText },
   topOn: { color: C.ink },
