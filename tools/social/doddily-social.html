@@ -213,6 +213,7 @@ footer{padding-block:64px 0;color:var(--muted);font-size:14px}
 .uipopt.on{background:var(--p-ink);color:#fff}
 .uipopt.on i{color:rgba(255,255,255,.72)}
 .uipadd{border:.3cqi dashed var(--p-rule);border-radius:2.6cqi;padding:2.6cqi;text-align:center;font:700 3.4cqi var(--text)}
+.asbadge{height:10.5cqi;width:auto;display:block;margin-top:1.5cqi;justify-self:start}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -422,6 +423,7 @@ const art = {
       <div style="display:grid;gap:2.4cqi">
         <p class="bigtype">${esc(a.big)}</p>
         ${a.sub ? `<p class="body" style="max-width:88%">${esc(a.sub)}</p>` : ''}
+        ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
       </div>
       <div class="uipanel">
         ${a.title ? `<p class="uiptitle">${esc(a.title)}</p>` : ''}
@@ -438,6 +440,7 @@ const art = {
       <div style="display:grid;gap:2.4cqi">
         <p class="bigtype">${esc(a.big)}</p>
         ${a.sub ? `<p class="body" style="max-width:88%">${esc(a.sub)}</p>` : ''}
+        ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
       </div>
       <div class="uishot"><img src="${a.img}" alt=""></div>
       <div class="foot">${brand()}<span>${esc(a.foot || '')}</span></div>
@@ -447,6 +450,7 @@ const art = {
       <div style="display:grid;gap:3cqi">
         <p class="bigtype">${esc(a.big)}</p>
         ${a.sub ? `<p class="body" style="max-width:82%">${esc(a.sub)}</p>` : ''}
+        ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
       </div>
       <div class="foot"><span>${esc(a.foot || '')}</span></div>
       ${a.bloom === false ? '' : `<svg class="bloom">${'<use href="#flower"/>'}</svg>`}
@@ -458,12 +462,14 @@ const art = {
         ${a.chips ? `<div class="chips">${a.chips.map((c) => `<span class="chipx ${c.on || ''}">${esc(c.t)}</span>`).join('')}</div>` : ''}
         ${(a.rows || []).map((r) => `<div class="uirow"><span class="e">${r.e}</span><span><span class="n">${esc(r.n)}</span><br><span class="v">${esc(r.v)}</span>${r.tag ? `<span class="minitag">${esc(r.tag)}</span>` : ''}</span><span class="t">${esc(r.t)}</span></div>`).join('')}
       </div>
+      ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
       <div class="foot">${brand()}<span>${esc(a.foot || '')}</span></div>
     </div>`,
   stat: (a) => `<div class="frame ${a.bg}">
       ${brand()}
       <div style="display:grid;gap:4.5cqi;position:relative;z-index:1">
         ${a.stats.map((s) => `<div class="stat"><b>${esc(s.n)}</b><span>${esc(s.l)}</span></div>`).join('')}
+        ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
       </div>
       <div class="foot"><span>${esc(a.foot || '')}</span></div>
       <svg class="bloom" style="opacity:.22"><use href="#flower"/></svg>
@@ -475,7 +481,7 @@ const art = {
     </div>`,
   quote: (a) => `<div class="frame ${a.bg}">
       <span class="swipe">${esc(a.label || 'Swipe')}</span>
-      <p class="bigtype">${esc(a.big)}</p>
+      <div style="display:grid;gap:3cqi"><p class="bigtype">${esc(a.big)}</p>${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}</div>
       <div class="foot">${brand()}<span class="dots">${(a.dots || []).map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span></div>
     </div>`,
   screenCrop: (a) => `<div class="frame ${a.bg} cropframe">
@@ -483,6 +489,7 @@ const art = {
       <div style="display:grid;gap:2.4cqi;position:relative;z-index:1">
         <p class="bigtype">${esc(a.big)}</p>
         ${a.sub ? `<p class="body" style="max-width:88%">${esc(a.sub)}</p>` : ''}
+        ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
       </div>
       <div class="phonecrop"><img src="${a.img}" alt=""></div>
     </div>`,
@@ -498,6 +505,7 @@ const art = {
       <div style="display:grid;gap:5cqi">
         <p class="${a.size === 'mid' ? 'midtype' : 'bigtype'}">${esc(a.big)}</p>
         ${a.sub ? `<p class="body" style="max-width:88%">${esc(a.sub)}</p>` : ''}
+        ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
       </div>
       ${a.sticker ? stickers[a.sticker.type](a.sticker) : ''}
       ${a.ui ? `<div class="ui">${(a.ui.rows || []).map((r) => `<div class="uirow"><span class="e">${r.e}</span><span><span class="n">${esc(r.n)}</span><br><span class="v">${esc(r.v)}</span></span><span class="t">${esc(r.t)}</span></div>`).join('')}</div>` : ''}
