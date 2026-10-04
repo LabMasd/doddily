@@ -32,7 +32,8 @@ const intoWeek = () => (new Date().getDay() + 6) % 7;
 const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 /**
- * "All" first, then one week of days, Monday to Sunday. Days of this week that have already gone are greyed out. The little arrow underneath drops down the next four weeks as a
+ * "All" first, then one week of days, Monday to Sunday. Days of this week that have already gone are greyed out.
+ * The calendar under the arrow shows one month, Monday first, weekends in a quieter grey. The little arrow underneath drops down the next four weeks as a
  * calendar; picking a day there closes it and the bar moves to that day's week.
  */
 export function WeekStrip({ day, onChange }: Props) {
@@ -46,6 +47,15 @@ export function WeekStrip({ day, onChange }: Props) {
   const daysOf = (w: number) => Array.from({ length: 7 }, (_, i) => describe(w * 7 - lead + i));
 
   const pick = (d: number | 'week') => { setOpen(false); onChange(d); };
+
+  // The calendar: which month it shows (0 is this month), and how far ahead a day can be picked.
+  const today = dateFor(0);
+  const furthest = WEEKS_AHEAD * 7 - lead - 1;
+  const monthsTo = (offset: number) => { const d = dateFor(offset); return (d.getFullYear() - today.getFullYear()) * 12 + d.getMonth() - today.getMonth(); };
+  const lastMonth = monthsTo(furthest);
+  const [month, setMonth] = useState(0);
+  // It opens on the month of the day that is chosen, or of the week in the bar.
+  const toggle = () => { if (!open) setMonth(monthsTo(typeof day === 'number' ? day : Math.max(0, week * 7 - lead))); setOpen((o) => !o); };
   const all = day === 'week';
 
   return (
@@ -66,33 +76,53 @@ export function WeekStrip({ day, onChange }: Props) {
         })}
       </View>
 
-      <Pressable onPress={() => setOpen((o) => !o)} hitSlop={{ top: 4, bottom: 6, left: 40, right: 40 }} style={s.arrow} accessibilityRole="button" accessibilityState={{ expanded: open }} accessibilityLabel={open ? 'Close the calendar' : 'Show the next four weeks'}>
+      <Pressable onPress={toggle} hitSlop={{ top: 4, bottom: 6, left: 40, right: 40 }} style={s.arrow} accessibilityRole="button" accessibilityState={{ expanded: open }} accessibilityLabel={open ? 'Close the calendar' : 'Open the calendar'}>
         <SymbolView name={open ? { ios: 'chevron.up', android: 'keyboard_arrow_up', web: 'keyboard_arrow_up' } : { ios: 'chevron.down', android: 'keyboard_arrow_down', web: 'keyboard_arrow_down' }} size={14} weight="semibold" tintColor={C.muted} />
       </Pressable>
 
-      {open && (
-        <View style={s.cal}>
-          <View style={s.row}>
-            {Array.from({ length: 7 }, (_, i) => (
-              <Text key={i} style={s.head} maxFontSizeMultiplier={CHROME_MAX}>{WEEKDAYS[i]}</Text>
+      {open && (() => {
+        // One month at a time, Monday first, like a wall calendar. Days outside the month, days already gone and
+        // days more than four weeks away are greyed out and cannot be picked.
+        const first = new Date(today.getFullYear(), today.getMonth() + month, 1);
+        const inMonth = new Date(first.getFullYear(), first.getMonth() + 1, 0).getDate();
+        const before = (first.getDay() + 6) % 7;
+        const rows = Math.ceil((before + inMonth) / 7);
+        const startOffset = Math.round((first.getTime() - today.getTime()) / 864e5) - before;
+        return (
+          <View style={s.cal}>
+            <View style={s.calHead}>
+              <Pressable onPress={() => setMonth(0)} disabled={month === 0} hitSlop={8} style={[s.step, month === 0 && s.gone]} accessibilityRole="button" accessibilityLabel="Earlier month">
+                <SymbolView name={{ ios: 'chevron.left', android: 'chevron_left', web: 'chevron_left' }} size={13} weight="semibold" tintColor={C.ink} />
+              </Pressable>
+              <Text style={s.calTitle} maxFontSizeMultiplier={CHROME_MAX}>{MONTH_LONG[first.getMonth()]} {first.getFullYear()}</Text>
+              <Pressable onPress={() => setMonth(lastMonth)} disabled={month >= lastMonth} hitSlop={8} style={[s.step, month >= lastMonth && s.gone]} accessibilityRole="button" accessibilityLabel="Later month">
+                <SymbolView name={{ ios: 'chevron.right', android: 'chevron_right', web: 'chevron_right' }} size={13} weight="semibold" tintColor={C.ink} />
+              </Pressable>
+            </View>
+            <View style={s.row}>
+              {WEEKDAYS.map((w, i) => <Text key={w} style={[s.head, i > 4 && s.weekend]} maxFontSizeMultiplier={CHROME_MAX}>{w}</Text>)}
+            </View>
+            {Array.from({ length: rows }, (_, r) => (
+              <View key={r} style={s.row}>
+                {Array.from({ length: 7 }, (_, c) => {
+                  const offset = startOffset + r * 7 + c;
+                  const d = describe(offset);
+                  const outside = r * 7 + c < before || r * 7 + c >= before + inMonth;
+                  const off = outside || offset < 0 || offset > furthest;
+                  const on = day === offset && !outside;
+                  return (
+                    <Pressable key={c} onPress={() => pick(offset)} disabled={off} style={[s.cell, off && s.gone]} accessibilityRole="button" accessibilityState={{ selected: on, disabled: off }} accessibilityLabel={d.label}>
+                      <View style={[s.dot, offset === 0 && !outside && s.todayDot, on && s.onDot]}>
+                        <Text style={[s.calNum, c > 4 && !on && s.weekend]} maxFontSizeMultiplier={CHROME_MAX}>{d.big}</Text>
+                      </View>
+                    </Pressable>
+                  );
+                })}
+              </View>
             ))}
           </View>
-          {Array.from({ length: WEEKS_AHEAD }, (_, w) => (
-            <View key={w} style={[s.row, w === week && !all && s.weekOn]}>
-              {daysOf(w).map((d) => {
-                const on = day === d.key;
-                const gone = d.key < 0;
-                return (
-                  <Pressable key={d.key} onPress={() => pick(d.key)} disabled={gone} style={[s.cell, on && s.on, gone && s.gone]} accessibilityRole="button" accessibilityState={{ selected: on, disabled: gone }} accessibilityLabel={d.label}>
-                    {d.month && <Text style={s.calMonth} maxFontSizeMultiplier={CHROME_MAX}>{d.top}</Text>}
-                    <Text style={[s.calNum, d.key === 0 && s.today]} maxFontSizeMultiplier={CHROME_MAX}>{d.big}</Text>
-                  </Pressable>
-                );
-              })}
-            </View>
-          ))}
-        </View>
-      )}
+        );
+      })()}
     </View>
   );
 }
@@ -109,11 +139,15 @@ const s = StyleSheet.create({
   allTab: { justifyContent: 'center', paddingTop: 0, paddingBottom: 0 },
   all: { fontSize: 16 },
   arrow: { alignSelf: 'center', width: 44, height: 18, alignItems: 'center', justifyContent: 'center', marginTop: 2 },
-  cal: { gap: 2, marginTop: 4, paddingTop: 8, paddingBottom: 4, borderTopWidth: 1, borderTopColor: C.line },
-  head: { flex: 1, textAlign: 'center', fontFamily: F.textMedium, fontSize: 12, color: C.muted, paddingBottom: 4 },
-  weekOn: { backgroundColor: C.accentSoft, borderRadius: 12 },
-  cell: { flex: 1, minWidth: 0, height: 44, alignItems: 'center', justifyContent: 'center', borderRadius: 12 },
-  calMonth: { fontFamily: F.textSemi, fontSize: 10, lineHeight: 11, color: C.accentText },
-  calNum: { fontFamily: F.display, fontSize: 17, color: C.ink, fontVariant: ['tabular-nums'] },
-  today: { textDecorationLine: 'underline' },
+  cal: { gap: 2, marginTop: 4, paddingTop: 10, paddingBottom: 4, borderTopWidth: 1, borderTopColor: C.line },
+  calHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 6, paddingBottom: 8 },
+  calTitle: { fontFamily: F.display, fontSize: 17, color: C.ink },
+  step: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center', backgroundColor: C.chip },
+  head: { flex: 1, textAlign: 'center', fontFamily: F.textMedium, fontSize: 12, color: C.ink, paddingBottom: 4 },
+  weekend: { color: C.muted },
+  cell: { flex: 1, minWidth: 0, height: 42, alignItems: 'center', justifyContent: 'center' },
+  dot: { width: 36, height: 36, borderRadius: 18, alignItems: 'center', justifyContent: 'center' },
+  todayDot: { borderWidth: 1.5, borderColor: C.ink },
+  onDot: { backgroundColor: C.accent, borderColor: C.accent },
+  calNum: { fontFamily: F.display, fontSize: 16, color: C.ink, fontVariant: ['tabular-nums'] },
 });
