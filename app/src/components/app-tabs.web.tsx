@@ -2,17 +2,19 @@ import { TabList, TabSlot, TabTrigger, Tabs, type TabTriggerSlotProps } from 'ex
 import { Image, Pressable, StyleSheet, Text, View, type ImageSourcePropType } from 'react-native';
 
 import { C, F } from '@/constants/theme';
+import { useStore } from '@/lib/store';
 
 // Web only: drawn to match the iPhone’s floating tab bar (same icons, labels and selected colour).
 const SELECTED = C.accentLine; // brand purple, matching the phone
 
 export default function AppTabs() {
+  const { goTop } = useStore();
   return (
     <Tabs>
       <TabSlot style={{ height: '100%' }} />
       <TabList asChild>
         <View style={s.bar}>
-          <TabTrigger name="index" href="/" asChild><TabButton icon={require('@/assets/images/tabIcons/today.png')}>Today</TabButton></TabTrigger>
+          <TabTrigger name="index" href="/" asChild><TabButton again={goTop} icon={require('@/assets/images/tabIcons/today.png')}>Today</TabButton></TabTrigger>
           <TabTrigger name="map" href="/map" asChild><TabButton icon={require('@/assets/images/tabIcons/map.png')}>Map</TabButton></TabTrigger>
           <TabTrigger name="saved" href="/saved" asChild><TabButton icon={require('@/assets/images/tabIcons/saved.png')}>Saved</TabButton></TabTrigger>
           <TabTrigger name="you" href="/you" asChild><TabButton icon={require('@/assets/images/tabIcons/you.png')}>You</TabButton></TabTrigger>
@@ -22,9 +24,10 @@ export default function AppTabs() {
   );
 }
 
-function TabButton({ children, icon, isFocused, ...props }: TabTriggerSlotProps & { icon: ImageSourcePropType }) {
+/** `again`: what tapping the tab does when it is already the one on screen. */
+function TabButton({ children, icon, isFocused, again, onPress, ...props }: TabTriggerSlotProps & { icon: ImageSourcePropType; again?: () => void }) {
   return (
-    <Pressable {...props} style={[s.btn, isFocused && s.on]}>
+    <Pressable {...props} onPress={(e) => { if (isFocused && again) again(); onPress?.(e); }} style={[s.btn, isFocused && s.on]}>
       <Image source={icon} style={[s.icon, { tintColor: isFocused ? SELECTED : C.ink }]} />
       <Text style={s.label}>{children}</Text>
     </Pressable>

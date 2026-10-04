@@ -5,7 +5,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import type { GroupId } from './categories';
 import { dropListingCache, loadActivities, loadPlaces } from './data';
 import type { Activity, Kid, Loc, MapApp } from './types';
-import { bandForMonths } from './schedule';
+import { bandForMonths, daySections, filterRows, selectedBands } from './schedule';
 
 const KEY = 'ld:settings:v1';
 const SAVED_KEY = 'ld:saved:v1';
@@ -30,6 +30,9 @@ type Ctx = {
   setQuery: (q: string) => void;
   day: number | 'week';
   setDay: (d: number | 'week') => void;
+  /** Goes up by one each time the list should return to its top (Today tapped again, another day picked). */
+  topTick: number;
+  goTop: () => void;
   saved: Record<string, Activity>;
   toggleSaved: (it: Activity) => void;
   data: { items: Activity[]; places: Activity[]; checked: string; status: Status; placesStatus: Status };
@@ -50,13 +53,22 @@ async function keep(key: string, value: unknown) {
   }
 }
 
+/** From this hour, a day with no sessions left counts as over. */
+const EVENING_HOUR = 18;
+
 export const newKidId = () => `k${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`;
 
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false);
   const [settings, setSettings] = useState<Settings>(DEFAULTS);
   const [toggles, setToggles] = useState<Toggles>({ free: false, drop: false, indoor: false, ageFit: true });
-  const [day, setDay] = useState<number | 'week'>(0);
+  const [day, setDayRaw] = useState<number | 'week'>(0);
+  // Once the person has picked a day themselves, the app never moves it for them.
+  const pickedDay = useRef(false);
+  const eveningChecked = useRef(false);
+  const setDay = useCallback((d: number | 'week') => { pickedDay.current = true; setDayRaw(d); }, []);
+  const [topTick, setTopTick] = useState(0);
+  const goTop = useCallback(() => setTopTick((n) => n + 1), []);
   const [forKid, setForKid] = useState<'all' | string>('all');
   const [query, setQuery] = useState('');
   const [saved, setSaved] = useState<Record<string, Activity>>({});
@@ -110,7 +122,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
-  const { loc, radius } = settings;
+  const { loc, radius, kids } = settings;
   const reload = useCallback(async () => {
     if (!loc) return;
     const id = ++loadId.current;
@@ -121,6 +133,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       items = res.items;
       if (id !== loadId.current) return;
       setData((d) => ({ ...d, items, checked: res.checked, status: 'ready' }));
+      // Opened in the evening with nothing left today: start on tomorrow, not on an empty list.
+      // Only on the first load after opening, and never once the person has chosen a day.
+      if (!eveningChecked.current) {
+        eveningChecked.current = true;
+        if (!pickedDay.current && new Date().getHours() >= EVENING_HOUR) {
+          const rows = filterRows(items, loc, radius, { group: 'all', free: false, drop: false, indoor: false, ageFit: true }, selectedBands(kids, 'all'));
+          if (daySections(rows, 0, 'all').timedCount === 0) setDayRaw(1);
+        }
+      }
       // A saved class is a copy made on the day it was saved. Bring the copies up to date with what was
       // just loaded, so a changed time or price doesn't stay wrong in Saved.
       const fresh = new Map(items.map((it) => [it.id, it]));
@@ -146,7 +167,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       if (id !== loadId.current) return;
       setData((d) => ({ ...d, placesStatus: 'offline' }));
     }
-  }, [loc, radius]);
+  }, [loc, radius]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => { reload(); }, [reload]);
 
@@ -160,8 +181,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     ready, settings, update, toggles,
     flip: (k) => setToggles((t) => ({ ...t, [k]: !t[k] })),
     forKid, setForKid, clearFilters, query, setQuery,
-    day, setDay, saved, toggleSaved, data, reload,
-  }), [ready, settings, update, toggles, forKid, clearFilters, query, day, saved, toggleSaved, data, reload]);
+    day, setDay, topTick, goTop, saved, toggleSaved, data, reload,
+  }), [ready, settings, update, toggles, forKid, clearFilters, query, day, setDay, topTick, goTop, saved, toggleSaved, data, reload]);
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }

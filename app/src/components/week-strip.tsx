@@ -68,7 +68,7 @@ export function WeekStrip({ day, onChange }: Props) {
           const on = day === d.key;
           const gone = d.key < 0;
           return (
-            <Pressable key={d.key} onPress={() => pick(d.key)} disabled={gone} style={[s.day, on && s.on, gone && s.gone]} accessibilityRole="tab" accessibilityState={{ selected: on, disabled: gone }} accessibilityLabel={d.label}>
+            <Pressable key={d.key} onPress={() => pick(d.key)} disabled={gone} style={[s.day, on && s.on, gone && s.gone]} accessibilityRole="tab" accessibilityState={gone ? { selected: false, disabled: true } : { selected: on }} accessibilityLabel={d.label}>
               <Text style={[s.top, d.month && s.month, on && s.topOn]} maxFontSizeMultiplier={CHROME_MAX} numberOfLines={1}>{d.top}</Text>
               <Text style={s.big} maxFontSizeMultiplier={CHROME_MAX}>{d.big}</Text>
             </Pressable>
