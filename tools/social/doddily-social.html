@@ -197,6 +197,9 @@ td:first-child{font-weight:700;white-space:nowrap}
 .metric b{font:700 17px var(--display)}
 footer{padding-block:64px 0;color:var(--muted);font-size:14px}
 @media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}}
+.uishot{border-radius:3.6cqi;overflow:hidden;box-shadow:0 2cqi 6cqi rgba(30,37,54,.14);background:#fff;position:relative;z-index:1}
+.uishot img{width:100%;display:block}
+.r916 .uishot{margin-top:auto;margin-bottom:auto}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -402,6 +405,14 @@ const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt
 
 // Artwork templates. Each returns the inside of one frame.
 const art = {
+  shot: (a) => `<div class="frame ${a.bg}">
+      <div style="display:grid;gap:2.4cqi">
+        <p class="bigtype">${esc(a.big)}</p>
+        ${a.sub ? `<p class="body" style="max-width:88%">${esc(a.sub)}</p>` : ''}
+      </div>
+      <div class="uishot"><img src="${a.img}" alt=""></div>
+      <div class="foot">${brand()}<span>${esc(a.foot || '')}</span></div>
+    </div>`,
   statement: (a) => `<div class="frame ${a.bg}">
       ${a.top === false ? '<span></span>' : brand()}
       <div style="display:grid;gap:3cqi">
