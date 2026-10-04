@@ -9,7 +9,7 @@ import { C, F, GUTTER, MaxContentWidth, R } from '@/constants/theme';
 import { addToCalendar, callPhone, nextOccurrence, openDirections, openLink, shareActivity } from '@/lib/actions';
 import { CATS } from '@/lib/categories';
 import { activityCache } from '@/lib/data';
-import { distLabel, miles } from '@/lib/geo';
+import { distLabel, drives, miles } from '@/lib/geo';
 import { clearReminder, getReminder, setReminder } from '@/lib/reminders';
 import { ageText } from '@/lib/schedule';
 import { useStore } from '@/lib/store';
@@ -86,7 +86,7 @@ export default function ActivityScreen() {
       <Tags it={it} />
 
       <View style={s.actions}>
-        <Pressable onPress={() => openDirections(it, settings.mapApp)} style={({ pressed }) => [s.primary, pressed && s.pressed]} accessibilityRole="button">
+        <Pressable onPress={() => openDirections(it, settings.mapApp, d != null && drives(d))} style={({ pressed }) => [s.primary, pressed && s.pressed]} accessibilityRole="button">
           <SymbolView name={{ ios: 'arrow.triangle.turn.up.right.diamond.fill', android: 'directions', web: 'directions' }} size={20} tintColor="#fff" />
           <Text style={s.primaryText}>Directions</Text>
         </Pressable>

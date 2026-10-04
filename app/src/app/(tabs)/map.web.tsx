@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { DistanceStepper } from '@/components/distance-stepper';
 import { FilterBar } from '@/components/filter-bar';
 import { SearchField } from '@/components/search-field';
 import { WeekStrip } from '@/components/week-strip';
@@ -126,8 +127,11 @@ export default function MapScreen() {
           <SearchField />
           <View style={s.gap8} />
           <WeekStrip day={query.trim() ? 'week' : day} onChange={(d) => { setQuery(''); setDay(d); }} />
-          <FilterBar bleed={CARD_PAD} />
-          <Text style={s.count}>{rows.length} on the map · {filters.count ? filters.labels.join(' · ') : 'tap a pin for details'}</Text>
+          <FilterBar bleed={CARD_PAD} surface={C.card} />
+          <View style={s.foot}>
+            <Text style={s.count} numberOfLines={1}>{rows.length} on the map · {filters.count ? filters.labels.join(' · ') : 'tap a pin for details'}</Text>
+            <DistanceStepper />
+          </View>
         </View>
       </View>
     </View>
@@ -139,5 +143,6 @@ const s = StyleSheet.create({
   top: { position: 'absolute', left: 0, right: 0, paddingHorizontal: GUTTER, zIndex: 1000 },
   card: { backgroundColor: C.card, borderRadius: R.lg, padding: CARD_PAD, overflow: 'hidden', boxShadow: '0 4px 12px rgba(30,37,54,0.12)' },
   gap8: { height: 8 },
-  count: { fontFamily: F.text, fontSize: 13, color: C.muted, textAlign: 'center', marginTop: 2 },
+  foot: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 4, paddingLeft: 6 },
+  count: { flex: 1, minWidth: 0, fontFamily: F.text, fontSize: 13, color: C.muted },
 });

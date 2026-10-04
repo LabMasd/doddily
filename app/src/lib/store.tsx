@@ -3,7 +3,7 @@ import { Platform } from 'react-native';
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 
 import type { GroupId } from './categories';
-import { loadActivities, loadPlaces } from './data';
+import { dropListingCache, loadActivities, loadPlaces } from './data';
 import type { Activity, Kid, Loc, MapApp } from './types';
 import { bandForMonths } from './schedule';
 
@@ -38,7 +38,17 @@ type Ctx = {
 
 const StoreContext = createContext<Ctx | null>(null);
 
-const DEFAULTS: Settings = { loc: null, radius: 3, group: 'all', onboarded: false, name: '', kids: [], mapApp: Platform.OS === 'ios' ? 'apple' : 'google' };
+const DEFAULTS: Settings = { loc: null, radius: 10, group: 'all', onboarded: false, name: '', kids: [], mapApp: Platform.OS === 'ios' ? 'apple' : 'google' };
+
+/** What the family typed must survive closing the app. If storage is full, the downloaded listings go, not this. */
+async function keep(key: string, value: unknown) {
+  const text = JSON.stringify(value);
+  try { await AsyncStorage.setItem(key, text); }
+  catch {
+    await dropListingCache();
+    try { await AsyncStorage.setItem(key, text); } catch { /* storage is unavailable (private browsing); nothing more to try */ }
+  }
+}
 
 export const newKidId = () => `k${Date.now().toString(36)}${Math.random().toString(36).slice(2, 5)}`;
 
@@ -85,7 +95,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const update = useCallback((patch: Partial<Settings>) => {
     setSettings((prev) => {
       const next = { ...prev, ...patch };
-      AsyncStorage.setItem(KEY, JSON.stringify(next)).catch(() => {});
+      keep(KEY, next);
       return next;
     });
   }, []);
@@ -95,7 +105,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       const next = { ...prev };
       if (next[it.id]) delete next[it.id];
       else next[it.id] = it;
-      AsyncStorage.setItem(SAVED_KEY, JSON.stringify(next)).catch(() => {});
+      keep(SAVED_KEY, next);
       return next;
     });
   }, []);
@@ -111,6 +121,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       items = res.items;
       if (id !== loadId.current) return;
       setData((d) => ({ ...d, items, checked: res.checked, status: 'ready' }));
+      // A saved class is a copy made on the day it was saved. Bring the copies up to date with what was
+      // just loaded, so a changed time or price doesn't stay wrong in Saved.
+      const fresh = new Map(items.map((it) => [it.id, it]));
+      setSaved((prev) => {
+        let changed = false;
+        const next = { ...prev };
+        for (const k of Object.keys(prev)) {
+          const now = fresh.get(k);
+          if (now && JSON.stringify(now) !== JSON.stringify(prev[k])) { next[k] = now; changed = true; }
+        }
+        if (changed) keep(SAVED_KEY, next);
+        return changed ? next : prev;
+      });
     } catch {
       if (id !== loadId.current) return;
       setData((d) => ({ ...d, status: 'offline' }));
