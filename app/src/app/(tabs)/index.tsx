@@ -1,5 +1,5 @@
-import { Redirect } from 'expo-router';
-import { useMemo, useState } from 'react';
+import { Redirect, useNavigation } from 'expo-router';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, RefreshControl, SectionList, StyleSheet, Text, View } from 'react-native';
 import Animated, { useSharedValue } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -16,7 +16,13 @@ import { DAY_LONG, daySections, filterRows, selectedBands, weekSections, type Se
 import { useStore } from '@/lib/store';
 
 export default function TodayScreen() {
-  const { ready, settings, toggles, forKid, day, setDay, data, reload, query, setQuery } = useStore();
+  const { ready, settings, toggles, forKid, day, setDay, data, reload, query, setQuery, topTick, goTop } = useStore();
+  const list = useRef<SectionList<Section['data'][number], Section>>(null);
+  // Today tapped again, or another day picked: back to the top of the list.
+  useEffect(() => { if (topTick) list.current?.getScrollResponder()?.scrollTo({ y: 0, animated: true }); }, [topTick]);
+  // The iPhone tab bar does this itself when it can find the list; this covers it when it cannot.
+  const navigation = useNavigation();
+  useEffect(() => navigation.addListener('tabPress' as never, () => { if (navigation.isFocused()) goTop(); }), [navigation, goTop]);
   const insets = useSafeAreaInsets();
   const [refreshing, setRefreshing] = useState(false);
   const scrollY = useSharedValue(0);
@@ -66,13 +72,14 @@ export default function TodayScreen() {
         <Animated.View style={[s.headerRest, intro.contentStyle]}>
           <SearchField />
           <View style={s.gap12} />
-          <WeekStrip day={q ? 'week' : day} onChange={(d) => { setQuery(''); setDay(d); }} />
+          <WeekStrip day={q ? 'week' : day} onChange={(d) => { setQuery(''); setDay(d); goTop(); }} />
           <FilterBar />
         </Animated.View>
       </View>
 
       <Animated.View style={[s.fill, intro.contentStyle]}>
         <SectionList<Section['data'][number], Section>
+          ref={list}
           sections={view.sections}
           keyExtractor={(r, i) => `${r.it.id}-${r.s?.day ?? ''}-${r.s?.start ?? ''}-${i}`}
           stickySectionHeadersEnabled={false}
