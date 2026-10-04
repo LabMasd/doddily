@@ -27,12 +27,19 @@ export function driveMins(mi: number) {
   return m > 20 ? Math.round(m / 5) * 5 : Math.round(m);
 }
 
-export function distLabel(mi: number) {
-  if (drives(mi)) return `${driveMins(mi)} min drive`;
-  const walk = walkMins(mi);
-  if (walk <= 35) return `${Math.max(2, walk)} min walk`;
-  return `${mi.toFixed(1)} mi`;
+/** A walk shorter than this needs no drive time beside it. */
+const DRIVE_TOO_FROM = 15;
+
+/**
+ * How far something is, in the ways a parent would get there:
+ * round the corner, the walk alone; a longer walk, the walk and the drive; too far to walk, the drive alone.
+ */
+export function distParts(mi: number): string[] {
+  if (drives(mi)) return [`${driveMins(mi)} min drive`];
+  const walk = Math.max(2, walkMins(mi));
+  return walk < DRIVE_TOO_FROM ? [`${walk} min walk`] : [`${walk} min walk`, `${driveMins(mi)} min drive`];
 }
+export const distLabel = (mi: number) => distParts(mi).join(' · ');
 
 /** What a chosen distance means in time, for the line under the distance control. */
 export const reachHint = (mi: number) =>
