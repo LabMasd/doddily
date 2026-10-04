@@ -11,7 +11,7 @@ const KEY = 'ld:settings:v1';
 const SAVED_KEY = 'ld:saved:v1';
 
 export type Settings = { loc: Loc | null; radius: number; group: GroupId; onboarded: boolean; name: string; kids: Kid[]; mapApp: MapApp };
-type Toggles = { free: boolean; drop: boolean; indoor: boolean; ageFit: boolean };
+export type Toggles = { free: boolean; drop: boolean; indoor: boolean; ageFit: boolean };
 type Status = 'idle' | 'loading' | 'ready' | 'offline';
 
 type Ctx = {
@@ -23,6 +23,11 @@ type Ctx = {
   /** Which child the list is filtered for. */
   forKid: 'all' | string;
   setForKid: (id: 'all' | string) => void;
+  /** Back to how the app opens: everything, right for the children, no other filter. */
+  clearFilters: () => void;
+  /** What is typed in search. Shared, so the list and the map show the same things. */
+  query: string;
+  setQuery: (q: string) => void;
   day: number | 'week';
   setDay: (d: number | 'week') => void;
   saved: Record<string, Activity>;
@@ -43,6 +48,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [toggles, setToggles] = useState<Toggles>({ free: false, drop: false, indoor: false, ageFit: true });
   const [day, setDay] = useState<number | 'week'>(0);
   const [forKid, setForKid] = useState<'all' | string>('all');
+  const [query, setQuery] = useState('');
   const [saved, setSaved] = useState<Record<string, Activity>>({});
   const [data, setData] = useState<Ctx['data']>({ items: [], places: [], checked: '', status: 'idle', placesStatus: 'idle' });
   const loadId = useRef(0);
@@ -121,12 +127,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => { reload(); }, [reload]);
 
+  const clearFilters = useCallback(() => {
+    update({ group: 'all' });
+    setToggles({ free: false, drop: false, indoor: false, ageFit: true });
+    setForKid('all');
+  }, [update]);
+
   const value = useMemo<Ctx>(() => ({
     ready, settings, update, toggles,
     flip: (k) => setToggles((t) => ({ ...t, [k]: !t[k] })),
-    forKid, setForKid,
+    forKid, setForKid, clearFilters, query, setQuery,
     day, setDay, saved, toggleSaved, data, reload,
-  }), [ready, settings, update, toggles, forKid, day, saved, toggleSaved, data, reload]);
+  }), [ready, settings, update, toggles, forKid, clearFilters, query, day, saved, toggleSaved, data, reload]);
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
 }

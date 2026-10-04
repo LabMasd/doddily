@@ -91,7 +91,7 @@ export function BrandHeader({ scrollY, t, onReady }: { scrollY: SharedValue<numb
     <View style={s.row} accessibilityRole="header" accessibilityLabel="Doddily" onLayout={() => onReady()}>
       <Animated.View style={[s.group, group]}>
         <View style={[s.mask, s.nameMask]}>
-          <Animated.Text style={[s.word, name]} numberOfLines={1} onLayout={(e) => { nameW.value = e.nativeEvent.layout.width; }}>Doddily</Animated.Text>
+          <Animated.Text style={[s.word, name]} numberOfLines={1} allowFontScaling={false} onLayout={(e) => { nameW.value = e.nativeEvent.layout.width; }}>Doddily</Animated.Text>
         </View>
         {/* Last, so the name slides out from behind the icon. */}
         <BrandMark scrollY={scrollY} spin={spin} size={K} />
