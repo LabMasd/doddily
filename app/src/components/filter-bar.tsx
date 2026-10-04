@@ -14,7 +14,7 @@ import { CHROME_MAX } from '@/lib/text-scale';
  * The filter chips, in one row that scrolls sideways. A chip that is on can be scrolled out of sight,
  * so whenever any filter has been chosen a round cross stays pinned at the start; one tap clears them all.
  * The cross sits beside the row, not on top of it: chips scroll up to a clean edge and never slide under it.
- * Under the row a line the width of the bar shows how far along you are, so it is clear there are more chips to the side.
+ * The chips fade out at the ends of the row where there are more to see.
  * `bleed` is the side padding of whatever holds the bar: the row runs to that container's edges.
  * `surface` is the colour behind the bar; chips fade into it at the ends of the row where there are more to see.
  */
@@ -47,11 +47,10 @@ export function FilterBar({ bleed = GUTTER, surface = C.milk }: { bleed?: number
   const [full, setFull] = useState(0);
   const [x, setX] = useState(0);
   const more = full > view + 1;
-  const thumb = more ? Math.max(0.25, view / full) : 1;
   const along = more ? Math.min(1, Math.max(0, x / (full - view))) : 0;
 
   return (
-    <View style={{ marginHorizontal: -bleed }}>
+    <View style={{ marginHorizontal: -bleed, paddingBottom: 6 }}>
     <View style={s.wrap}>
       {count > 0 && (
         <Pressable onPress={clearFilters} hitSlop={6} style={[s.clear, { marginLeft: bleed }]} accessibilityRole="button" accessibilityLabel={`Clear ${count} filter${count === 1 ? '' : 's'}`}>
@@ -74,9 +73,6 @@ export function FilterBar({ bleed = GUTTER, surface = C.milk }: { bleed?: number
       {more && x > 4 && <Fade solid="left" size={28} color={surface} style={{ top: 0, bottom: 0, left: count > 0 ? bleed + 42 : 0 }} />}
       {more && along < 0.98 && <Fade solid="right" size={36} color={surface} style={{ top: 0, bottom: 0, right: 0 }} />}
     </View>
-      <View style={[s.track, { marginHorizontal: bleed }]} accessible={false} importantForAccessibility="no">
-        {more && <View style={[s.thumb, { width: `${thumb * 100}%`, marginLeft: `${(1 - thumb) * along * 100}%` }]} />}
-      </View>
     </View>
   );
 }
@@ -93,8 +89,6 @@ function Chip({ label, on, onPress, onColor = C.ink }: Omit<ChipProps, 'key' | '
 
 const s = StyleSheet.create({
   wrap: { flexDirection: 'row', alignItems: 'center', paddingTop: 10, paddingBottom: 6 },
-  track: { alignSelf: 'stretch', height: 3, borderRadius: 2, backgroundColor: C.line, marginBottom: 10, overflow: 'hidden' },
-  thumb: { height: 3, borderRadius: 2, backgroundColor: C.accentLine },
   scroll: { flex: 1, flexGrow: 1, minWidth: 0 },
   row: { gap: 8 },
   chip: { borderRadius: R.pill, borderWidth: 1, borderColor: C.line, backgroundColor: C.card, paddingHorizontal: 13, paddingVertical: 8 },
