@@ -43,9 +43,8 @@ export function WeekStrip({ day, onChange }: Props) {
   return (
     <View>
       <View style={s.row} accessibilityRole="tablist">
-        <Pressable onPress={() => pick('week')} style={[s.day, all && s.on]} accessibilityRole="tab" accessibilityState={{ selected: all }} accessibilityLabel="Everything, any day">
-          <Text style={[s.top, all && s.topOn]} maxFontSizeMultiplier={CHROME_MAX} numberOfLines={1}>All</Text>
-          <Text style={[s.big, s.all]} maxFontSizeMultiplier={CHROME_MAX}>days</Text>
+        <Pressable onPress={() => pick('week')} style={[s.day, s.allTab, all && s.on]} accessibilityRole="tab" accessibilityState={{ selected: all }} accessibilityLabel="All, any day">
+          <Text style={[s.big, s.all]} maxFontSizeMultiplier={CHROME_MAX} numberOfLines={1}>All</Text>
         </Pressable>
         {Array.from({ length: 7 }, (_, i) => describe(week * 7 + i)).map((d) => {
           const on = day === d.key;
@@ -96,7 +95,8 @@ const s = StyleSheet.create({
   month: { fontFamily: F.textSemi, color: C.accentText },
   topOn: { color: C.ink },
   big: { fontFamily: F.display, fontSize: 20, color: C.ink, fontVariant: ['tabular-nums'] },
-  all: { fontSize: 15, lineHeight: 24 },
+  allTab: { justifyContent: 'center', paddingTop: 0, paddingBottom: 0 },
+  all: { fontSize: 16 },
   arrow: { alignSelf: 'center', width: 44, height: 18, alignItems: 'center', justifyContent: 'center', marginTop: 2 },
   cal: { gap: 2, marginTop: 4, paddingTop: 8, paddingBottom: 4, borderTopWidth: 1, borderTopColor: C.line },
   head: { flex: 1, textAlign: 'center', fontFamily: F.textMedium, fontSize: 12, color: C.muted, paddingBottom: 4 },
