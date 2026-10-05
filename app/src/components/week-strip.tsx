@@ -32,7 +32,7 @@ const intoWeek = () => (new Date().getDay() + 6) % 7;
 const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 /**
- * "All" first, then one week of days, Monday to Sunday. Days of this week that have already gone are greyed out.
+ * One week of days, Monday to Sunday, then "All" at the end (Victoria, 5 Oct: it felt wrong at the start). Days of this week that have already gone are greyed out.
  * The calendar under the arrow shows one month, Monday first, weekends in a quieter grey. The little arrow underneath drops down the next four weeks as a
  * calendar; picking a day there closes it and the bar moves to that day's week.
  */
@@ -61,9 +61,6 @@ export function WeekStrip({ day, onChange }: Props) {
   return (
     <View>
       <View style={s.row} accessibilityRole="tablist">
-        <Pressable onPress={() => pick('week')} style={[s.day, s.allTab, all && s.on]} accessibilityRole="tab" accessibilityState={{ selected: all }} accessibilityLabel="All, any day">
-          <Text style={[s.big, s.all]} maxFontSizeMultiplier={CHROME_MAX} numberOfLines={1}>All</Text>
-        </Pressable>
         {daysOf(week).map((d) => {
           const on = day === d.key;
           const gone = d.key < 0;
@@ -74,6 +71,9 @@ export function WeekStrip({ day, onChange }: Props) {
             </Pressable>
           );
         })}
+        <Pressable onPress={() => pick('week')} style={[s.day, s.allTab, all && s.on]} accessibilityRole="tab" accessibilityState={{ selected: all }} accessibilityLabel="All, any day">
+          <Text style={[s.big, s.all]} maxFontSizeMultiplier={CHROME_MAX} numberOfLines={1}>All</Text>
+        </Pressable>
       </View>
 
       <Pressable onPress={toggle} hitSlop={{ top: 4, bottom: 6, left: 40, right: 40 }} style={s.arrow} accessibilityRole="button" accessibilityState={{ expanded: open }} accessibilityLabel={open ? 'Close the calendar' : 'Open the calendar'}>
