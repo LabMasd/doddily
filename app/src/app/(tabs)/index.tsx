@@ -134,7 +134,7 @@ export default function TodayScreen() {
               {data.placesStatus === 'loading' && <Text style={s.summary}>Finding parks and playgrounds nearby…</Text>}
               {data.status === 'offline' && <Text style={s.summary}>You’re offline. Showing what was saved on this phone.</Text>}
               <Text style={s.foot}>
-                {checked ? `Class times checked ${checked}. ` : ''}Timetables change, so check the provider’s page before you head out. Parks and playgrounds from OpenStreetMap.
+                {checked ? `Class times checked ${checked}. ` : ''}Timetables change, so check the provider’s page before you head out. Parks and playgrounds from OpenStreetMap. Leisure centre times from Better, Everyone Active and Places Leisure open data (OpenActive, CC BY 4.0).
               </Text>
             </View>
           }
