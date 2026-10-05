@@ -3,5 +3,6 @@
 // it puts a "doddily" folder inside Doddily.app, which clashes with the app's own "Doddily" file.
 module.exports = ({ config }) => {
   if (process.env.DODDILY_WEB !== '1') return config;
-  return { ...config, experiments: { ...config.experiments, baseUrl: '/doddily' } };
+  // DODDILY_BASE overrides the path, for a preview copy hosted somewhere else (for example a hidden folder on doddily.app).
+  return { ...config, experiments: { ...config.experiments, baseUrl: process.env.DODDILY_BASE || '/doddily' } };
 };
