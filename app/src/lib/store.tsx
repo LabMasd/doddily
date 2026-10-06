@@ -7,6 +7,8 @@ import { dropListingCache, loadActivities, loadPlaces } from './data';
 import type { Activity, Kid, Loc, MapApp } from './types';
 import { bandForMonths, daySections, filterRows, selectedBands } from './schedule';
 
+import { DEMO, DEMO_SETTINGS } from './demo';
+
 const KEY = 'ld:settings:v1';
 const SAVED_KEY = 'ld:saved:v1';
 
@@ -45,6 +47,7 @@ const DEFAULTS: Settings = { loc: null, radius: 3, group: 'all', onboarded: fals
 
 /** What the family typed must survive closing the app. If storage is full, the downloaded listings go, not this. */
 async function keep(key: string, value: unknown) {
+  if (DEMO) return; // the website demo leaves nothing on the visitor's device
   const text = JSON.stringify(value);
   try { await AsyncStorage.setItem(key, text); }
   catch {
@@ -77,6 +80,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     (async () => {
+      if (DEMO) { setSettings({ ...DEFAULTS, ...DEMO_SETTINGS }); setReady(true); return; }
       try {
         const [s, sv] = await Promise.all([AsyncStorage.getItem(KEY), AsyncStorage.getItem(SAVED_KEY)]);
         // Always open on Everything; a remembered filter makes the list look empty days later.
@@ -107,6 +111,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const update = useCallback((patch: Partial<Settings>) => {
     setSettings((prev) => {
       const next = { ...prev, ...patch };
+      if (DEMO) next.loc = DEMO_SETTINGS.loc; // the demo stays where it is
       keep(KEY, next);
       return next;
     });
