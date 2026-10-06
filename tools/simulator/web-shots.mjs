@@ -53,5 +53,12 @@ await shot('3-saved', '/saved', 2500);
 await shot('4-you', '/you', 2500);
 await shot('6-calendar', '/', 4500, () => p.getByRole('button', { name: /Open the calendar/ }).click());
 await shot('5-today-week', '/', 4500, () => p.getByRole('tab', { name: /All, any day/ }).click());
+// a class's own page, opened from the list the way a parent would (in the All list a row is named "<class>, <how far>")
+await shot('7-detail', '/', 4500, async () => {
+  await p.getByRole('tab', { name: /All, any day/ }).click(); await p.waitForTimeout(1200);
+  const pick = p.getByRole('button', { name: /^(Baby Bounce|Tiny Tots|Stories & Rhymes).*, \d+ min walk/ }).first();
+  await ((await pick.count()) ? pick : p.getByRole('button', { name: /, \d+ min (walk|drive)/ }).first()).click();
+  await p.waitForTimeout(2500);
+});
 await b.close();
 console.log('Screenshots in', out);

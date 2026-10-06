@@ -7,7 +7,7 @@
 # (an iPhone 17 Pro Max at three pixels per point) with a 9:41 status bar, then makes the framed store
 # pages with their captions. Nothing is uploaded anywhere. Needs Google Chrome; no simulator, no build service.
 #
-#   <output>/screens   the bare screens: 1-today, 2-map, 3-saved, 4-you, 5-today-week, 6-calendar
+#   <output>/screens   the bare screens: 1-today, 2-map, 3-saved, 4-you, 5-today-week, 6-calendar, 7-detail
 #   <output>/store     the same in a drawn iPhone with a headline: promo-today, promo-map, promo-you, promo-calendar
 #
 # To add a screen, add a line to tools/simulator/web-shots.mjs; to caption it, add it to PAGES in promo.mjs.
