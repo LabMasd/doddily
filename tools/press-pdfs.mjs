@@ -74,7 +74,7 @@ p{margin:0 0 3.6mm;break-inside:avoid}ul{margin:0 0 3.6mm;padding-left:5mm}li{ma
 .q small{display:block;color:#667085;font-size:7.8pt;margin-top:1mm}
 .sheet p{font-size:8.8pt;margin-bottom:0}
 /* the release reads at a comfortable size over two pages; the fact sheet is one page, so it is set tighter */
-.release{font-size:10.6pt}.release h1{font-size:23.5pt}.release .stand{font-size:12.6pt}.release h2{font-size:12.4pt}
+.release{font-size:10.3pt}.release h1{font-size:23pt}.release .stand{font-size:12.6pt}.release h2{font-size:12.4pt}
 .release .about{break-inside:avoid}
 body.sheetpage .top{margin-bottom:4.5mm;padding-bottom:4mm}body.sheetpage .foot{margin-top:4mm}
 body.sheetpage .sheet h2{margin-top:4.6mm}body.sheetpage .cards div{padding:3mm 4mm}body.sheetpage .sheet .line{margin-bottom:4mm}body.sheetpage .q{padding:2.6mm 4mm}
@@ -84,7 +84,7 @@ body.sheetpage .sheet h2{margin-top:4.6mm}body.sheetpage .cards div{padding:3mm 
 const sheet = `<div class="sheet"><h1>Doddily</h1><p class="line">${esc(FACTS.line)}</p>
 <div class="cards">${FACTS.cards.map(([t, x]) => `<div><b>${esc(t)}</b>${esc(x)}</div>`).join('')}</div>
 <h2>In numbers<small>${esc(FACTS.asOf)}</small></h2><div class="nums">${FACTS.numbers.map(([n, l]) => `<div><b>${n}</b>${esc(l)}</div>`).join('')}</div>
-<h2>Quotes</h2>${quotes.map((q) => `<div class="q">“${esc(q.text)}”<small>${esc(q.by)}</small></div>`).join('')}
+<h2>${quotes.length === 1 ? 'Quote' : 'Quotes'}</h2>${quotes.map((q) => `<div class="q">“${esc(q.text)}”<small>${esc(q.by)}</small></div>`).join('')}
 <h2>About Doddily</h2><p>${rich(by['About Doddily'] || '')}</p>
 <h2>Contact</h2><p>${rich((by['Press contact'] || '').replace('Images, screenshots', 'Logos, screenshots'))}</p></div>`;
 
