@@ -1,6 +1,7 @@
 import { SymbolView } from 'expo-symbols';
 import { useEffect, useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View, type LayoutChangeEvent } from 'react-native';
+import Animated, { Easing, useAnimatedStyle, useReducedMotion, useSharedValue, withTiming } from 'react-native-reanimated';
 
 import { C, F } from '@/constants/theme';
 import { DAY_LONG, DAYS, dateFor } from '@/lib/schedule';
@@ -13,6 +14,11 @@ export const WEEKS_AHEAD = 4;
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const MONTH_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const GAP = 4;
+// The calendar slides open and shut instead of appearing: a little longer to open so it settles, quicker to close.
+const OPEN_MS = 420;
+const CLOSE_MS = 360;
+const OPENING = Easing.bezierFn(0.22, 1, 0.36, 1); // quick start, long gentle settle, the same curve the header uses
+const CLOSING = Easing.bezierFn(0.45, 0, 0.2, 1); // starts gently, so it never snaps shut, then eases to rest
 
 const describe = (i: number) => {
   const d = dateFor(i);
@@ -35,6 +41,8 @@ const WEEKDAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
  * One week of days, Monday to Sunday, then "All" at the end (Victoria, 5 Oct: it felt wrong at the start). Days of this week that have already gone are greyed out.
  * The calendar under the arrow shows one month, Monday first, weekends in a quieter grey. The little arrow underneath drops down the next four weeks as a
  * calendar; picking a day there closes it and the bar moves to that day's week.
+ * The calendar stays mounted and its height, fade and the arrow's turn are animated, so opening and closing are eased
+ * (Marcos, 6 Oct: it closed abruptly). With Reduce Motion on it simply appears.
  */
 export function WeekStrip({ day, onChange }: Props) {
   const [open, setOpen] = useState(false);
@@ -58,6 +66,21 @@ export function WeekStrip({ day, onChange }: Props) {
   const toggle = () => { if (!open) setMonth(monthsTo(typeof day === 'number' ? day : Math.max(0, week * 7 - lead))); setOpen((o) => !o); };
   const all = day === 'week';
 
+  // 0 is shut, 1 is fully open. The calendar's own height is measured, because a five-row month is shorter than a six-row one.
+  const calm = useReducedMotion();
+  const openness = useSharedValue(0);
+  const calHeight = useSharedValue(0);
+  useEffect(() => {
+    openness.value = withTiming(open ? 1 : 0, { duration: calm ? 0 : open ? OPEN_MS : CLOSE_MS, easing: open ? OPENING : CLOSING });
+  }, [open, calm, openness]);
+  const onCalLayout = (e: LayoutChangeEvent) => {
+    const h = e.nativeEvent.layout.height;
+    // the first measure is taken as it is; after that a change of month eases to its new height
+    calHeight.value = calHeight.value === 0 || calm ? h : withTiming(h, { duration: 220, easing: CLOSING });
+  };
+  const drawer = useAnimatedStyle(() => ({ height: calHeight.value * openness.value, opacity: openness.value }));
+  const turn = useAnimatedStyle(() => ({ transform: [{ rotate: `${openness.value * 180}deg` }] }));
+
   return (
     <View>
       <View style={s.row} accessibilityRole="tablist">
@@ -77,10 +100,12 @@ export function WeekStrip({ day, onChange }: Props) {
       </View>
 
       <Pressable onPress={toggle} hitSlop={{ top: 4, bottom: 6, left: 40, right: 40 }} style={s.arrow} accessibilityRole="button" accessibilityState={{ expanded: open }} accessibilityLabel={open ? 'Close the calendar' : 'Open the calendar'}>
-        <SymbolView name={open ? { ios: 'chevron.up', android: 'keyboard_arrow_up', web: 'keyboard_arrow_up' } : { ios: 'chevron.down', android: 'keyboard_arrow_down', web: 'keyboard_arrow_down' }} size={14} weight="semibold" tintColor={C.muted} />
+        <Animated.View style={turn}>
+          <SymbolView name={{ ios: 'chevron.down', android: 'keyboard_arrow_down', web: 'keyboard_arrow_down' }} size={14} weight="semibold" tintColor={C.muted} />
+        </Animated.View>
       </Pressable>
 
-      {open && (() => {
+      {(() => {
         // One month at a time, Monday first, like a wall calendar. Days outside the month, days already gone and
         // days more than four weeks away are greyed out and cannot be picked.
         const first = new Date(today.getFullYear(), today.getMonth() + month, 1);
@@ -89,6 +114,8 @@ export function WeekStrip({ day, onChange }: Props) {
         const rows = Math.ceil((before + inMonth) / 7);
         const startOffset = Math.round((first.getTime() - today.getTime()) / 864e5) - before;
         return (
+          <Animated.View style={[s.drawer, drawer]} pointerEvents={open ? 'auto' : 'none'} accessibilityElementsHidden={!open} importantForAccessibility={open ? 'auto' : 'no-hide-descendants'}>
+          <View style={s.calWrap} onLayout={onCalLayout}>
           <View style={s.cal}>
             <View style={s.calHead}>
               <Pressable onPress={() => setMonth(0)} disabled={month === 0} hitSlop={8} style={[s.step, month === 0 && s.gone]} accessibilityRole="button" accessibilityLabel="Earlier month">
@@ -121,6 +148,8 @@ export function WeekStrip({ day, onChange }: Props) {
               </View>
             ))}
           </View>
+          </View>
+          </Animated.View>
         );
       })()}
     </View>
@@ -139,7 +168,10 @@ const s = StyleSheet.create({
   allTab: { justifyContent: 'center', paddingTop: 0, paddingBottom: 0 },
   all: { fontSize: 16 },
   arrow: { alignSelf: 'center', width: 44, height: 18, alignItems: 'center', justifyContent: 'center', marginTop: 2 },
-  cal: { gap: 2, marginTop: 4, paddingTop: 10, paddingBottom: 4, borderTopWidth: 1, borderTopColor: C.line },
+  // The drawer's height is animated; the calendar inside is laid out at its full height and clipped, so it can be measured while shut.
+  drawer: { overflow: 'hidden' },
+  calWrap: { position: 'absolute', top: 0, left: 0, right: 0, paddingTop: 4 },
+  cal: { gap: 2, paddingTop: 10, paddingBottom: 4, borderTopWidth: 1, borderTopColor: C.line },
   calHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 6, paddingBottom: 8 },
   calTitle: { fontFamily: F.display, fontSize: 17, color: C.ink },
   step: { width: 32, height: 32, borderRadius: 16, alignItems: 'center', justifyContent: 'center', backgroundColor: C.chip },
