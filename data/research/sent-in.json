@@ -1,0 +1,50 @@
+[
+ {
+  "name": "The Happy Hub",
+  "provider": "The Happy Hub, Cholsey Children's Centre",
+  "category": "stayplay",
+  "venue": "Cholsey Pavilion",
+  "address": "The Pavilion, Station Road, Cholsey",
+  "postcode": "OX10 9PT",
+  "lat": 51.573845,
+  "lng": -1.154271,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:00",
+    "end": "11:30"
+   },
+   {
+    "day": "Tue",
+    "start": "09:00",
+    "end": "11:30"
+   },
+   {
+    "day": "Wed",
+    "start": "09:00",
+    "end": "11:30"
+   },
+   {
+    "day": "Thu",
+    "start": "09:00",
+    "end": "11:30"
+   },
+   {
+    "day": "Fri",
+    "start": "09:00",
+    "end": "11:30"
+   }
+  ],
+  "schedule_note": "Times sent in by The Happy Hub on 6 October 2026. Check their Facebook page for changes in the holidays.",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "£3 donation per child",
+  "free": false,
+  "booking": "drop-in",
+  "indoor": true,
+  "description": "A children's centre for under-fives in two playrooms at Cholsey Pavilion, with messy play, arts and crafts, and an outdoor area and allotment.",
+  "url": "https://www.facebook.com/THHCCC/",
+  "phone": "07754 081674",
+  "confidence": "medium"
+ }
+]
