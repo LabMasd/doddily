@@ -10,6 +10,7 @@ import { BANDS } from '@/lib/schedule';
 import type { Kid } from '@/lib/types';
 import { newKidId, useStore } from '@/lib/store';
 import type { Loc } from '@/lib/types';
+import { DEMO, DEMO_NOTE } from '@/lib/demo';
 
 
 /** `askChild`: also ask for a first child's name and birth month (used on the welcome screen). */
@@ -54,6 +55,7 @@ export function LocationForm({ submitLabel, onDone, askChild }: { submitLabel: s
     setError('');
     let loc = pending;
     const typed = pc.replace(/\s+/g, '').toUpperCase();
+    if (DEMO && (pending || (typed && typed !== (settings.loc?.postcode ?? '').replace(/\s+/g, '')))) { setError(DEMO_NOTE); return; }
     if (!loc && typed && typed !== (settings.loc?.postcode ?? '').replace(/\s+/g, '')) {
       setBusy('save');
       loc = await lookupPostcode(typed);
