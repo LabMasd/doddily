@@ -1,6 +1,6 @@
 import { Redirect, useNavigation } from 'expo-router';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Pressable, RefreshControl, SectionList, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, RefreshControl, SectionList, StyleSheet, Text, View } from 'react-native';
 import Animated, { useSharedValue } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -67,6 +67,12 @@ export default function TodayScreen() {
     setRefreshing(false);
   };
 
+  // Nothing to show yet: the first load after opening, or a wider search from an empty list. Say so plainly, so the app
+  // never looks broken or claims "nothing on" while it is still fetching (Marcos, 6 Oct).
+  const loading = (data.status === 'idle' || data.status === 'loading') && data.items.length === 0;
+  // Listings are on screen and a fresh set is on its way (the distance or the place changed).
+  const updating = data.status === 'loading' && data.items.length > 0;
+
   // The next distance worth trying, or none once the slider is at its furthest.
   const wider = WIDER_MI.find((mi) => mi > settings.radius) ?? null;
   const widen = wider ? (
@@ -101,33 +107,41 @@ export default function TodayScreen() {
           refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor={C.muted} />}
           ListHeaderComponent={
             <View>
-              <Text style={s.summary}>{data.status === 'loading' && !data.items.length ? 'Finding what’s on…' : view.summary}</Text>
-              {filters.labels.length > 0 && (
+              {loading ? (
+                <View style={s.loading} accessible accessibilityRole="progressbar" accessibilityLabel="Loading listings near you">
+                  <ActivityIndicator color={C.ink} />
+                  <Text style={s.emptyTitle}>Loading listings near you</Text>
+                  <Text style={s.emptyText}>The first time can take a moment.</Text>
+                </View>
+              ) : (
+                <Text style={s.summary}>{view.summary}{updating ? ' · updating…' : ''}</Text>
+              )}
+              {!loading && filters.labels.length > 0 && (
                 <Text style={s.showing} accessibilityLabel={`Filters on: ${filters.labels.join(', ')}`}>
                   Showing <Text style={s.showingOn}>{filters.labels.join(' · ')}</Text>
                 </Text>
               )}
-              {view.empty === 'done' && (
+              {!loading && view.empty === 'done' && (
                 <View style={s.empty}>
                   <Text style={s.emptyTitle}>That’s everything for today</Text>
                   <Pressable onPress={() => setDay(1)} style={s.emptyBtn}><Text style={s.emptyBtnText}>See tomorrow</Text></Pressable>
                 </View>
               )}
-              {view.empty === 'none' && data.status !== 'loading' && settings.group !== 'parks' && settings.group !== 'change' && (
+              {!loading && view.empty === 'none' && data.status !== 'loading' && settings.group !== 'parks' && settings.group !== 'change' && (
                 <View style={s.empty}>
                   <Text style={s.emptyTitle}>Nothing timetabled {view.dayName}</Text>
                   <Text style={s.emptyText}>{wider ? `That’s within ${settings.radius} miles. Try looking further, another day, or the places below.` : 'Try another day, or the places below.'}</Text>
                   {widen}
                 </View>
               )}
-              {view.empty === 'search' && (
+              {!loading && view.empty === 'search' && (
                 <View style={s.empty}>
                   <Text style={s.emptyTitle}>Nothing matches “{query.trim()}” nearby</Text>
                   <Text style={s.emptyText}>{wider ? 'Try another word, or look further.' : 'Try another word.'}</Text>
                   {widen}
                 </View>
               )}
-              {view.empty === 'far' && data.status !== 'loading' && (
+              {!loading && view.empty === 'far' && data.status !== 'loading' && (
                 <View style={s.empty}>
                   <Text style={s.emptyTitle}>Nothing within {settings.radius} miles</Text>
                   <Text style={s.emptyText}>{wider ? 'Try looking further.' : 'We may not cover your area yet.'}</Text>
@@ -159,7 +173,7 @@ export default function TodayScreen() {
                   <Text style={s.moreText}>Want more? <Text style={s.moreLink}>Look within {wider} miles</Text></Text>
                 </Pressable>
               )}
-              {data.placesStatus === 'loading' && <Text style={s.summary}>Finding parks and playgrounds nearby…</Text>}
+              {!loading && data.placesStatus === 'loading' && <Text style={s.summary}>Finding parks and playgrounds nearby…</Text>}
               {data.status === 'offline' && <Text style={s.summary}>You’re offline. Showing what was saved on this phone.</Text>}
               <Text style={s.foot}>
                 {checked ? `Class times checked ${checked}. ` : ''}Timetables change, so check the provider’s page before you head out. Parks and playgrounds from OpenStreetMap. Leisure centre times from Better, Everyone Active and Places Leisure open data (OpenActive, CC BY 4.0).
@@ -187,6 +201,7 @@ const s = StyleSheet.create({
   sectionTitle: { fontFamily: F.display, fontSize: 19, color: C.ink, marginTop: 22, marginBottom: 6 },
   count: { fontFamily: F.textMedium, fontSize: 14, color: C.muted },
   empty: { alignItems: 'center', paddingVertical: 28, gap: 6 },
+  loading: { alignItems: 'center', paddingVertical: 44, gap: 10 },
   emptyTitle: { fontFamily: F.display, fontSize: 20, color: C.ink, textAlign: 'center' },
   emptyText: { fontFamily: F.text, fontSize: 15, color: C.muted, textAlign: 'center' },
   emptyBtn: { marginTop: 8, backgroundColor: C.ink, borderRadius: R.md, paddingHorizontal: 18, paddingVertical: 12 },

@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { StyleSheet, View, useWindowDimensions } from 'react-native';
 import Animated, { Easing, useAnimatedStyle, useDerivedValue, useReducedMotion, useSharedValue, withTiming, type SharedValue } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -47,16 +48,22 @@ function seg(ms: number, [a, b]: readonly [number, number], ease: (x: number) =>
 export function useIntro() {
   const reduceMotion = useReducedMotion();
   const t = useSharedValue(played || reduceMotion ? DURATION : 0);
+  // Once the opening has played, the content is simply there: its being visible must not hang on an animated value,
+  // or a list could come back invisible after a spell in another tab (Marcos, 6 Oct: Today sometimes empty on return).
+  const [settled, setSettled] = useState(played || reduceMotion);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
   const start = () => {
     if (played || reduceMotion) return;
     played = true;
     t.value = withTiming(DURATION, { duration: DURATION, easing: Easing.linear });
+    timer.current = setTimeout(() => setSettled(true), DURATION + 120);
   };
-  const contentStyle = useAnimatedStyle(() => {
+  const fadeIn = useAnimatedStyle(() => {
     const p = seg(t.value, P.content, EASE_OUT);
     return { opacity: p, transform: [{ translateY: (1 - p) * 16 }] };
   });
-  return { t, start, contentStyle };
+  return { t, start, contentStyle: settled ? undefined : fadeIn };
 }
 
 /** Icon then "Doddily", centred together at the top of Today, with the opening sequence. */
