@@ -74,7 +74,7 @@ p{margin:0 0 3.6mm;break-inside:avoid}ul{margin:0 0 3.6mm;padding-left:5mm}li{ma
 .q small{display:block;color:#667085;font-size:7.8pt;margin-top:1mm}
 .sheet p{font-size:8.8pt;margin-bottom:0}
 /* the release reads at a comfortable size over two pages; the fact sheet is one page, so it is set tighter */
-.release{font-size:10.3pt}.release h1{font-size:23pt}.release .stand{font-size:12.6pt}.release h2{font-size:12.4pt}
+.release{font-size:10pt}.release h1{font-size:22pt}.release .stand{font-size:12pt}.release h2{font-size:12pt;margin-top:5mm}
 .release .about{break-inside:avoid}
 body.sheetpage .top{margin-bottom:4.5mm;padding-bottom:4mm}body.sheetpage .foot{margin-top:4mm}
 body.sheetpage .sheet h2{margin-top:4.6mm}body.sheetpage .cards div{padding:3mm 4mm}body.sheetpage .sheet .line{margin-bottom:4mm}body.sheetpage .q{padding:2.6mm 4mm}
