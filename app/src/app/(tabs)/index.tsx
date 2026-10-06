@@ -15,8 +15,12 @@ import { activeFilters, searchRows } from '@/lib/filters';
 import { DAY_LONG, daySections, filterRows, selectedBands, weekSections, type Section } from '@/lib/schedule';
 import { useStore } from '@/lib/store';
 
+// The app starts at 3 miles. When that shows nothing, it offers the next sensible distance in one tap rather than
+// sending people to the You tab (Marcos, 6 Oct). These are all stops on the distance slider.
+const WIDER_MI = [5, 10, 15, 25];
+
 export default function TodayScreen() {
-  const { ready, settings, toggles, forKid, day, setDay, data, reload, query, setQuery, topTick, goTop } = useStore();
+  const { ready, settings, update, toggles, forKid, day, setDay, data, reload, query, setQuery, topTick, goTop } = useStore();
   const list = useRef<SectionList<Section['data'][number], Section>>(null);
   // Today tapped again, or another day picked: glide back to the top of the list.
   useEffect(() => { if (topTick) list.current?.getScrollResponder()?.scrollTo({ y: 0, animated: true }); }, [topTick]);
@@ -38,14 +42,14 @@ export default function TodayScreen() {
   const found = useMemo(() => searchRows(rows, query), [rows, query]);
   const filters = activeFilters(settings, toggles, forKid);
 
-  const view = useMemo((): { sections: Section[]; summary: string; empty: null | 'done' | 'none' | 'search'; dayName: string } => {
+  const view = useMemo((): { sections: Section[]; summary: string; empty: null | 'done' | 'none' | 'search' | 'far'; dayName: string } => {
     const where = `within ${settings.radius} mi of ${settings.loc?.name ?? 'you'}`;
     if (q) {
       const n = found.length;
       return { sections: weekSections(found), summary: `${n} match${n === 1 ? '' : 'es'} for “${query.trim()}” ${where}`, empty: n ? null : 'search', dayName: '' };
     }
     if (day === 'week') {
-      return { sections: weekSections(rows), summary: `${rows.length} things ${where}, any day`, empty: null, dayName: '' };
+      return { sections: weekSections(rows), summary: `${rows.length} things ${where}, any day`, empty: rows.length ? null : 'far', dayName: '' };
     }
     const r = daySections(rows, day, settings.group);
     // Past the first week a weekday alone is ambiguous, so the date goes with it.
@@ -62,6 +66,14 @@ export default function TodayScreen() {
     await reload();
     setRefreshing(false);
   };
+
+  // The next distance worth trying, or none once the slider is at its furthest.
+  const wider = WIDER_MI.find((mi) => mi > settings.radius) ?? null;
+  const widen = wider ? (
+    <Pressable onPress={() => update({ radius: wider })} style={s.emptyBtn} accessibilityRole="button" accessibilityLabel={`Look within ${wider} miles`}>
+      <Text style={s.emptyBtnText}>Look within {wider} miles</Text>
+    </Pressable>
+  ) : null;
 
   const checked = data.checked ? new Date(data.checked).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
 
@@ -104,13 +116,22 @@ export default function TodayScreen() {
               {view.empty === 'none' && data.status !== 'loading' && settings.group !== 'parks' && settings.group !== 'change' && (
                 <View style={s.empty}>
                   <Text style={s.emptyTitle}>Nothing timetabled {view.dayName}</Text>
-                  <Text style={s.emptyText}>Try a wider distance, another day, or the places below.</Text>
+                  <Text style={s.emptyText}>{wider ? `That’s within ${settings.radius} miles. Try looking further, another day, or the places below.` : 'Try another day, or the places below.'}</Text>
+                  {widen}
                 </View>
               )}
               {view.empty === 'search' && (
                 <View style={s.empty}>
                   <Text style={s.emptyTitle}>Nothing matches “{query.trim()}” nearby</Text>
-                  <Text style={s.emptyText}>Try another word, or widen your distance in You.</Text>
+                  <Text style={s.emptyText}>{wider ? 'Try another word, or look further.' : 'Try another word.'}</Text>
+                  {widen}
+                </View>
+              )}
+              {view.empty === 'far' && data.status !== 'loading' && (
+                <View style={s.empty}>
+                  <Text style={s.emptyTitle}>Nothing within {settings.radius} miles</Text>
+                  <Text style={s.emptyText}>{wider ? 'Try looking further.' : 'We may not cover your area yet.'}</Text>
+                  {widen}
                 </View>
               )}
             </View>
@@ -131,6 +152,13 @@ export default function TodayScreen() {
           )}
           ListFooterComponent={
             <View style={s.footer}>
+              {/* On "All", the end of the list is where people run out, so that is where the wider search is offered: once, quietly.
+                  A single day does not get it (Marcos, 6 Oct): there it only appears when the day is empty, as the button above. */}
+              {wider && day === 'week' && !q && view.empty === null && data.status !== 'loading' && (
+                <Pressable onPress={() => { update({ radius: wider }); goTop(); }} hitSlop={8} style={s.more} accessibilityRole="button" accessibilityLabel={`See more by looking within ${wider} miles`}>
+                  <Text style={s.moreText}>Want more? <Text style={s.moreLink}>Look within {wider} miles</Text></Text>
+                </Pressable>
+              )}
               {data.placesStatus === 'loading' && <Text style={s.summary}>Finding parks and playgrounds nearby…</Text>}
               {data.status === 'offline' && <Text style={s.summary}>You’re offline. Showing what was saved on this phone.</Text>}
               <Text style={s.foot}>
@@ -164,5 +192,8 @@ const s = StyleSheet.create({
   emptyBtn: { marginTop: 8, backgroundColor: C.ink, borderRadius: R.md, paddingHorizontal: 18, paddingVertical: 12 },
   emptyBtnText: { fontFamily: F.textSemi, fontSize: 16, color: '#fff' },
   footer: { marginTop: 20 },
+  more: { alignSelf: 'flex-start', paddingVertical: 6, marginBottom: 6 },
+  moreText: { fontFamily: F.text, fontSize: 15, color: C.muted },
+  moreLink: { fontFamily: F.textSemi, color: C.ink, textDecorationLine: 'underline' },
   foot: { fontFamily: F.text, fontSize: 13, color: C.muted, marginTop: 8 },
 });

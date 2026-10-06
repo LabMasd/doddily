@@ -41,7 +41,7 @@ type Ctx = {
 
 const StoreContext = createContext<Ctx | null>(null);
 
-const DEFAULTS: Settings = { loc: null, radius: 10, group: 'all', onboarded: false, name: '', kids: [], mapApp: Platform.OS === 'ios' ? 'apple' : 'google' };
+const DEFAULTS: Settings = { loc: null, radius: 3, group: 'all', onboarded: false, name: '', kids: [], mapApp: Platform.OS === 'ios' ? 'apple' : 'google' };
 
 /** What the family typed must survive closing the app. If storage is full, the downloaded listings go, not this. */
 async function keep(key: string, value: unknown) {

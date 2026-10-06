@@ -15,6 +15,8 @@ const LINKS = [
   { label: 'Privacy', hint: 'doddily.app/privacy', url: 'https://doddily.app/privacy.html' },
   { label: 'Website', hint: 'doddily.app', url: 'https://doddily.app' },
   { label: 'Contact', hint: 'hello@doddily.app', url: 'mailto:hello@doddily.app' },
+  // A class or place we are missing: the same form the website and the Instagram links page point at.
+  { label: 'Not listed?', hint: 'Send us the link', url: 'https://doddily.app/list/' },
 ];
 
 export default function YouScreen() {
