@@ -485,7 +485,7 @@ const art = {
   step: (a) => `<div class="frame ${a.bg}">
       <span class="step" ${a.bg === 'purple' ? 'style="color:var(--p-ink)"' : ''}>${esc(a.n)}</span>
       <p class="midtype">${esc(a.big)}</p>
-      <div class="foot">${a.n === '1' ? brand() : '<span></span>'}<span class="dots">${a.dots.map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span></div>
+      <div class="foot">${a.n === '1' ? brand() : '<span></span>'}<span class="dots">${(a.dots || []).map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span></div>
       ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
     </div>`,
   quote: (a) => `<div class="frame ${a.bg}">
