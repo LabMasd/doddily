@@ -44,7 +44,7 @@ export const ActivityRow = memo(function ActivityRow({ row, when, faded }: Props
         <View style={s.head}>
           <View style={s.nameWrap}>
             <Text style={s.name}>{it.name}</Text>
-            {loved ? <SymbolView name={{ ios: 'heart.fill', android: 'favorite', web: 'favorite' }} size={14} tintColor={C.accentText} style={s.heart} /> : null}
+            {loved ? <SymbolView name={{ ios: 'heart.fill', android: 'favorite', web: 'favorite' }} size={15} tintColor={C.accent} style={s.heart} /> : null}
           </View>
           {/* Walk and drive sit on two short lines, so a long name still has room beside them. */}
           <Text style={s.dist}>{distParts(d).join('\n')}</Text>
