@@ -1,6 +1,6 @@
 import { useRouter } from 'expo-router';
 import { memo } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { SymbolView } from 'expo-symbols';
 
 import { C, F, R } from '@/constants/theme';
@@ -44,7 +44,8 @@ export const ActivityRow = memo(function ActivityRow({ row, when, faded }: Props
         <View style={s.head}>
           <View style={s.nameWrap}>
             <Text style={s.name}>{it.name}</Text>
-            {loved ? <SymbolView name={{ ios: 'heart.fill', android: 'favorite', web: 'favorite' }} size={15} tintColor={C.accent} style={s.heart} /> : null}
+            {/* a filled heart everywhere: the SF Symbol on iPhone, a glyph elsewhere (the web fallback draws outlines) */}
+            {loved ? (Platform.OS === 'ios' ? <SymbolView name={{ ios: 'heart.fill', android: 'favorite', web: 'favorite' }} size={15} tintColor={C.accent} style={s.heart} /> : <Text style={s.heartGlyph} accessible={false}>♥</Text>) : null}
           </View>
           {/* Walk and drive sit on two short lines, so a long name still has room beside them. */}
           <Text style={s.dist}>{distParts(d).join('\n')}</Text>
@@ -106,7 +107,8 @@ const s = StyleSheet.create({
   head: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },
   nameWrap: { flex: 1, flexDirection: 'row', alignItems: 'flex-start', gap: 6 },
   name: { flexShrink: 1, fontFamily: F.textSemi, fontSize: 17, lineHeight: 22, color: C.ink },
-  heart: { width: 14, height: 14, marginTop: 4 },
+  heart: { width: 15, height: 15, marginTop: 4 },
+  heartGlyph: { color: C.accent, fontSize: 15, lineHeight: 22 },
   dist: { fontFamily: F.text, fontSize: 14, lineHeight: 18, color: C.muted, paddingTop: 2, textAlign: 'right' },
   venue: { fontFamily: F.text, fontSize: 15, color: C.muted, marginTop: 1 },
   tags: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 8 },
