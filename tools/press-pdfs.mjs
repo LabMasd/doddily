@@ -13,7 +13,7 @@ const { chromium } = require(process.env.PLAYWRIGHT || '/Users/marcos/qr-lab/sit
 
 const press = (process.argv[2] || `${process.env.HOME}/doddily-site/press`).replace(/\/$/, '');
 const md = readFileSync(`${press}/press-release.md`, 'utf8').split(/\n---\n/)[0];
-const logo = `data:image/svg+xml;base64,${readFileSync(`${press}/assets/logos/doddily-lockup-ink.svg`).toString('base64')}`;
+const logo = `data:image/svg+xml;base64,${readFileSync(`${press}/assets/logos/doddily-wordmark-ink.svg`).toString('base64')}`;
 
 const esc = (s) => s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 // addresses become links, the way the earlier PDFs had them
