@@ -107,6 +107,7 @@ td:first-child{font-weight:700;white-space:nowrap}
 .soft{background:var(--p-soft)}
 .milk{background:var(--p-milk)}
 .bigtype{font-weight:800;font-size:10cqi;line-height:.98;letter-spacing:-.03em;text-wrap:balance;position:relative;z-index:1}
+.frame.solo .bigtype{font-size:14cqi}
 .midtype{font-weight:700;font-size:6.6cqi;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;position:relative;z-index:1}
 .body{text-wrap:balance;font:600 4.2cqi/1.35 var(--text);position:relative;z-index:1}
 .foot{display:flex;align-items:baseline;justify-content:space-between;gap:2cqi;font:600 3.4cqi var(--text);position:relative;z-index:1}
@@ -463,7 +464,7 @@ const art = {
       <svg class="bloom">${'<use href="#flower"/>'}</svg>
       <img class="asbadge" src="${a.badge || '/social/app-store-badge.svg'}" alt="Download on the App Store">
     </div>`,
-  statement: (a) => `<div class="frame ${a.bg}">
+  statement: (a) => `<div class="frame ${a.bg}${a.sub ? '' : ' solo'}">
       ${a.top === false ? '<span></span>' : brand()}
       <div style="display:grid;gap:3cqi">
         <p class="bigtype">${esc(a.big)}</p>
@@ -499,7 +500,7 @@ const art = {
       <div class="foot">${a.n === '1' ? brand() : '<span></span>'}<span class="dots">${(a.dots || []).map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span></div>
       ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
     </div>`,
-  quote: (a) => `<div class="frame ${a.bg}">
+  quote: (a) => `<div class="frame ${a.bg}${a.sub ? '' : ' solo'}">
       <span class="swipe">${esc(a.label || 'Swipe')}</span>
       <p class="bigtype">${esc(a.big)}</p>
       <div class="foot">${brand()}<span class="dots">${(a.dots || []).map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span></div>
