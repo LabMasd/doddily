@@ -11,7 +11,7 @@ import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PLAYWRIGHT || '/Users/marcos/qr-lab/site/node_modules/playwright');
 
-const press = (process.argv[2] || `${process.env.HOME}/doddily-site/press`).replace(/\/$/, '');
+const press = (process.argv[2] || `${process.env.HOME}/copy-lab/press`).replace(/\/$/, '');
 const md = readFileSync(`${press}/press-release.md`, 'utf8').split(/\n---\n/)[0];
 const logo = `data:image/svg+xml;base64,${readFileSync(`${press}/assets/logos/doddily-wordmark-ink.svg`).toString('base64')}`;
 
