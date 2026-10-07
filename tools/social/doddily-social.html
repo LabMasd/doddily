@@ -452,6 +452,17 @@ const art = {
       <div class="foot">${brand()}<span>${esc(a.foot || '')}</span></div>
       ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
     </div>`,
+  // The closing frame of every UI / feature post (Marcos, 7 Oct 2026): the wordmark, one line, the App Store badge.
+  cta: (a) => `<div class="frame ${a.bg || 'ink'}">
+      ${brand()}
+      <div style="display:grid;gap:3cqi">
+        <p class="bigtype">${esc(a.big || 'Download Doddily on the App Store today.')}</p>
+        ${a.sub ? `<p class="body" style="max-width:82%">${esc(a.sub)}</p>` : ''}
+      </div>
+      <div class="foot"><span>${esc(a.foot || '')}</span></div>
+      <svg class="bloom">${'<use href="#flower"/>'}</svg>
+      <img class="asbadge" src="${a.badge || '/social/app-store-badge.svg'}" alt="Download on the App Store">
+    </div>`,
   statement: (a) => `<div class="frame ${a.bg}">
       ${a.top === false ? '<span></span>' : brand()}
       <div style="display:grid;gap:3cqi">
