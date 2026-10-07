@@ -495,7 +495,7 @@ const art = {
       ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
     </div>`,
   screenCrop: (a) => `<div class="frame ${a.bg} cropframe">
-      <div class="croptop">${a.first === false ? '<span></span>' : brand()}${a.dots ? `<span class="dots">${a.dots.map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span>` : `<span class="swipe">${esc(a.foot || '')}</span>`}</div>
+      <div class="croptop"><span></span>${a.dots ? `<span class="dots">${a.dots.map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span>` : `<span class="swipe">${esc(a.foot || '')}</span>`}</div>
       <div style="display:grid;gap:2.4cqi;position:relative;z-index:1">
         <p class="bigtype">${esc(a.big)}</p>
         ${a.sub ? `<p class="body" style="max-width:88%">${esc(a.sub)}</p>` : ''}
@@ -509,7 +509,7 @@ const art = {
         ${a.sub ? `<p class="body" style="max-width:86%">${esc(a.sub)}</p>` : ''}
       </div>
       <div class="phoneshot"><img src="${a.img}" alt=""></div>
-      <div class="foot">${a.first === false ? '<span></span>' : brand()}<span>${esc(a.foot || '')}</span>${a.dots ? `<span class="dots">${a.dots.map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span>` : ''}</div>
+      <div class="foot"><span></span><span>${esc(a.foot || '')}</span>${a.dots ? `<span class="dots">${a.dots.map((d) => `<i class="${d ? 'on' : ''}"></i>`).join('')}</span>` : ''}</div>
       ${a.badge ? `<img class="asbadge" src="${a.badge}" alt="Download on the App Store">` : ''}
     </div>`,
   story: (a) => `<div class="frame ${a.bg}">
