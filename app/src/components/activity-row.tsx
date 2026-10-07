@@ -1,11 +1,13 @@
 import { useRouter } from 'expo-router';
 import { memo } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { SymbolView } from 'expo-symbols';
 
 import { C, F, R } from '@/constants/theme';
 import { CATS } from '@/lib/categories';
 import { distLabel, distParts } from '@/lib/geo';
 import { ageText } from '@/lib/schedule';
+import { useStore } from '@/lib/store';
 import { useTextScale } from '@/lib/text-scale';
 import type { Activity, Row } from '@/lib/types';
 
@@ -18,12 +20,16 @@ export const ActivityRow = memo(function ActivityRow({ row, when, faded }: Props
   // The time column is sized for ordinary text. With larger text it would squeeze the name into a
   // sliver, so the time moves to a line of its own above the name.
   const { roomy } = useTextScale();
+  // A saved class carries a small heart beside its name, so the favourites stand out in the list and the
+  // calendar, where the same class comes round every week (Victoria, 7 Oct 2026).
+  const { saved } = useStore();
+  const loved = !!saved[it.id];
   return (
     <Pressable
       onPress={() => router.push({ pathname: '/activity/[id]', params: { id: it.id } })}
       style={({ pressed }) => [s.row, roomy && s.rowRoomy, faded && s.faded, pressed && s.pressed]}
       accessibilityRole="button"
-      accessibilityLabel={`${when ? when.start + ', ' : ''}${it.name}, ${distLabel(d)}`}>
+      accessibilityLabel={`${when ? when.start + ', ' : ''}${it.name}${loved ? ', saved' : ''}, ${distLabel(d)}`}>
       <View style={roomy ? s.whenRoomy : s.when}>
         {when ? (
           <>
@@ -36,7 +42,10 @@ export const ActivityRow = memo(function ActivityRow({ row, when, faded }: Props
       </View>
       <View style={s.body}>
         <View style={s.head}>
-          <Text style={s.name}>{it.name}</Text>
+          <View style={s.nameWrap}>
+            <Text style={s.name}>{it.name}</Text>
+            {loved ? <SymbolView name={{ ios: 'heart.fill', android: 'favorite', web: 'favorite' }} size={14} tintColor={C.accentText} style={s.heart} /> : null}
+          </View>
           {/* Walk and drive sit on two short lines, so a long name still has room beside them. */}
           <Text style={s.dist}>{distParts(d).join('\n')}</Text>
         </View>
@@ -95,7 +104,9 @@ const s = StyleSheet.create({
   emoji: { fontSize: 26 },
   body: { flex: 1, minWidth: 0 },
   head: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },
-  name: { flex: 1, fontFamily: F.textSemi, fontSize: 17, lineHeight: 22, color: C.ink },
+  nameWrap: { flex: 1, flexDirection: 'row', alignItems: 'flex-start', gap: 6 },
+  name: { flexShrink: 1, fontFamily: F.textSemi, fontSize: 17, lineHeight: 22, color: C.ink },
+  heart: { width: 14, height: 14, marginTop: 4 },
   dist: { fontFamily: F.text, fontSize: 14, lineHeight: 18, color: C.muted, paddingTop: 2, textAlign: 'right' },
   venue: { fontFamily: F.text, fontSize: 15, color: C.muted, marginTop: 1 },
   tags: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 8 },
