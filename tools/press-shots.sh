@@ -10,7 +10,7 @@
 # Needs ImageMagick. Nothing is uploaded; commit and push the website to publish.
 set -euo pipefail
 SRC="${1:?Give the screens folder, e.g. ~/Downloads/doddily-screens-2026-10-06/screens}"
-PRESS="${2:-$HOME/doddily-site/press}"
+PRESS="${2:-$HOME/copy-lab/press}"
 MILK='#F4F6F8'; INK='#1E2536'
 W=1130; H=2455; X=80; Y=170; R=132          # the phone on the 1290 x 2796 page, and its corner
 mkdir -p "$PRESS/assets/screenshots/framed" "$PRESS/thumbs"
