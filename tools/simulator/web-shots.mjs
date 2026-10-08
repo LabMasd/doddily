@@ -18,7 +18,11 @@ const out = process.argv[3] || `${process.env.HOME}/Downloads/doddily-screenshot
 mkdirSync(out, { recursive: true });
 const W = 440, H = 956, BAR = 62;
 
-const settings = { loc: { lat: 51.545033, lng: -0.056407, name: 'E8 1EA', postcode: 'E8 1EA' }, radius: 3, group: 'all', onboarded: true, name: '', kids: [{ id: 'k1', name: 'Ada', band: '1to2' }], mapApp: 'google' };
+// SHOT_LOC='EH6 4AD|55.975127|-3.179889' takes the pictures somewhere else (a Scottish postcode for a post about Scotland);
+// SHOT_ONLY='4-you,1-today' takes only those screens.
+const [PC, LAT, LNG] = (process.env.SHOT_LOC || 'E8 1EA|51.545033|-0.056407').split('|');
+const ONLY = (process.env.SHOT_ONLY || '').split(',').filter(Boolean);
+const settings = { loc: { lat: Number(LAT), lng: Number(LNG), name: PC, postcode: PC }, radius: 3, group: 'all', onboarded: true, name: '', kids: [{ id: 'k1', name: 'Ada', band: '1to2' }], mapApp: 'google' };
 // A few saved classes, so the Saved screen has something on it (the same sample the simulator shots used).
 const seedFile = new URL('./saved-seed.json', import.meta.url);
 const saved = existsSync(seedFile) ? readFileSync(seedFile, 'utf8') : '{}';
@@ -42,6 +46,7 @@ const dress = () => p.evaluate(({ STATUS, BAR }) => {
   document.body.style.background = '#F4F6F8'; // the app's own background, so the status bar sits on the same ground
 }, { STATUS, BAR });
 const shot = async (name, path, settle, prep) => {
+  if (ONLY.length && !ONLY.includes(name)) return;
   await p.goto(base + path, { waitUntil: 'networkidle' }); await dress(); await p.waitForTimeout(settle);
   if (prep) { await prep(); await p.waitForTimeout(900); }
   await dress(); await p.screenshot({ path: `${out}/${name}.png` }); console.log('rendered', name);
