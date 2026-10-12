@@ -386,5 +386,69 @@
   ],
   "schedule_note": "Mixed Moo 9.50am and 11.30am, Baby Moo 10.45am. Term time",
   "price": "£6.75 per session"
+ },
+ {
+  "name": "Moo Music",
+  "provider": "Moo Music Cheltenham and Gloucester",
+  "category": "music",
+  "age_min_months": 0,
+  "age_max_months": 48,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly sing-along music sessions with original songs, percussion and movement for young children.",
+  "url": "https://moo-music.co.uk/areas/candg/",
+  "phone": "",
+  "source": "provider, by email 12 Oct 2026",
+  "confidence": "high",
+  "venue": "Badgeworth Village Hall",
+  "address": "Badgeworth Lane, Badgeworth, Cheltenham, GL51 4UJ",
+  "postcode": "GL51 4UJ",
+  "lat": 51.867897,
+  "lng": -2.133025,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:30"
+   },
+   {
+    "day": "Mon",
+    "start": "10:30"
+   }
+  ],
+  "schedule_note": "Baby Moo (0 to 1 years) 9.30am, Mixed Moo (1 to 4 years) 10.30am"
+ },
+ {
+  "name": "Moo Music",
+  "provider": "Moo Music Cheltenham and Gloucester",
+  "category": "music",
+  "age_min_months": 0,
+  "age_max_months": 48,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly sing-along music sessions with original songs, percussion and movement for young children.",
+  "url": "https://moo-music.co.uk/areas/candg/",
+  "phone": "",
+  "source": "provider, by email 12 Oct 2026",
+  "confidence": "high",
+  "venue": "St Johns Church",
+  "address": "St Johns Avenue, Churchdown, Gloucester, GL3 2DB",
+  "postcode": "GL3 2DB",
+  "lat": 51.886285,
+  "lng": -2.185387,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "09:30"
+   },
+   {
+    "day": "Wed",
+    "start": "10:30"
+   }
+  ],
+  "schedule_note": "Baby Moo (0 to 1 years) 9.30am, Mixed Moo (1 to 4 years) 10.30am"
  }
 ]
