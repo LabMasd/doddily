@@ -19,7 +19,7 @@ mkdirSync(out, { recursive: true });
 const W = 440, H = 956, BAR = 62;
 
 // SHOT_LOC='EH6 4AD|55.975127|-3.179889' takes the pictures somewhere else (a Scottish postcode for a post about Scotland);
-// SHOT_ONLY='4-you,1-today' takes only those screens.
+// SHOT_ONLY='4-you,1-today' takes only those screens. SHOT_CLASS / SHOT_LIST: see 7-detail below.
 const [PC, LAT, LNG] = (process.env.SHOT_LOC || 'E8 1EA|51.545033|-0.056407').split('|');
 const ONLY = (process.env.SHOT_ONLY || '').split(',').filter(Boolean);
 const settings = { loc: { lat: Number(LAT), lng: Number(LNG), name: PC, postcode: PC }, radius: 3, group: 'all', onboarded: true, name: '', kids: [{ id: 'k1', name: 'Ada', band: '1to2' }], mapApp: 'google' };
@@ -61,7 +61,9 @@ await shot('5-today-week', '/', 4500, () => p.getByRole('tab', { name: /All, any
 // a class's own page, opened from the list the way a parent would (in the All list a row is named "<class>, <how far>")
 await shot('7-detail', '/', 4500, async () => {
   await p.getByRole('tab', { name: /All, any day/ }).click(); await p.waitForTimeout(1200);
-  const pick = p.getByRole('button', { name: /^(Baby Bounce|Tiny Tots|Stories & Rhymes).*, \d+ min walk/ }).first();
+  // SHOT_CLASS='Rhyme' picks a particular class by its name (a pattern); SHOT_LIST=1 prints the names on offer
+  if (process.env.SHOT_LIST) console.log((await p.getByRole('button', { name: /, \d+ min (walk|drive)/ }).evaluateAll((els) => els.map((e) => e.getAttribute('aria-label')))).join('\n'));
+  const pick = p.getByRole('button', { name: process.env.SHOT_CLASS ? new RegExp(process.env.SHOT_CLASS) : /^(Baby Bounce|Tiny Tots|Stories & Rhymes).*, \d+ min walk/ }).first();
   await ((await pick.count()) ? pick : p.getByRole('button', { name: /, \d+ min (walk|drive)/ }).first()).click();
   await p.waitForTimeout(2500);
 });
