@@ -450,5 +450,124 @@
    }
   ],
   "schedule_note": "Baby Moo (0 to 1 years) 9.30am, Mixed Moo (1 to 4 years) 10.30am"
+ },
+ {
+  "name": "Moo Music",
+  "provider": "Moo Music Hinckley and Nuneaton",
+  "category": "music",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly sing-along music sessions with original songs, percussion and movement for young children.",
+  "url": "https://bookwhen.com/cherylsouthwick",
+  "phone": "",
+  "source": "provider, by email 13 Oct 2026",
+  "confidence": "high",
+  "venue": "Bugwicks Barn",
+  "address": "11 Waterloo Road, Hinckley, LE10 0QJ",
+  "postcode": "LE10 0QJ",
+  "lat": 52.539112,
+  "lng": -1.37501,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:45",
+    "end": "10:25"
+   },
+   {
+    "day": "Mon",
+    "start": "10:45",
+    "end": "11:25"
+   },
+   {
+    "day": "Mon",
+    "start": "11:45",
+    "end": "12:25"
+   },
+   {
+    "day": "Mon",
+    "start": "12:45",
+    "end": "13:25"
+   },
+   {
+    "day": "Tue",
+    "start": "09:45",
+    "end": "10:25"
+   },
+   {
+    "day": "Tue",
+    "start": "10:45",
+    "end": "11:25"
+   },
+   {
+    "day": "Tue",
+    "start": "11:45",
+    "end": "12:25"
+   },
+   {
+    "day": "Tue",
+    "start": "12:45",
+    "end": "13:25"
+   },
+   {
+    "day": "Wed",
+    "start": "09:45",
+    "end": "10:25"
+   },
+   {
+    "day": "Wed",
+    "start": "10:45",
+    "end": "11:25"
+   },
+   {
+    "day": "Wed",
+    "start": "11:45",
+    "end": "12:25"
+   },
+   {
+    "day": "Thu",
+    "start": "09:45",
+    "end": "10:25"
+   },
+   {
+    "day": "Thu",
+    "start": "10:45",
+    "end": "11:25"
+   },
+   {
+    "day": "Thu",
+    "start": "11:45",
+    "end": "12:25"
+   },
+   {
+    "day": "Thu",
+    "start": "13:00",
+    "end": "13:40"
+   },
+   {
+    "day": "Fri",
+    "start": "09:45",
+    "end": "10:25"
+   },
+   {
+    "day": "Fri",
+    "start": "10:45",
+    "end": "11:25"
+   },
+   {
+    "day": "Fri",
+    "start": "11:45",
+    "end": "12:25"
+   },
+   {
+    "day": "Sat",
+    "start": "09:00",
+    "end": "09:40"
+   }
+  ],
+  "schedule_note": "Mixed Moo (0 to 5 years) Mon to Fri 9.45am, Mon, Tue, Wed and Fri 10.45am, Sat 9am. Baby Moo Mon 12.45pm, Tue to Fri 11.45am. Mini Moo (standing to wobbly walkers) Mon 11.45am, Thu 10.45am. Moo Born (0 to 6 months) Tue 12.45pm. SEND Mixed Moo Thu 1pm."
  }
 ]
