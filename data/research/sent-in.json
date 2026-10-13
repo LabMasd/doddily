@@ -569,5 +569,117 @@
    }
   ],
   "schedule_note": "Mixed Moo (0 to 5 years) Mon to Fri 9.45am, Mon, Tue, Wed and Fri 10.45am, Sat 9am. Baby Moo Mon 12.45pm, Tue to Fri 11.45am. Mini Moo (standing to wobbly walkers) Mon 11.45am, Thu 10.45am. Moo Born (0 to 6 months) Tue 12.45pm. SEND Mixed Moo Thu 1pm."
+ },
+ {
+  "name": "Moo Music",
+  "provider": "Moo Music Mid Down",
+  "category": "music",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly sing-along music sessions with original songs, percussion and movement for young children.",
+  "url": "https://bookwhen.com/moomusicmiddown",
+  "phone": "",
+  "source": "provider, by email 13 Oct 2026",
+  "confidence": "high",
+  "venue": "St Patrick's Church",
+  "address": "24 Church Street, Ballynahinch, BT24 8AF",
+  "postcode": "BT24 8AF",
+  "lat": 54.400135,
+  "lng": -5.897252,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": "10:40"
+   },
+   {
+    "day": "Tue",
+    "start": "11:00",
+    "end": "11:40"
+   }
+  ],
+  "schedule_note": "Mixed Moo (0 to 5 years) 10am, Baby Moo (birth to crawling) 11am"
+ },
+ {
+  "name": "Moo Music",
+  "provider": "Moo Music Mid Down",
+  "category": "music",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly sing-along music sessions with original songs, percussion and movement for young children.",
+  "url": "https://bookwhen.com/moomusicmiddown",
+  "phone": "",
+  "source": "provider, by email 13 Oct 2026",
+  "confidence": "high",
+  "venue": "St John's Church, Millennium Room",
+  "address": "The Rock, 161 Central Parade, Newcastle, County Down, BT33 0EU",
+  "postcode": "BT33 0EU",
+  "lat": 54.205068,
+  "lng": -5.893059,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "10:40"
+   },
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": "11:40"
+   },
+   {
+    "day": "Thu",
+    "start": "12:00",
+    "end": "12:40"
+   }
+  ],
+  "schedule_note": "Mixed Moo (0 to 5 years) 10am, Baby Moo (birth to crawling) 11am and 12pm"
+ },
+ {
+  "name": "Moo Music",
+  "provider": "Moo Music Mid Down",
+  "category": "music",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly sing-along music sessions with original songs, percussion and movement for young children.",
+  "url": "https://bookwhen.com/moomusicmiddown",
+  "phone": "",
+  "source": "provider, by email 13 Oct 2026",
+  "confidence": "high",
+  "venue": "The Saint Patrick Centre",
+  "address": "Market Street, Downpatrick, County Down, BT30 6LZ",
+  "postcode": "BT30 6LZ",
+  "lat": 54.326461,
+  "lng": -5.718182,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "09:45",
+    "end": "10:25"
+   },
+   {
+    "day": "Fri",
+    "start": "10:45",
+    "end": "11:25"
+   },
+   {
+    "day": "Fri",
+    "start": "11:45",
+    "end": "12:25"
+   }
+  ],
+  "schedule_note": "Mixed Moo (0 to 5 years) 9.45am, Mini Moo (mobile babies to wobbly walkers) 10.45am, Baby Moo (birth to crawling) 11.45am"
  }
 ]
