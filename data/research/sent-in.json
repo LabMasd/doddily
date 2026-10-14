@@ -681,5 +681,37 @@
    }
   ],
   "schedule_note": "Mixed Moo (0 to 5 years) 9.45am, Mini Moo (mobile babies to wobbly walkers) 10.45am, Baby Moo (birth to crawling) 11.45am"
+ },
+ {
+  "name": "Moo Music",
+  "provider": "Moo Music Basingstoke, Tadley and Aldermaston",
+  "category": "music",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "£6.50",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Weekly sing-along music sessions with original songs, percussion and movement for young children.",
+  "url": "https://bookwhen.com/moomusicbasingstoke",
+  "phone": "",
+  "source": "provider, by email 14 Oct 2026",
+  "confidence": "high",
+  "venue": "Heath End Village Hall",
+  "address": "Heath End Road, Baughurst, RG26 5LU",
+  "postcode": "RG26 5LU",
+  "lat": 51.356073,
+  "lng": -1.16574,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:00"
+   },
+   {
+    "day": "Mon",
+    "start": "11:00"
+   }
+  ],
+  "schedule_note": "Mini Moo (walking to age 5) 10am, Baby Moo (newborn to walking) 11am"
  }
 ]
