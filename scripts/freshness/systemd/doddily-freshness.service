@@ -1,0 +1,20 @@
+[Unit]
+Description=Doddily freshness: check listing pages and send the weekly digest
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=marcos
+Group=marcos
+Environment=HOME=/home/marcos
+# Repo checkout on the server (see README, "Install"). Change both paths if it lives elsewhere.
+WorkingDirectory=/home/marcos/little-days
+ExecStart=/usr/bin/flock -n /run/lock/doddily-freshness.lock /home/marcos/little-days/scripts/freshness/run-weekly.sh
+Nice=10
+IOSchedulingClass=idle
+TimeoutStartSec=4h
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=/home/marcos/little-days/data /home/marcos/little-days/scripts/freshness /run/lock

@@ -18,6 +18,11 @@ const pad = (t) => (t && HM.test(t) ? t.padStart(5, '0') : null);
 const pcKey = (p) => String(p || '').replace(/\s+/g, '').toUpperCase();
 const brand = (s) => slug(s).split('-').slice(0, 2).join('-');
 
+// Freshness (scripts/freshness/check.mjs): per-url status and the date the provider page was last seen
+// matching the listing. Optional; missing file = no verified fields.
+let fresh = {};
+try { fresh = JSON.parse(fs.readFileSync(path.join(root, 'data/freshness-state.json'), 'utf8')).urls || {}; } catch { /* not run yet */ }
+
 const items = [];
 const byId = new Set();
 const byDupe = new Set();
@@ -52,6 +57,11 @@ function readDir(dir, local) {
       if (byId.has(id)) continue;
       byId.add(id); if (it.postcode) byDupe.add(dupe);
       delete it.evidence;
+      delete it.verified; delete it.verifiedStatus;
+      const f = it.url && fresh[it.url];
+      const oa = /openactive/i.test(it.attribution || '') && /checked (\d{4}-\d{2}-\d{2})/.exec(it.schedule_note || '');
+      if (oa) { it.verified = oa[1]; it.verifiedStatus = 'feed'; } // OpenActive: the feed pull date
+      else if (f && f.st) { if (f.v) it.verified = f.v; it.verifiedStatus = f.st; }
       it.id = id;
       items.push(it);
       kept++;

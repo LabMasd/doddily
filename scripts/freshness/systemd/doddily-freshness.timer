@@ -1,0 +1,10 @@
+[Unit]
+Description=Doddily freshness check, Sundays 05:00 (digest arrives when it finishes, about an hour later)
+
+[Timer]
+OnCalendar=Sun *-*-* 05:00:00
+Persistent=true
+RandomizedDelaySec=15m
+
+[Install]
+WantedBy=timers.target
