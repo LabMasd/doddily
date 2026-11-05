@@ -437,11 +437,11 @@
    {
     "day": "Mon",
     "start": "10:30",
-    "end": "11:30"
+    "end": "11:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "",
+  "schedule_note": "Listed as Rhymetime, Mon 10.30am-11am (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "Free",
@@ -776,7 +776,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "",
+  "schedule_note": "Term time only (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "Free",
@@ -1108,6 +1108,11 @@
     "day": "Tue",
     "start": "10:30",
     "end": "11:00"
+   },
+   {
+    "day": "Fri",
+    "start": "10:30",
+    "end": "11:00"
    }
   ],
   "tier": "timetable",
@@ -1238,10 +1243,15 @@
     "day": "Thu",
     "start": "14:15",
     "end": "14:45"
+   },
+   {
+    "day": "Sat",
+    "start": "10:30",
+    "end": "11:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Runs by Better (GLL) for Wandsworth Council",
+  "schedule_note": "Runs by Better (GLL) for Wandsworth Council. The Saturday 10.30am session runs every other week and is listed for \"children\" (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 24,
   "price": "Free",
@@ -1866,7 +1876,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Check the weekly table for school-holiday changes and cancellations.",
+  "schedule_note": "Alternate Thursdays (fortnightly): 5 and 19 Nov, 3 and 17 Dec 2026 (council page checked 2026-11-05). Check the weekly table for school-holiday changes and cancellations.",
   "age_min_months": 0,
   "age_max_months": 36,
   "price": "Free",
@@ -2460,13 +2470,13 @@
   "lng": -1.080525,
   "sessions": [
    {
-    "day": "Tue",
+    "day": "Mon",
     "start": "10:00",
     "end": "12:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly drop-in; stay and play with stories, rhymes, singing and crafts",
+  "schedule_note": "Weekly drop-in; stay and play with stories, rhymes, singing and crafts. Moved to Monday (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -3945,13 +3955,13 @@
   "lng": -1.836814,
   "sessions": [
    {
-    "day": "Sat",
+    "day": "Mon",
     "start": "11:00",
     "end": null
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Check times with the library.",
+  "schedule_note": "Mondays 11am (council page checked 2026-11-05). Check times with the library.",
   "age_min_months": 12,
   "age_max_months": 60,
   "price": "Free",
@@ -4071,7 +4081,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Check times with the library.",
+  "schedule_note": "Rhyme Time and Story Time alternate on Thursdays 10am, term time only (council page checked 2026-11-05).",
   "age_min_months": 12,
   "age_max_months": 60,
   "price": "Free",
@@ -4097,11 +4107,16 @@
    {
     "day": "Mon",
     "start": "14:00",
-    "end": "14:45"
+    "end": "14:30"
+   },
+   {
+    "day": "Mon",
+    "start": "14:30",
+    "end": "15:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Term time only. Check times with the library.",
+  "schedule_note": "Mondays: Storytime 2pm-2.30pm, then Rhymetime 2.30pm-3pm (council page checked 2026-11-05); the page no longer marks it term time only.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -4185,13 +4200,13 @@
   "lng": -1.710075,
   "sessions": [
    {
-    "day": "Tue",
-    "start": "13:00",
-    "end": "13:30"
+    "day": "Fri",
+    "start": "09:00",
+    "end": "10:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Check times with the library.",
+  "schedule_note": "Fridays 9am-10.30am (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -4215,13 +4230,13 @@
   "lng": -1.710075,
   "sessions": [
    {
-    "day": "Fri",
-    "start": "11:30",
-    "end": "12:30"
+    "day": "Tue",
+    "start": "10:00",
+    "end": "12:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Check times with the library.",
+  "schedule_note": "Tuesdays 10am-12 noon (council page checked 2026-11-05).",
   "age_min_months": 12,
   "age_max_months": 60,
   "price": "Free",
@@ -4365,13 +4380,18 @@
   "lng": -1.720683,
   "sessions": [
    {
-    "day": "Tue",
-    "start": "09:30",
-    "end": "10:30"
+    "day": "Thu",
+    "start": "10:30",
+    "end": "11:00"
+   },
+   {
+    "day": "Thu",
+    "start": "11:00",
+    "end": "11:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Term time only. Check times with the library.",
+  "schedule_note": "Thursdays: Storytime 10.30am-11am, then Rhymetime 11am-11.30am (council page checked 2026-11-05); the page no longer marks it term time only.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -5996,7 +6016,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Gaelic-language session. Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Gaelic-language session. Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6041,7 +6061,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6076,7 +6096,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6106,7 +6126,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6136,7 +6156,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6166,7 +6186,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6211,7 +6231,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6246,7 +6266,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6281,7 +6301,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6321,7 +6341,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6351,7 +6371,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6381,7 +6401,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6421,7 +6441,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6456,7 +6476,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6486,7 +6506,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Gaelic-language session. Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Gaelic-language session. Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6521,7 +6541,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6556,7 +6576,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6591,7 +6611,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6621,7 +6641,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6656,7 +6676,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6686,7 +6706,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6716,7 +6736,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6751,7 +6771,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6781,7 +6801,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6816,7 +6836,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6846,7 +6866,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Gaelic-language session. Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Gaelic-language session. Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6876,7 +6896,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6906,7 +6926,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6936,7 +6956,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6966,7 +6986,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -6996,7 +7016,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -7026,7 +7046,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Gaelic-language session. Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Gaelic-language session. Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -7056,7 +7076,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -7086,7 +7106,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -7121,7 +7141,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served.",
+  "schedule_note": "Weekly; free drop-in, spaces limited, first come first served. A new Wednesday 13:30-14:00 session starts on 2 Dec 2026 (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -7151,7 +7171,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly; free drop-in.",
+  "schedule_note": "Weekly; free drop-in. The council page lists sessions to 22 Dec 2026.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -7169,10 +7189,10 @@
   "provider": "Edinburgh Libraries",
   "category": "library",
   "venue": "Balerno Library",
-  "address": "Balerno Library, 1 Main Street, Edinburgh EH14 7EQ",
-  "postcode": "EH14 7EQ",
-  "lat": 55.883894,
-  "lng": -3.338456,
+  "address": "The Welcome Station (Balerno Village Trust), 2 Main Street, Balerno EH14 7EH",
+  "postcode": "EH14 7EH",
+  "lat": 55.883755,
+  "lng": -3.338867,
   "sessions": [
    {
     "day": "Wed",
@@ -7181,12 +7201,12 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly. Call 0131 529 5500 to book a place.",
+  "schedule_note": "Weekly. Sessions are held at The Welcome Station (Balerno Village Trust), 2 Main Street. No booking required (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "Free",
   "free": true,
-  "booking": "book",
+  "booking": "drop-in",
   "indoor": true,
   "description": "Free Bookbug session of songs, rhymes and a story for 0-4 year olds with their grown-ups.",
   "url": "https://www.edinburgh.gov.uk/libraries/libraries-fives/3",
@@ -7492,20 +7512,9 @@
   "postcode": "EH17 8RG",
   "lat": 55.905445,
   "lng": -3.134071,
-  "sessions": [
-   {
-    "day": "Tue",
-    "start": "14:30",
-    "end": "15:00"
-   },
-   {
-    "day": "Fri",
-    "start": "11:00",
-    "end": "11:30"
-   }
-  ],
+  "sessions": [],
   "tier": "timetable",
-  "schedule_note": "Weekly; no booking required.",
+  "schedule_note": "Library closed for refurbishment until January 2027 (council page checked 2026-11-05). Before closing: Tue 14:30, Fri 11:00.",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "Free",
@@ -7516,7 +7525,7 @@
   "url": "https://www.edinburgh.gov.uk/libraries/libraries-fives/3",
   "phone": "",
   "source": "edinburgh.gov.uk",
-  "confidence": "medium"
+  "confidence": "low"
  },
  {
   "name": "Bookbug",
@@ -7706,15 +7715,9 @@
   "postcode": "EH7 4LU",
   "lat": 55.961579,
   "lng": -3.181607,
-  "sessions": [
-   {
-    "day": "Mon",
-    "start": "14:00",
-    "end": "14:30"
-   }
-  ],
+  "sessions": [],
   "tier": "timetable",
-  "schedule_note": "Weekly Italian-language session. Book places online (Eventbrite).",
+  "schedule_note": "The Italian session (was Mon 14:00) is no longer listed on the council page (council page checked 2026-11-05); only English and Spanish Bookbug are shown. It may have stopped.",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "Free",
@@ -7725,7 +7728,7 @@
   "url": "https://www.edinburgh.gov.uk/libraries/libraries-fives/3",
   "phone": "",
   "source": "edinburgh.gov.uk",
-  "confidence": "medium"
+  "confidence": "low"
  },
  {
   "name": "Bookbug",
@@ -8107,7 +8110,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly. Book places online (Eventbrite).",
+  "schedule_note": "Weekly. Book places online (Eventbrite). The library was closed for building maintenance, expected to reopen Mon 2 Nov 2026; no sessions listed yet (council page checked 2026-11-05). Check with the library.",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "Free",
@@ -8118,7 +8121,7 @@
   "url": "https://www.edinburgh.gov.uk/libraries/libraries-fives/3",
   "phone": "",
   "source": "edinburgh.gov.uk",
-  "confidence": "medium"
+  "confidence": "low"
  },
  {
   "name": "Bookbug",
@@ -8702,11 +8705,6 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "10:30",
-    "end": "11:00"
-   },
-   {
-    "day": "Mon",
     "start": "11:15",
     "end": "11:45"
    },
@@ -8717,7 +8715,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly. Listed as running through June 2027.",
+  "schedule_note": "Weekly. Listed as running through June 2027. Mon 10:30 session no longer listed (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "Free",
@@ -10272,7 +10270,7 @@
   "sessions": [
    {
     "day": "Thu",
-    "start": "14:00",
+    "start": "11:00",
     "end": null
    }
   ],
@@ -10454,15 +10452,10 @@
     "day": "Wed",
     "start": "11:00",
     "end": "11:30"
-   },
-   {
-    "day": "Fri",
-    "start": "11:00",
-    "end": "11:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Capacity limited to 50 (adults and children); arrive early",
+  "schedule_note": "Capacity limited to 50 (adults and children); arrive early. The council event page lists Wednesdays only (11 Nov to 9 Dec 2026); no Friday session (council page checked 2026-11-05).",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",
@@ -10552,7 +10545,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "",
+  "schedule_note": "Term time only.",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "Free",

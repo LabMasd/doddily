@@ -1,0 +1,2160 @@
+[
+ {
+  "name": "Parent and toddler sessions (Language and Play, Ti & Fi)",
+  "provider": "Carmarthenshire County Council (Flying Start)",
+  "category": "stayplay",
+  "venue": "Llwynhendy Integrated Children's Centre",
+  "address": "Off Llwynhendy Road, Llwynhendy, Llanelli",
+  "postcode": "SA14 9DP",
+  "lat": 51.679486,
+  "lng": -4.119686,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Timetable PDF linked on council page; Language and Play groups may be limited to Flying Start areas. Ages not stated on the council page.",
+  "age_min_months": 0,
+  "age_max_months": null,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "url": "https://fis.carmarthenshire.gov.wales/iccs/",
+  "source": "fis.carmarthenshire.gov.wales iccs",
+  "confidence": "low",
+  "indoor": true
+ },
+ {
+  "name": "Parent and toddler sessions (Language and Play, Ti & Fi)",
+  "provider": "Carmarthenshire County Council (Flying Start)",
+  "category": "stayplay",
+  "venue": "Morfa Integrated Children's Centre",
+  "address": "School Road, Morfa, Llanelli",
+  "postcode": "SA15 2AU",
+  "lat": 51.669969,
+  "lng": -4.145101,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Timetable PDF linked on council page; Language and Play groups may be limited to Flying Start areas. Ages not stated on the council page.",
+  "age_min_months": 0,
+  "age_max_months": null,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "url": "https://fis.carmarthenshire.gov.wales/iccs/",
+  "source": "fis.carmarthenshire.gov.wales iccs",
+  "confidence": "low",
+  "indoor": true
+ },
+ {
+  "name": "Parent and toddler sessions (Language and Play, Ti & Fi)",
+  "provider": "Carmarthenshire County Council (Flying Start)",
+  "category": "stayplay",
+  "venue": "Felinfoel Integrated Children's Centre",
+  "address": "Ynyswen, Felin-foel, Llanelli",
+  "postcode": "SA14 8BE",
+  "lat": 51.696515,
+  "lng": -4.142637,
+  "sessions": [],
+  "tier": "venue",
+  "schedule_note": "Timetable PDF linked on council page; Language and Play groups may be limited to Flying Start areas. Ages not stated on the council page.",
+  "age_min_months": 0,
+  "age_max_months": null,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "url": "https://fis.carmarthenshire.gov.wales/iccs/",
+  "source": "fis.carmarthenshire.gov.wales iccs",
+  "confidence": "low",
+  "indoor": true
+ },
+ {
+  "name": "Bubbles and Babies",
+  "provider": "Derbyshire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Ashbourne Library",
+  "address": "Ashbourne Library",
+  "postcode": "DE6 1DA",
+  "lat": 53.014736,
+  "lng": -1.731537,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "09:45",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Page says no need to book",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.derbyshire.gov.uk/leisure/libraries/events/story-and-rhyme/story-and-rhyme-times.aspx",
+  "source": "derbyshire.gov.uk story-and-rhyme-times",
+  "confidence": "high"
+ },
+ {
+  "name": "Bubbles and Babies",
+  "provider": "Derbyshire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Etwall Library",
+  "address": "Etwall Library",
+  "postcode": "DE65 6NB",
+  "lat": 52.881333,
+  "lng": -1.602517,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.derbyshire.gov.uk/leisure/libraries/events/story-and-rhyme/story-and-rhyme-times.aspx",
+  "source": "derbyshire.gov.uk story-and-rhyme-times",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby sensory play",
+  "provider": "Derbyshire County Council Libraries",
+  "category": "sensory",
+  "venue": "Ilkeston Library",
+  "address": "Ilkeston Library",
+  "postcode": "DE7 5RN",
+  "lat": 52.970128,
+  "lng": -1.309064,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Term time.",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.derbyshire.gov.uk/leisure/libraries/events/story-and-rhyme/story-and-rhyme-times.aspx",
+  "source": "derbyshire.gov.uk story-and-rhyme-times",
+  "confidence": "high"
+ },
+ {
+  "name": "Sensory Play",
+  "provider": "Derbyshire County Council Libraries",
+  "category": "sensory",
+  "venue": "Long Eaton Library",
+  "address": "Long Eaton Library",
+  "postcode": "NG10 1JG",
+  "lat": 52.895668,
+  "lng": -1.272892,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Term time only; last session this year 26 November 2026.",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.derbyshire.gov.uk/leisure/libraries/events/story-and-rhyme/story-and-rhyme-times.aspx",
+  "source": "derbyshire.gov.uk story-and-rhyme-times",
+  "confidence": "low"
+ },
+ {
+  "name": "Sensory baby session",
+  "provider": "Derbyshire County Council Libraries",
+  "category": "sensory",
+  "venue": "Pinxton Library",
+  "address": "Pinxton Library",
+  "postcode": "NG16 6NA",
+  "lat": 53.091505,
+  "lng": -1.3191,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "14:00",
+    "end": "15:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.derbyshire.gov.uk/leisure/libraries/events/story-and-rhyme/story-and-rhyme-times.aspx",
+  "source": "derbyshire.gov.uk story-and-rhyme-times",
+  "confidence": "high"
+ },
+ {
+  "name": "Bubbles and Babies",
+  "provider": "Derbyshire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Shirebrook Library",
+  "address": "Shirebrook Library",
+  "postcode": "NG20 8AL",
+  "lat": 53.202988,
+  "lng": -1.21399,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.derbyshire.gov.uk/leisure/libraries/events/story-and-rhyme/story-and-rhyme-times.aspx",
+  "source": "derbyshire.gov.uk story-and-rhyme-times",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Bishop Auckland Family Hub",
+  "address": "Bishop Auckland Family Hub",
+  "postcode": "DL14 6QL",
+  "lat": 54.647575,
+  "lng": -1.686619,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:30",
+    "end": "15:00"
+   },
+   {
+    "day": "Fri",
+    "start": "13:30",
+    "end": "15:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Brandon Family Hub",
+  "address": "Brandon Family Hub",
+  "postcode": "DH7 8NL",
+  "lat": 54.750651,
+  "lng": -1.629149,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Chester Le Street Family Hub",
+  "address": "Chester Le Street Family Hub",
+  "postcode": "DH2 2EL",
+  "lat": 54.851355,
+  "lng": -1.585055,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Consett Family Hub",
+  "address": "Consett Family Hub",
+  "postcode": "DH8 8EQ",
+  "lat": 54.838625,
+  "lng": -1.873847,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Durham Family Hub",
+  "address": "Durham Family Hub",
+  "postcode": "DH1 2EY",
+  "lat": 54.776227,
+  "lng": -1.549537,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "13:00",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Easington Family Hub",
+  "address": "Easington Family Hub",
+  "postcode": "SR8 3DJ",
+  "lat": 54.787392,
+  "lng": -1.340016,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Ferryhill Family Hub",
+  "address": "Ferryhill Family Hub",
+  "postcode": "DL17 8PH",
+  "lat": 54.687887,
+  "lng": -1.563748,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Horden Family Hub",
+  "address": "Horden Family Hub",
+  "postcode": "SR8 4EQ",
+  "lat": 54.763088,
+  "lng": -1.31006,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "13:00",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Newton Aycliffe Family Hub",
+  "address": "Newton Aycliffe Family Hub",
+  "postcode": "DL5 7DD",
+  "lat": 54.619749,
+  "lng": -1.584128,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Peterlee Family Hub",
+  "address": "Peterlee Family Hub",
+  "postcode": "SR8 5NJ",
+  "lat": 54.763576,
+  "lng": -1.326712,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "SeaView Centre",
+  "address": "SeaView Centre",
+  "postcode": "SR7 8QE",
+  "lat": 54.837883,
+  "lng": -1.346028,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Page lists Thursday with note: Wednesday from 22 July 2026; Wednesday used. Drop-in per page text",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "medium"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Stanley Family Hub",
+  "address": "Stanley Family Hub",
+  "postcode": "DH9 0AB",
+  "lat": 54.870038,
+  "lng": -1.698065,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:00",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Tudhoe Moor Family Hub",
+  "address": "Tudhoe Moor Family Hub",
+  "postcode": "DL16 6EX",
+  "lat": 54.702122,
+  "lng": -1.58428,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Wheatley Hill Family Hub",
+  "address": "Wheatley Hill Family Hub",
+  "postcode": "DH6 3RT",
+  "lat": 54.741488,
+  "lng": -1.422821,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Willington Family Hub",
+  "address": "Willington Family Hub",
+  "postcode": "DL15 0EQ",
+  "lat": 54.710285,
+  "lng": -1.694347,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "13:30",
+    "end": "15:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 12,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/ToddlerAndMe",
+  "source": "durham.gov.uk ToddlerAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Bishop Auckland Family Hub",
+  "address": "Bishop Auckland Family Hub",
+  "postcode": "DL14 6QL",
+  "lat": 54.647575,
+  "lng": -1.686619,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Brandon Family Hub",
+  "address": "Brandon Family Hub",
+  "postcode": "DH7 8NL",
+  "lat": 54.750651,
+  "lng": -1.629149,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Chester Le Street Family Hub",
+  "address": "Chester Le Street Family Hub",
+  "postcode": "DH2 2EL",
+  "lat": 54.851355,
+  "lng": -1.585055,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Consett Family Hub",
+  "address": "Consett Family Hub",
+  "postcode": "DH8 8EQ",
+  "lat": 54.838625,
+  "lng": -1.873847,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:00",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Durham Family Hub",
+  "address": "Durham Family Hub",
+  "postcode": "DH1 2EY",
+  "lat": 54.776227,
+  "lng": -1.549537,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:00",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Easington Family Hub",
+  "address": "Easington Family Hub",
+  "postcode": "SR8 3DJ",
+  "lat": 54.787392,
+  "lng": -1.340016,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "13:00",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Ferryhill Family Hub",
+  "address": "Ferryhill Family Hub",
+  "postcode": "DL17 8PH",
+  "lat": 54.687887,
+  "lng": -1.563748,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Horden Family Hub",
+  "address": "Horden Family Hub",
+  "postcode": "SR8 4EQ",
+  "lat": 54.763088,
+  "lng": -1.31006,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:00",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Newton Aycliffe Family Hub",
+  "address": "Newton Aycliffe Family Hub",
+  "postcode": "DL5 7DD",
+  "lat": 54.619749,
+  "lng": -1.584128,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Peterlee Family Hub",
+  "address": "Peterlee Family Hub",
+  "postcode": "SR8 5NJ",
+  "lat": 54.763576,
+  "lng": -1.326712,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "SeaView Centre",
+  "address": "SeaView Centre",
+  "postcode": "SR7 8QE",
+  "lat": 54.837883,
+  "lng": -1.346028,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:00",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Stanley Family Hub",
+  "address": "Stanley Family Hub",
+  "postcode": "DH9 0AB",
+  "lat": 54.870038,
+  "lng": -1.698065,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Tudhoe Moor Family Hub",
+  "address": "Tudhoe Moor Family Hub",
+  "postcode": "DL16 6EX",
+  "lat": 54.702122,
+  "lng": -1.58428,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Wheatley Hill Family Hub",
+  "address": "Wheatley Hill Family Hub",
+  "postcode": "DH6 3RT",
+  "lat": 54.741488,
+  "lng": -1.422821,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Me",
+  "provider": "Durham County Council (Best Start Family Hubs)",
+  "category": "stayplay",
+  "venue": "Willington Family Hub",
+  "address": "Willington Family Hub",
+  "postcode": "DL15 0EQ",
+  "lat": 54.710285,
+  "lng": -1.694347,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop-in per page text; booking not otherwise stated. Contact Best Start Family Hubs 03000 261 111",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.durham.gov.uk/BabyAndMe",
+  "source": "durham.gov.uk BabyAndMe",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby bubble social huddle",
+  "provider": "Barnsley Council Libraries",
+  "category": "stayplay",
+  "venue": "Mapplewell and Staincross Library",
+  "address": "Mapplewell and Staincross Library",
+  "postcode": "S75 6AL",
+  "lat": 53.586132,
+  "lng": -1.508165,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": "12:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Page describes it as a baby session; age and booking not stated",
+  "age_min_months": 0,
+  "age_max_months": null,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.barnsley.gov.uk/services/libraries/regular-activities-at-our-libraries/",
+  "source": "barnsley.gov.uk libraries",
+  "confidence": "medium"
+ },
+ {
+  "name": "Meet and Play",
+  "provider": "Solihull Council Libraries",
+  "category": "stayplay",
+  "venue": "The Core Library",
+  "address": "The Core Library",
+  "postcode": "B91 3RG",
+  "lat": 52.411871,
+  "lng": -1.779854,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "10:15",
+    "end": "11:15"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Families meet, play and sing; led by families; toys provided; booking not required (page). Ages not stated on the council page.",
+  "age_min_months": 0,
+  "age_max_months": null,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.solihull.gov.uk/libraries/children-and-young-peoples-library-services",
+  "source": "solihull.gov.uk libraries",
+  "confidence": "high"
+ },
+ {
+  "name": "Musical Tots",
+  "provider": "Staffordshire County Council Libraries",
+  "category": "music",
+  "venue": "Audley Library",
+  "address": "Audley Library",
+  "postcode": "ST7 8DB",
+  "lat": 53.053668,
+  "lng": -2.300978,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "10:15",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Free, pre-school fun; booking not stated",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.staffordshire.gov.uk/libraries/library-events-and-activities-children/audley-library-musical-tots",
+  "source": "staffordshire.gov.uk library events children",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Sing and Play",
+  "provider": "Staffordshire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Glascote Community Library",
+  "address": "Glascote Community Library",
+  "postcode": "B77 2ED",
+  "lat": 52.621983,
+  "lng": -1.663803,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Free; no booking needed. Ages not stated on the council page. Every Monday except during the summer holidays.",
+  "age_min_months": 0,
+  "age_max_months": null,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.staffordshire.gov.uk/libraries/library-events-and-activities-children/glascote-baby-sing-and-play",
+  "source": "staffordshire.gov.uk library events children",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay and Play",
+  "provider": "Staffordshire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Glascote Library",
+  "address": "Glascote Library",
+  "postcode": "B77 2ED",
+  "lat": 52.621983,
+  "lng": -1.663803,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "10:15",
+    "end": "12:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Stay and play for under 5s; community managed library run by volunteers under NHS Trust. Booking not stated on the council page: check with the library before you go.",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Small charge may apply",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.staffordshire.gov.uk/libraries/library-events-and-activities-children/glascote-library-stay-and-play",
+  "source": "staffordshire.gov.uk library events children",
+  "confidence": "high"
+ },
+ {
+  "name": "Tots Time",
+  "provider": "Staffordshire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Kinver Library",
+  "address": "Kinver Library",
+  "postcode": "DY7 6HJ",
+  "lat": 52.447568,
+  "lng": -2.230185,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "14:15",
+    "end": "14:45"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Toddler play and activity session; community managed library; booking not stated. Ages not stated on the council page.",
+  "age_min_months": 0,
+  "age_max_months": null,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.staffordshire.gov.uk/libraries/library-events-and-activities-children/kinver-library-tots-time",
+  "source": "staffordshire.gov.uk library events children",
+  "confidence": "high"
+ },
+ {
+  "name": "Tots Time: Crafty Caterpillars",
+  "provider": "Staffordshire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Rugeley Library",
+  "address": "Rugeley Library",
+  "postcode": "WS15 2BB",
+  "lat": 52.761062,
+  "lng": -1.935669,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "10:45"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Parent and carer toddler group, 12 months to pre-school. Booking not stated on the council page: check with the library before you go.",
+  "age_min_months": 12,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.staffordshire.gov.uk/libraries/library-events-and-activities-children/rugeley-library-tots-time-crafty-caterpillars",
+  "source": "staffordshire.gov.uk library events children",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay and Play",
+  "provider": "Worcestershire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Alvechurch Library",
+  "address": "Birmingham Road, Alvechurch, Birmingham B48 7TA",
+  "postcode": "B48 7TA",
+  "lat": 52.354659,
+  "lng": -1.962244,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.worcestershire.gov.uk/events/stay-and-play-0",
+  "source": "worcestershire.gov.uk events",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay and Play",
+  "provider": "Worcestershire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Kidderminster Library",
+  "address": "Market Street, Kidderminster DY10 1AB",
+  "postcode": "DY10 1AB",
+  "lat": 52.386127,
+  "lng": -2.248981,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "11:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Tue",
+    "start": "13:30",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Several weekly sessions at this library; see event pages",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.worcestershire.gov.uk/events/stay-and-play-2",
+  "source": "worcestershire.gov.uk events",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay and Play",
+  "provider": "Worcestershire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Droitwich Spa Library",
+  "address": "Victoria Square, Droitwich WR9 8DQ",
+  "postcode": "WR9 8DQ",
+  "lat": 52.266959,
+  "lng": -2.150043,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "13:30",
+    "end": "15:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.worcestershire.gov.uk/events/stay-and-play-4",
+  "source": "worcestershire.gov.uk events",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay & Play",
+  "provider": "Worcestershire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Redditch Library",
+  "address": "15 Market Place, Redditch B98 8AR",
+  "postcode": "B98 8AR",
+  "lat": 52.306399,
+  "lng": -1.940152,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "11:30",
+    "end": "12:30"
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Several weekly sessions at this library; see event pages; 50p for refreshments",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "50p refreshments",
+  "free": false,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.worcestershire.gov.uk/events/stay-play-0",
+  "source": "worcestershire.gov.uk events",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay & Play",
+  "provider": "Worcestershire County Council Libraries",
+  "category": "stayplay",
+  "venue": "Upton-upon-Severn Library",
+  "address": "School Lane, Upton-upon-Severn, Worcester WR8 0LE",
+  "postcode": "WR8 0LE",
+  "lat": 52.061303,
+  "lng": -2.216536,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:00",
+    "end": "12:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.worcestershire.gov.uk/events/stay-play-1",
+  "source": "worcestershire.gov.uk events",
+  "confidence": "high"
+ },
+ {
+  "name": "Story and Rhymes",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Alperton Best Start Family Hub",
+  "address": "Alperton Best Start Family Hub, Brent, London HA0 4PW",
+  "postcode": "HA0 4PW",
+  "lat": 51.54121,
+  "lng": -0.299493,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly; book a space online; timetable Sep-Dec 2026",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/alperton-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby sensory",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "sensory",
+  "venue": "Alperton Best Start Family Hub",
+  "address": "Alperton Best Start Family Hub, Brent, London HA0 4PW",
+  "postcode": "HA0 4PW",
+  "lat": 51.54121,
+  "lng": -0.299493,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:00",
+    "end": "10:45"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly; book a space online; timetable Sep-Dec 2026",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/alperton-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Story and Rhyme Time",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Church Lane Best Start Family Hub",
+  "address": "Church Lane Best Start Family Hub, Brent, London NW9 8JD",
+  "postcode": "NW9 8JD",
+  "lat": 51.577816,
+  "lng": -0.263099,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly except some dates in the PDF (30 Sept and one other, text cut off); book online; timetable Sep-Dec 2026",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/church-lane-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Time",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Church Lane Best Start Family Hub",
+  "address": "Church Lane Best Start Family Hub, Brent, London NW9 8JD",
+  "postcode": "NW9 8JD",
+  "lat": 51.577816,
+  "lng": -0.263099,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "13:30",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly; book online; timetable Sep-Dec 2026",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/church-lane-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Messy Play",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "sensory",
+  "venue": "Church Lane Best Start Family Hub",
+  "address": "Church Lane Best Start Family Hub, Brent, London NW9 8JD",
+  "postcode": "NW9 8JD",
+  "lat": 51.577816,
+  "lng": -0.263099,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly but not available 1st and 3rd Thursday of the month; term time; book online",
+  "age_min_months": 13,
+  "age_max_months": 48,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/church-lane-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby tummy time with sensory play",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "sensory",
+  "venue": "Granville Plus Best Start Family Hub",
+  "address": "Granville Plus Best Start Family Hub, Brent, London NW6 5RA",
+  "postcode": "NW6 5RA",
+  "lat": 51.532735,
+  "lng": -0.197944,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly; book online; timetable Sep-Dec 2026",
+  "age_min_months": 0,
+  "age_max_months": 10,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/granville-plus-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Toddler messy play",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "sensory",
+  "venue": "Granville Plus Best Start Family Hub",
+  "address": "Granville Plus Best Start Family Hub, Brent, London NW6 5RA",
+  "postcode": "NW6 5RA",
+  "lat": 51.532735,
+  "lng": -0.197944,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "14:00",
+    "end": "15:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly; book online; timetable Sep-Dec 2026",
+  "age_min_months": 14,
+  "age_max_months": 36,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/granville-plus-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Shakers and movers with sensory play",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "movement",
+  "venue": "Granville Plus Best Start Family Hub",
+  "address": "Granville Plus Best Start Family Hub, Brent, London NW6 5RA",
+  "postcode": "NW6 5RA",
+  "lat": 51.532735,
+  "lng": -0.197944,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly; book online; timetable Sep-Dec 2026",
+  "age_min_months": 10,
+  "age_max_months": 18,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/granville-plus-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Time",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Preston Park Best Start Family Hub",
+  "address": "Preston Park Best Start Family Hub, Brent, London HA9 8RJ",
+  "postcode": "HA9 8RJ",
+  "lat": 51.571953,
+  "lng": -0.300597,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:45",
+    "end": "10:45"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "7 Sept to 14 Dec 2026; book online. Ages not stated on the council page.",
+  "age_min_months": 0,
+  "age_max_months": null,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/preston-park-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Rhythm & Rhyme",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "music",
+  "venue": "Preston Park Best Start Family Hub",
+  "address": "Preston Park Best Start Family Hub, Brent, London HA9 8RJ",
+  "postcode": "HA9 8RJ",
+  "lat": 51.571953,
+  "lng": -0.300597,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:00",
+    "end": "14:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "8 Sept to 15 Dec 2026 per PDF; book online",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/preston-park-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay & Play Baby Talk",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "St Raphael's Best Start Family Hub",
+  "address": "St Raphael's Best Start Family Hub, Brent, London NW10 0TS",
+  "postcode": "NW10 0TS",
+  "lat": 51.550524,
+  "lng": -0.267341,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "13:00",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly; book online; timetable Sep-Dec 2026",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/st-raphaels-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay & Play Toddler Talk",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "St Raphael's Best Start Family Hub",
+  "address": "St Raphael's Best Start Family Hub, Brent, London NW10 0TS",
+  "postcode": "NW10 0TS",
+  "lat": 51.550524,
+  "lng": -0.267341,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "09:30",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly from 16 Sept; book online",
+  "age_min_months": 12,
+  "age_max_months": 24,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/st-raphaels-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay, Play and Learn",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Three Trees Best Start Family Hub",
+  "address": "Three Trees Best Start Family Hub, Brent, London NW10 3HL",
+  "postcode": "NW10 3HL",
+  "lat": 51.538338,
+  "lng": -0.217449,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "09:45",
+    "end": "10:45"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly; 1 year plus; book online; timetable Sep-Dec 2026",
+  "age_min_months": 12,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/three-trees-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby Time",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Three Trees Best Start Family Hub",
+  "address": "Three Trees Best Start Family Hub, Brent, London NW10 3HL",
+  "postcode": "NW10 3HL",
+  "lat": 51.538338,
+  "lng": -0.217449,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "11:45",
+    "end": "13:15"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly, term time only; under 1s; book online",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/three-trees-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Mum and Baby Yoga (Sport in Mind)",
+  "provider": "London Borough of Brent (Best Start Family Hub)",
+  "category": "movement",
+  "venue": "Three Trees Best Start Family Hub",
+  "address": "Three Trees Best Start Family Hub, Brent, London NW10 3HL",
+  "postcode": "NW10 3HL",
+  "lat": 51.538338,
+  "lng": -0.217449,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly, term time only; 6 weeks to 1 year; book online or drop-in",
+  "age_min_months": 1,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "book",
+  "indoor": true,
+  "url": "https://www.brent.gov.uk/children-young-people-and-families/support-for-parents-and-families/family-wellbeing-centres/three-trees-best-start-family-hub",
+  "source": "www.brent.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Rhyme and Move (autism-friendly)",
+  "provider": "Royal Borough of Kensington and Chelsea Libraries",
+  "category": "movement",
+  "venue": "Brompton Library",
+  "address": "210 Old Brompton Road, London SW5 0BS",
+  "postcode": "SW5 0BS",
+  "lat": 51.49008,
+  "lng": -0.188406,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "10:30",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Free; autism-friendly; under 5s; no need to book",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://www.rbkc.gov.uk/events/rhyme-and-move",
+  "source": "www.rbkc.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay and Play",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Lampton (Central)",
+  "address": "Neville Close, Hounslow TW3 4JG",
+  "postcode": "TW3 4JG",
+  "lat": 51.47585,
+  "lng": -0.366409,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:30",
+    "end": "10:30"
+   },
+   {
+    "day": "Tue",
+    "start": "13:00",
+    "end": "14:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop in; not on Mon 2 Nov Drop in; not on Tue 3 Nov",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/Family_Hub_Central.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Non Walkers",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Lampton (Central)",
+  "address": "Neville Close, Hounslow TW3 4JG",
+  "postcode": "TW3 4JG",
+  "lat": 51.47585,
+  "lng": -0.366409,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Babies and children not yet walking; drop in; not on 4 Nov and 2 Dec",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/Family_Hub_Central.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Story and Rhyme Time",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Lampton (Central)",
+  "address": "Neville Close, Hounslow TW3 4JG",
+  "postcode": "TW3 4JG",
+  "lat": 51.47585,
+  "lng": -0.366409,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "13:00",
+    "end": "14:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Ages 2 to 5; drop in; not on 4 Nov and 2 Dec",
+  "age_min_months": 24,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/Family_Hub_Central.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay and Play",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Brentford (East)",
+  "address": "North Road, Brentford TW8 0BJ",
+  "postcode": "TW8 0BJ",
+  "lat": 51.487605,
+  "lng": -0.296952,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "13:15",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop in; not on Mon 2 Nov",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/FamilyHubEast.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Dad's Play",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Brentford (East)",
+  "address": "North Road, Brentford TW8 0BJ",
+  "postcode": "TW8 0BJ",
+  "lat": 51.487605,
+  "lng": -0.296952,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "10:30",
+    "end": "11:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop in; not on 2 Oct and 4 Dec",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/FamilyHubEast.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Non Walkers",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Brentford (East)",
+  "address": "North Road, Brentford TW8 0BJ",
+  "postcode": "TW8 0BJ",
+  "lat": 51.487605,
+  "lng": -0.296952,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "13:00",
+    "end": "14:15"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Babies and children not yet walking; drop in; not on 2 Oct and 4 Dec",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/FamilyHubEast.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Non Walkers",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Feltham (West, Alf Kings)",
+  "address": "7 Hanworth Road, Feltham TW13 5AF",
+  "postcode": "TW13 5AF",
+  "lat": 51.447519,
+  "lng": -0.405858,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:00",
+    "end": "11:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Babies and children not yet walking; drop in; not on Mon 2 Nov",
+  "age_min_months": 0,
+  "age_max_months": 12,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/FamilyHubWest.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Baby and Toddler Group",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Feltham (West, Alf Kings)",
+  "address": "7 Hanworth Road, Feltham TW13 5AF",
+  "postcode": "TW13 5AF",
+  "lat": 51.447519,
+  "lng": -0.405858,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "13:30",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Up to 2nd birthday; drop in; not on Mon 2 Nov",
+  "age_min_months": 0,
+  "age_max_months": 24,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/FamilyHubWest.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Dad's Play",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Feltham (West, Alf Kings)",
+  "address": "7 Hanworth Road, Feltham TW13 5AF",
+  "postcode": "TW13 5AF",
+  "lat": 51.447519,
+  "lng": -0.405858,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:30",
+    "end": "14:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop in; not on Tue 3 Nov",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/FamilyHubWest.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ },
+ {
+  "name": "Stay and Play",
+  "provider": "London Borough of Hounslow (Best Start Family Hub)",
+  "category": "stayplay",
+  "venue": "Best Start Family Hub Feltham (West, Alf Kings)",
+  "address": "7 Hanworth Road, Feltham TW13 5AF",
+  "postcode": "TW13 5AF",
+  "lat": 51.447519,
+  "lng": -0.405858,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": "13:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Drop in; not on 4 Nov and 2 Dec",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "Free",
+  "free": true,
+  "booking": "drop-in",
+  "indoor": true,
+  "url": "https://fsd.hounslow.gov.uk/SynergyWeb/Family_Hubs/FamilyHubWest.aspx",
+  "source": "fsd.hounslow.gov.uk",
+  "confidence": "high"
+ }
+]

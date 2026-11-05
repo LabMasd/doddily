@@ -218,7 +218,7 @@
    {
     "day": "Thu",
     "start": "10:00",
-    "end": "10:50"
+    "end": "11:00"
    },
    {
     "day": "Sun",
@@ -227,7 +227,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.20–£7.30",
@@ -466,22 +466,12 @@
    {
     "day": "Thu",
     "start": "10:00",
-    "end": "11:00"
-   },
-   {
-    "day": "Thu",
-    "start": "11:00",
     "end": "12:00"
    },
    {
     "day": "Sat",
     "start": "11:00",
-    "end": "12:00"
-   },
-   {
-    "day": "Sun",
-    "start": "10:00",
-    "end": "11:00"
+    "end": "13:00"
    },
    {
     "day": "Sun",
@@ -490,7 +480,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.15–£8.60",
@@ -681,46 +671,11 @@
    {
     "day": "Mon",
     "start": "11:30",
-    "end": "12:20"
-   },
-   {
-    "day": "Mon",
-    "start": "11:40",
     "end": "12:30"
-   },
-   {
-    "day": "Fri",
-    "start": "10:30",
-    "end": "11:20"
-   },
-   {
-    "day": "Fri",
-    "start": "10:40",
-    "end": "11:30"
-   },
-   {
-    "day": "Fri",
-    "start": "10:50",
-    "end": "11:40"
-   },
-   {
-    "day": "Fri",
-    "start": "11:00",
-    "end": "11:50"
-   },
-   {
-    "day": "Fri",
-    "start": "11:10",
-    "end": "12:00"
-   },
-   {
-    "day": "Fri",
-    "start": "11:20",
-    "end": "12:10"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£6.00–£8.00",
@@ -902,10 +857,20 @@
     "day": "Wed",
     "start": "10:00",
     "end": "11:00"
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:00"
+   },
+   {
+    "day": "Fri",
+    "start": "10:00",
+    "end": "11:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 18,
   "age_max_months": 60,
   "price": "£6.25–£12.50",
@@ -1645,12 +1610,12 @@
   "sessions": [
    {
     "day": "Tue",
-    "start": "09:00",
-    "end": "09:45"
+    "start": "09:30",
+    "end": "10:15"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.20–£7.30",
@@ -1721,18 +1686,13 @@
     "end": "14:30"
    },
    {
-    "day": "Tue",
-    "start": "13:30",
-    "end": "14:30"
-   },
-   {
     "day": "Fri",
     "start": "12:45",
     "end": "13:45"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 6,
   "age_max_months": 60,
   "price": "£10.20",
@@ -1893,40 +1853,10 @@
     "day": "Mon",
     "start": "09:50",
     "end": "10:50"
-   },
-   {
-    "day": "Wed",
-    "start": "09:00",
-    "end": "10:00"
-   },
-   {
-    "day": "Wed",
-    "start": "09:10",
-    "end": "10:10"
-   },
-   {
-    "day": "Wed",
-    "start": "09:20",
-    "end": "10:20"
-   },
-   {
-    "day": "Wed",
-    "start": "09:30",
-    "end": "10:30"
-   },
-   {
-    "day": "Wed",
-    "start": "09:40",
-    "end": "10:40"
-   },
-   {
-    "day": "Wed",
-    "start": "09:50",
-    "end": "10:50"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "£2.50–£8.00",
@@ -2176,6 +2106,11 @@
     "end": "11:00"
    },
    {
+    "day": "Wed",
+    "start": "16:00",
+    "end": "16:30"
+   },
+   {
     "day": "Sat",
     "start": "08:30",
     "end": "09:00"
@@ -2187,7 +2122,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -2273,6 +2208,11 @@
     "end": "17:30"
    },
    {
+    "day": "Wed",
+    "start": "16:30",
+    "end": "17:00"
+   },
+   {
     "day": "Sat",
     "start": "08:00",
     "end": "08:30"
@@ -2309,7 +2249,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -2334,18 +2274,28 @@
   "lng": 1.583006,
   "sessions": [
    {
-    "day": "Sat",
+    "day": "Tue",
+    "start": "10:00",
+    "end": "11:00"
+   },
+   {
+    "day": "Tue",
     "start": "12:00",
     "end": "13:00"
    },
    {
-    "day": "Sun",
-    "start": "09:00",
-    "end": "10:00"
+    "day": "Thu",
+    "start": "11:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Sat",
+    "start": "12:00",
+    "end": "13:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£2.80–£6.80",
@@ -2897,10 +2847,15 @@
     "day": "Sat",
     "start": "09:45",
     "end": "10:45"
+   },
+   {
+    "day": "Sat",
+    "start": "11:00",
+    "end": "12:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.50",
@@ -3118,18 +3073,13 @@
     "end": "10:00"
    },
    {
-    "day": "Thu",
-    "start": "12:00",
-    "end": "13:00"
-   },
-   {
     "day": "Fri",
     "start": "09:00",
     "end": "10:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£4.60–£7.15",
@@ -3267,11 +3217,6 @@
    },
    {
     "day": "Mon",
-    "start": "11:30",
-    "end": "12:00"
-   },
-   {
-    "day": "Mon",
     "start": "12:15",
     "end": "12:45"
    },
@@ -3279,16 +3224,6 @@
     "day": "Mon",
     "start": "12:45",
     "end": "13:15"
-   },
-   {
-    "day": "Mon",
-    "start": "13:15",
-    "end": "13:45"
-   },
-   {
-    "day": "Mon",
-    "start": "13:45",
-    "end": "14:15"
    },
    {
     "day": "Mon",
@@ -3392,7 +3327,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -3432,13 +3367,18 @@
     "end": "10:25"
    },
    {
+    "day": "Sat",
+    "start": "13:30",
+    "end": "14:25"
+   },
+   {
     "day": "Sun",
     "start": "13:15",
     "end": "14:10"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£3.75–£6.20",
@@ -4205,11 +4145,6 @@
     "end": "17:00"
    },
    {
-    "day": "Mon",
-    "start": "17:45",
-    "end": "18:15"
-   },
-   {
     "day": "Tue",
     "start": "11:30",
     "end": "13:00"
@@ -4291,11 +4226,6 @@
    },
    {
     "day": "Sat",
-    "start": "08:00",
-    "end": "08:30"
-   },
-   {
-    "day": "Sat",
     "start": "09:00",
     "end": "09:30"
    },
@@ -4336,7 +4266,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -4591,19 +4521,9 @@
     "end": "10:30"
    },
    {
-    "day": "Tue",
-    "start": "10:00",
-    "end": "10:30"
-   },
-   {
     "day": "Wed",
     "start": "10:30",
     "end": "11:00"
-   },
-   {
-    "day": "Thu",
-    "start": "10:00",
-    "end": "10:30"
    },
    {
     "day": "Thu",
@@ -4637,7 +4557,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -4662,9 +4582,9 @@
   "lng": -0.747568,
   "sessions": [
    {
-    "day": "Tue",
-    "start": "11:00",
-    "end": "11:30"
+    "day": "Thu",
+    "start": "10:00",
+    "end": "10:30"
    },
    {
     "day": "Fri",
@@ -4678,7 +4598,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -4716,16 +4636,6 @@
     "day": "Mon",
     "start": "16:00",
     "end": "16:30"
-   },
-   {
-    "day": "Tue",
-    "start": "09:30",
-    "end": "10:00"
-   },
-   {
-    "day": "Tue",
-    "start": "10:30",
-    "end": "11:00"
    },
    {
     "day": "Tue",
@@ -4809,7 +4719,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -5223,8 +5133,18 @@
    },
    {
     "day": "Tue",
-    "start": "14:00",
-    "end": "15:00"
+    "start": "12:30",
+    "end": "13:30"
+   },
+   {
+    "day": "Wed",
+    "start": "09:00",
+    "end": "10:00"
+   },
+   {
+    "day": "Wed",
+    "start": "11:00",
+    "end": "12:00"
    },
    {
     "day": "Wed",
@@ -5240,6 +5160,11 @@
     "day": "Thu",
     "start": "14:00",
     "end": "15:00"
+   },
+   {
+    "day": "Thu",
+    "start": "15:00",
+    "end": "16:00"
    },
    {
     "day": "Fri",
@@ -5260,10 +5185,15 @@
     "day": "Fri",
     "start": "14:00",
     "end": "15:00"
+   },
+   {
+    "day": "Fri",
+    "start": "15:00",
+    "end": "16:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£3.98–£5.91",
@@ -5670,63 +5600,13 @@
   "lng": -2.034135,
   "sessions": [
    {
-    "day": "Mon",
-    "start": "10:00",
-    "end": "10:30"
-   },
-   {
-    "day": "Mon",
-    "start": "10:30",
-    "end": "11:00"
-   },
-   {
-    "day": "Tue",
-    "start": "13:00",
-    "end": "13:30"
-   },
-   {
-    "day": "Tue",
-    "start": "13:30",
-    "end": "14:00"
-   },
-   {
-    "day": "Tue",
-    "start": "14:00",
-    "end": "14:30"
-   },
-   {
-    "day": "Thu",
-    "start": "13:30",
-    "end": "14:00"
-   },
-   {
-    "day": "Thu",
-    "start": "14:00",
-    "end": "14:30"
-   },
-   {
-    "day": "Fri",
-    "start": "14:00",
-    "end": "14:30"
-   },
-   {
-    "day": "Fri",
-    "start": "14:30",
-    "end": "15:00"
-   },
-   {
     "day": "Sat",
     "start": "08:00",
     "end": "08:30"
-   },
-   {
-    "day": "Sun",
-    "start": "12:30",
-    "end": "13:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -5751,13 +5631,13 @@
   "lng": -2.034135,
   "sessions": [
    {
-    "day": "Mon",
-    "start": "09:30",
-    "end": "10:00"
+    "day": "Fri",
+    "start": "14:30",
+    "end": "15:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -5782,78 +5662,18 @@
   "lng": -2.034135,
   "sessions": [
    {
-    "day": "Mon",
-    "start": "11:00",
-    "end": "11:30"
-   },
-   {
-    "day": "Tue",
-    "start": "14:30",
-    "end": "15:00"
-   },
-   {
-    "day": "Tue",
-    "start": "17:45",
-    "end": "18:15"
-   },
-   {
-    "day": "Wed",
-    "start": "16:30",
-    "end": "17:00"
-   },
-   {
-    "day": "Thu",
-    "start": "14:30",
-    "end": "15:00"
-   },
-   {
-    "day": "Thu",
-    "start": "15:30",
-    "end": "16:00"
-   },
-   {
-    "day": "Thu",
-    "start": "16:30",
-    "end": "17:00"
-   },
-   {
     "day": "Fri",
     "start": "15:15",
     "end": "15:45"
    },
    {
-    "day": "Fri",
-    "start": "15:45",
-    "end": "16:15"
-   },
-   {
-    "day": "Fri",
-    "start": "16:45",
-    "end": "17:15"
-   },
-   {
-    "day": "Sat",
-    "start": "08:30",
-    "end": "09:00"
-   },
-   {
     "day": "Sat",
     "start": "10:00",
     "end": "10:30"
-   },
-   {
-    "day": "Sat",
-    "start": "11:00",
-    "end": "11:30"
-   },
-   {
-    "day": "Sun",
-    "start": "11:00",
-    "end": "11:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -6055,11 +5875,6 @@
     "end": "10:45"
    },
    {
-    "day": "Fri",
-    "start": "10:30",
-    "end": "11:00"
-   },
-   {
     "day": "Sat",
     "start": "08:00",
     "end": "08:30"
@@ -6071,7 +5886,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -6134,7 +5949,7 @@
    {
     "day": "Mon",
     "start": "10:45",
-    "end": "11:00"
+    "end": "11:15"
    },
    {
     "day": "Tue",
@@ -6163,7 +5978,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -6250,11 +6065,6 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "09:00",
-    "end": "09:30"
-   },
-   {
-    "day": "Mon",
     "start": "11:00",
     "end": "11:30"
    },
@@ -6275,7 +6085,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -6490,13 +6300,8 @@
   "sessions": [
    {
     "day": "Tue",
-    "start": "09:45",
-    "end": "10:15"
-   },
-   {
-    "day": "Tue",
-    "start": "10:15",
-    "end": "10:45"
+    "start": "10:00",
+    "end": "10:30"
    },
    {
     "day": "Wed",
@@ -6507,6 +6312,11 @@
     "day": "Thu",
     "start": "10:30",
     "end": "11:00"
+   },
+   {
+    "day": "Thu",
+    "start": "11:30",
+    "end": "12:00"
    },
    {
     "day": "Fri",
@@ -6520,7 +6330,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -6546,8 +6356,8 @@
   "sessions": [
    {
     "day": "Tue",
-    "start": "10:45",
-    "end": "11:15"
+    "start": "10:30",
+    "end": "11:00"
    },
    {
     "day": "Wed",
@@ -6566,7 +6376,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -6592,13 +6402,13 @@
   "sessions": [
    {
     "day": "Tue",
-    "start": "11:15",
-    "end": "11:45"
+    "start": "11:00",
+    "end": "11:30"
    },
    {
     "day": "Tue",
-    "start": "12:15",
-    "end": "12:45"
+    "start": "11:30",
+    "end": "12:00"
    },
    {
     "day": "Wed",
@@ -6622,12 +6432,12 @@
    },
    {
     "day": "Thu",
-    "start": "12:30",
-    "end": "13:00"
+    "start": "16:00",
+    "end": "16:30"
    },
    {
     "day": "Thu",
-    "start": "16:00",
+    "start": "16:30",
     "end": "17:00"
    },
    {
@@ -6643,6 +6453,11 @@
    {
     "day": "Fri",
     "start": "12:30",
+    "end": "13:00"
+   },
+   {
+    "day": "Fri",
+    "start": "13:00",
     "end": "13:30"
    },
    {
@@ -6667,7 +6482,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -6724,6 +6539,11 @@
   "sessions": [
    {
     "day": "Thu",
+    "start": "11:00",
+    "end": "11:30"
+   },
+   {
+    "day": "Thu",
     "start": "12:00",
     "end": "12:30"
    },
@@ -6734,7 +6554,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -6760,6 +6580,11 @@
   "sessions": [
    {
     "day": "Thu",
+    "start": "10:30",
+    "end": "11:00"
+   },
+   {
+    "day": "Thu",
     "start": "11:30",
     "end": "12:00"
    },
@@ -6770,7 +6595,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -6836,6 +6661,11 @@
    },
    {
     "day": "Thu",
+    "start": "11:30",
+    "end": "12:00"
+   },
+   {
+    "day": "Thu",
     "start": "12:30",
     "end": "13:00"
    },
@@ -6866,7 +6696,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -6937,6 +6767,11 @@
     "end": "16:00"
    },
    {
+    "day": "Tue",
+    "start": "16:45",
+    "end": "17:15"
+   },
+   {
     "day": "Thu",
     "start": "15:30",
     "end": "16:00"
@@ -6948,7 +6783,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -7333,11 +7168,11 @@
    },
    {
     "day": "Mon",
-    "start": "11:00",
-    "end": "11:30"
+    "start": "16:00",
+    "end": "16:30"
    },
    {
-    "day": "Mon",
+    "day": "Tue",
     "start": "16:00",
     "end": "16:30"
    },
@@ -7378,11 +7213,6 @@
    },
    {
     "day": "Sat",
-    "start": "10:30",
-    "end": "11:00"
-   },
-   {
-    "day": "Sat",
     "start": "11:00",
     "end": "11:30"
    },
@@ -7398,7 +7228,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -7618,6 +7448,11 @@
   "lng": -0.36478,
   "sessions": [
    {
+    "day": "Tue",
+    "start": "16:00",
+    "end": "16:30"
+   },
+   {
     "day": "Wed",
     "start": "15:45",
     "end": "16:15"
@@ -7649,7 +7484,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -8302,7 +8137,7 @@
    },
    {
     "day": "Thu",
-    "start": "10:00",
+    "start": "10:30",
     "end": "11:30"
    },
    {
@@ -8322,7 +8157,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.01–£7.69",
@@ -9743,8 +9578,8 @@
   "lng": -0.79357,
   "sessions": [
    {
-    "day": "Mon",
-    "start": "11:00",
+    "day": "Tue",
+    "start": "10:30",
     "end": "12:00"
    },
    {
@@ -9759,7 +9594,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.40–£7.30",
@@ -10190,13 +10025,18 @@
     "end": "11:00"
    },
    {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "10:30"
+   },
+   {
     "day": "Sat",
     "start": "12:30",
     "end": "13:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -10304,7 +10144,7 @@
    {
     "day": "Thu",
     "start": "15:45",
-    "end": "16:45"
+    "end": "17:15"
    },
    {
     "day": "Thu",
@@ -10348,7 +10188,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -11299,11 +11139,6 @@
     "end": "17:45"
    },
    {
-    "day": "Thu",
-    "start": "15:45",
-    "end": "16:15"
-   },
-   {
     "day": "Fri",
     "start": "16:00",
     "end": "16:30"
@@ -11330,7 +11165,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -11694,6 +11529,11 @@
    {
     "day": "Tue",
     "start": "13:00",
+    "end": "13:30"
+   },
+   {
+    "day": "Tue",
+    "start": "13:30",
     "end": "14:00"
    },
    {
@@ -11743,7 +11583,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -12134,6 +11974,11 @@
    },
    {
     "day": "Wed",
+    "start": "12:00",
+    "end": "12:30"
+   },
+   {
+    "day": "Wed",
     "start": "12:30",
     "end": "13:00"
    },
@@ -12184,7 +12029,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -12478,11 +12323,6 @@
     "end": "10:00"
    },
    {
-    "day": "Fri",
-    "start": "11:00",
-    "end": "11:30"
-   },
-   {
     "day": "Sat",
     "start": "08:30",
     "end": "09:00"
@@ -12499,7 +12339,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -12641,6 +12481,11 @@
    },
    {
     "day": "Fri",
+    "start": "11:00",
+    "end": "11:30"
+   },
+   {
+    "day": "Fri",
     "start": "16:00",
     "end": "16:30"
    },
@@ -12661,7 +12506,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -13123,13 +12968,18 @@
   "lng": -0.362723,
   "sessions": [
    {
+    "day": "Tue",
+    "start": "11:00",
+    "end": "11:30"
+   },
+   {
     "day": "Sat",
     "start": "09:30",
     "end": "10:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -13153,6 +13003,11 @@
   "lat": 51.607421,
   "lng": -0.362723,
   "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": "10:30"
+   },
    {
     "day": "Tue",
     "start": "16:30",
@@ -13210,7 +13065,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -13470,6 +13325,11 @@
    },
    {
     "day": "Mon",
+    "start": "16:30",
+    "end": "17:00"
+   },
+   {
+    "day": "Mon",
     "start": "17:00",
     "end": "17:30"
    },
@@ -13482,6 +13342,11 @@
     "day": "Tue",
     "start": "15:30",
     "end": "16:30"
+   },
+   {
+    "day": "Tue",
+    "start": "17:00",
+    "end": "17:30"
    },
    {
     "day": "Wed",
@@ -13506,6 +13371,11 @@
    {
     "day": "Thu",
     "start": "11:00",
+    "end": "11:30"
+   },
+   {
+    "day": "Thu",
+    "start": "11:30",
     "end": "12:00"
    },
    {
@@ -13560,7 +13430,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -13943,7 +13813,7 @@
    {
     "day": "Wed",
     "start": "16:15",
-    "end": "17:15"
+    "end": "16:45"
    },
    {
     "day": "Wed",
@@ -14002,7 +13872,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -14083,6 +13953,11 @@
     "end": "12:35"
    },
    {
+    "day": "Tue",
+    "start": "13:45",
+    "end": "14:15"
+   },
+   {
     "day": "Wed",
     "start": "10:00",
     "end": "10:30"
@@ -14094,7 +13969,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -14657,6 +14532,11 @@
    {
     "day": "Mon",
     "start": "09:30",
+    "end": "10:30"
+   },
+   {
+    "day": "Mon",
+    "start": "10:30",
     "end": "11:00"
    },
    {
@@ -14716,7 +14596,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -15195,16 +15075,6 @@
    {
     "day": "Wed",
     "start": "09:00",
-    "end": "09:30"
-   },
-   {
-    "day": "Wed",
-    "start": "09:30",
-    "end": "10:00"
-   },
-   {
-    "day": "Wed",
-    "start": "10:00",
     "end": "10:30"
    },
    {
@@ -15269,7 +15139,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -15830,10 +15700,25 @@
     "day": "Fri",
     "start": "12:00",
     "end": "13:00"
+   },
+   {
+    "day": "Sun",
+    "start": "11:15",
+    "end": "12:15"
+   },
+   {
+    "day": "Sun",
+    "start": "12:15",
+    "end": "13:15"
+   },
+   {
+    "day": "Sun",
+    "start": "13:15",
+    "end": "14:15"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£3.90–£6.80",
@@ -16111,7 +15996,7 @@
    {
     "day": "Mon",
     "start": "17:00",
-    "end": "17:30"
+    "end": "18:00"
    },
    {
     "day": "Tue",
@@ -16124,9 +16009,14 @@
     "end": "17:45"
    },
    {
+    "day": "Wed",
+    "start": "16:00",
+    "end": "16:30"
+   },
+   {
     "day": "Thu",
-    "start": "11:30",
-    "end": "12:00"
+    "start": "11:00",
+    "end": "11:30"
    },
    {
     "day": "Thu",
@@ -16160,7 +16050,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -16289,12 +16179,22 @@
    {
     "day": "Mon",
     "start": "12:00",
-    "end": "13:00"
+    "end": "12:55"
+   },
+   {
+    "day": "Mon",
+    "start": "14:45",
+    "end": "15:40"
+   },
+   {
+    "day": "Tue",
+    "start": "09:30",
+    "end": "10:25"
    },
    {
     "day": "Tue",
     "start": "11:45",
-    "end": "12:45"
+    "end": "12:40"
    },
    {
     "day": "Tue",
@@ -16333,11 +16233,6 @@
    },
    {
     "day": "Fri",
-    "start": "14:00",
-    "end": "14:55"
-   },
-   {
-    "day": "Fri",
     "start": "18:30",
     "end": "19:25"
    },
@@ -16348,7 +16243,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£1.35–£5.95",
@@ -16682,7 +16577,7 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "11:45",
+    "start": "11:15",
     "end": "12:15"
    },
    {
@@ -16724,15 +16619,10 @@
     "day": "Sat",
     "start": "09:30",
     "end": "11:00"
-   },
-   {
-    "day": "Sat",
-    "start": "11:30",
-    "end": "12:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -17049,7 +16939,7 @@
    {
     "day": "Thu",
     "start": "11:30",
-    "end": "12:30"
+    "end": "12:00"
    },
    {
     "day": "Thu",
@@ -17093,7 +16983,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -17169,18 +17059,13 @@
   "lng": -0.833656,
   "sessions": [
    {
-    "day": "Tue",
-    "start": "10:30",
-    "end": "11:30"
-   },
-   {
     "day": "Fri",
     "start": "13:30",
     "end": "14:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£3.00",
@@ -17717,18 +17602,13 @@
   "lng": -1.21126,
   "sessions": [
    {
-    "day": "Mon",
-    "start": "12:00",
-    "end": "13:00"
-   },
-   {
     "day": "Wed",
     "start": "14:00",
     "end": "15:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£3.00",
@@ -18316,11 +18196,6 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "09:30",
-    "end": "10:00"
-   },
-   {
-    "day": "Mon",
     "start": "10:30",
     "end": "11:00"
    },
@@ -18436,7 +18311,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -18934,6 +18809,11 @@
    },
    {
     "day": "Tue",
+    "start": "10:30",
+    "end": "11:00"
+   },
+   {
+    "day": "Tue",
     "start": "11:30",
     "end": "12:00"
    },
@@ -18989,7 +18869,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -19030,11 +18910,6 @@
    },
    {
     "day": "Tue",
-    "start": "10:30",
-    "end": "11:00"
-   },
-   {
-    "day": "Tue",
     "start": "11:00",
     "end": "11:30"
    },
@@ -19045,7 +18920,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -19177,6 +19052,11 @@
   "lng": -0.893431,
   "sessions": [
    {
+    "day": "Mon",
+    "start": "12:00",
+    "end": "12:30"
+   },
+   {
     "day": "Tue",
     "start": "12:30",
     "end": "13:00"
@@ -19188,7 +19068,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -19216,11 +19096,6 @@
     "day": "Mon",
     "start": "11:30",
     "end": "12:00"
-   },
-   {
-    "day": "Mon",
-    "start": "12:00",
-    "end": "12:30"
    },
    {
     "day": "Mon",
@@ -19269,7 +19144,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -20397,11 +20272,6 @@
     "end": "10:30"
    },
    {
-    "day": "Mon",
-    "start": "11:00",
-    "end": "11:30"
-   },
-   {
     "day": "Tue",
     "start": "12:15",
     "end": "12:45"
@@ -20428,7 +20298,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -20506,7 +20376,7 @@
    {
     "day": "Mon",
     "start": "09:30",
-    "end": "11:30"
+    "end": "11:00"
    },
    {
     "day": "Tue",
@@ -20540,7 +20410,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -21334,11 +21204,6 @@
    },
    {
     "day": "Thu",
-    "start": "09:15",
-    "end": "09:45"
-   },
-   {
-    "day": "Thu",
     "start": "09:45",
     "end": "10:15"
    },
@@ -21364,7 +21229,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -21466,12 +21331,12 @@
    },
    {
     "day": "Thu",
-    "start": "10:45",
-    "end": "11:15"
+    "start": "09:15",
+    "end": "09:45"
    },
    {
     "day": "Thu",
-    "start": "11:15",
+    "start": "10:45",
     "end": "11:45"
    },
    {
@@ -21511,7 +21376,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -21852,11 +21717,6 @@
     "end": "12:00"
    },
    {
-    "day": "Thu",
-    "start": "13:00",
-    "end": "14:00"
-   },
-   {
     "day": "Fri",
     "start": "11:00",
     "end": "12:00"
@@ -21868,7 +21728,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.20–£9.35",
@@ -23326,6 +23186,11 @@
     "end": "17:00"
    },
    {
+    "day": "Tue",
+    "start": "17:30",
+    "end": "18:00"
+   },
+   {
     "day": "Wed",
     "start": "09:30",
     "end": "10:00"
@@ -23367,11 +23232,6 @@
    },
    {
     "day": "Fri",
-    "start": "12:00",
-    "end": "12:30"
-   },
-   {
-    "day": "Fri",
     "start": "17:30",
     "end": "18:00"
    },
@@ -23407,7 +23267,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -23605,8 +23465,8 @@
    },
    {
     "day": "Tue",
-    "start": "17:00",
-    "end": "17:30"
+    "start": "16:30",
+    "end": "17:00"
    },
    {
     "day": "Wed",
@@ -23660,7 +23520,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -24497,13 +24357,18 @@
     "end": "10:30"
    },
    {
+    "day": "Sat",
+    "start": "11:00",
+    "end": "11:30"
+   },
+   {
     "day": "Sun",
     "start": "14:30",
     "end": "15:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -24553,13 +24418,33 @@
     "end": "10:00"
    },
    {
+    "day": "Sat",
+    "start": "09:00",
+    "end": "09:30"
+   },
+   {
+    "day": "Sat",
+    "start": "09:30",
+    "end": "10:00"
+   },
+   {
+    "day": "Sat",
+    "start": "10:30",
+    "end": "11:00"
+   },
+   {
+    "day": "Sat",
+    "start": "11:00",
+    "end": "11:30"
+   },
+   {
     "day": "Sun",
     "start": "15:30",
     "end": "16:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -24825,18 +24710,13 @@
   "lng": -0.19999,
   "sessions": [
    {
-    "day": "Tue",
-    "start": "12:30",
-    "end": "13:00"
-   },
-   {
     "day": "Wed",
     "start": "13:00",
     "end": "13:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -24861,18 +24741,13 @@
   "lng": -0.19999,
   "sessions": [
    {
-    "day": "Tue",
-    "start": "12:00",
-    "end": "12:30"
-   },
-   {
     "day": "Wed",
     "start": "12:30",
     "end": "13:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -25056,12 +24931,17 @@
    },
    {
     "day": "Sat",
+    "start": "08:00",
+    "end": "08:30"
+   },
+   {
+    "day": "Sat",
     "start": "08:30",
     "end": "09:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -25592,11 +25472,6 @@
     "end": "10:00"
    },
    {
-    "day": "Thu",
-    "start": "10:00",
-    "end": "10:30"
-   },
-   {
     "day": "Fri",
     "start": "09:30",
     "end": "10:00"
@@ -25613,7 +25488,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -25644,8 +25519,8 @@
    },
    {
     "day": "Fri",
-    "start": "09:00",
-    "end": "09:30"
+    "start": "10:30",
+    "end": "11:00"
    },
    {
     "day": "Sun",
@@ -25654,7 +25529,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -25686,6 +25561,11 @@
    {
     "day": "Mon",
     "start": "09:30",
+    "end": "10:00"
+   },
+   {
+    "day": "Mon",
+    "start": "10:00",
     "end": "10:30"
    },
    {
@@ -25721,7 +25601,7 @@
    {
     "day": "Wed",
     "start": "09:30",
-    "end": "10:30"
+    "end": "10:00"
    },
    {
     "day": "Wed",
@@ -25741,7 +25621,12 @@
    {
     "day": "Fri",
     "start": "09:00",
-    "end": "10:30"
+    "end": "09:30"
+   },
+   {
+    "day": "Fri",
+    "start": "09:30",
+    "end": "10:00"
    },
    {
     "day": "Fri",
@@ -25775,7 +25660,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -26138,6 +26023,11 @@
    },
    {
     "day": "Fri",
+    "start": "16:00",
+    "end": "16:30"
+   },
+   {
+    "day": "Fri",
     "start": "16:30",
     "end": "17:00"
    },
@@ -26163,7 +26053,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -26367,11 +26257,6 @@
    },
    {
     "day": "Fri",
-    "start": "11:30",
-    "end": "12:00"
-   },
-   {
-    "day": "Fri",
     "start": "16:00",
     "end": "16:30"
    },
@@ -26407,7 +26292,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -26810,6 +26695,11 @@
    },
    {
     "day": "Sun",
+    "start": "10:30",
+    "end": "11:00"
+   },
+   {
+    "day": "Sun",
     "start": "11:00",
     "end": "11:30"
    },
@@ -26820,7 +26710,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -26886,6 +26776,11 @@
     "end": "11:30"
    },
    {
+    "day": "Fri",
+    "start": "13:30",
+    "end": "14:00"
+   },
+   {
     "day": "Sat",
     "start": "09:30",
     "end": "10:00"
@@ -26897,7 +26792,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -26988,6 +26883,11 @@
     "end": "17:00"
    },
    {
+    "day": "Thu",
+    "start": "18:00",
+    "end": "18:30"
+   },
+   {
     "day": "Fri",
     "start": "16:00",
     "end": "16:30"
@@ -27019,7 +26919,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -27347,11 +27247,6 @@
    {
     "day": "Tue",
     "start": "15:30",
-    "end": "16:00"
-   },
-   {
-    "day": "Tue",
-    "start": "16:00",
     "end": "16:30"
    },
    {
@@ -27375,6 +27270,11 @@
     "end": "19:00"
    },
    {
+    "day": "Thu",
+    "start": "16:30",
+    "end": "17:30"
+   },
+   {
     "day": "Sat",
     "start": "08:45",
     "end": "09:15"
@@ -27382,36 +27282,16 @@
    {
     "day": "Sat",
     "start": "10:30",
-    "end": "11:00"
-   },
-   {
-    "day": "Sat",
-    "start": "11:00",
-    "end": "11:30"
-   },
-   {
-    "day": "Sat",
-    "start": "11:30",
     "end": "12:00"
    },
    {
     "day": "Sun",
     "start": "10:30",
-    "end": "11:00"
-   },
-   {
-    "day": "Sun",
-    "start": "11:00",
-    "end": "11:30"
-   },
-   {
-    "day": "Sun",
-    "start": "11:30",
     "end": "12:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -27695,10 +27575,15 @@
     "day": "Sat",
     "start": "09:30",
     "end": "10:00"
+   },
+   {
+    "day": "Sat",
+    "start": "11:30",
+    "end": "12:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 4,
   "age_max_months": 18,
   "price": "",
@@ -28111,11 +27996,6 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "09:30",
-    "end": "10:00"
-   },
-   {
-    "day": "Mon",
     "start": "15:45",
     "end": "16:15"
    },
@@ -28131,8 +28011,8 @@
    },
    {
     "day": "Tue",
-    "start": "17:45",
-    "end": "18:15"
+    "start": "17:30",
+    "end": "18:00"
    },
    {
     "day": "Wed",
@@ -28176,7 +28056,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -28630,7 +28510,7 @@
    {
     "day": "Thu",
     "start": "16:00",
-    "end": "17:00"
+    "end": "17:30"
    },
    {
     "day": "Fri",
@@ -28649,7 +28529,7 @@
    },
    {
     "day": "Sat",
-    "start": "08:30",
+    "start": "08:00",
     "end": "09:00"
    },
    {
@@ -28679,7 +28559,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -28833,6 +28713,11 @@
    },
    {
     "day": "Fri",
+    "start": "09:30",
+    "end": "10:00"
+   },
+   {
+    "day": "Fri",
     "start": "17:00",
     "end": "17:30"
    },
@@ -28848,7 +28733,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -29195,18 +29080,13 @@
     "end": "12:00"
    },
    {
-    "day": "Tue",
-    "start": "11:00",
-    "end": "12:00"
-   },
-   {
     "day": "Wed",
     "start": "11:00",
     "end": "12:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£4.00–£5.50",
@@ -29722,23 +29602,13 @@
    },
    {
     "day": "Tue",
-    "start": "10:00",
+    "start": "10:30",
     "end": "11:00"
-   },
-   {
-    "day": "Tue",
-    "start": "11:00",
-    "end": "11:30"
    },
    {
     "day": "Tue",
     "start": "15:45",
     "end": "16:15"
-   },
-   {
-    "day": "Wed",
-    "start": "09:30",
-    "end": "10:00"
    },
    {
     "day": "Wed",
@@ -29772,11 +29642,6 @@
    },
    {
     "day": "Thu",
-    "start": "13:00",
-    "end": "13:30"
-   },
-   {
-    "day": "Thu",
     "start": "16:15",
     "end": "16:45"
    },
@@ -29784,11 +29649,6 @@
     "day": "Fri",
     "start": "09:30",
     "end": "11:00"
-   },
-   {
-    "day": "Fri",
-    "start": "09:30",
-    "end": "10:00"
    },
    {
     "day": "Fri",
@@ -29822,7 +29682,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -29971,11 +29831,6 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "10:30",
-    "end": "11:00"
-   },
-   {
-    "day": "Mon",
     "start": "11:00",
     "end": "11:30"
    },
@@ -30031,7 +29886,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -30125,10 +29980,15 @@
     "day": "Sat",
     "start": "08:45",
     "end": "09:15"
+   },
+   {
+    "day": "Sat",
+    "start": "10:15",
+    "end": "10:45"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -30171,15 +30031,10 @@
     "day": "Sat",
     "start": "12:00",
     "end": "12:30"
-   },
-   {
-    "day": "Sat",
-    "start": "12:30",
-    "end": "13:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 19,
   "age_max_months": 36,
   "price": "",
@@ -30546,11 +30401,6 @@
    },
    {
     "day": "Tue",
-    "start": "11:00",
-    "end": "11:30"
-   },
-   {
-    "day": "Tue",
     "start": "11:30",
     "end": "12:00"
    },
@@ -30616,7 +30466,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -30659,20 +30509,10 @@
     "day": "Thu",
     "start": "11:30",
     "end": "12:30"
-   },
-   {
-    "day": "Fri",
-    "start": "09:00",
-    "end": "10:00"
-   },
-   {
-    "day": "Fri",
-    "start": "13:30",
-    "end": "14:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£4.60–£7.15",
@@ -30978,6 +30818,11 @@
    },
    {
     "day": "Thu",
+    "start": "11:30",
+    "end": "12:00"
+   },
+   {
+    "day": "Thu",
     "start": "16:45",
     "end": "17:15"
    },
@@ -31013,7 +30858,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -31289,8 +31134,8 @@
    },
    {
     "day": "Wed",
-    "start": "15:45",
-    "end": "16:15"
+    "start": "16:00",
+    "end": "16:30"
    },
    {
     "day": "Thu",
@@ -31314,7 +31159,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -31910,6 +31755,11 @@
     "end": "11:30"
    },
    {
+    "day": "Tue",
+    "start": "15:30",
+    "end": "16:00"
+   },
+   {
     "day": "Wed",
     "start": "11:00",
     "end": "11:30"
@@ -31951,7 +31801,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -32347,11 +32197,6 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "11:00",
-    "end": "11:30"
-   },
-   {
-    "day": "Mon",
     "start": "11:30",
     "end": "12:00"
    },
@@ -32422,7 +32267,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 36,
   "age_max_months": 60,
   "price": "",
@@ -32503,21 +32348,6 @@
   "lng": -1.482199,
   "sessions": [
    {
-    "day": "Mon",
-    "start": "13:40",
-    "end": "14:25"
-   },
-   {
-    "day": "Tue",
-    "start": "13:40",
-    "end": "14:25"
-   },
-   {
-    "day": "Wed",
-    "start": "09:30",
-    "end": "10:15"
-   },
-   {
     "day": "Wed",
     "start": "11:45",
     "end": "12:30"
@@ -32544,7 +32374,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "£3.00–£6.35",
@@ -32571,11 +32401,16 @@
    {
     "day": "Wed",
     "start": "09:30",
+    "end": "10:15"
+   },
+   {
+    "day": "Wed",
+    "start": "10:15",
     "end": "11:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "£6.65",
@@ -33411,15 +33246,10 @@
     "day": "Mon",
     "start": "12:30",
     "end": "13:30"
-   },
-   {
-    "day": "Fri",
-    "start": "08:45",
-    "end": "09:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 48,
   "price": "£3.60–£5.70",
@@ -34398,27 +34228,57 @@
    },
    {
     "day": "Tue",
-    "start": "09:00",
+    "start": "09:15",
+    "end": "15:30"
+   },
+   {
+    "day": "Tue",
+    "start": "16:30",
     "end": "18:30"
    },
    {
     "day": "Wed",
-    "start": "09:00",
+    "start": "09:15",
+    "end": "11:00"
+   },
+   {
+    "day": "Wed",
+    "start": "12:00",
     "end": "18:30"
    },
    {
     "day": "Thu",
-    "start": "09:00",
+    "start": "09:15",
     "end": "18:30"
    },
    {
     "day": "Fri",
-    "start": "09:00",
-    "end": "18:30"
+    "start": "09:15",
+    "end": "18:00"
+   },
+   {
+    "day": "Sat",
+    "start": "09:30",
+    "end": "12:45"
+   },
+   {
+    "day": "Sat",
+    "start": "13:30",
+    "end": "15:00"
+   },
+   {
+    "day": "Sat",
+    "start": "15:30",
+    "end": "16:45"
+   },
+   {
+    "day": "Sun",
+    "start": "09:30",
+    "end": "15:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "",
@@ -34911,18 +34771,13 @@
   "lng": -0.324989,
   "sessions": [
    {
-    "day": "Tue",
-    "start": "09:30",
-    "end": "12:30"
-   },
-   {
     "day": "Thu",
     "start": "09:30",
     "end": "12:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "",
@@ -36112,31 +35967,6 @@
   "lng": -0.334234,
   "sessions": [
    {
-    "day": "Mon",
-    "start": "08:00",
-    "end": "18:00"
-   },
-   {
-    "day": "Tue",
-    "start": "08:00",
-    "end": "18:00"
-   },
-   {
-    "day": "Wed",
-    "start": "08:00",
-    "end": "18:00"
-   },
-   {
-    "day": "Thu",
-    "start": "08:00",
-    "end": "18:00"
-   },
-   {
-    "day": "Fri",
-    "start": "08:00",
-    "end": "18:00"
-   },
-   {
     "day": "Sat",
     "start": "08:00",
     "end": "14:00"
@@ -36148,7 +35978,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "£4.60–£9.30",
@@ -36481,16 +36311,16 @@
    {
     "day": "Sat",
     "start": "09:00",
-    "end": "18:00"
+    "end": "19:00"
    },
    {
     "day": "Sun",
     "start": "09:00",
-    "end": "18:00"
+    "end": "19:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "£3.65–£7.25",
@@ -36532,20 +36362,10 @@
    {
     "day": "Thu",
     "start": "09:30",
-    "end": "13:30"
-   },
-   {
-    "day": "Thu",
-    "start": "14:30",
     "end": "17:00"
    },
    {
     "day": "Fri",
-    "start": "09:30",
-    "end": "17:00"
-   },
-   {
-    "day": "Sat",
     "start": "09:30",
     "end": "17:00"
    },
@@ -36556,7 +36376,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 144,
   "price": "£2.10–£17.20",
@@ -37867,31 +37687,6 @@
   "lng": -1.429434,
   "sessions": [
    {
-    "day": "Mon",
-    "start": "09:00",
-    "end": "19:00"
-   },
-   {
-    "day": "Tue",
-    "start": "09:00",
-    "end": "19:00"
-   },
-   {
-    "day": "Wed",
-    "start": "09:00",
-    "end": "19:00"
-   },
-   {
-    "day": "Thu",
-    "start": "09:00",
-    "end": "19:00"
-   },
-   {
-    "day": "Fri",
-    "start": "09:00",
-    "end": "19:00"
-   },
-   {
     "day": "Sat",
     "start": "09:00",
     "end": "17:00"
@@ -37903,7 +37698,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "£5.50–£7.95",
@@ -38066,18 +37861,13 @@
   "lng": -1.481099,
   "sessions": [
    {
-    "day": "Wed",
-    "start": "09:30",
-    "end": "11:00"
-   },
-   {
     "day": "Sun",
     "start": "09:30",
     "end": "10:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "£1.00–£5.10",
@@ -38119,11 +37909,6 @@
    {
     "day": "Thu",
     "start": "09:00",
-    "end": "10:00"
-   },
-   {
-    "day": "Thu",
-    "start": "11:00",
     "end": "19:00"
    },
    {
@@ -38143,7 +37928,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£7.10–£8.90",
@@ -38201,122 +37986,77 @@
    {
     "day": "Mon",
     "start": "10:00",
-    "end": "11:30"
+    "end": "12:00"
    },
    {
     "day": "Mon",
-    "start": "11:45",
-    "end": "13:15"
-   },
-   {
-    "day": "Mon",
-    "start": "14:00",
+    "start": "12:30",
     "end": "15:30"
    },
    {
     "day": "Mon",
-    "start": "15:45",
-    "end": "17:00"
-   },
-   {
-    "day": "Mon",
-    "start": "17:30",
+    "start": "16:00",
     "end": "19:00"
    },
    {
     "day": "Tue",
     "start": "10:00",
-    "end": "11:30"
+    "end": "12:00"
    },
    {
     "day": "Tue",
-    "start": "14:00",
+    "start": "12:30",
     "end": "15:30"
    },
    {
     "day": "Tue",
-    "start": "15:45",
-    "end": "17:00"
-   },
-   {
-    "day": "Tue",
-    "start": "17:30",
+    "start": "16:00",
     "end": "19:00"
    },
    {
     "day": "Wed",
     "start": "10:00",
-    "end": "11:30"
+    "end": "12:00"
    },
    {
     "day": "Wed",
-    "start": "11:45",
-    "end": "13:15"
-   },
-   {
-    "day": "Wed",
-    "start": "14:00",
+    "start": "12:30",
     "end": "15:30"
    },
    {
     "day": "Wed",
-    "start": "15:45",
-    "end": "17:00"
-   },
-   {
-    "day": "Wed",
-    "start": "17:30",
+    "start": "16:00",
     "end": "19:00"
    },
    {
     "day": "Thu",
     "start": "10:00",
-    "end": "11:30"
+    "end": "12:00"
    },
    {
     "day": "Thu",
-    "start": "11:45",
-    "end": "13:15"
-   },
-   {
-    "day": "Thu",
-    "start": "14:00",
+    "start": "12:30",
     "end": "15:30"
    },
    {
     "day": "Thu",
-    "start": "15:45",
-    "end": "17:00"
-   },
-   {
-    "day": "Thu",
-    "start": "17:30",
+    "start": "16:00",
     "end": "19:00"
    },
    {
     "day": "Fri",
     "start": "10:00",
-    "end": "11:30"
+    "end": "12:00"
    },
    {
     "day": "Fri",
-    "start": "11:45",
-    "end": "13:15"
-   },
-   {
-    "day": "Fri",
-    "start": "14:00",
+    "start": "12:30",
     "end": "15:30"
    },
    {
     "day": "Fri",
     "start": "16:00",
-    "end": "17:30"
-   },
-   {
-    "day": "Fri",
-    "start": "18:00",
-    "end": "19:30"
+    "end": "19:00"
    },
    {
     "day": "Sat",
@@ -38370,7 +38110,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 144,
   "price": "£8.40",
@@ -38462,8 +38202,13 @@
    },
    {
     "day": "Tue",
-    "start": "09:30",
-    "end": "17:30"
+    "start": "10:00",
+    "end": "13:00"
+   },
+   {
+    "day": "Tue",
+    "start": "15:30",
+    "end": "17:00"
    },
    {
     "day": "Wed",
@@ -38492,7 +38237,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 168,
   "price": "£1.50–£11.10",
@@ -38882,12 +38627,12 @@
    },
    {
     "day": "Sun",
-    "start": "09:00",
+    "start": "09:30",
     "end": "17:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£9.30",
@@ -38918,8 +38663,8 @@
    },
    {
     "day": "Tue",
-    "start": "07:00",
-    "end": "18:00"
+    "start": "10:00",
+    "end": "11:00"
    },
    {
     "day": "Wed",
@@ -38939,11 +38684,6 @@
    {
     "day": "Sat",
     "start": "08:30",
-    "end": "14:30"
-   },
-   {
-    "day": "Sat",
-    "start": "15:30",
     "end": "16:30"
    },
    {
@@ -38953,7 +38693,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£5.00",
@@ -39052,10 +38792,15 @@
     "day": "Mon",
     "start": "11:00",
     "end": "12:30"
+   },
+   {
+    "day": "Sat",
+    "start": "08:00",
+    "end": "09:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£3.50",
@@ -39111,7 +38856,7 @@
    },
    {
     "day": "Sat",
-    "start": "08:30",
+    "start": "10:00",
     "end": "16:00"
    },
    {
@@ -39121,7 +38866,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£9.50",
@@ -39208,7 +38953,7 @@
    },
    {
     "day": "Sat",
-    "start": "11:00",
+    "start": "12:00",
     "end": "16:00"
    },
    {
@@ -39218,7 +38963,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£7.16",
@@ -39376,7 +39121,7 @@
    },
    {
     "day": "Tue",
-    "start": "10:00",
+    "start": "12:00",
     "end": "17:30"
    },
    {
@@ -39397,16 +39142,16 @@
    {
     "day": "Sat",
     "start": "10:00",
-    "end": "17:30"
+    "end": "16:00"
    },
    {
     "day": "Sun",
     "start": "10:00",
-    "end": "16:00"
+    "end": "17:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 36,
   "price": "£2.00–£6.60",
@@ -39438,16 +39183,31 @@
    {
     "day": "Tue",
     "start": "10:30",
+    "end": "12:00"
+   },
+   {
+    "day": "Tue",
+    "start": "13:30",
     "end": "16:30"
    },
    {
     "day": "Wed",
     "start": "09:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Wed",
+    "start": "13:30",
     "end": "16:30"
    },
    {
     "day": "Thu",
     "start": "09:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Thu",
+    "start": "13:30",
     "end": "16:30"
    },
    {
@@ -39463,21 +39223,21 @@
    {
     "day": "Sat",
     "start": "09:00",
-    "end": "10:30"
+    "end": "13:30"
+   },
+   {
+    "day": "Sat",
+    "start": "15:00",
+    "end": "16:30"
    },
    {
     "day": "Sun",
     "start": "09:00",
-    "end": "12:00"
-   },
-   {
-    "day": "Sun",
-    "start": "13:30",
     "end": "16:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 72,
   "price": "£2.00–£6.25",
@@ -39514,6 +39274,11 @@
    {
     "day": "Tue",
     "start": "10:00",
+    "end": "13:00"
+   },
+   {
+    "day": "Tue",
+    "start": "14:00",
     "end": "16:00"
    },
    {
@@ -39543,7 +39308,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£4.25",
@@ -39888,7 +39653,7 @@
    {
     "day": "Tue",
     "start": "12:00",
-    "end": "18:30"
+    "end": "16:00"
    },
    {
     "day": "Wed",
@@ -39927,7 +39692,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£2.30–£5.10",
@@ -40142,11 +39907,6 @@
    {
     "day": "Sat",
     "start": "08:00",
-    "end": "09:30"
-   },
-   {
-    "day": "Sat",
-    "start": "14:00",
     "end": "18:30"
    },
    {
@@ -40156,7 +39916,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£5.30",
@@ -40560,18 +40320,13 @@
     "end": "11:30"
    },
    {
-    "day": "Thu",
-    "start": "13:00",
-    "end": "14:30"
-   },
-   {
     "day": "Sun",
     "start": "15:00",
     "end": "16:30"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£7.00",
@@ -40822,7 +40577,7 @@
    {
     "day": "Tue",
     "start": "09:00",
-    "end": "18:00"
+    "end": "16:30"
    },
    {
     "day": "Wed",
@@ -40836,7 +40591,7 @@
    },
    {
     "day": "Fri",
-    "start": "10:30",
+    "start": "09:00",
     "end": "18:00"
    },
    {
@@ -40847,11 +40602,16 @@
    {
     "day": "Sun",
     "start": "09:00",
+    "end": "10:30"
+   },
+   {
+    "day": "Sun",
+    "start": "15:00",
     "end": "18:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£4.50",
@@ -41174,7 +40934,7 @@
    },
    {
     "day": "Sat",
-    "start": "16:30",
+    "start": "15:00",
     "end": "18:00"
    },
    {
@@ -41184,12 +40944,12 @@
    },
    {
     "day": "Sun",
-    "start": "15:00",
+    "start": "16:30",
     "end": "18:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£4.70–£7.25",
@@ -41251,7 +41011,7 @@
    },
    {
     "day": "Tue",
-    "start": "09:30",
+    "start": "11:00",
     "end": "18:30"
    },
    {
@@ -41286,7 +41046,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 144,
   "price": "£5.65",
@@ -41410,17 +41170,17 @@
    {
     "day": "Tue",
     "start": "10:00",
-    "end": "17:30"
+    "end": "19:30"
    },
    {
     "day": "Wed",
     "start": "10:00",
-    "end": "17:30"
+    "end": "19:30"
    },
    {
     "day": "Thu",
     "start": "10:00",
-    "end": "17:30"
+    "end": "19:30"
    },
    {
     "day": "Fri",
@@ -41449,7 +41209,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£8.45",
@@ -41606,7 +41366,7 @@
    },
    {
     "day": "Sun",
-    "start": "10:00",
+    "start": "09:00",
     "end": "15:00"
    },
    {
@@ -41616,7 +41376,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£6.25",
@@ -41705,15 +41465,10 @@
     "day": "Mon",
     "start": "10:30",
     "end": "12:00"
-   },
-   {
-    "day": "Sat",
-    "start": "15:00",
-    "end": "16:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£6.00",
@@ -41836,7 +41591,12 @@
    {
     "day": "Sat",
     "start": "08:00",
-    "end": "15:30"
+    "end": "11:00"
+   },
+   {
+    "day": "Sat",
+    "start": "12:30",
+    "end": "14:00"
    },
    {
     "day": "Sun",
@@ -41850,7 +41610,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 96,
   "price": "£4.55",
@@ -41979,6 +41739,11 @@
    {
     "day": "Tue",
     "start": "09:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Tue",
+    "start": "13:00",
     "end": "18:00"
    },
    {
@@ -41999,7 +41764,7 @@
    {
     "day": "Sat",
     "start": "08:00",
-    "end": "14:00"
+    "end": "16:00"
    },
    {
     "day": "Sun",
@@ -42008,7 +41773,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 96,
   "price": "£3.80",
@@ -42090,16 +41855,6 @@
    },
    {
     "day": "Tue",
-    "start": "11:15",
-    "end": "12:45"
-   },
-   {
-    "day": "Tue",
-    "start": "13:00",
-    "end": "14:30"
-   },
-   {
-    "day": "Tue",
     "start": "15:30",
     "end": "18:30"
    },
@@ -42169,21 +41924,6 @@
     "end": "10:30"
    },
    {
-    "day": "Sat",
-    "start": "10:45",
-    "end": "12:15"
-   },
-   {
-    "day": "Sat",
-    "start": "12:30",
-    "end": "14:00"
-   },
-   {
-    "day": "Sat",
-    "start": "14:30",
-    "end": "16:00"
-   },
-   {
     "day": "Sun",
     "start": "10:45",
     "end": "12:15"
@@ -42200,7 +41940,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 155,
   "price": "£6.00",
@@ -42490,14 +42230,19 @@
   "lng": -1.482032,
   "sessions": [
    {
-    "day": "Tue",
-    "start": "09:30",
-    "end": "10:30"
+    "day": "Mon",
+    "start": "09:00",
+    "end": "18:00"
    },
    {
     "day": "Tue",
-    "start": "10:45",
-    "end": "11:45"
+    "start": "09:00",
+    "end": "18:00"
+   },
+   {
+    "day": "Wed",
+    "start": "09:00",
+    "end": "18:00"
    },
    {
     "day": "Thu",
@@ -42521,7 +42266,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 144,
   "price": "£5.20",
@@ -42790,16 +42535,16 @@
    {
     "day": "Sat",
     "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Sat",
+    "start": "10:30",
     "end": "11:45"
    },
    {
     "day": "Sat",
     "start": "12:00",
-    "end": "13:15"
-   },
-   {
-    "day": "Sat",
-    "start": "13:30",
     "end": "14:45"
    },
    {
@@ -42810,11 +42555,21 @@
    {
     "day": "Sun",
     "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Sun",
+    "start": "10:30",
     "end": "11:45"
    },
    {
     "day": "Sun",
     "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Sun",
+    "start": "13:30",
     "end": "14:45"
    },
    {
@@ -42824,7 +42579,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 144,
   "price": "£5.50",
@@ -43026,8 +42781,8 @@
    },
    {
     "day": "Sat",
-    "start": "12:30",
-    "end": "13:45"
+    "start": "09:30",
+    "end": "10:45"
    },
    {
     "day": "Sat",
@@ -43036,12 +42791,27 @@
    },
    {
     "day": "Sun",
-    "start": "12:30",
-    "end": "13:45"
+    "start": "09:30",
+    "end": "10:45"
+   },
+   {
+    "day": "Sun",
+    "start": "11:00",
+    "end": "12:15"
+   },
+   {
+    "day": "Sun",
+    "start": "14:00",
+    "end": "15:15"
+   },
+   {
+    "day": "Sun",
+    "start": "15:30",
+    "end": "16:45"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "£3.00–£6.00",
@@ -43309,6 +43079,11 @@
    },
    {
     "day": "Sun",
+    "start": "09:30",
+    "end": "10:45"
+   },
+   {
+    "day": "Sun",
     "start": "11:00",
     "end": "12:15"
    },
@@ -43316,15 +43091,10 @@
     "day": "Sun",
     "start": "14:00",
     "end": "15:15"
-   },
-   {
-    "day": "Sun",
-    "start": "15:30",
-    "end": "16:45"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 144,
   "price": "£3.00–£6.00",
@@ -43667,11 +43437,6 @@
    {
     "day": "Sun",
     "start": "09:00",
-    "end": "09:45"
-   },
-   {
-    "day": "Sun",
-    "start": "10:00",
     "end": "12:45"
    },
    {
@@ -43701,7 +43466,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£4.20",
@@ -44024,7 +43789,7 @@
    {
     "day": "Mon",
     "start": "09:00",
-    "end": "14:00"
+    "end": "12:00"
    },
    {
     "day": "Mon",
@@ -44063,7 +43828,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 96,
   "price": "£7.10",
@@ -45000,8 +44765,18 @@
   "sessions": [
    {
     "day": "Mon",
+    "start": "09:30",
+    "end": "10:45"
+   },
+   {
+    "day": "Mon",
     "start": "11:00",
     "end": "12:15"
+   },
+   {
+    "day": "Mon",
+    "start": "12:30",
+    "end": "13:45"
    },
    {
     "day": "Mon",
@@ -45012,6 +44787,11 @@
     "day": "Mon",
     "start": "15:30",
     "end": "16:45"
+   },
+   {
+    "day": "Mon",
+    "start": "17:00",
+    "end": "18:15"
    },
    {
     "day": "Tue",
@@ -45037,6 +44817,11 @@
     "day": "Tue",
     "start": "15:30",
     "end": "16:45"
+   },
+   {
+    "day": "Tue",
+    "start": "17:00",
+    "end": "18:15"
    },
    {
     "day": "Wed",
@@ -45142,10 +44927,20 @@
     "day": "Sun",
     "start": "08:00",
     "end": "09:15"
+   },
+   {
+    "day": "Sun",
+    "start": "09:30",
+    "end": "10:45"
+   },
+   {
+    "day": "Sun",
+    "start": "12:30",
+    "end": "13:45"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 144,
   "price": "£3.00–£6.00",
@@ -45169,6 +44964,156 @@
   "lat": 54.961372,
   "lng": -1.84562,
   "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Mon",
+    "start": "10:30",
+    "end": "11:45"
+   },
+   {
+    "day": "Mon",
+    "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Mon",
+    "start": "13:30",
+    "end": "14:45"
+   },
+   {
+    "day": "Mon",
+    "start": "15:00",
+    "end": "16:15"
+   },
+   {
+    "day": "Mon",
+    "start": "16:30",
+    "end": "17:45"
+   },
+   {
+    "day": "Tue",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Tue",
+    "start": "10:30",
+    "end": "11:45"
+   },
+   {
+    "day": "Tue",
+    "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Tue",
+    "start": "13:30",
+    "end": "14:45"
+   },
+   {
+    "day": "Tue",
+    "start": "15:00",
+    "end": "16:15"
+   },
+   {
+    "day": "Tue",
+    "start": "16:30",
+    "end": "17:45"
+   },
+   {
+    "day": "Wed",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": "11:45"
+   },
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Wed",
+    "start": "13:30",
+    "end": "14:45"
+   },
+   {
+    "day": "Wed",
+    "start": "15:00",
+    "end": "16:15"
+   },
+   {
+    "day": "Wed",
+    "start": "16:30",
+    "end": "17:45"
+   },
+   {
+    "day": "Thu",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Thu",
+    "start": "10:30",
+    "end": "11:45"
+   },
+   {
+    "day": "Thu",
+    "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Thu",
+    "start": "13:30",
+    "end": "14:45"
+   },
+   {
+    "day": "Thu",
+    "start": "15:00",
+    "end": "16:15"
+   },
+   {
+    "day": "Thu",
+    "start": "16:30",
+    "end": "17:45"
+   },
+   {
+    "day": "Fri",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Fri",
+    "start": "10:30",
+    "end": "11:45"
+   },
+   {
+    "day": "Fri",
+    "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Fri",
+    "start": "13:30",
+    "end": "14:45"
+   },
+   {
+    "day": "Fri",
+    "start": "15:00",
+    "end": "16:15"
+   },
+   {
+    "day": "Fri",
+    "start": "16:30",
+    "end": "17:45"
+   },
    {
     "day": "Sat",
     "start": "09:00",
@@ -45196,12 +45141,32 @@
    },
    {
     "day": "Sun",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Sun",
     "start": "10:30",
     "end": "11:45"
+   },
+   {
+    "day": "Sun",
+    "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Sun",
+    "start": "13:30",
+    "end": "14:45"
+   },
+   {
+    "day": "Sun",
+    "start": "15:00",
+    "end": "16:15"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 36,
   "price": "£3.00–£6.00",
@@ -45243,7 +45208,7 @@
    {
     "day": "Mon",
     "start": "15:30",
-    "end": "18:00"
+    "end": "17:00"
    },
    {
     "day": "Tue",
@@ -45263,7 +45228,7 @@
    {
     "day": "Tue",
     "start": "15:30",
-    "end": "18:00"
+    "end": "17:00"
    },
    {
     "day": "Wed",
@@ -45283,7 +45248,7 @@
    {
     "day": "Wed",
     "start": "15:30",
-    "end": "18:00"
+    "end": "17:00"
    },
    {
     "day": "Thu",
@@ -45303,7 +45268,7 @@
    {
     "day": "Thu",
     "start": "15:30",
-    "end": "18:00"
+    "end": "17:00"
    },
    {
     "day": "Fri",
@@ -45323,7 +45288,7 @@
    {
     "day": "Fri",
     "start": "15:30",
-    "end": "18:00"
+    "end": "17:00"
    },
    {
     "day": "Sat",
@@ -45357,7 +45322,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 96,
   "price": "£6.90",
@@ -45501,11 +45466,6 @@
    {
     "day": "Sat",
     "start": "08:00",
-    "end": "14:00"
-   },
-   {
-    "day": "Sat",
-    "start": "15:00",
     "end": "17:00"
    },
    {
@@ -45515,7 +45475,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£3.10–£6.10",
@@ -45689,53 +45649,23 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "10:00",
-    "end": "10:45"
-   },
-   {
-    "day": "Mon",
-    "start": "11:00",
-    "end": "11:45"
-   },
-   {
-    "day": "Mon",
-    "start": "12:45",
-    "end": "13:30"
+    "start": "09:00",
+    "end": "17:15"
    },
    {
     "day": "Tue",
-    "start": "10:00",
-    "end": "10:45"
-   },
-   {
-    "day": "Tue",
-    "start": "11:00",
-    "end": "11:45"
-   },
-   {
-    "day": "Tue",
-    "start": "12:45",
-    "end": "13:30"
+    "start": "09:00",
+    "end": "17:15"
    },
    {
     "day": "Wed",
-    "start": "12:45",
-    "end": "13:30"
+    "start": "09:00",
+    "end": "17:15"
    },
    {
     "day": "Thu",
-    "start": "10:00",
-    "end": "10:45"
-   },
-   {
-    "day": "Thu",
-    "start": "11:00",
-    "end": "11:45"
-   },
-   {
-    "day": "Thu",
-    "start": "12:45",
-    "end": "13:30"
+    "start": "09:00",
+    "end": "17:15"
    },
    {
     "day": "Fri",
@@ -45744,12 +45674,7 @@
    },
    {
     "day": "Sat",
-    "start": "12:45",
-    "end": "13:30"
-   },
-   {
-    "day": "Sat",
-    "start": "15:00",
+    "start": "09:00",
     "end": "17:15"
    },
    {
@@ -45759,7 +45684,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 84,
   "price": "£4.65",
@@ -45809,6 +45734,16 @@
     "end": "15:15"
    },
    {
+    "day": "Mon",
+    "start": "16:00",
+    "end": "17:00"
+   },
+   {
+    "day": "Mon",
+    "start": "17:15",
+    "end": "18:15"
+   },
+   {
     "day": "Tue",
     "start": "09:00",
     "end": "10:00"
@@ -45834,6 +45769,16 @@
     "end": "15:15"
    },
    {
+    "day": "Tue",
+    "start": "16:00",
+    "end": "17:00"
+   },
+   {
+    "day": "Tue",
+    "start": "17:15",
+    "end": "18:15"
+   },
+   {
     "day": "Wed",
     "start": "09:00",
     "end": "10:00"
@@ -45859,6 +45804,16 @@
     "end": "15:15"
    },
    {
+    "day": "Wed",
+    "start": "16:00",
+    "end": "17:00"
+   },
+   {
+    "day": "Wed",
+    "start": "17:15",
+    "end": "18:15"
+   },
+   {
     "day": "Thu",
     "start": "09:00",
     "end": "10:00"
@@ -45884,6 +45839,16 @@
     "end": "15:15"
    },
    {
+    "day": "Thu",
+    "start": "16:00",
+    "end": "17:00"
+   },
+   {
+    "day": "Thu",
+    "start": "17:15",
+    "end": "18:15"
+   },
+   {
     "day": "Fri",
     "start": "09:00",
     "end": "10:00"
@@ -45907,6 +45872,16 @@
     "day": "Fri",
     "start": "14:15",
     "end": "15:15"
+   },
+   {
+    "day": "Fri",
+    "start": "16:00",
+    "end": "17:00"
+   },
+   {
+    "day": "Fri",
+    "start": "17:15",
+    "end": "18:15"
    },
    {
     "day": "Sat",
@@ -45965,7 +45940,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.00",
@@ -46052,8 +46027,23 @@
   "sessions": [
    {
     "day": "Mon",
+    "start": "09:00",
+    "end": "12:45"
+   },
+   {
+    "day": "Mon",
     "start": "13:15",
     "end": "15:15"
+   },
+   {
+    "day": "Mon",
+    "start": "15:45",
+    "end": "17:15"
+   },
+   {
+    "day": "Tue",
+    "start": "09:00",
+    "end": "12:45"
    },
    {
     "day": "Tue",
@@ -46061,12 +46051,42 @@
     "end": "15:15"
    },
    {
+    "day": "Tue",
+    "start": "15:45",
+    "end": "17:15"
+   },
+   {
+    "day": "Wed",
+    "start": "09:00",
+    "end": "12:45"
+   },
+   {
     "day": "Wed",
     "start": "13:15",
     "end": "15:15"
    },
    {
+    "day": "Wed",
+    "start": "15:45",
+    "end": "17:15"
+   },
+   {
     "day": "Thu",
+    "start": "09:00",
+    "end": "13:00"
+   },
+   {
+    "day": "Thu",
+    "start": "13:15",
+    "end": "17:15"
+   },
+   {
+    "day": "Fri",
+    "start": "09:00",
+    "end": "13:00"
+   },
+   {
+    "day": "Fri",
     "start": "13:15",
     "end": "17:15"
    },
@@ -46077,7 +46097,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 96,
   "price": "£3.25–£5.80",
@@ -46102,6 +46122,11 @@
   "lng": -0.173564,
   "sessions": [
    {
+    "day": "Mon",
+    "start": "12:00",
+    "end": "16:00"
+   },
+   {
     "day": "Tue",
     "start": "09:00",
     "end": "15:00"
@@ -46119,11 +46144,21 @@
    {
     "day": "Fri",
     "start": "09:00",
-    "end": "11:00"
+    "end": "15:00"
+   },
+   {
+    "day": "Sat",
+    "start": "10:00",
+    "end": "16:00"
+   },
+   {
+    "day": "Sun",
+    "start": "10:00",
+    "end": "16:00"
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 60,
   "price": "£5.50",
@@ -46210,13 +46245,33 @@
   "sessions": [
    {
     "day": "Mon",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Mon",
     "start": "10:30",
     "end": "11:45"
    },
    {
     "day": "Mon",
+    "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Mon",
+    "start": "13:30",
+    "end": "14:45"
+   },
+   {
+    "day": "Mon",
     "start": "15:00",
     "end": "16:15"
+   },
+   {
+    "day": "Mon",
+    "start": "16:30",
+    "end": "17:45"
    },
    {
     "day": "Tue",
@@ -46250,8 +46305,33 @@
    },
    {
     "day": "Wed",
+    "start": "09:00",
+    "end": "10:15"
+   },
+   {
+    "day": "Wed",
+    "start": "10:30",
+    "end": "11:45"
+   },
+   {
+    "day": "Wed",
+    "start": "12:00",
+    "end": "13:15"
+   },
+   {
+    "day": "Wed",
+    "start": "13:30",
+    "end": "14:45"
+   },
+   {
+    "day": "Wed",
     "start": "15:00",
     "end": "16:15"
+   },
+   {
+    "day": "Wed",
+    "start": "16:30",
+    "end": "17:45"
    },
    {
     "day": "Thu",
@@ -46375,7 +46455,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "£3.00–£6.00",
@@ -46401,7 +46481,7 @@
   "sessions": [
    {
     "day": "Mon",
-    "start": "12:30",
+    "start": "09:30",
     "end": "18:30"
    },
    {
@@ -46411,7 +46491,7 @@
    },
    {
     "day": "Wed",
-    "start": "14:00",
+    "start": "09:30",
     "end": "18:30"
    },
    {
@@ -46421,8 +46501,8 @@
    },
    {
     "day": "Fri",
-    "start": "15:30",
-    "end": "17:00"
+    "start": "09:30",
+    "end": "18:30"
    },
    {
     "day": "Sat",
@@ -46436,7 +46516,7 @@
    }
   ],
   "tier": "timetable",
-  "schedule_note": "Weekly times from the provider's open data (checked 2026-10-04); check before you go",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
   "age_min_months": 0,
   "age_max_months": 120,
   "price": "£4.20",
@@ -46832,6 +46912,667 @@
   "phone": "01494 688100",
   "source": "https://placesleisure.gs-signature.cloud/OpenActive/",
   "attribution": "Places Leisure (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "Gymnastics Discover (3–5 years)",
+  "provider": "Everyone Active",
+  "category": "movement",
+  "venue": "Cleator Moor Act Centre",
+  "address": "off Wyndham Street Cleator Moor, Whitehaven, Cumbria, CA25 5AN",
+  "postcode": "CA25 5AN",
+  "lat": 54.521747,
+  "lng": -3.515126,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "16:00",
+    "end": "16:45"
+   },
+   {
+    "day": "Tue",
+    "start": "17:00",
+    "end": "17:45"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 36,
+  "age_max_months": 60,
+  "price": "",
+  "free": false,
+  "booking": "term",
+  "indoor": true,
+  "description": "Our fully qualified British Gymnastics instructors will lead your child through each development stage completing the progressive development of core skills such as balance, strength, flexibility and co-ordination and…",
+  "url": "https://joinonline.everyoneactive.com/lessons?lessonid=18&siteid=0409",
+  "phone": "01946 553 043",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "Adult and child gymnastics (18–36 months)",
+  "provider": "Everyone Active",
+  "category": "movement",
+  "venue": "Cleator Moor Act Centre",
+  "address": "off Wyndham Street Cleator Moor, Whitehaven, Cumbria, CA25 5AN",
+  "postcode": "CA25 5AN",
+  "lat": 54.521747,
+  "lng": -3.515126,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:15",
+    "end": "12:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 18,
+  "age_max_months": 36,
+  "price": "",
+  "free": false,
+  "booking": "term",
+  "indoor": true,
+  "description": "Our fully qualified British Gymnastics instructors will lead your child through each development stage completing the progressive development of core skills such as balance, strength, flexibility and co-ordination and…",
+  "url": "https://joinonline.everyoneactive.com/lessons?lessonid=18&siteid=0409",
+  "phone": "01946 553 043",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "Tennis Tots (2–4 years)",
+  "provider": "Everyone Active",
+  "category": "movement",
+  "venue": "Deal Leisure Centre",
+  "address": "Park Avenue, Deal, Kent, CT14 9UU",
+  "postcode": "CT14 9UU",
+  "lat": 51.21859,
+  "lng": 1.396477,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "16:15",
+    "end": "17:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 24,
+  "age_max_months": 48,
+  "price": "",
+  "free": false,
+  "booking": "term",
+  "indoor": true,
+  "description": "Working in partnership with the Lawn Tennis Association (LTA) Everyone Active deliver the LTA Youth Programme.",
+  "url": "https://joinonline.everyoneactive.com/lessons?lessonid=15&siteid=0390",
+  "phone": "01304 793997",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "Active Antz",
+  "provider": "Everyone Active",
+  "category": "movement",
+  "venue": "Green bank Leisure Centre",
+  "address": "Civic Way, Swadlincote, Derbyshire, DE11 0AD",
+  "postcode": "DE11 0AD",
+  "lat": 52.773978,
+  "lng": -1.560534,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "12:00",
+    "end": "14:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "£3.75",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Designed to give you and your child time to play and learn from each other, Active Antz encourages you and your child to try a variety of activities each week.",
+  "url": "https://book.everyoneactive.com/Connect/landing.aspx?Site=0334&Activities=3345K5112000324&Culture=en-GB",
+  "phone": "01283216269",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "Gymnastics Discover",
+  "provider": "Everyone Active",
+  "category": "movement",
+  "venue": "The Phoenix Centre",
+  "address": "Mollison Drive, Wallington, Greater London, SM6 9NZ",
+  "postcode": "SM6 9NZ",
+  "lat": 51.353157,
+  "lng": -0.125087,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "09:45",
+    "end": "10:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "£7.98",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Gymnastics is a great way for children to increase agility, flexibility, balance and co-ordination, while having fun and interacting with other children.",
+  "url": "https://book.everyoneactive.com/Connect/landing.aspx?Site=0072&Activities=0723K6809450426&Culture=en-GB",
+  "phone": "020 8770 6006",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "Under 5s fun swim",
+  "provider": "Everyone Active",
+  "category": "swim",
+  "venue": "White Oak Lc",
+  "address": "Hilda May Ave, Swanley, Kent, BR8 7BT",
+  "postcode": "BR8 7BT",
+  "lat": 51.40088,
+  "lng": 0.17051,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "10:00",
+    "end": "11:00"
+   },
+   {
+    "day": "Mon",
+    "start": "14:00",
+    "end": "15:00"
+   },
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": "11:00"
+   },
+   {
+    "day": "Tue",
+    "start": "14:00",
+    "end": "15:00"
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "11:00"
+   },
+   {
+    "day": "Thu",
+    "start": "14:00",
+    "end": "15:00"
+   },
+   {
+    "day": "Fri",
+    "start": "14:00",
+    "end": "15:00"
+   },
+   {
+    "day": "Sun",
+    "start": "15:30",
+    "end": "16:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "£5.01–£7.69",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Sessions for children aged under five in shallow water to help build their water confidence. All children must be accompanied and supervised by an adult.",
+  "url": "https://book.everyoneactive.com/Connect/landing.aspx?Site=0261&Activities=2611WUFSL140185&Culture=en-GB",
+  "phone": "01322662188",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "Buggy Walk",
+  "provider": "Everyone Active",
+  "category": "fitness",
+  "venue": "Woking Sports Box",
+  "address": "Egley Road, Woking, Surrey, GU22 0AF",
+  "postcode": "GU22 0AF",
+  "lat": 51.3,
+  "lng": 0.57,
+  "sessions": [
+   {
+    "day": "Fri",
+    "start": "11:00",
+    "end": "12:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "£5.00",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Get fit, have fun and meet other parents. Walk with our trained walk leader in the outdoors or inside if it’s raining (where applicable).",
+  "url": "https://book.everyoneactive.com/Connect/landing.aspx?Site=0386&Activities=3865K8211000426&Culture=en-GB",
+  "phone": "01483 314084",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent and baby fitness classes",
+  "provider": "Places Leisure",
+  "category": "fitness",
+  "venue": "Blyth Sports Centre",
+  "address": "Bolam Park, Blyth, Northumberland, NE24 5BT",
+  "postcode": "NE24 5BT",
+  "lat": 55.125383,
+  "lng": -1.520372,
+  "sessions": [
+   {
+    "day": "Thu",
+    "start": "12:00",
+    "end": "12:45"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "£8.00",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Exercise classes for a parent with their baby alongside: cycle, legs, bums and tums, Body Balance and similar. Ask the centre which class is on which day.",
+  "url": "https://www.placesleisure.org/centres/blyth-sports-centre/",
+  "phone": "01670 620200",
+  "source": "https://placesleisure.gs-signature.cloud/OpenActive/",
+  "attribution": "Places Leisure (OpenActive open data)",
+  "confidence": "medium"
+ },
+ {
+  "name": "Buggy Workout",
+  "provider": "Places Leisure",
+  "category": "fitness",
+  "venue": "Elmbridge Xcel Leisure Complex",
+  "address": "Waterside Drive, Walton-On-Thames, Surrey, KT12 2JG",
+  "postcode": "KT12 2JG",
+  "lat": 51.39857,
+  "lng": -0.413039,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "11:30",
+    "end": "12:15"
+   },
+   {
+    "day": "Fri",
+    "start": "10:30",
+    "end": "11:15"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "£5.50",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "A fun way to meet new Mummies whilst getting the chance to get active again! The workout will vary each week including different activities such as Circuits, Boot Camp, Netball, Boxing (pad-work) and more.",
+  "url": "https://www.placesleisure.org/centres/elmbridge-xcel-leisure-complex/",
+  "phone": "01932 260300",
+  "source": "https://placesleisure.gs-signature.cloud/OpenActive/",
+  "attribution": "Places Leisure (OpenActive open data)",
+  "confidence": "medium"
+ },
+ {
+  "name": "Buggy Workout",
+  "provider": "Places Leisure",
+  "category": "fitness",
+  "venue": "Places Leisure Eastleigh",
+  "address": "Passfield Avenue, Eastleigh, Hampshire, SO50 9NL",
+  "postcode": "SO50 9NL",
+  "lat": 50.968779,
+  "lng": -1.370909,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "11:15",
+    "end": "12:00"
+   },
+   {
+    "day": "Thu",
+    "start": "10:00",
+    "end": "10:45"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "£3.60",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "A fun way to meet new Mummies whilst getting the chance to get active again! The workout will vary each week including different activities such as Circuits, Boot Camp, Netball, Boxing (pad-work) and more.",
+  "url": "https://www.placesleisure.org/centres/places-leisure-eastleigh/",
+  "phone": "02380 684800",
+  "source": "https://placesleisure.gs-signature.cloud/OpenActive/",
+  "attribution": "Places Leisure (OpenActive open data)",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent and baby fitness classes",
+  "provider": "Places Leisure",
+  "category": "fitness",
+  "venue": "The Dolphin",
+  "address": "Pasture Hill Road, Haywards Heath, West Sussex, RH16 1LY",
+  "postcode": "RH16 1LY",
+  "lat": 51.005711,
+  "lng": -0.110582,
+  "sessions": [
+   {
+    "day": "Wed",
+    "start": "09:45",
+    "end": "10:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "£7.90",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Exercise classes for a parent with their baby alongside: cycle, legs, bums and tums, Body Balance and similar. Ask the centre which class is on which day.",
+  "url": "https://www.placesleisure.org/centres/the-dolphin",
+  "phone": "01444 457337",
+  "source": "https://placesleisure.gs-signature.cloud/OpenActive/",
+  "attribution": "Places Leisure (OpenActive open data)",
+  "confidence": "medium"
+ },
+ {
+  "name": "Parent and baby fitness classes",
+  "provider": "Places Leisure",
+  "category": "fitness",
+  "venue": "Wokingham Leisure Centre",
+  "address": "Wellington Road, Wokingham, Berkshire, RG40 2AF",
+  "postcode": "RG40 2AF",
+  "lat": 51.407364,
+  "lng": -0.838179,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:00",
+    "end": "13:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 18,
+  "price": "£5.30",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Exercise classes for a parent with their baby alongside: cycle, legs, bums and tums, Body Balance and similar. Ask the centre which class is on which day.",
+  "url": "https://www.placesleisure.org/centres/wokingham-leisure-centre/",
+  "phone": "0118 977 0007",
+  "source": "https://placesleisure.gs-signature.cloud/OpenActive/",
+  "attribution": "Places Leisure (OpenActive open data)",
+  "confidence": "medium"
+ },
+ {
+  "name": "SEND soft play session",
+  "provider": "Better",
+  "category": "softplay",
+  "venue": "Newham Leisure Centre",
+  "address": "281, Prince Regent Lane, Plaistow, Plaistow, E13 8SD",
+  "postcode": "E13 8SD",
+  "lat": 51.5182,
+  "lng": 0.032452,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:00",
+    "end": "10:00"
+   },
+   {
+    "day": "Tue",
+    "start": "13:05",
+    "end": "14:05"
+   },
+   {
+    "day": "Thu",
+    "start": "18:00",
+    "end": "19:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Times of the sessions bookable now from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 60,
+  "price": "",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "A quieter soft play session for children with additional needs and their families. Check with the centre who it is for before you go.",
+  "url": "https://better.org.uk/leisure-centre/newham/newham-leisure-centre/timetable",
+  "phone": "02037704477",
+  "source": "http://data.better.org.uk/",
+  "attribution": "GLL (OpenActive open data)",
+  "confidence": "medium"
+ },
+ {
+  "name": "SEND soft play session",
+  "provider": "Everyone Active",
+  "category": "softplay",
+  "venue": "Fareham Leisure Centre",
+  "address": "Park Lane, Fareham, South East, PO16 7JU",
+  "postcode": "PO16 7JU",
+  "lat": 50.857384,
+  "lng": -1.185069,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "10:00",
+    "end": "12:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 155,
+  "price": "£2.00–£3.30",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "A quieter soft play session for children with additional needs and their families. Check with the centre who it is for before you go.",
+  "url": "https://book.everyoneactive.com/Connect/landing.aspx?Site=0039&Activities=0392K6010000426&Culture=en-GB",
+  "phone": "01329 233652",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "SEND soft play session",
+  "provider": "Everyone Active",
+  "category": "softplay",
+  "venue": "Hart Leisure Centre",
+  "address": "Emerald Avenue, Fleet, South East, GU51 5EE",
+  "postcode": "GU51 5EE",
+  "lat": 51.279823,
+  "lng": -0.866325,
+  "sessions": [
+   {
+    "day": "Tue",
+    "start": "13:00",
+    "end": "14:00"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 155,
+  "price": "£4.25",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "A quieter soft play session for children with additional needs and their families. Check with the centre who it is for before you go.",
+  "url": "https://book.everyoneactive.com/Connect/landing.aspx?Site=0136&Activities=1362K6013000326&Culture=en-GB",
+  "phone": "01252629974",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
+  "confidence": "high"
+ },
+ {
+  "name": "Soft play",
+  "provider": "Everyone Active",
+  "category": "softplay",
+  "venue": "North Herts L C",
+  "address": "Baldock Road, Letchworth, North Hertfordshire, SG6 2ER",
+  "postcode": "SG6 2ER",
+  "lat": 51.977657,
+  "lng": -0.2052,
+  "sessions": [
+   {
+    "day": "Mon",
+    "start": "09:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Mon",
+    "start": "12:30",
+    "end": "15:30"
+   },
+   {
+    "day": "Tue",
+    "start": "09:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Tue",
+    "start": "12:30",
+    "end": "15:30"
+   },
+   {
+    "day": "Wed",
+    "start": "09:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Wed",
+    "start": "12:30",
+    "end": "15:30"
+   },
+   {
+    "day": "Thu",
+    "start": "09:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Thu",
+    "start": "12:30",
+    "end": "15:30"
+   },
+   {
+    "day": "Thu",
+    "start": "16:00",
+    "end": "17:30"
+   },
+   {
+    "day": "Fri",
+    "start": "09:00",
+    "end": "12:00"
+   },
+   {
+    "day": "Fri",
+    "start": "12:30",
+    "end": "15:30"
+   },
+   {
+    "day": "Fri",
+    "start": "16:00",
+    "end": "17:30"
+   },
+   {
+    "day": "Sat",
+    "start": "09:00",
+    "end": "10:30"
+   },
+   {
+    "day": "Sat",
+    "start": "10:45",
+    "end": "12:15"
+   },
+   {
+    "day": "Sat",
+    "start": "12:30",
+    "end": "14:00"
+   },
+   {
+    "day": "Sat",
+    "start": "14:15",
+    "end": "15:45"
+   },
+   {
+    "day": "Sat",
+    "start": "16:00",
+    "end": "17:30"
+   },
+   {
+    "day": "Sun",
+    "start": "09:00",
+    "end": "10:30"
+   },
+   {
+    "day": "Sun",
+    "start": "10:45",
+    "end": "12:15"
+   },
+   {
+    "day": "Sun",
+    "start": "12:30",
+    "end": "14:00"
+   },
+   {
+    "day": "Sun",
+    "start": "14:15",
+    "end": "15:45"
+   },
+   {
+    "day": "Sun",
+    "start": "16:00",
+    "end": "17:30"
+   }
+  ],
+  "tier": "timetable",
+  "schedule_note": "Weekly times from the provider's open data (checked 2026-11-05); check before you go",
+  "age_min_months": 0,
+  "age_max_months": 155,
+  "price": "£8.00",
+  "free": false,
+  "booking": "book",
+  "indoor": true,
+  "description": "Suitable for kids aged all the way up to 12, they can climb, clamber and explore our dedicated soft play area, having fun and getting active at the same time.",
+  "url": "https://book.everyoneactive.com/Connect/landing.aspx?Site=0336&Activities=3366K5812300326&Culture=en-GB",
+  "phone": "01462 679311",
+  "source": "https://data.everyoneactive.com/OpenActive/",
+  "attribution": "Everyone Active (OpenActive open data)",
   "confidence": "high"
  }
 ]
